@@ -1,0 +1,1851 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>微积分II期末复习 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              微积分II期末复习
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Calculus-II-notes-chapt1/" class="md-tabs__link md-tabs__link--active">
+        数学
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        计算机科学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+        技能树
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          final review
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        final review
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题型整理
+  </a>
+  
+    <nav class="md-nav" aria-label="题型整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    空间解析几何
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#green-gauss-stokes" class="md-nav__link">
+    曲线\曲面积分 Green公式 Gauss公式 Stokes公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    无穷级数
+  </a>
+  
+    <nav class="md-nav" aria-label="无穷级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    判断数项级数绝对收敛/条件收敛
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    判断广义积分敛散性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    做题步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    根据级数求和函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    将函数展成麦克劳林级数/泰勒级数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    傅里叶级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    微分方程
+  </a>
+  
+    <nav class="md-nav" aria-label="微分方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    各种类型的微分方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simsim" class="md-nav__link">
+    级数\sim\sim微分方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    微分方程解的结构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    知识与技巧
+  </a>
+  
+    <nav class="md-nav" aria-label="知识与技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int_0piover-2-sinn-x-dxint_0piover-2-sinn-x-dx" class="md-nav__link">
+    形如\int_0^{\pi\over 2} \sin^n x\ dx\int_0^{\pi\over 2} \sin^n x\ dx 的高阶三角函数积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    常见函数泰勒级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    和差化积\积化和差
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    常见的一些曲线\曲面
+  </a>
+  
+    <nav class="md-nav" aria-label="常见的一些曲线\曲面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    旋轮线/摆线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    注意点
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          计算机科学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机科学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机科学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          技能树
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技能树" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          技能树
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课堂笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          课堂笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="随笔" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    题型整理
+  </a>
+  
+    <nav class="md-nav" aria-label="题型整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    空间解析几何
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#green-gauss-stokes" class="md-nav__link">
+    曲线\曲面积分 Green公式 Gauss公式 Stokes公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    无穷级数
+  </a>
+  
+    <nav class="md-nav" aria-label="无穷级数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    判断数项级数绝对收敛/条件收敛
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    判断广义积分敛散性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    做题步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    根据级数求和函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    将函数展成麦克劳林级数/泰勒级数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    傅里叶级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    微分方程
+  </a>
+  
+    <nav class="md-nav" aria-label="微分方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    各种类型的微分方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simsim" class="md-nav__link">
+    级数\sim\sim微分方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    微分方程解的结构
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    知识与技巧
+  </a>
+  
+    <nav class="md-nav" aria-label="知识与技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int_0piover-2-sinn-x-dxint_0piover-2-sinn-x-dx" class="md-nav__link">
+    形如\int_0^{\pi\over 2} \sin^n x\ dx\int_0^{\pi\over 2} \sin^n x\ dx 的高阶三角函数积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    常见函数泰勒级数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    和差化积\积化和差
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    常见的一些曲线\曲面
+  </a>
+  
+    <nav class="md-nav" aria-label="常见的一些曲线\曲面">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    旋轮线/摆线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    注意点
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="_1">期末复习<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">题型整理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">空间解析几何<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>求空间曲线 <span class="arithmatex"><span class="MathJax_Preview">\left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=14, \\ 3 x+2 y+z=10\end{array}\right.</span><script type="math/tex">\left\{\begin{array}{l}x^{2}+y^{2}+z^{2}=14, \\ 3 x+2 y+z=10\end{array}\right.</script></span> 在点 <span class="arithmatex"><span class="MathJax_Preview">P(1,2,3)</span><script type="math/tex">P(1,2,3)</script></span> 处的法平面与切线方程.</li>
+<li></li>
+</ol>
+<h3 id="green-gauss-stokes">曲线\曲面积分 Green公式 Gauss公式 Stokes公式<a class="headerlink" href="#green-gauss-stokes" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>求柱面 <span class="arithmatex"><span class="MathJax_Preview">x^{2}+y^{2}=a y(a&gt;0)</span><script type="math/tex">x^{2}+y^{2}=a y(a>0)</script></span> 位于球面 <span class="arithmatex"><span class="MathJax_Preview">x^{2}+y^{2}+z^{2}=a^{2}</span><script type="math/tex">x^{2}+y^{2}+z^{2}=a^{2}</script></span> 内部分曲面的面积.</p>
+</li>
+<li>
+<p>计算第二类曲线积分 <span class="arithmatex"><span class="MathJax_Preview">I_{1}=\int_{C} \cos \left(x+y^{2}\right) \mathrm{d} x+\left(2 y \cos \left(x+y^{2}\right)-\sqrt{1+y^{4}}\right) \mathrm{d} y</span><script type="math/tex">I_{1}=\int_{C} \cos \left(x+y^{2}\right) \mathrm{d} x+\left(2 y \cos \left(x+y^{2}\right)-\sqrt{1+y^{4}}\right) \mathrm{d} y</script></span>, 其中 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 为旋轮 线 <span class="arithmatex"><span class="MathJax_Preview">x=a(t-\sin t), y=a(1-\cos t)</span><script type="math/tex">x=a(t-\sin t), y=a(1-\cos t)</script></span>, 由 <span class="arithmatex"><span class="MathJax_Preview">O(0,0)</span><script type="math/tex">O(0,0)</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">A(2 \pi a, 0)</span><script type="math/tex">A(2 \pi a, 0)</script></span>, 其中 <span class="arithmatex"><span class="MathJax_Preview">a&gt;0</span><script type="math/tex">a>0</script></span>.</p>
+</li>
+<li>
+<p>计算第一类曲面积分 <span class="arithmatex"><span class="MathJax_Preview">I_{2}=\iint_{S}(x y+y z+z x) \mathrm{d} S</span><script type="math/tex">I_{2}=\iint_{S}(x y+y z+z x) \mathrm{d} S</script></span>, 其中 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 为圆雉面 <span class="arithmatex"><span class="MathJax_Preview">z=\sqrt{x^{2}+y^{2}}</span><script type="math/tex">z=\sqrt{x^{2}+y^{2}}</script></span> 被柱面 <span class="arithmatex"><span class="MathJax_Preview">x^{2}+y^{2}=</span><script type="math/tex">x^{2}+y^{2}=</script></span> <span class="arithmatex"><span class="MathJax_Preview">2 a x(a&gt;0)</span><script type="math/tex">2 a x(a>0)</script></span> 所截下的部分.</p>
+</li>
+</ol>
+<blockquote>
+<p>投影法+利用对称性化简
+$$
+I_{2}=\iint_{S}(x y+y z+z x) \mathrm{d} S  =\iint zx dS\
+= \iint x\sqrt{x<sup>2+y</sup>2}|(z_1', z_2' ,-1)|dxdy =  \sqrt2\iint x\sqrt{x<sup>2+y</sup>2}dxdy\
+= 2\sqrt{2} \iint \rho^3\cos \varphi d\rho d\varphi = \cdots.
+$$</p>
+</blockquote>
+<ol>
+<li>计算 <span class="arithmatex"><span class="MathJax_Preview">I_{3}=\int_{C} y^{2} \mathrm{~d} x+z^{2} \mathrm{~d} y+x^{2} \mathrm{~d} z</span><script type="math/tex">I_{3}=\int_{C} y^{2} \mathrm{~d} x+z^{2} \mathrm{~d} y+x^{2} \mathrm{~d} z</script></span>, 其中 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 是平面 <span class="arithmatex"><span class="MathJax_Preview">x+y+z=1</span><script type="math/tex">x+y+z=1</script></span> 的第一卦限部分与三 个坐标面的交线, 从 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 周正向往 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 轴负向看去是逆时针方向.</li>
+</ol>
+<blockquote>
+<p><strong>法一</strong> 
+$$
+I_3 = \oint_c(y^2, z^2, x^2)\cdot d\vec{r}\
+=  \iint rot(y^2, z^2, x^2)\times \vec{n}dS\
+= \iint (-2z, -2x, -2y)\cdot {(1,1,1)\over \sqrt{3}}dS\
+= -{2\over \sqrt{3}}\iint (x+y+z)dS\
+= -{2\over \sqrt{3}}\iint 1dS = -{2\over \sqrt{3}}S_\Delta = -1.\square\
+$$
+<strong>注</strong> 这里最后如果没有发现<span class="arithmatex"><span class="MathJax_Preview">x+y+z=1</span><script type="math/tex">x+y+z=1</script></span>为积分区域的方程来化简的话, 直接嗯算也是可以的(笔者第一次就没发现) 
+$$
+\iint_s (x+ y + z)dS = -{2\over \sqrt{3}}\iint (x+ y + (1-x-y))\sqrt{3}dxdy = -1.
+$$
+<strong>法二</strong> (直接曲线积分)</p>
+<ol>
+<li>
+<p>由轮换对称性, <span class="arithmatex"><span class="MathJax_Preview">I_3 = 3\int (0,0, x^2)\cdot d\vec{r}</span><script type="math/tex">I_3 = 3\int (0,0, x^2)\cdot d\vec{r}</script></span></p>
+</li>
+<li>
+<p>分段, 发现其中一段的切向量与函数方向垂直, 点积为0, 另有一段函数向量为零, 点积为0,因此只要积其中一段.</p>
+</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   I_3 = 3\int_{C_3} (0, 0, x^2)\cdot (1, 0, -1)dx = -3\int_0^1 x^2dx = -1.
+   </div>
+<script type="math/tex; mode=display">
+   I_3 = 3\int_{C_3} (0, 0, x^2)\cdot (1, 0, -1)dx = -3\int_0^1 x^2dx = -1.
+   </script>
+</div>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li>
+<p>计算 <span class="arithmatex"><span class="MathJax_Preview">I_{2}=\displaystyle \oint_{C} \frac{y^{2}}{2} \mathrm{~d} x-x z \mathrm{~d} y+\frac{y^{2}}{2} \mathrm{~d} z</span><script type="math/tex">I_{2}=\displaystyle \oint_{C} \frac{y^{2}}{2} \mathrm{~d} x-x z \mathrm{~d} y+\frac{y^{2}}{2} \mathrm{~d} z</script></span>, 其中 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">x^{2}+y^{2}+z^{2}=R^{2}</span><script type="math/tex">x^{2}+y^{2}+z^{2}=R^{2}</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">x+y=R</span><script type="math/tex">x+y=R</script></span> 的交线, 从 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 轴正向看去是顺时针方向.</p>
+</li>
+<li>
+<p>计算第二类曲面积分 <span class="arithmatex"><span class="MathJax_Preview">\displaystyle I_{3}=\iint_{\Sigma} x \mathrm{~d} y \mathrm{~d} z+(z+1)^{2} \mathrm{~d} x \mathrm{~d} y</span><script type="math/tex">\displaystyle I_{3}=\iint_{\Sigma} x \mathrm{~d} y \mathrm{~d} z+(z+1)^{2} \mathrm{~d} x \mathrm{~d} y</script></span>, 其中 <span class="arithmatex"><span class="MathJax_Preview">\Sigma</span><script type="math/tex">\Sigma</script></span> 是下半球面 <span class="arithmatex"><span class="MathJax_Preview">z=-\sqrt{1-x^{2}-y^{2}}</span><script type="math/tex">z=-\sqrt{1-x^{2}-y^{2}}</script></span>, 取下侧.</p>
+</li>
+</ol>
+<h3 id="_4">无穷级数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">判断数项级数绝对收敛/条件收敛<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>可以先判断是否绝对收敛,再判断是否条件收敛.</p>
+</blockquote>
+<ol>
+<li>讨论数项级数 <span class="arithmatex"><span class="MathJax_Preview">\sum_{n=1}^{\infty} \frac{n^{n-1}}{\left(2 n^{2}+n+1\right)^{\frac{n+1}{2}}}</span><script type="math/tex">\sum_{n=1}^{\infty} \frac{n^{n-1}}{\left(2 n^{2}+n+1\right)^{\frac{n+1}{2}}}</script></span> 的敛散性.</li>
+</ol>
+<blockquote>
+<p><strong>法一</strong> 放缩即可.</p>
+<p><strong>法二</strong> 根植判别法 <span class="arithmatex"><span class="MathJax_Preview">\lim_{n\to \infin} \sqrt[n]{\frac{n^{n-1}}{\left(2 n^{2}+n+1\right)^{\frac{n+1}{2}}}} = {1\over 2} &lt; 1</span><script type="math/tex">\lim_{n\to \infin} \sqrt[n]{\frac{n^{n-1}}{\left(2 n^{2}+n+1\right)^{\frac{n+1}{2}}}} = {1\over 2} < 1</script></span></p>
+<p>注意配凑出比较好的形式<span class="arithmatex"><span class="MathJax_Preview">x^n</span><script type="math/tex">x^n</script></span>类.</p>
+</blockquote>
+<ol>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text { 考察级数 } \sum_{n=1}^{\infty}\left(\frac{1}{n}-\arctan \frac{1}{n}\right) \text { 的敛散性. }
+   </div>
+<script type="math/tex; mode=display">
+   \text { 考察级数 } \sum_{n=1}^{\infty}\left(\frac{1}{n}-\arctan \frac{1}{n}\right) \text { 的敛散性. }
+   </script>
+</div>
+</li>
+</ol>
+<blockquote>
+<p>先处理<span class="arithmatex"><span class="MathJax_Preview">\arctan {1\over n}</span><script type="math/tex">\arctan {1\over n}</script></span>.</p>
+</blockquote>
+<h4 id="_6">判断广义积分敛散性<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<blockquote>
+<h4 id="_7">做题步骤<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<ol>
+<li>判断广义积分的奇点(若有多个,需要分段)</li>
+<li>对每个部分判断敛散性,方法:</li>
+<li>比较判别法</li>
+<li>放缩</li>
+<li>拆分</li>
+<li>Abel审敛法(有界+积分收敛)</li>
+<li>Dirichlet审敛法(单调趋于零+积分有界)</li>
+<li>非负项有上界</li>
+</ol>
+</blockquote>
+<ol>
+<li>讨论广义积分 <span class="arithmatex"><span class="MathJax_Preview">\int_{0}^{+\infty} x^{p-1} \mathrm{e}^{-x} \mathrm{~d} x</span><script type="math/tex">\int_{0}^{+\infty} x^{p-1} \mathrm{e}^{-x} \mathrm{~d} x</script></span> 的敛散性.</li>
+</ol>
+<blockquote>
+<p><mark>注意</mark>: </p>
+<ul>
+<li>对可能出现奇点的情况进行讨论.(不要**漏**可能的奇点!!)</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">e^x(x\to \infin)</span><script type="math/tex">e^x(x\to \infin)</script></span>趋近<span class="arithmatex"><span class="MathJax_Preview">+\infin</span><script type="math/tex">+\infin</script></span>的速度快于任何幂级数.因此<span class="arithmatex"><span class="MathJax_Preview">\forall k \in \R,\displaystyle  lim_{x\to +\infin}{x^k\over e^x} = 0</span><script type="math/tex">\forall k \in \R,\displaystyle  lim_{x\to +\infin}{x^k\over e^x} = 0</script></span></li>
+<li>但是在说明<span class="arithmatex"><span class="MathJax_Preview">\int {x^{p-1}\over e^x}</span><script type="math/tex">\int {x^{p-1}\over e^x}</script></span>收敛时,比较好的说法是<span class="arithmatex"><span class="MathJax_Preview">{x^{p-1}\over e^x} \le {x^{p-1}\over x^{p+1}}</span><script type="math/tex">{x^{p-1}\over e^x} \le {x^{p-1}\over x^{p+1}}</script></span>.</li>
+</ul>
+</blockquote>
+<ol>
+<li>讨论数项级数 <span class="arithmatex"><span class="MathJax_Preview">\sum_{n=2}^{\infty} \frac{\sin \left(\frac{n \pi}{6}\right)}{\sqrt{n}}</span><script type="math/tex">\sum_{n=2}^{\infty} \frac{\sin \left(\frac{n \pi}{6}\right)}{\sqrt{n}}</script></span> 的敛散性. 如果收敛，是绝对收敛还是条件收敛?</li>
+</ol>
+<blockquote>
+<p>同**例** 8.3.3</p>
+</blockquote>
+<ol>
+<li>求数项级数 <span class="arithmatex"><span class="MathJax_Preview">\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n}\left(1-\frac{1}{3^{n}}\right)</span><script type="math/tex">\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n}\left(1-\frac{1}{3^{n}}\right)</script></span> 的和.</li>
+</ol>
+<blockquote>
+<p><strong>解</strong> 考虑函数项级数<span class="arithmatex"><span class="MathJax_Preview">\sum {(-1)^n\over n}x^n = S(x)</span><script type="math/tex">\sum {(-1)^n\over n}x^n = S(x)</script></span>,</p>
+<p>显然收敛域为<span class="arithmatex"><span class="MathJax_Preview">(-1,1]</span><script type="math/tex">(-1,1]</script></span>.</p>
+<p>$S(x)  = S(x) - S(0) = \int_0^x S'(x) = \int \sum_{n=0}^\infin (-x)^n = \int_0^x{1\over 1+ x}= \ln (x+1). $</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\therefore 原级数 = S(1) -  S({1\over 3}) = \ln 2 - \ln {4\over 3} = \ln {3\over 2},x\in (-1,1].\square</span><script type="math/tex">\therefore 原级数 = S(1) -  S({1\over 3}) = \ln 2 - \ln {4\over 3} = \ln {3\over 2},x\in (-1,1].\square</script></span></p>
+</blockquote>
+<ol>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text { 判别级数 } \sum_{n=1}^{\infty} \frac{1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}}{(n+1)(n+2)} \text { 的敛散性; 若收敛, 求其和. }
+   </div>
+<script type="math/tex; mode=display">
+   \text { 判别级数 } \sum_{n=1}^{\infty} \frac{1+\frac{1}{2}+\frac{1}{3}+\cdots+\frac{1}{n}}{(n+1)(n+2)} \text { 的敛散性; 若收敛, 求其和. }
+   </script>
+</div>
+</li>
+</ol>
+<blockquote>
+<p><strong>注</strong> 这里有一个对<span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^\infin {1\over k}</span><script type="math/tex">\sum_{i=1}^\infin {1\over k}</script></span>的估计.</p>
+<blockquote>
+<p>解: <span class="arithmatex"><span class="MathJax_Preview">x&gt;0</span><script type="math/tex">x>0</script></span> 时, <span class="arithmatex"><span class="MathJax_Preview">\frac{x}{1+x}&lt;\ln (1+x)</span><script type="math/tex">\frac{x}{1+x}<\ln (1+x)</script></span>, 令 <span class="arithmatex"><span class="MathJax_Preview">x=\frac{1}{k}</span><script type="math/tex">x=\frac{1}{k}</script></span>, 则 <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{k+1}&lt;\ln \left(1+\frac{1}{k}\right)</span><script type="math/tex">\frac{1}{k+1}<\ln \left(1+\frac{1}{k}\right)</script></span>, 取 <span class="arithmatex"><span class="MathJax_Preview">k=1,2, \cdots, n-1</span><script type="math/tex">k=1,2, \cdots, n-1</script></span>, 再将各式相加可得 <span class="arithmatex"><span class="MathJax_Preview">a_{n}=1+\frac{1}{2}+\cdots+\frac{1}{n}&lt;\ln n+1&lt;2 \ln n(n \geq 3)</span><script type="math/tex">a_{n}=1+\frac{1}{2}+\cdots+\frac{1}{n}<\ln n+1<2 \ln n(n \geq 3)</script></span>, 所以 <span class="arithmatex"><span class="MathJax_Preview">\frac{a_{n}}{(n+1)(n+2)}&lt;\frac{2 \ln r}{n^{2}}</span><script type="math/tex">\frac{a_{n}}{(n+1)(n+2)}<\frac{2 \ln r}{n^{2}}</script></span> 而 <span class="arithmatex"><span class="MathJax_Preview">\lim _{n \rightarrow \infty} \frac{2 \ln n}{n^{2}} \cdot n^{\frac{3}{2}}=0</span><script type="math/tex">\lim _{n \rightarrow \infty} \frac{2 \ln n}{n^{2}} \cdot n^{\frac{3}{2}}=0</script></span>, 所以级数 <span class="arithmatex"><span class="MathJax_Preview">\sum_{n=1}^{\infty} \frac{2 \ln n}{n^{2}}</span><script type="math/tex">\sum_{n=1}^{\infty} \frac{2 \ln n}{n^{2}}</script></span> 收玫. 由比较判别法, 级数 <span class="arithmatex"><span class="MathJax_Preview">\sum_{n=1}^{\infty} \frac{a_{n}}{(n+1)(n+2)}</span><script type="math/tex">\sum_{n=1}^{\infty} \frac{a_{n}}{(n+1)(n+2)}</script></span> 收敛.
+$$
+\begin{aligned}
+S_{n}=&amp; \sum_{k=1}^{n} \frac{a_{k}}{(k+1)(k+2)}=\sum_{k=1}^{n} a_{k}\left(\frac{1}{k+1}-\frac{1}{k+2}\right)=\frac{a_{1}}{2}+\frac{a_{2}-a_{1}}{3}+\cdots+\frac{a_{n}-a_{n-1}}{n+1}-\frac{a_{n}}{n+2} \
+&amp;=1-\frac{1}{n+1}-\frac{a_{n}}{n+2}, \text { 所以 } \sum_{n=1}^{\infty} \frac{a_{n}}{(n+1)(n+2)}=\lim <em>{n \rightarrow \infty} S</em>{n}=1 .
+\end{aligned}
+$$</p>
+</blockquote>
+</blockquote>
+<h4 id="_8">根据级数求和函数<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<blockquote>
+<ol>
+<li>求收敛半径<span class="arithmatex"><span class="MathJax_Preview">l = \lim {a_{n+1}\over a_n}, R = {1\over l}</span><script type="math/tex">l = \lim {a_{n+1}\over a_n}, R = {1\over l}</script></span>.</li>
+<li>带两端端点,判断收敛区间开闭</li>
+<li>利用和函数的性质,求导/积分/换元(<span class="arithmatex"><span class="MathJax_Preview">S(f(x)) = \sum a_n(f(x)^n)</span><script type="math/tex">S(f(x)) = \sum a_n(f(x)^n)</script></span>) 对和函数变形, 求解后再逆运算得到和函数.</li>
+<li>若还要求某级数</li>
+<li>
+<p>和, 利用和函数带入特定的x即可.</p>
+</li>
+<li>
+<p>有时候可能会先提出/放进去<span class="arithmatex"><span class="MathJax_Preview">x^k</span><script type="math/tex">x^k</script></span>之类的, 然后再求剩下级数的和函数.</p>
+</li>
+</ol>
+</blockquote>
+<ol>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text { 求幂级数 } \sum_{n=1}^{\infty} \frac{2 n-1}{2^{n}} x^{2 n-2} \text { 的收敛域、和函数, 并由此计算 } \sum_{n=1}^{\infty} \frac{2 n-1}{2^{n}} \text { 的和. }
+   </div>
+<script type="math/tex; mode=display">
+   \text { 求幂级数 } \sum_{n=1}^{\infty} \frac{2 n-1}{2^{n}} x^{2 n-2} \text { 的收敛域、和函数, 并由此计算 } \sum_{n=1}^{\infty} \frac{2 n-1}{2^{n}} \text { 的和. }
+   </script>
+</div>
+</li>
+</ol>
+<blockquote>
+<p><strong>注</strong> 此题判断收敛半径时要么不直接用公式,要么做<span class="arithmatex"><span class="MathJax_Preview">t = x^2</span><script type="math/tex">t = x^2</script></span>的代换.</p>
+<p>后面的计算级数是显然的.</p>
+</blockquote>
+<h4 id="_9">将函数展成麦克劳林级数/泰勒级数<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>方法一</strong> 结合*常见函数泰勒级数* 将函数变形至已知函数</p>
+<p><strong>方法二</strong> 利用定义: <span class="arithmatex"><span class="MathJax_Preview">f(x) =\displaystyle \sum_{n=0}^\infin {f^{n}(x_0)\over {n!}}x^n +R_n(x_0)</span><script type="math/tex">f(x) =\displaystyle \sum_{n=0}^\infin {f^{n}(x_0)\over {n!}}x^n +R_n(x_0)</script></span></p>
+<p><mark>注意</mark>: 用第二种方法不要忘了本来就有阶乘!!</p>
+<ul>
+<li>往往题目是几个函数的叠加形式,需要先拆分.</li>
+</ul>
+</blockquote>
+<h3 id="_10">傅里叶级数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>计算比较困难.</p>
+<ul>
+<li>一些常识</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\cos n\pi x = (-1)^n.\\
+\sin n\pi x =0.
+</div>
+<script type="math/tex; mode=display">
+\cos n\pi x = (-1)^n.\\
+\sin n\pi x =0.
+</script>
+</div>
+<p><strong>解题步骤</strong></p>
+<ol>
+<li>
+<p>判断函数周期(或题目要求延拓的周期)<span class="arithmatex"><span class="MathJax_Preview">2l</span><script type="math/tex">2l</script></span>,</p>
+</li>
+<li>
+<p>计算傅里叶系数<span class="arithmatex"><span class="MathJax_Preview">a_0,a_n,b_n</span><script type="math/tex">a_0,a_n,b_n</script></span>(先判断函数奇偶性,可能减少一半计算量)</p>
+</li>
+</ol>
+<p><strong>注意不要乘错,想清楚是乘<span class="arithmatex"><span class="MathJax_Preview">\sin nx</span><script type="math/tex">\sin nx</script></span>还是<span class="arithmatex"><span class="MathJax_Preview">\cos nx</span><script type="math/tex">\cos nx</script></span>, 否则白算</strong>.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+a_n = {1\over \pi} \int_{-\pi}^{\pi}f(x)\cos nx\ dx, n = 0, 1, 2, \cdots\\
+b_n = {1\over \pi} \int_{-\pi}^{pi}f(x) \sin nx\ dx, n = 1, 2, \cdots.\\
+a_n = {1\over l} \int_{-l}^{l}f(x)\cos {n\pi x\over l} dx, n = 0, 1, 2, \cdots\\
+b_n = {1\over l} \int_{-l}^{l}f(x) \sin {n\pi x\over l} dx, n = 1, 2, \cdots.
+</div>
+<script type="math/tex; mode=display">
+a_n = {1\over \pi} \int_{-\pi}^{\pi}f(x)\cos nx\ dx, n = 0, 1, 2, \cdots\\
+b_n = {1\over \pi} \int_{-\pi}^{pi}f(x) \sin nx\ dx, n = 1, 2, \cdots.\\
+a_n = {1\over l} \int_{-l}^{l}f(x)\cos {n\pi x\over l} dx, n = 0, 1, 2, \cdots\\
+b_n = {1\over l} \int_{-l}^{l}f(x) \sin {n\pi x\over l} dx, n = 1, 2, \cdots.
+</script>
+</div>
+<ol>
+<li>写成傅里叶级数</li>
+</ol>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+{a_0\over 2} + \sum_{n=1}^\infin (a_n \cos nx + b_n \sin nx)\\
+{a_0\over 2} + \sum_{n=1}^\infin (a_n \cos  {n\pi x\over l} + b_n \sin  {n\pi x\over l})
+</div>
+<script type="math/tex; mode=display">
+{a_0\over 2} + \sum_{n=1}^\infin (a_n \cos nx + b_n \sin nx)\\
+{a_0\over 2} + \sum_{n=1}^\infin (a_n \cos  {n\pi x\over l} + b_n \sin  {n\pi x\over l})
+</script>
+</div>
+</blockquote>
+<ol>
+<li>将函数 <span class="arithmatex"><span class="MathJax_Preview">f(x)=\pi^{2}-x^{2}</span><script type="math/tex">f(x)=\pi^{2}-x^{2}</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">(-\pi, \pi)</span><script type="math/tex">(-\pi, \pi)</script></span> 上展开成余弦级数, 并求级数 <span class="arithmatex"><span class="MathJax_Preview">\sum_{n=1}^{\infty} \frac{1}{n^{2}}, \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^{2}}</span><script type="math/tex">\sum_{n=1}^{\infty} \frac{1}{n^{2}}, \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^{2}}</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\sum_{n=1}^{\infty} \frac{1}{(2 n-1)^{2}}</span><script type="math/tex">\sum_{n=1}^{\infty} \frac{1}{(2 n-1)^{2}}</script></span> 的和.</li>
+</ol>
+<h3 id="_11">微分方程<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>解题步骤</p>
+<ol>
+<li>确定微分方程类型(往往不那么直接, 需要适当变形:<span class="arithmatex"><span class="MathJax_Preview">{dy\over dx}\iff {dx\over dy}</span><script type="math/tex">{dy\over dx}\iff {dx\over dy}</script></span>/换元/乘积分因子)</li>
+<li>根据不同类型,按部就班选取相应方法求解.</li>
+</ol>
+</blockquote>
+<p><a href="https://www.bilibili.com/video/BV17v411P7nr?spm_id_from=333.337.search-card.all.click">常微分方程全是套路？【数二必看知识框架】十分钟带你梳理微分方程知识框架。看完在做题，痛苦少一半！！_哔哩哔哩_bilibili</a></p>
+<h4 id="_12">各种类型的微分方程<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ol>
+<li>求微分方程 <span class="arithmatex"><span class="MathJax_Preview">\frac{\mathrm{d} y}{\mathrm{~d} x}=\frac{3 x^{2}+2 x y-y^{2}}{2 x y-x^{2}}</span><script type="math/tex">\frac{\mathrm{d} y}{\mathrm{~d} x}=\frac{3 x^{2}+2 x y-y^{2}}{2 x y-x^{2}}</script></span> 的通积分.</li>
+<li>求微分方程 <span class="arithmatex"><span class="MathJax_Preview">\frac{\mathrm{d} y}{\mathrm{~d} x}=\frac{x^{4}+y^{3}}{x y^{2}}</span><script type="math/tex">\frac{\mathrm{d} y}{\mathrm{~d} x}=\frac{x^{4}+y^{3}}{x y^{2}}</script></span> 的通积分.</li>
+</ol>
+<h4 id="simsim">级数<span class="arithmatex"><span class="MathJax_Preview">\sim</span><script type="math/tex">\sim</script></span>微分方程<a class="headerlink" href="#simsim" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>设 <span class="arithmatex"><span class="MathJax_Preview">f(x)=\sum_{n=1}^{\infty} \frac{2(2 n) ! !}{(2 n+1) ! !(n+1)} x^{2(n+1)}, x \in(-1,1)</span><script type="math/tex">f(x)=\sum_{n=1}^{\infty} \frac{2(2 n) ! !}{(2 n+1) ! !(n+1)} x^{2(n+1)}, x \in(-1,1)</script></span>. 求出 <span class="arithmatex"><span class="MathJax_Preview">f(x)</span><script type="math/tex">f(x)</script></span> 满足的微分方程, 并 求解之. 计算 <span class="arithmatex"><span class="MathJax_Preview">\sum_{n=1}^{\infty} \frac{n !}{(2 n+1) ! !(n+1)}</span><script type="math/tex">\sum_{n=1}^{\infty} \frac{n !}{(2 n+1) ! !(n+1)}</script></span>.</p>
+</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text {求微分方程 }\left(\frac{1}{y} \sin \frac{x}{y}-\frac{y}{x^{2}} \cos \frac{y}{x}+5\right) \mathrm{d} x+\left(-\frac{x}{y^{2}} \sin \frac{x}{y}+\frac{1}{x} \cos \frac{y}{x}+\frac{6}{y^{3}}\right) \mathrm{d} y=0 \text { 的通积分. }
+   </div>
+<script type="math/tex; mode=display">
+   \text {求微分方程 }\left(\frac{1}{y} \sin \frac{x}{y}-\frac{y}{x^{2}} \cos \frac{y}{x}+5\right) \mathrm{d} x+\left(-\frac{x}{y^{2}} \sin \frac{x}{y}+\frac{1}{x} \cos \frac{y}{x}+\frac{6}{y^{3}}\right) \mathrm{d} y=0 \text { 的通积分. }
+   </script>
+</div>
+</li>
+</ol>
+<blockquote>
+<p><mark>注意</mark>: 得到诸如<span class="arithmatex"><span class="MathJax_Preview">\sin 1, \cos 1, 5</span><script type="math/tex">\sin 1, \cos 1, 5</script></span>之类的,不要写在上面,而是写到常数C中</p>
+</blockquote>
+<ol>
+<li></li>
+</ol>
+<h4 id="_13">微分方程解的结构<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>主要是要知道解的结构.</p>
+<p>知道特征方程特征值与解的关系.</p>
+<p><mark>注意</mark>: 看清题目是要求*求出特解*or*写出特解的形式*.</p>
+</blockquote>
+<ol>
+<li>已知 <span class="arithmatex"><span class="MathJax_Preview">y_{1}=x e^{x}+e^{2 x}, y_{2}=x e^{x}+e^{-x}, y_{3}=x e^{x}+e^{2 x}-e^{-x}</span><script type="math/tex">y_{1}=x e^{x}+e^{2 x}, y_{2}=x e^{x}+e^{-x}, y_{3}=x e^{x}+e^{2 x}-e^{-x}</script></span> 是某二阶线性非齐次微分方程 的三个解, 求出此微分方程, 写出其通解.</li>
+</ol>
+<blockquote>
+<p>解: <span class="arithmatex"><span class="MathJax_Preview">y_{1}-y_{3}=e^{-x}</span><script type="math/tex">y_{1}-y_{3}=e^{-x}</script></span> 是对应的齐次方程的一个解, 则 <span class="arithmatex"><span class="MathJax_Preview">y_{4}=y_{2}-e^{-x}=x e^{x}</span><script type="math/tex">y_{4}=y_{2}-e^{-x}=x e^{x}</script></span> 是非齐次方程的一个 解, <span class="arithmatex"><span class="MathJax_Preview">y_{1}-y_{4}=e^{2 x}</span><script type="math/tex">y_{1}-y_{4}=e^{2 x}</script></span> 是对应的齐次方程的另一个解。所以 <span class="arithmatex"><span class="MathJax_Preview">-1,2</span><script type="math/tex">-1,2</script></span> 是特征根。
+二阶线性非齐次微分方程为 <span class="arithmatex"><span class="MathJax_Preview">y^{\prime \prime}-y^{\prime}-2 y=f(x)</span><script type="math/tex">y^{\prime \prime}-y^{\prime}-2 y=f(x)</script></span>, 将 <span class="arithmatex"><span class="MathJax_Preview">y_{4}=x e^{x}</span><script type="math/tex">y_{4}=x e^{x}</script></span> 带入方程可得 <span class="arithmatex"><span class="MathJax_Preview">f(x)=(1-2 x) e^{x}</span><script type="math/tex">f(x)=(1-2 x) e^{x}</script></span>. 所以微分方程为 <span class="arithmatex"><span class="MathJax_Preview">y^{\prime \prime}-y^{\prime}-2 y=(1-2 x) e^{x}</span><script type="math/tex">y^{\prime \prime}-y^{\prime}-2 y=(1-2 x) e^{x}</script></span>, 通解为 <span class="arithmatex"><span class="MathJax_Preview">y=C_{1} e^{-x}+C_{2} e^{2 x}+x e^{x}</span><script type="math/tex">y=C_{1} e^{-x}+C_{2} e^{2 x}+x e^{x}</script></span>.</p>
+</blockquote>
+<h2 id="_14">知识与技巧<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="int_0piover-2-sinn-x-dxint_0piover-2-sinn-x-dx">形如<span class="arithmatex"><span class="MathJax_Preview">\int_0^{\pi\over 2} \sin^n x\ dx</span><script type="math/tex">\int_0^{\pi\over 2} \sin^n x\ dx</script></span> 的高阶三角函数积分<a class="headerlink" href="#int_0piover-2-sinn-x-dxint_0piover-2-sinn-x-dx" title="Permanent link">&para;</a></h3>
+<p><a href="https://zhuanlan.zhihu.com/p/400024954">点火公式(华理士公式)及其推广的图像助记 - 知乎 (zhihu.com)</a></p>
+<p><strong>Wallis公式</strong></p>
+<ul>
+<li>华理士公式-基础版</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\int_{0}^{\frac{\pi}{2}} \sin ^{n} x \mathrm{~d} x=\int_{0}^{\frac{\pi}{2}} \cos ^{n} x \mathrm{~d} x=\left\{\begin{array}{l}
+\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{2}{3} \cdot 1 \quad n \text { is odd. } \\
+\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2} \quad n \text { is even. }
+\end{array}\right.
+</div>
+<script type="math/tex; mode=display">
+\int_{0}^{\frac{\pi}{2}} \sin ^{n} x \mathrm{~d} x=\int_{0}^{\frac{\pi}{2}} \cos ^{n} x \mathrm{~d} x=\left\{\begin{array}{l}
+\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{2}{3} \cdot 1 \quad n \text { is odd. } \\
+\frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2} \quad n \text { is even. }
+\end{array}\right.
+</script>
+</div>
+<ul>
+<li>华理士公式-推广公式</li>
+<li>推广公式1</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\int_{0}^{\pi} \sin ^{n} x \mathrm{~d} x=2 \int_{0}^{\frac{\pi}{2}} \sin ^{n} x \mathrm{~d} x= \begin{cases}2 \cdot \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{2}{3} \cdot 1 &amp; n \text { is odd } \\ 2 \cdot \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2} &amp; n \text { is even. }\end{cases}
+</div>
+<script type="math/tex; mode=display">
+\int_{0}^{\pi} \sin ^{n} x \mathrm{~d} x=2 \int_{0}^{\frac{\pi}{2}} \sin ^{n} x \mathrm{~d} x= \begin{cases}2 \cdot \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{2}{3} \cdot 1 & n \text { is odd } \\ 2 \cdot \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2} & n \text { is even. }\end{cases}
+</script>
+</div>
+<ul>
+<li>推广公式2
+  <span class="arithmatex"><span class="MathJax_Preview">\int_{0}^{\pi} \cos ^{n} x \mathrm{~d} x= \begin{cases}0 &amp; n \text { is odd. } \\ 2 \cdot \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2} &amp; n \text { is even }\end{cases}</span><script type="math/tex">\int_{0}^{\pi} \cos ^{n} x \mathrm{~d} x= \begin{cases}0 & n \text { is odd. } \\ 2 \cdot \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2} & n \text { is even }\end{cases}</script></span></li>
+<li>推广公式3
+  <span class="arithmatex"><span class="MathJax_Preview">\int_{0}^{2 \pi} \sin ^{n} x \mathrm{~d} x=\int_{0}^{2 \pi} \cos ^{n} x \mathrm{~d} x= \begin{cases}0 &amp; n \text { is odd } \\ 4 \cdot \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2} &amp; n \text { is even }\end{cases}</span><script type="math/tex">\int_{0}^{2 \pi} \sin ^{n} x \mathrm{~d} x=\int_{0}^{2 \pi} \cos ^{n} x \mathrm{~d} x= \begin{cases}0 & n \text { is odd } \\ 4 \cdot \frac{n-1}{n} \cdot \frac{n-3}{n-2} \cdots \frac{1}{2} \cdot \frac{\pi}{2} & n \text { is even }\end{cases}</script></span></li>
+</ul>
+<blockquote>
+<p>于是
+$$
+\int_0^{\pi\over 2}\sin^3xdx = {2\over 3}.\
+\int_0^{\pi\over 2}\sin^4xdx = {3\over 4}\cdot {1\over 2}\cdot {\pi\over 2}.
+$$</p>
+</blockquote>
+<h3 id="_15">常见函数泰勒级数<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{align}
+(1)&amp; e^x = \sum_{n=0}^\infin {1\over n!}x^n=1 + x + {1\over 2}x^2 + {1\over 3}x^3 + \cdots, &amp; x \in (-\infin, +\infin)\\
+(2)&amp; \sin x = \sum_{k=1}^\infin {(-1)^{k+1}\over (2k-1)!} x^{2k-1} = 1 - {1\over 3!}x^3 + {1\over 5!}x^5 - \cdots,&amp; x \in (-\infin, +\infin)\\
+(3)&amp; \cos x = \sum_{k=0}^\infin {(-1)^k\over (2k)!}x^{2k} = 1-{1\over 2!}x^2 +{1\over 4!}x^4 - \cdots,&amp; x \in (-\infin, +\infin)\\
+(4)&amp; {1\over 1+x} = \sum_{k=0}^\infin (-1)^kx^k=1-x + x^2-x^3 + \cdots, &amp; x\in (-1,1)\\
+(5)&amp; \ln (x+1) = \sum_{k=0}^\infin {(-1)^k\over (k+1)}x^{k+1} = x - {1\over 2}x^2 + {1\over 3}x^3 - \cdots,&amp; x \in (-1,1]\\
+(6)&amp; a^x = e^{x\ln a} = \sum_{n=0}^\infin {(\ln a)^n\over n!}x^n,&amp; x \in (-\infin, +\infin)\\
+(7)&amp; \arctan x  =\sum_{k=0}^\infin {(-1)^n\over (2n+1)}x^{2n+1},&amp; x\in [-1, 1]\\
+(\bold8)&amp; (1+x)^m = 1 + \sum_{n=1}^\infin {m(m-1))\cdots (m-n+1)\over n!}x^n,&amp; x\in (-1,1)
+\end{align}
+</div>
+<script type="math/tex; mode=display">
+\begin{align}
+(1)& e^x = \sum_{n=0}^\infin {1\over n!}x^n=1 + x + {1\over 2}x^2 + {1\over 3}x^3 + \cdots, & x \in (-\infin, +\infin)\\
+(2)& \sin x = \sum_{k=1}^\infin {(-1)^{k+1}\over (2k-1)!} x^{2k-1} = 1 - {1\over 3!}x^3 + {1\over 5!}x^5 - \cdots,& x \in (-\infin, +\infin)\\
+(3)& \cos x = \sum_{k=0}^\infin {(-1)^k\over (2k)!}x^{2k} = 1-{1\over 2!}x^2 +{1\over 4!}x^4 - \cdots,& x \in (-\infin, +\infin)\\
+(4)& {1\over 1+x} = \sum_{k=0}^\infin (-1)^kx^k=1-x + x^2-x^3 + \cdots, & x\in (-1,1)\\
+(5)& \ln (x+1) = \sum_{k=0}^\infin {(-1)^k\over (k+1)}x^{k+1} = x - {1\over 2}x^2 + {1\over 3}x^3 - \cdots,& x \in (-1,1]\\
+(6)& a^x = e^{x\ln a} = \sum_{n=0}^\infin {(\ln a)^n\over n!}x^n,& x \in (-\infin, +\infin)\\
+(7)& \arctan x  =\sum_{k=0}^\infin {(-1)^n\over (2n+1)}x^{2n+1},& x\in [-1, 1]\\
+(\bold8)& (1+x)^m = 1 + \sum_{n=1}^\infin {m(m-1))\cdots (m-n+1)\over n!}x^n,& x\in (-1,1)
+\end{align}
+</script>
+</div>
+<h3 id="_16">和差化积\积化和差<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>该技巧常用于对级数化简(去<span class="arithmatex"><span class="MathJax_Preview">\sum</span><script type="math/tex">\sum</script></span>).</p>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\sum \cos n\theta就乘\sin\theta \rightarrow 2 \cos \alpha \sin \beta =\sin (\alpha+\beta)-\sin (\alpha -\beta)\\
+\sum \sin n\theta也配\sin\theta \rightarrow 2 \sin \alpha \sin \beta =\cos (\alpha-\beta)-\cos (\alpha +\beta)\\
+(另外两种化出来是和的形式, 用处不大)
+</div>
+<script type="math/tex; mode=display">
+\sum \cos n\theta就乘\sin\theta \rightarrow 2 \cos \alpha \sin \beta =\sin (\alpha+\beta)-\sin (\alpha -\beta)\\
+\sum \sin n\theta也配\sin\theta \rightarrow 2 \sin \alpha \sin \beta =\cos (\alpha-\beta)-\cos (\alpha +\beta)\\
+(另外两种化出来是和的形式, 用处不大)
+</script>
+</div>
+<h3 id="_17">常见的一些曲线\曲面<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h4 id="_18">旋轮线/摆线<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>例</strong> 设 <span class="arithmatex"><span class="MathJax_Preview">C: x=a(t-\sin t), y=a(1-\cos t), t: 0 \rightarrow 2 \pi</span><script type="math/tex">C: x=a(t-\sin t), y=a(1-\cos t), t: 0 \rightarrow 2 \pi</script></span> 为旋轮线的一拱, 方向由原点 到 <span class="arithmatex"><span class="MathJax_Preview">A(2 \pi a, 0), \quad</span><script type="math/tex">A(2 \pi a, 0), \quad</script></span> 计算 <span class="arithmatex"><span class="MathJax_Preview">I_{1}=\int_{C}\left((x+y+1) e^{x}-e^{y}+y\right) \mathrm{d} x+\left(e^{x}-(x+y+1) e^{y}-x\right) \mathrm{d} y</span><script type="math/tex">I_{1}=\int_{C}\left((x+y+1) e^{x}-e^{y}+y\right) \mathrm{d} x+\left(e^{x}-(x+y+1) e^{y}-x\right) \mathrm{d} y</script></span>.</p>
+</blockquote>
+<p>旋轮线的题目基本都联系green公式形成套路. 比较好的情况是转化得到的二重积分恰为0, 否则需要计算.</p>
+<ul>
+<li>一拱的面积
+  $$
+  S = \int_0^{2\pi }ydx = a^2(1-\cos t)^2dt = a<sup>2\int_0</sup>{2\pi} (1+ {1\over 2})dx = 3\pi a^2.
+  $$</li>
+</ul>
+<h2 id="_19">问题<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<ol>
+<li>遇到<span class="arithmatex"><span class="MathJax_Preview">\int\ln xdx</span><script type="math/tex">\int\ln xdx</script></span>什么时候去绝对值?</li>
+</ol>
+<blockquote>
+<p><strong>例</strong> $$
+\text { 求微分方程 } 2 x y \cdot y<sup>{\prime}-y</sup>{2}+x=0 \text { 的解. }
+$$</p>
+</blockquote>
+<ol>
+<li>使用高斯公式时, 怎么根据有向曲面的方向判断积分是否要变号?</li>
+</ol>
+<blockquote>
+<p><strong>例</strong> 
+$$
+\text { 计算 } I_{2}=\iint_{S} 2 x^{3} \mathrm{~d} y \mathrm{~d} z+2 y^{3} \mathrm{~d} z \mathrm{~d} x+3\left(z^{2}-1\right) \mathrm{d} x \mathrm{~d} y \text  {, 其中 } S \text { 为曲面 } z=1-x<sup>{2}-y</sup>{2}(z \geq 0) \text { 的上侧 }
+$$
+计算 <span class="arithmatex"><span class="MathJax_Preview">I_{1}=\iint_{S}\left(x^{3}+a z^{2}\right) \mathrm{d} y \mathrm{~d} z+\left(y^{3}+a x^{2}\right) \mathrm{d} z \mathrm{~d} x+\left(z^{3}+a y^{2}\right) \mathrm{d} x \mathrm{~d} y</span><script type="math/tex">I_{1}=\iint_{S}\left(x^{3}+a z^{2}\right) \mathrm{d} y \mathrm{~d} z+\left(y^{3}+a x^{2}\right) \mathrm{d} z \mathrm{~d} x+\left(z^{3}+a y^{2}\right) \mathrm{d} x \mathrm{~d} y</script></span>, 其中 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 为曲面 <span class="arithmatex"><span class="MathJax_Preview">z=</span><script type="math/tex">z=</script></span> <span class="arithmatex"><span class="MathJax_Preview">\sqrt{a^{2}-x^{2}-y^{2}}(a&gt;0)</span><script type="math/tex">\sqrt{a^{2}-x^{2}-y^{2}}(a>0)</script></span> 的上侧.</p>
+</blockquote>
+<ol>
+<li>
+<p>一个说法问题: 什么叫**从<span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>轴正向看去**?</p>
+</li>
+<li>
+<p>对*投影法* *长公式*的一些思考</p>
+</li>
+</ol>
+<h2 id="_20">注意点<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<ol>
+<li>解微分方程时如果换元了,<mark>一定要记得最后再换回去</mark>!</li>
+<li>将函数展开成级数(傅里叶级数)时, 要注意最后的结果要检查有没有*瑕项* (n带入没有意义的项),如果有就要单独写出来.</li>
+</ol>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../Calculus-II-midterm-review/" class="md-footer__link md-footer__link--prev" aria-label="上一页: midterm review" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              midterm review
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-footer__link md-footer__link--next" aria-label="下一页: 代数系统" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              代数系统
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

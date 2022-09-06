@@ -1,0 +1,1561 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>离散数学笔记-图论-支配与着色 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              离散数学笔记-图论-支配与着色
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt1/" class="md-tabs__link md-tabs__link--active">
+        数学
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        计算机科学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+        技能树
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          支配与着色
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        支配与着色
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    知识点
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    支配集\点覆盖集\点独立集
+  </a>
+  
+    <nav class="md-nav" aria-label="支配集\点覆盖集\点独立集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    支配集(这些点支配其他所有点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    (点)独立集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    点覆盖集(点覆盖所有边)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    边覆盖集与匹配
+  </a>
+  
+    <nav class="md-nav" aria-label="边覆盖集与匹配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    边覆盖(边覆盖所有点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    匹配(边独立集)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    各种集合的总结
+  </a>
+  
+    <nav class="md-nav" aria-label="各种集合的总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#berge" class="md-nav__link">
+    Berge定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    二部图的匹配
+  </a>
+  
+    <nav class="md-nav" aria-label="二部图的匹配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-hall" class="md-nav__link">
+    完备匹配的充要条件-Hall定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-t" class="md-nav__link">
+    完备匹配的充分条件-t条件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    习题
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    完备匹配\完美匹配
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    二部图匹配应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    交错路径
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          计算机科学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机科学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机科学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          技能树
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技能树" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          技能树
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课堂笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          课堂笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="随笔" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    知识点
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    支配集\点覆盖集\点独立集
+  </a>
+  
+    <nav class="md-nav" aria-label="支配集\点覆盖集\点独立集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    支配集(这些点支配其他所有点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    (点)独立集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    点覆盖集(点覆盖所有边)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    边覆盖集与匹配
+  </a>
+  
+    <nav class="md-nav" aria-label="边覆盖集与匹配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    边覆盖(边覆盖所有点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    匹配(边独立集)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    各种集合的总结
+  </a>
+  
+    <nav class="md-nav" aria-label="各种集合的总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#berge" class="md-nav__link">
+    Berge定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    二部图的匹配
+  </a>
+  
+    <nav class="md-nav" aria-label="二部图的匹配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-hall" class="md-nav__link">
+    完备匹配的充要条件-Hall定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-t" class="md-nav__link">
+    完备匹配的充分条件-t条件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    习题
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    完备匹配\完美匹配
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    二部图匹配应用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    交错路径
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="_1">支配集\覆盖集\独立集\支配与着色<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">知识点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">支配集\点覆盖集\点独立集<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h4 id="_4">支配集(这些点支配其他所有点)<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>无向图<span class="arithmatex"><span class="MathJax_Preview">G = &lt;V,E&gt;</span><script type="math/tex">G = <V,E></script></span>,取<span class="arithmatex"><span class="MathJax_Preview">V^* \sube V</span><script type="math/tex">V^* \sube V</script></span>,使得对于<span class="arithmatex"><span class="MathJax_Preview">\forall v_i \in V-V^*</span><script type="math/tex">\forall v_i \in V-V^*</script></span>,都能在<span class="arithmatex"><span class="MathJax_Preview">V^*</span><script type="math/tex">V^*</script></span>中找到一个点与其相连.就称<span class="arithmatex"><span class="MathJax_Preview">V^*</span><script type="math/tex">V^*</script></span>为支配集.</p>
+<ul>
+<li>极小支配集</li>
+<li>最小支配集</li>
+<li>G的支配数为最小支配集中顶点的个数.记作<span class="arithmatex"><span class="MathJax_Preview">\gamma_0(G)</span><script type="math/tex">\gamma_0(G)</script></span>.</li>
+</ul>
+<h4 id="_5">(点)独立集<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>无向图<span class="arithmatex"><span class="MathJax_Preview">G = &lt;V,E&gt;</span><script type="math/tex">G = <V,E></script></span>,取<span class="arithmatex"><span class="MathJax_Preview">V^* \sube V</span><script type="math/tex">V^* \sube V</script></span>,使得 <span class="arithmatex"><span class="MathJax_Preview">V^*</span><script type="math/tex">V^*</script></span>中任意两个点都不相邻,则称为G的(点)独立集</p>
+<ul>
+<li>极大独立集</li>
+<li>最大独立集</li>
+<li>G的点独立数为最大独立集中的顶点数.记作<span class="arithmatex"><span class="MathJax_Preview">\beta_0(G)</span><script type="math/tex">\beta_0(G)</script></span></li>
+</ul>
+<h4 id="_6">定理<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>极大独立集**都是**极小支配集</strong>,反之不然</li>
+</ul>
+<h4 id="_7">点覆盖集(点覆盖所有边)<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>无向图<span class="arithmatex"><span class="MathJax_Preview">G = &lt;V,E&gt;</span><script type="math/tex">G = <V,E></script></span>,取<span class="arithmatex"><span class="MathJax_Preview">V^* \sube V</span><script type="math/tex">V^* \sube V</script></span>,使得G中任意一条边,都有<span class="arithmatex"><span class="MathJax_Preview">V^*</span><script type="math/tex">V^*</script></span>中一个顶点相关联.则成为G的点覆盖集.简称为点覆盖.</p>
+<ul>
+<li>极小点覆盖</li>
+<li>最小点覆盖</li>
+<li>点覆盖数为最小点覆盖中的顶点数,记作<span class="arithmatex"><span class="MathJax_Preview">\alpha_0(G)</span><script type="math/tex">\alpha_0(G)</script></span>.</li>
+</ul>
+<h4 id="_8">定理<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">V^*</span><script type="math/tex">V^*</script></span>为G的点覆盖<span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span><span class="arithmatex"><span class="MathJax_Preview">\overline{V^*} = V-V^*</span><script type="math/tex">\overline{V^*} = V-V^*</script></span>为G的点独立集.</li>
+<li><strong>推论</strong>: <span class="arithmatex"><span class="MathJax_Preview">V^*</span><script type="math/tex">V^*</script></span>为G的极小(最小)覆盖<span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span><span class="arithmatex"><span class="MathJax_Preview">\overline{V^*} =V-V^*</span><script type="math/tex">\overline{V^*} =V-V^*</script></span>是G的极大(最大)点独立集,从而有<span class="arithmatex"><span class="MathJax_Preview">\alpha_0 +\beta_0 = n</span><script type="math/tex">\alpha_0 +\beta_0 = n</script></span>.</li>
+</ul>
+<h3 id="_9">边覆盖集与匹配<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h4 id="_10">边覆盖(边覆盖所有点)<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>设G没有**孤立点**,<span class="arithmatex"><span class="MathJax_Preview">E^* \sube E</span><script type="math/tex">E^* \sube E</script></span>(<mark>注意这是一个**边集**</mark>),使得<span class="arithmatex"><span class="MathJax_Preview">\forall v \in V</span><script type="math/tex">\forall v \in V</script></span>,<span class="arithmatex"><span class="MathJax_Preview">\exist e \in E^*</span><script type="math/tex">\exist e \in E^*</script></span>,<span class="arithmatex"><span class="MathJax_Preview">e与v关联</span><script type="math/tex">e与v关联</script></span>.则称<span class="arithmatex"><span class="MathJax_Preview">E^*</span><script type="math/tex">E^*</script></span>为G的边覆盖(集)</p>
+<ul>
+<li>极小边覆盖</li>
+<li>最小边覆盖</li>
+<li>边覆盖数为最小边覆盖中的边数,记作<span class="arithmatex"><span class="MathJax_Preview">\alpha_1</span><script type="math/tex">\alpha_1</script></span>.</li>
+</ul>
+<h4 id="_11">匹配(边独立集)<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p>一个边集,其中所有元素都不相邻.</p>
+<ul>
+<li>极大匹配(极大边独立集)</li>
+<li>最大匹配(最大边独立集)</li>
+<li>匹配数(边独立数)为最大匹配中的边数,记作<span class="arithmatex"><span class="MathJax_Preview">\beta_1</span><script type="math/tex">\beta_1</script></span>.</li>
+</ul>
+<p>设M为图<span class="arithmatex"><span class="MathJax_Preview">G = &lt;V,E&gt;</span><script type="math/tex">G = <V,E></script></span> 的一个匹配,</p>
+<ul>
+<li>
+<p>称M中的边为匹配边,不在其中的边为非匹配边</p>
+</li>
+<li>
+<p>与匹配边相关联的点成为**饱和点**(不能再连其他边,因此饱和),不与匹配边关联的点为非饱和点.</p>
+</li>
+<li>
+<p>若G中每一个定点都是饱和点,则称M为G的**完美匹配**.(每一个点都有边关联,都被匹配到)</p>
+</li>
+<li>
+<p>G中由**匹配边**与**非匹配边**交替构成的路径叫做**交错路径**,起点和终点都是**非饱和点**的交错路径成为**可增广的交错路径**,交替构成的圈称为**交错圈**(显然是偶圈).</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>注</strong>:为什么边独立集叫做匹配?</p>
+<p>笔者的理解是,匹配要求一个点不能被匹配超过一次,也就是边与边不能相邻(类比一男不能脚踏两条船),因此我们从图中选取一些**不相邻**的边,在就构成了符合条件的匹配.</p>
+</blockquote>
+<h4 id="_12">定理<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>设n阶图G中无孤立点.</p>
+<p>(1)设M为G的一个最大匹配,对G中每一个<span class="arithmatex"><span class="MathJax_Preview">M-</span><script type="math/tex">M-</script></span>非饱和点均取一条与其关联的边,组成边集N,则<span class="arithmatex"><span class="MathJax_Preview">W = M\cup N</span><script type="math/tex">W = M\cup N</script></span>为G的最小边覆盖.</p>
+<p>(2)最小边覆盖中移去相邻的边中的一条得到的匹配为最大匹配</p>
+<p>(3)边覆盖数<span class="arithmatex"><span class="MathJax_Preview">\alpha_1+</span><script type="math/tex">\alpha_1+</script></span>匹配数<span class="arithmatex"><span class="MathJax_Preview">\beta_1= n</span><script type="math/tex">\beta_1= n</script></span>.</p>
+<h3 id="_13">各种集合的总结<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ol>
+<li>覆盖-独立-支配</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\alpha_0 + \beta_0 = n</span><script type="math/tex">\alpha_0 + \beta_0 = n</script></span>.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\alpha_1 + \beta_1 = n</span><script type="math/tex">\alpha_1 + \beta_1 = n</script></span>.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\gamma_0</span><script type="math/tex">\gamma_0</script></span>自称一派.</li>
+</ol>
+<h4 id="berge">Berge定理<a class="headerlink" href="#berge" title="Permanent link">&para;</a></h4>
+<p>设M是G的一个匹配,则M是G的最大匹配<span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span>G中不含有关于M的可增广路径.</p>
+<h3 id="_14">二部图的匹配<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>设<span class="arithmatex"><span class="MathJax_Preview">G = <V_1,V_2,E> <span class="arithmatex"><span class="MathJax_Preview">为二部图,</span><script type="math/tex">为二部图,</script></span>|V_1| \le |V_2||V_1| \le |V_2|</span><script type="math/tex">G = <V_1,V_2,E> <span class="arithmatex"><span class="MathJax_Preview">为二部图,</span><script type="math/tex">为二部图,</script></span>|V_1| \le |V_2||V_1| \le |V_2|</script></span>,M为G的一个匹配.当<span class="arithmatex"><span class="MathJax_Preview">|M| = |V_1|</span><script type="math/tex">|M| = |V_1|</script></span>,称M为<span class="arithmatex"><span class="MathJax_Preview">V_1</span><script type="math/tex">V_1</script></span>到<span class="arithmatex"><span class="MathJax_Preview">V_2</span><script type="math/tex">V_2</script></span>的**完备匹配**.</p>
+<blockquote>
+<p>完备匹配一定是最大匹配,因为所有<span class="arithmatex"><span class="MathJax_Preview">V_1</span><script type="math/tex">V_1</script></span>中的点都被饱和了,但不一定是完美匹配.</p>
+</blockquote>
+<p>当且仅当<span class="arithmatex"><span class="MathJax_Preview">|V_1| = |V_2| =|M|</span><script type="math/tex">|V_1| = |V_2| =|M|</script></span>时,M是**完美匹配**.</p>
+<h4 id="-hall">完备匹配的充要条件-Hall定理<a class="headerlink" href="#-hall" title="Permanent link">&para;</a></h4>
+<p>G中存在<span class="arithmatex"><span class="MathJax_Preview">V_1</span><script type="math/tex">V_1</script></span>到<span class="arithmatex"><span class="MathJax_Preview">V_2</span><script type="math/tex">V_2</script></span>的完备匹配<span class="arithmatex"><span class="MathJax_Preview">\iff V_1</span><script type="math/tex">\iff V_1</script></span>中任意<span class="arithmatex"><span class="MathJax_Preview">k(k = 1, 2, \cdots, |V_1|)</span><script type="math/tex">k(k = 1, 2, \cdots, |V_1|)</script></span>个顶点**至少**与<span class="arithmatex"><span class="MathJax_Preview">V_2</span><script type="math/tex">V_2</script></span>中<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>个顶点相邻.</p>
+<p>即,<span class="arithmatex"><span class="MathJax_Preview">\forall i = 1,2,3,\dots, |V_i| \le |N(V_i)|.</span><script type="math/tex">\forall i = 1,2,3,\dots, |V_i| \le |N(V_i)|.</script></span></p>
+<ul>
+<li>归纳证明.</li>
+</ul>
+<p>(1)对 <span class="arithmatex"><span class="MathJax_Preview">V_{1}</span><script type="math/tex">V_{1}</script></span> 的任意真子集 <span class="arithmatex"><span class="MathJax_Preview">A,|N(A)|&gt;|A|</span><script type="math/tex">A,|N(A)|>|A|</script></span> 任取一个顶点 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{v} \in \mathbf{V}_{1}</span><script type="math/tex">\mathbf{v} \in \mathbf{V}_{1}</script></span>, 任取 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{w} \in \mathbf{N}(\{\mathbf{v}\})</span><script type="math/tex">\mathbf{w} \in \mathbf{N}(\{\mathbf{v}\})</script></span>. <span class="arithmatex"><span class="MathJax_Preview">\mathbf{H}=\mathbf{G}-\{\mathbf{v}, \mathbf{w}\}</span><script type="math/tex">\mathbf{H}=\mathbf{G}-\{\mathbf{v}, \mathbf{w}\}</script></span> 是一个二部图（非空）
+  H满足归纳假设的条件, 从而 <span class="arithmatex"><span class="MathJax_Preview">H</span><script type="math/tex">H</script></span> 有 <span class="arithmatex"><span class="MathJax_Preview">V_{1}-\{\mathbf{v}\}</span><script type="math/tex">V_{1}-\{\mathbf{v}\}</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">V_{2}-\{\mathbf{w}\}</span><script type="math/tex">V_{2}-\{\mathbf{w}\}</script></span> 的完备匹配. 这个匹配加上边 <span class="arithmatex"><span class="MathJax_Preview">(v, w)</span><script type="math/tex">(v, w)</script></span> 构成 <span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span> 的从 <span class="arithmatex"><span class="MathJax_Preview">V_{1}</span><script type="math/tex">V_{1}</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">V_{2}</span><script type="math/tex">V_{2}</script></span> 的完备匹配.</p>
+<blockquote>
+<p><strong>说明</strong></p>
+<p>为什么要分成<span class="arithmatex"><span class="MathJax_Preview">|N(A)| &gt; |A|</span><script type="math/tex">|N(A)| > |A|</script></span> 的情况?</p>
+<p><img src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220530110908931.png" alt="image-20220530110908931" style="zoom:25%;" /></p>
+<p>因为这样的话,就有<span class="arithmatex"><span class="MathJax_Preview">|N(A| \ge |A|+1)</span><script type="math/tex">|N(A| \ge |A|+1)</script></span>,我们删去点v,w后,即使对于w的最坏的情况,即w连了尽可能多的边,那么删去w后,对于<span class="arithmatex"><span class="MathJax_Preview">V_1 = V-v</span><script type="math/tex">V_1 = V-v</script></span>,每个点的度数保持不变或者减1,因此对于<span class="arithmatex"><span class="MathJax_Preview">V_1</span><script type="math/tex">V_1</script></span>,我们仍有<span class="arithmatex"><span class="MathJax_Preview">\forall V_i \sub V_1, |V_i| \le |N(V_i)|</span><script type="math/tex">\forall V_i \sub V_1, |V_i| \le |N(V_i)|</script></span>.</p>
+</blockquote>
+<h4 id="-t">完备匹配的充分条件-t条件<a class="headerlink" href="#-t" title="Permanent link">&para;</a></h4>
+<p>若<span class="arithmatex"><span class="MathJax_Preview">V_1</span><script type="math/tex">V_1</script></span>中每个顶点至少关联<span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>条边,且<span class="arithmatex"><span class="MathJax_Preview">V_2</span><script type="math/tex">V_2</script></span>中每个顶点至多关联<span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span>条边.则存在完备匹配.</p>
+<h2 id="_15">习题<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
+<h3 id="_16">完备匹配\完美匹配<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ol>
+<li><span class="arithmatex"><span class="MathJax_Preview">\text { 一个无回路的简单连通图最多只有一个完美匹配。(完美匹配指能饱和所有顶点的匹配) }</span><script type="math/tex">\text { 一个无回路的简单连通图最多只有一个完美匹配。(完美匹配指能饱和所有顶点的匹配) }</script></span></li>
+</ol>
+<blockquote>
+<p>即证一棵树至多有一个完美匹配.</p>
+<p>构造法证明</p>
+<blockquote>
+<p>对每个叶子结点，它只能和唯一与它相邻的那个点匹配
+如果一个结点连了两个或以上的叶子结点，那么这两个叶子结点中至少有一个是不能匹配的
+所以，只有当每个结点最多只和一个叶子结点相邻的时候，才会存在完美匹配
+去掉叶子结点以及与其相邻的点，会得到若干不连通的树
+重复上面的过程，直到所有的结点都被匹配或者有点不能被匹配
+由于在任意阶段，每个结点最多只会和一个叶子结点相连，所以这个匹配的方法都是被唯一确定下来的
+因此一棵树最多只有一种完美匹配的方法。</p>
+</blockquote>
+</blockquote>
+<ol>
+<li>
+<p>令 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 为一整数。对于任意有限集合, 证明对它的任意两个 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 划分都存在一个相同的代表集。</p>
+</li>
+<li>
+<p>集合的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 划分指划分为大小相同的互不相交的 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 个子集, 为简便起见, 设集合的大小为 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 的整数倍从而 每个子集均有相同个元素。</p>
+</li>
+<li>一个划分的代表集指从每个子集中取出一个元素而构成的集合。
+     举例：集合 <span class="arithmatex"><span class="MathJax_Preview">\{1,2,3,4\}</span><script type="math/tex">\{1,2,3,4\}</script></span> 的一个 2 划分为 <span class="arithmatex"><span class="MathJax_Preview">A:\{1,2\}\{3,4\}</span><script type="math/tex">A:\{1,2\}\{3,4\}</script></span> 。此划分的代表集有 <span class="arithmatex"><span class="MathJax_Preview">\{1,3\},\{2,3\},\{1,4\},\{2,4\}</span><script type="math/tex">\{1,3\},\{2,3\},\{1,4\},\{2,4\}</script></span>, 但 <span class="arithmatex"><span class="MathJax_Preview">\{1,2\}</span><script type="math/tex">\{1,2\}</script></span> 不是其代表集。集合的另外一个划分为 <span class="arithmatex"><span class="MathJax_Preview">B:\{2,3\}\{1,4\}</span><script type="math/tex">B:\{2,3\}\{1,4\}</script></span> 。易见, <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 存在相同的代表集 <span class="arithmatex"><span class="MathJax_Preview">\{1,3\}</span><script type="math/tex">\{1,3\}</script></span> 。</li>
+</ol>
+<blockquote>
+<p><strong>解析</strong></p>
+<p>难点在于怎么将题目转化为图的问题.</p>
+<p>两个划分各自构成二部图的两边，划分中的子集相邻当且仅当这两个子集有相同元素.</p>
+<p>于是由t-条件,存在一个完备匹配,且是完美的.</p>
+</blockquote>
+<ol>
+<li><img alt="image-20220603151624239" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220603151624239.png" /></li>
+</ol>
+<blockquote>
+<p>注意到题目条件**对所有<span class="arithmatex"><span class="MathJax_Preview">k \le</span><script type="math/tex">k \le</script></span> n,任意k个集合的并集至少包含<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>个元素**,这句话非常像二部图完备匹配的充要条件(Hall定理)</p>
+<p>稍微难的地方在于建图:什么作为点?什么作为关系?</p>
+</blockquote>
+<ol>
+<li><img alt="image-20220603171658252" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220603171658252.png" /></li>
+</ol>
+<h3 id="_17">二部图匹配应用<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><img src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220530114829358.png" alt="image-20220530114829358" style="zoom: 33%;" /></p>
+</li>
+<li>
+<p><img alt="image-20220601213221310" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220601213221310.png" /></p>
+</li>
+</ol>
+<blockquote>
+<p>经典染色问题.</p>
+<p>对方格间隔染色.不难发现任意的小矩形都有1黑1白,而相同颜色的方格不能出现在同一个小矩形上.这构成一个二部图.而要求裁成若干小矩形,就要求存在完美匹配.</p>
+<p>而显然<span class="arithmatex"><span class="MathJax_Preview">|V_1| \ne |V_2|</span><script type="math/tex">|V_1| \ne |V_2|</script></span>.故不存在完美匹配.</p>
+</blockquote>
+<h3 id="_18">交错路径<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ol>
+<li><img alt="image-20220601203307388" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220601203307388.png" /></li>
+</ol>
+<blockquote>
+<p>对圆圈间隔染色,不难发现任意一条边必须经过一个绿色和一个黑色,因此最终得到的路径必然是绿白交错的,根据小学的植树原理,绿色的圆圈要么与白色相等,要么与白色相差1,而这里有13个绿圈,11个白圈,显然不能构成一条简单路径.</p>
+</blockquote>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 格与布尔代数" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              格与布尔代数
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-footer__link md-footer__link--next" aria-label="下一页: 欧拉图与哈密顿图" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              欧拉图与哈密顿图
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1901 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>Calculus-II-notes-chapt3 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#7" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Calculus-II-notes-chapt3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Calculus-II-notes-chapt1/" class="md-tabs__link md-tabs__link--active">
+        数学
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        计算机科学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+        技能树
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          chap 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        chap 3
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7 曲线积分·曲面积分与场论
+  </a>
+  
+    <nav class="md-nav" aria-label="7 曲线积分·曲面积分与场论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    7.1 第一类曲线积分
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 第一类曲线积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711" class="md-nav__link">
+    7.1.1 第一类曲线积分的概念与性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#712" class="md-nav__link">
+    7.1.2 第一类曲线积分的计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    7.2 第二类曲线积分
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 第二类曲线积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721" class="md-nav__link">
+    7.2.1 第二类曲线积分的概念与性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722" class="md-nav__link">
+    7.2.2 第二类曲线积分的计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723" class="md-nav__link">
+    7.2.3 两类曲线积分之间的联系
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    7.3 格林公式
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 格林公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    推论：求闭区域的面积
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732" class="md-nav__link">
+    7.3.2 平面上第二类曲线积分与路径无关的条件
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3.2 平面上第二类曲线积分与路径无关的条件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    曲线积分的基本公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    7.4 第一类曲面积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    7.5 第二类曲面积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    7.6 高斯公式和斯托克斯公式
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 高斯公式和斯托克斯公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gauss" class="md-nav__link">
+    Gauss公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stokes" class="md-nav__link">
+    Stokes公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    各类积分归纳整理
+  </a>
+  
+    <nav class="md-nav" aria-label="各类积分归纳整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    一重积分
+  </a>
+  
+    <nav class="md-nav" aria-label="一重积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-fxy-dsint-fxy-ds" class="md-nav__link">
+    第一类曲线积分\int f(x,y) ds\int f(x,y) ds（立体侧面积、物质曲线的质量）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    特例：曲线长度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    一重积分和二重积分的联系：格林公式(可以求面积)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    第二类曲线积分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    二重积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#green-gauss-stokes" class="md-nav__link">
+    Green公式 Gauss公式 Stokes公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    第二类曲面积分 - 投影法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          计算机科学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机科学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机科学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          技能树
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技能树" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          技能树
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课堂笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          课堂笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="随笔" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    7 曲线积分·曲面积分与场论
+  </a>
+  
+    <nav class="md-nav" aria-label="7 曲线积分·曲面积分与场论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    7.1 第一类曲线积分
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 第一类曲线积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#711" class="md-nav__link">
+    7.1.1 第一类曲线积分的概念与性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#712" class="md-nav__link">
+    7.1.2 第一类曲线积分的计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    7.2 第二类曲线积分
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 第二类曲线积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721" class="md-nav__link">
+    7.2.1 第二类曲线积分的概念与性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722" class="md-nav__link">
+    7.2.2 第二类曲线积分的计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#723" class="md-nav__link">
+    7.2.3 两类曲线积分之间的联系
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    7.3 格林公式
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 格林公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    推论：求闭区域的面积
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732" class="md-nav__link">
+    7.3.2 平面上第二类曲线积分与路径无关的条件
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3.2 平面上第二类曲线积分与路径无关的条件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    曲线积分的基本公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    7.4 第一类曲面积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75" class="md-nav__link">
+    7.5 第二类曲面积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#76" class="md-nav__link">
+    7.6 高斯公式和斯托克斯公式
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 高斯公式和斯托克斯公式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gauss" class="md-nav__link">
+    Gauss公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stokes" class="md-nav__link">
+    Stokes公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    各类积分归纳整理
+  </a>
+  
+    <nav class="md-nav" aria-label="各类积分归纳整理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    一重积分
+  </a>
+  
+    <nav class="md-nav" aria-label="一重积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#int-fxy-dsint-fxy-ds" class="md-nav__link">
+    第一类曲线积分\int f(x,y) ds\int f(x,y) ds（立体侧面积、物质曲线的质量）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    特例：曲线长度
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    一重积分和二重积分的联系：格林公式(可以求面积)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    第二类曲线积分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    二重积分
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#green-gauss-stokes" class="md-nav__link">
+    Green公式 Gauss公式 Stokes公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    第二类曲面积分 - 投影法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>chap 3</h1>
+
+<h2 id="7">7 曲线积分·曲面积分与场论<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h3 id="71">7.1 第一类曲线积分<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
+<h4 id="711">7.1.1 第一类曲线积分的概念与性质<a class="headerlink" href="#711" title="Permanent link">&para;</a></h4>
+<p>定义 7.1.1 (第一类曲线积分) 设 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">x O y</span><script type="math/tex">x O y</script></span> 平面上的一条光滑曲线段, 函数 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上有定义, 在 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上任意揷入一点列 <span class="arithmatex"><span class="MathJax_Preview">M_{0}, M_{1}, \cdots, M_{n}</span><script type="math/tex">M_{0}, M_{1}, \cdots, M_{n}</script></span>, 将 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 分为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 小段, 第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 段的长度记 为 <span class="arithmatex"><span class="MathJax_Preview">\Delta s_{i}(i=1,2, \cdots, n)</span><script type="math/tex">\Delta s_{i}(i=1,2, \cdots, n)</script></span>. 在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 段上任取一点 <span class="arithmatex"><span class="MathJax_Preview">\left(\xi_{i}, \eta_{i}\right)</span><script type="math/tex">\left(\xi_{i}, \eta_{i}\right)</script></span>. 令 <span class="arithmatex"><span class="MathJax_Preview">\lambda=\max _{1 \leqslant i \leqslant n}\left\{\Delta s_{i}\right\}</span><script type="math/tex">\lambda=\max _{1 \leqslant i \leqslant n}\left\{\Delta s_{i}\right\}</script></span>, 如果对于曲线的任 意分割及点 <span class="arithmatex"><span class="MathJax_Preview">\left(\xi_{i}, \eta_{i}\right)</span><script type="math/tex">\left(\xi_{i}, \eta_{i}\right)</script></span> 的任意取法, 下面的极限
+$$
+\lim <em>{\lambda \rightarrow 0} \sum</em>{i=1}^{n} f\left(\xi_{i}, \eta_{i}\right) \Delta s_{i}
+$$
+都存在且唯一, 则称此极限值为函数 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 在曲线段 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上的第一类曲线积分, 也称为对弧 长的曲线积分, 记为 <span class="arithmatex"><span class="MathJax_Preview">\int_{C} f(x, y) \mathrm{d} s</span><script type="math/tex">\int_{C} f(x, y) \mathrm{d} s</script></span>, 即
+$$
+\int_{C} f(x, y) \mathrm{d} s=\lim <em>{\lambda \rightarrow 0} \sum</em>{i=1}^{n} f\left(\xi_{i}, \eta_{i}\right) \Delta s_{i} .
+$$
+其中 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 称为被积函数, <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 称为积分曲线, <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} s</span><script type="math/tex">\mathrm{d} s</script></span> 称为弧微分.</p>
+<h4 id="712">7.1.2 第一类曲线积分的计算<a class="headerlink" href="#712" title="Permanent link">&para;</a></h4>
+<p>我们将第一类曲线积分化为我们熟悉的定积分来计算.
+<strong>定理 7.1.2</strong> 设 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 为定义在曲线段 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上的连续函数, <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的参数方程为
+$$
+\left{\begin{array}{l}
+x=\varphi(t), \
+y=\psi(t),
+\end{array} \quad(a \leqslant t \leqslant b)\right.
+$$
+其中 <span class="arithmatex"><span class="MathJax_Preview">\varphi(t), \psi(t)</span><script type="math/tex">\varphi(t), \psi(t)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">[a, b]</span><script type="math/tex">[a, b]</script></span> 上具有连续的一阶导数, 且 <span class="arithmatex"><span class="MathJax_Preview">\left[\varphi^{\prime}(t)\right]^{2}+\left[\psi^{\prime}(t)\right]^{2} \neq 0</span><script type="math/tex">\left[\varphi^{\prime}(t)\right]^{2}+\left[\psi^{\prime}(t)\right]^{2} \neq 0</script></span>, 则第一类曲线积分 <span class="arithmatex"><span class="MathJax_Preview">\int_{C} f(x, y) \mathrm{d} s</span><script type="math/tex">\int_{C} f(x, y) \mathrm{d} s</script></span> 存在, 且
+$$
+\int_{C} f(x, y) \mathrm{d} s=\int_{a}^{b} f(\varphi(t), \psi(t)) \sqrt{\left[\varphi<sup>{\prime}(t)\right]</sup>{2}+\left[\psi<sup>{\prime}(t)\right]</sup>{2}} \mathrm{~d} t
+$$</p>
+<h3 id="72">7.2 第二类曲线积分<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<h4 id="721">7.2.1 第二类曲线积分的概念与性质<a class="headerlink" href="#721" title="Permanent link">&para;</a></h4>
+<p><strong>定义</strong> <span class="arithmatex"><span class="MathJax_Preview">7.2 .1</span><script type="math/tex">7.2 .1</script></span> (第二类曲线积分) 设 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">x O y</span><script type="math/tex">x O y</script></span> 平面上从点 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 到点 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的一条有向光滑曲 线段, 向量函数 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{F}(x, y)=P(x, y) \boldsymbol{i}+Q(x, y) \boldsymbol{j}</span><script type="math/tex">\boldsymbol{F}(x, y)=P(x, y) \boldsymbol{i}+Q(x, y) \boldsymbol{j}</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上有定义, 沿 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的方向用分点
+$$
+A=M_{0}\left(x_{0}, y_{0}\right), M_{1}\left(x_{1}, y_{1}\right), \cdots, M_{n-1}\left(x_{n-1}, y_{n-1}\right), M_{n}\left(x_{n}, y_{n}\right)=B,
+$$
+将 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 分为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个有向小弧段 <span class="arithmatex"><span class="MathJax_Preview">\widehat{M_{i-1} M_{i}}(i=1,2, \cdots, n), \widehat{M_{i-1} M_{i}}</span><script type="math/tex">\widehat{M_{i-1} M_{i}}(i=1,2, \cdots, n), \widehat{M_{i-1} M_{i}}</script></span> 的弧长记为 <span class="arithmatex"><span class="MathJax_Preview">\Delta s_{i}(i=1,2, \cdots, n)</span><script type="math/tex">\Delta s_{i}(i=1,2, \cdots, n)</script></span>. 设 <span class="arithmatex"><span class="MathJax_Preview">\lambda=\max _{1 \leqslant i \leqslant n}\left\{\Delta s_{i}\right\}, \Delta x_{i}=x_{i}-x_{i-1}, \Delta y_{i}=y_{i}-y_{i-1}</span><script type="math/tex">\lambda=\max _{1 \leqslant i \leqslant n}\left\{\Delta s_{i}\right\}, \Delta x_{i}=x_{i}-x_{i-1}, \Delta y_{i}=y_{i}-y_{i-1}</script></span>. 在 <span class="arithmatex"><span class="MathJax_Preview">\widehat{M_{i-1} M_{i}}</span><script type="math/tex">\widehat{M_{i-1} M_{i}}</script></span> 上任取一点 <span class="arithmatex"><span class="MathJax_Preview">\left(\xi_{i}, \eta_{i}\right)</span><script type="math/tex">\left(\xi_{i}, \eta_{i}\right)</script></span>. 如果 极限
+$$
+\lim <em>{\lambda \rightarrow 0} \sum</em>{i=1}^{n} \boldsymbol{F}\left(\xi_{i}, \eta_{i}\right) \cdot \overrightarrow{M_{i-1} M_{i}}=\lim <em>{\lambda \rightarrow 0} \sum</em>{i=1}^{n}\left[P\left(\xi_{i}, \eta_{i}\right) \Delta x_{i}+Q\left(\xi_{i}, \eta_{i}\right) \Delta y_{i}\right]
+$$
+存在唯一 (不依赖于对曲线的分割及 <span class="arithmatex"><span class="MathJax_Preview">\widehat{M}_{i-1} M_{i}</span><script type="math/tex">\widehat{M}_{i-1} M_{i}</script></span> 上点 <span class="arithmatex"><span class="MathJax_Preview">\left(\xi_{i}, \eta_{i}\right)</span><script type="math/tex">\left(\xi_{i}, \eta_{i}\right)</script></span> 的选取), 则称此极限为向量函数 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{F}(x, y)</span><script type="math/tex">\boldsymbol{F}(x, y)</script></span> 沿曲线 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 点到 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 点的第二类曲线积分. 记为
+$$
+\int_{C} P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y \text { 或 } \int_{C} \boldsymbol{F}(x, y) \cdot \mathrm{d} \boldsymbol{r},
+$$
+其中 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} \boldsymbol{r}=(\mathrm{d} x, \mathrm{~d} y)</span><script type="math/tex">\mathrm{d} \boldsymbol{r}=(\mathrm{d} x, \mathrm{~d} y)</script></span>, 有向曲线 <span class="arithmatex"><span class="MathJax_Preview">C=\overparen{A B}</span><script type="math/tex">C=\overparen{A B}</script></span> 称为积分路径. 第二类曲线积分也称为对坐标的曲线积分.</p>
+<blockquote>
+<p>注：此处我们可以对积分变量做直观的表示<span class="arithmatex"><span class="MathJax_Preview">d\boldsymbol{r} = (dx, dy)</span><script type="math/tex">d\boldsymbol{r} = (dx, dy)</script></span>，那么<span class="arithmatex"><span class="MathJax_Preview">\int_cF(x,y)\cdot d\bold{r} = \int_c (P(x,y),Q(x,y))\cdot (dx, dy)</span><script type="math/tex">\int_cF(x,y)\cdot d\bold{r} = \int_c (P(x,y),Q(x,y))\cdot (dx, dy)</script></span></p>
+</blockquote>
+<h4 id="722">7.2.2 第二类曲线积分的计算<a class="headerlink" href="#722" title="Permanent link">&para;</a></h4>
+<p>与第一类曲线积分的计算类似, 第二类曲线积分也可以化为定积分来计算. 我们首先讨论平面曲线的情况.
+定理 <span class="arithmatex"><span class="MathJax_Preview">7.2 .2</span><script type="math/tex">7.2 .2</script></span> 设 <span class="arithmatex"><span class="MathJax_Preview">P(x, y), Q(x, y)</span><script type="math/tex">P(x, y), Q(x, y)</script></span> 在有向曲线 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上有定义且连续, <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的参数方程为
+$$
+\left{\begin{array}{l}
+x=\varphi(t) \
+y=\psi(t)
+\end{array}\right.
+$$
+当 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 单调地由 <span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span> 变到 <span class="arithmatex"><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span> 时, 点 <span class="arithmatex"><span class="MathJax_Preview">M(x, y)</span><script type="math/tex">M(x, y)</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的起点 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 沿 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 运动到终点 <span class="arithmatex"><span class="MathJax_Preview">B, \varphi(t), \psi(t)</span><script type="math/tex">B, \varphi(t), \psi(t)</script></span> 在以 <span class="arithmatex"><span class="MathJax_Preview">\alpha, \beta</span><script type="math/tex">\alpha, \beta</script></span> 为端点的闭区间上具有一阶连续的导数, 且 <span class="arithmatex"><span class="MathJax_Preview">\left[\varphi^{\prime}(t)\right]^{2}+\left[\psi^{\prime}(t)\right]^{2} \neq 0</span><script type="math/tex">\left[\varphi^{\prime}(t)\right]^{2}+\left[\psi^{\prime}(t)\right]^{2} \neq 0</script></span>. 则第二类曲线积分
+$$
+\int_{C} P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y
+$$</p>
+<p>存在, 且
+$$
+\int_{C} P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y=\int_{\alpha}^{\beta}\left[P(\varphi(t), \psi(t)) \varphi^{\prime}(t)+Q(\varphi(t), \psi(t)) \psi^{\prime}(t)\right] \mathrm{d} t .
+$$</p>
+<blockquote>
+<p>注：其实还是参数化，转化为一元的积分</p>
+</blockquote>
+<h4 id="723">7.2.3 两类曲线积分之间的联系<a class="headerlink" href="#723" title="Permanent link">&para;</a></h4>
+<p>虽然两类曲线积分的定义不同, 但在一定条件下可以互相转化, 我们先讨论平面曲线. 设有向曲线 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的起点为 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>, 终点为 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>, 曲线 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的参数方程为
+$$
+\left{\begin{array}{l}
+x=\varphi(t) \
+y=\psi(t)
+\end{array}\right.
+$$
+起点 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>, 终点 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 分别对应于参数 <span class="arithmatex"><span class="MathJax_Preview">t_{1}, t_{2}</span><script type="math/tex">t_{1}, t_{2}</script></span>, 不妨设 <span class="arithmatex"><span class="MathJax_Preview">t_{1}&lt;t_{2} .\left(\varphi^{\prime}(t), \psi^{\prime}(t)\right)</span><script type="math/tex">t_{1}<t_{2} .\left(\varphi^{\prime}(t), \psi^{\prime}(t)\right)</script></span> 是曲线的切向量, 因而
+$$
+\mathrm{d} \boldsymbol{r}=(\mathrm{d} x, \mathrm{~d} y)=\left(\varphi^{\prime}(t), \psi^{\prime}(t)\right) \mathrm{d} t
+$$
+也是 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的切向量且其方向与积分路径的方向一致, 又 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} r</span><script type="math/tex">\mathrm{d} r</script></span> 的模正好是弧微分
+$$
+|\mathrm{d} r|=\sqrt{(\mathrm{d} x)^{2}+(\mathrm{d} y)^{2}}=\mathrm{d} s
+$$
+设 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} \boldsymbol{r}</span><script type="math/tex">\mathrm{d} \boldsymbol{r}</script></span> 的方向余弦为 <span class="arithmatex"><span class="MathJax_Preview">\cos \alpha, \cos \beta</span><script type="math/tex">\cos \alpha, \cos \beta</script></span>, 则有
+$$
+(\cos \alpha, \cos \beta)=\frac{\mathrm{d} r}{|\mathrm{~d} r|}=\left(\frac{\mathrm{d} x}{\mathrm{~d} s}, \frac{\mathrm{d} y}{\mathrm{~d} s}\right)
+$$
+所以
+$$
+\mathrm{d} x=\cos \alpha \mathrm{d} s, \quad \mathrm{~d} y=\cos \beta \mathrm{d} s
+$$
+因此
+$$
+\int_{C} P(x, y) \mathrm{d} x+Q(x, y) \mathrm{d} y=\int_{C}(P(x, y) \cos \alpha+Q(x, y) \cos \beta) \mathrm{d} s .
+$$
+其中 <span class="arithmatex"><span class="MathJax_Preview">(\cos \alpha, \cos \beta)</span><script type="math/tex">(\cos \alpha, \cos \beta)</script></span> 为曲线 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上点 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span> 处的单位切向量 <span class="arithmatex"><span class="MathJax_Preview">\vec{T} =  {r'(t)\over |r'(t)|}</span><script type="math/tex">\vec{T} =  {r'(t)\over |r'(t)|}</script></span>(且其方向与积分曲线方向一致). </p>
+<h3 id="73">7.3 格林公式<a class="headerlink" href="#73" title="Permanent link">&para;</a></h3>
+<p>定理 7.3.1 (格林 <span class="arithmatex"><span class="MathJax_Preview">\left(\right.</span><script type="math/tex">\left(\right.</script></span> Green <span class="arithmatex"><span class="MathJax_Preview">\left.^{*}\right)</span><script type="math/tex">\left.^{*}\right)</script></span> 公式) 设有界闭区域 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 由逐段光滑曲线 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 围成, 函数 <span class="arithmatex"><span class="MathJax_Preview">P(x, y)</span><script type="math/tex">P(x, y)</script></span> 及 <span class="arithmatex"><span class="MathJax_Preview">Q(x, y)</span><script type="math/tex">Q(x, y)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 上具有**一阶连续偏导数**, 则
+$$
+\oint_{C} P \mathrm{~d} x+Q \mathrm{~d} y=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) \mathrm{d} x \mathrm{~d} y .
+$$
+其中 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 的方向按 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 的**正向边界**曲线所取.</p>
+<h4 id="_1">推论：求闭区域的面积<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>在公式中取 <span class="arithmatex"><span class="MathJax_Preview">P(x, y)=-y, Q(x, y)=x</span><script type="math/tex">P(x, y)=-y, Q(x, y)=x</script></span>, 即得
+$$
+{1\over 2}\oint_{C} x \mathrm{~d} y-y \mathrm{~d} x= \iint_{D} \mathrm{~d} x \mathrm{~d} y = \sigma(S).
+$$
+设闭区域 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 的面积为 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>, 则有
+$$
+A=\frac{1}{2} \oint_{C} x \mathrm{~d} y-y \mathrm{~d} x .
+$$</p>
+<h3 id="732">7.3.2 平面上第二类曲线积分与路径无关的条件<a class="headerlink" href="#732" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+{\part Q\over \part x} - {\part P \over \part y }  = 0 \iff \exist u(x,y), du = Pdx + Qdy 
+</div>
+<script type="math/tex; mode=display">
+{\part Q\over \part x} - {\part P \over \part y }  = 0 \iff \exist u(x,y), du = Pdx + Qdy 
+</script>
+</div>
+<h4 id="_2">曲线积分的基本公式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>设区域 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 是一个单连通区域, 函数 <span class="arithmatex"><span class="MathJax_Preview">P(x, y), Q(x, y)</span><script type="math/tex">P(x, y), Q(x, y)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 内具有一阶连续 偏导数, 对于 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 内的任意两点 <span class="arithmatex"><span class="MathJax_Preview">A, B</span><script type="math/tex">A, B</script></span>, 曲线积分 <span class="arithmatex"><span class="MathJax_Preview">\int_{\overparen{A B}} P \mathrm{~d} x+Q \mathrm{~d} y</span><script type="math/tex">\int_{\overparen{A B}} P \mathrm{~d} x+Q \mathrm{~d} y</script></span> 与路径无关的充分必要条件 是: <span class="arithmatex"><span class="MathJax_Preview">P \mathrm{~d} x+Q \mathrm{~d} y</span><script type="math/tex">P \mathrm{~d} x+Q \mathrm{~d} y</script></span> 恰是某个函数 <span class="arithmatex"><span class="MathJax_Preview">u(x, y)</span><script type="math/tex">u(x, y)</script></span> 的全微分, 即 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} u=P \mathrm{~d} x+Q \mathrm{~d} y</span><script type="math/tex">\mathrm{d} u=P \mathrm{~d} x+Q \mathrm{~d} y</script></span> (这时我们称 <span class="arithmatex"><span class="MathJax_Preview">P \mathrm{~d} x+Q \mathrm{~d} y</span><script type="math/tex">P \mathrm{~d} x+Q \mathrm{~d} y</script></span> 为恰当微分). 此时有
+$$
+\int_{\overparen{A B}} P \mathrm{~d} x+Q \mathrm{~d} y=\int_{A}^{B} \mathrm{~d} u=u(B)-u(A)
+$$</p>
+<h3 id="74">7.4 第一类曲面积分<a class="headerlink" href="#74" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\iint f(x,y,z)dS
+</div>
+<script type="math/tex; mode=display">
+\iint f(x,y,z)dS
+</script>
+</div>
+<p>补充：<span class="arithmatex"><span class="MathJax_Preview">dS</span><script type="math/tex">dS</script></span>的等价表示
+$$
+{\begin{cases}x  =x(u,v)\ y = y(u,v)\ z = z (u,v)
+\end{cases}}\
+r_1'= (x_1', y_1', z_1') \quad r_2' = (x_2',y_2',z_2')\
+d\vec{S} = r_1' \times r_2' = \left|\begin{array}{ccc}
+i &amp; j &amp; k \
+x_{1}^{\prime} &amp; y_{1}^{\prime} &amp; z '<em>1 \
+x</em>{2}^{\prime} &amp; y_{2}^{\prime} &amp; z_{2}^{\prime}
+\end{array}\right| = (y_1'z_2'-y_2'z_1', x_2'z_1'- x_1'z_2', x_1'y_2'-x_2'y_1')\ = (|\begin{array} {ccc} y_1' &amp; y_2'\ z_1' &amp; z_2' \end{array}|,|\begin{array}{ccc}z_1' &amp; z_2' \ x_1' &amp; x_2'  \end{array}|,|\begin{array}{ccc}x_1' &amp; x_2' \ y_1' &amp; y_2'  \end{array}|) =  (A, B, C)\
+dS = |d\vec{S}| = \sqrt{A<sup>2+B</sup>2+C^2}dudv\
+E = r_1'\cdot r_1' \quad F = r_1' \cdot r_2' \quad G = r_2'\cdot r_2'\
+EG-F^2= A<sup>2+B</sup>2+C^2\
+\therefore dS = \sqrt{EG-F^2}dudv
+$$
+当曲面 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 由参数方程
+$$
+\left{\begin{array}{l}
+x=x(u, v), \
+y=y(u, v), \
+z=z(u, v),
+\end{array} \quad(u, v) \in D\right.
+给出时, 由第 6 章的讨论知, 曲面的面积微元可表示成 \mathrm{d} S=\sqrt{E G-F^{2}} \mathrm{~d} u \mathrm{~d} v, 其中
+$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+E=\boldsymbol{r}_{u}^{\prime} \cdot \boldsymbol{r}_{u}^{\prime}, \quad F=\boldsymbol{r}_{u}^{\prime} \cdot \boldsymbol{r}_{v}^{\prime}, \quad G=\boldsymbol{r}_{v}^{\prime} \cdot \boldsymbol{r}_{v}^{\prime}, \quad \boldsymbol{r}=(x(u, v), y(u, v), z(u, v)),
+</div>
+<script type="math/tex; mode=display">
+E=\boldsymbol{r}_{u}^{\prime} \cdot \boldsymbol{r}_{u}^{\prime}, \quad F=\boldsymbol{r}_{u}^{\prime} \cdot \boldsymbol{r}_{v}^{\prime}, \quad G=\boldsymbol{r}_{v}^{\prime} \cdot \boldsymbol{r}_{v}^{\prime}, \quad \boldsymbol{r}=(x(u, v), y(u, v), z(u, v)),
+</script>
+</div>
+<p>因此, 有下面的计算公式
+$$
+\iint_{S} f(x, y, z) \mathrm{d} S=\iint_{D} f(x(u, v), y(u, v), z(u, v)) \sqrt{E G-F^{2}} \mathrm{~d} u \mathrm{~d} v .
+$$
+特别的，若<span class="arithmatex"><span class="MathJax_Preview">x =x ,y= y, z = z(x,y)</span><script type="math/tex">x =x ,y= y, z = z(x,y)</script></span>
+$$
+d\vec{S} =(-z_1', -z_2', 1)
+dS = \sqrt{1+z_1'<sup>2+z_2'</sup>2}dxdy
+$$</p>
+<blockquote>
+<p>实际上, 投影法是比较常见的情形.</p>
+</blockquote>
+<h3 id="75">7.5 第二类曲面积分<a class="headerlink" href="#75" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\iint_s \bold F(x,y,z) \cdot \bold n(x,y,z)dS, \bold n = (\cos\alpha, \cos\beta, \cos\gamma),|\bold n| = 1.\\
+\cos\gamma\ dS = dxdy,  \dots\\
+\therefore \iint \bold F\cdot \bold ndS = \iint Pdydz+Qdzdx+Rdxdy.
+</div>
+<script type="math/tex; mode=display">
+\iint_s \bold F(x,y,z) \cdot \bold n(x,y,z)dS, \bold n = (\cos\alpha, \cos\beta, \cos\gamma),|\bold n| = 1.\\
+\cos\gamma\ dS = dxdy,  \dots\\
+\therefore \iint \bold F\cdot \bold ndS = \iint Pdydz+Qdzdx+Rdxdy.
+</script>
+</div>
+<blockquote>
+<p>第二类曲面积分与第一类的联系: <span class="arithmatex"><span class="MathJax_Preview">\vec{n}= {r'_1\times r'_2\over |r'_1 \times r'_2|}</span><script type="math/tex">\vec{n}= {r'_1\times r'_2\over |r'_1 \times r'_2|}</script></span></p>
+<p><mark>注意</mark>: 对于第二类曲面积分, 总是要先判断我们所积区域的法向量方向.</p>
+</blockquote>
+<h3 id="76">7.6 高斯公式和斯托克斯公式<a class="headerlink" href="#76" title="Permanent link">&para;</a></h3>
+<h4 id="gauss">Gauss公式<a class="headerlink" href="#gauss" title="Permanent link">&para;</a></h4>
+<p>**空间闭区域上三重积分**与其**边界曲面上的曲面积分**之间的关系</p>
+<ul>
+<li>使用条件: 分片光滑 <span class="arithmatex"><span class="MathJax_Preview">P\ Q \ R在空间V上有一阶连续偏导数</span><script type="math/tex">P\ Q \ R在空间V上有一阶连续偏导数</script></span></li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+则有 \\
+\iint _S Pdydz + Qdzdx + Rdxdy = \iiint_V ({\part P\over \part x} + {\part Q \over \part y } + {\part R\over  \part z})dxdydz
+</div>
+<script type="math/tex; mode=display">
+则有 \\
+\iint _S Pdydz + Qdzdx + Rdxdy = \iiint_V ({\part P\over \part x} + {\part Q \over \part y } + {\part R\over  \part z})dxdydz
+</script>
+</div>
+<p>建立了第二类曲面积分与三重积分的联系</p>
+<blockquote>
+<p>注: Gauss的使用路径往往只能是将一个第二类曲面积分转化为三重积分.</p>
+<p><strong>特例</strong> <span class="arithmatex"><span class="MathJax_Preview">\displaystyle \iiint1dV = \iint zdz  =  \iint xdx</span><script type="math/tex">\displaystyle \iiint1dV = \iint zdz  =  \iint xdx</script></span></p>
+</blockquote>
+<h4 id="stokes">Stokes公式<a class="headerlink" href="#stokes" title="Permanent link">&para;</a></h4>
+<p>将格林公式由平面推广到曲面, 使在具有光滑边界曲线的光滑曲面上的曲面积分与其边界上的曲线积分联系起来.</p>
+<ul>
+<li>使用条件: 设<span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span>为分片光滑的**有向曲面**, 其边界<span class="arithmatex"><span class="MathJax_Preview">\Gamma</span><script type="math/tex">\Gamma</script></span>逐段光滑 <strong>有向闭曲线</strong> <span class="arithmatex"><span class="MathJax_Preview">\Gamma 与S</span><script type="math/tex">\Gamma 与S</script></span>符合右手法则 $P Q R $有一阶连续偏导数,则有</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\oint_{\Gamma} P \mathrm{~d} x+Q \mathrm{~d} y+R \mathrm{~d} z=\iint_{S}\left|\begin{array}{ccc}
+\mathrm{d} y \mathrm{~d} z &amp; \mathrm{~d} z \mathrm{~d} x &amp; \mathrm{~d} x \mathrm{~d} y \\
+\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\
+P &amp; Q &amp; R
+\end{array}\right| = \iint \nabla \times (P,Q,R)\cdot  \vec{n}dS .
+</div>
+<script type="math/tex; mode=display">
+\oint_{\Gamma} P \mathrm{~d} x+Q \mathrm{~d} y+R \mathrm{~d} z=\iint_{S}\left|\begin{array}{ccc}
+\mathrm{d} y \mathrm{~d} z & \mathrm{~d} z \mathrm{~d} x & \mathrm{~d} x \mathrm{~d} y \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+P & Q & R
+\end{array}\right| = \iint \nabla \times (P,Q,R)\cdot  \vec{n}dS .
+</script>
+</div>
+<blockquote>
+<p>Stokes的使用路径往往只能是将一个闭合的第二类曲线积分转化为第二类曲面积分. 因为反方向是不容易求得的.</p>
+</blockquote>
+<h2 id="_3">各类积分归纳整理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">一重积分<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="int-fxy-dsint-fxy-ds">第一类曲线积分<span class="arithmatex"><span class="MathJax_Preview">\int f(x,y) ds</span><script type="math/tex">\int f(x,y) ds</script></span>（立体侧面积、物质曲线的质量）<a class="headerlink" href="#int-fxy-dsint-fxy-ds" title="Permanent link">&para;</a></h4>
+<ul>
+<li>注意：这里不是<span class="arithmatex"><span class="MathJax_Preview">f \cdot ds</span><script type="math/tex">f \cdot ds</script></span>，因为这里的积分变量是标量（长度） </li>
+<li>计算：参数化</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+{\begin{cases}x = \varphi(t) \quad dx = \varphi'(t)dt\\ y = \psi(t) \quad dy = \psi'(t)dt\end{cases}} \\
+then\ ds = \sqrt{(dx)^2+(dy)^2} = \sqrt{\varphi'(t)^2 + \psi'(t)^ 2}dt \\
+\int_c f(x，y)ds = \int f(\varphi(t),\psi(t))|r'(t)|dt, \quad r'(t) = (\varphi'(t) , \psi'(t))\\
+特别的，若y可以表示成y = y(x), 那么\int_c f(x,y(x))ds = \int_c f(x,y(x))\sqrt{1 + y'(x)^2}dx
+</div>
+<script type="math/tex; mode=display">
+{\begin{cases}x = \varphi(t) \quad dx = \varphi'(t)dt\\ y = \psi(t) \quad dy = \psi'(t)dt\end{cases}} \\
+then\ ds = \sqrt{(dx)^2+(dy)^2} = \sqrt{\varphi'(t)^2 + \psi'(t)^ 2}dt \\
+\int_c f(x，y)ds = \int f(\varphi(t),\psi(t))|r'(t)|dt, \quad r'(t) = (\varphi'(t) , \psi'(t))\\
+特别的，若y可以表示成y = y(x), 那么\int_c f(x,y(x))ds = \int_c f(x,y(x))\sqrt{1 + y'(x)^2}dx
+</script>
+</div>
+<h4 id="_5">特例：曲线长度<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+对于第一类曲线积分，若f(x,y)  = 1, 则 \int_c 1 \cdot ds = len(c), i.e 曲线长度.
+</div>
+<script type="math/tex; mode=display">
+对于第一类曲线积分，若f(x,y)  = 1, 则 \int_c 1 \cdot ds = len(c), i.e 曲线长度.
+</script>
+</div>
+<h4 id="_6">一重积分和二重积分的联系：格林公式(可以求面积)<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\oint_{C} P \mathrm{~d} x+Q \mathrm{~d} y=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) \mathrm{d} x \mathrm{~d} y .
+</div>
+<script type="math/tex; mode=display">
+\oint_{C} P \mathrm{~d} x+Q \mathrm{~d} y=\iint_{D}\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right) \mathrm{d} x \mathrm{~d} y .
+</script>
+</div>
+<p>在公式中取 <span class="arithmatex"><span class="MathJax_Preview">P(x, y)=-y, Q(x, y)=x</span><script type="math/tex">P(x, y)=-y, Q(x, y)=x</script></span>, 即得
+$$
+\oint_{C} x \mathrm{~d} y-y \mathrm{~d} x=2 \iint_{D} \mathrm{~d} x \mathrm{~d} y
+$$
+设闭区域 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 的面积为 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>, 则有
+$$
+A=\frac{1}{2} \oint_{C} x \mathrm{~d} y-y \mathrm{~d} x .
+$$</p>
+<h4 id="_7">第二类曲线积分<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<ul>
+<li>注意：第二类曲线积分的积分方向改变时，积分结果变号。这是因为矢量的方向性。</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\int \bold F(x,y)\cdot d \bold r = \int P(x,y)dx + Q(x,y)dy.（三维同理）
+</div>
+<script type="math/tex; mode=display">
+\int \bold F(x,y)\cdot d \bold r = \int P(x,y)dx + Q(x,y)dy.（三维同理）
+</script>
+</div>
+<ul>
+<li>
+<p>计算：
+  $$
+  {\begin{cases}x = \varphi(t) \quad dx = \varphi'(t)dt\ y = \psi(t) \quad dy = \psi'(t)dt\end{cases}} \
+  \int_c P(x,y)dx + Q(x,y)dy =  \int_\alpha^\beta  [(P(\varphi(t),\psi(t))]\varphi'(t)+(Q(\varphi(t),\psi(t)))\psi'(t)]dt\
+  特别的， 若y = y(x), \
+  \begin{cases}dx = dx \
+  dy = y'(x)dx
+  \end{cases}
+  $$</p>
+</li>
+<li></li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">注：d\bold r = (\cos\alpha, \cos \beta)ds = (dx,dy)</span><script type="math/tex">注：d\bold r = (\cos\alpha, \cos \beta)ds = (dx,dy)</script></span></p>
+</li>
+</ul>
+<h3 id="_8">二重积分<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\iint f(x)g(y)dxdy = (\int f(x)dx)(\int g(y)dy)\\
+</div>
+<script type="math/tex; mode=display">
+\iint f(x)g(y)dxdy = (\int f(x)dx)(\int g(y)dy)\\
+</script>
+</div>
+<ol>
+<li>
+<p>三重积分（质量）</p>
+</li>
+<li>
+<p>曲面面</p>
+</li>
+</ol>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+S:\begin{cases}x = \varphi(u,v)\\
+y = \psi(u,v)\\
+z = \omega(u,v)
+\end{cases}\\
+引入向量函数r(u,v) = (\varphi(u,v), \psi(u,v),\omega(u,v))\\
+\sigma(S) = \iint |r'_u \times r'_v|\ dudv\\
+特别的，若可以表示为\\
+S:\begin{cases}x = u\\
+y = v\\
+z = \omega(u,v)
+\end{cases}\\
+\sigma(S) = \iint \sqrt{1 + \omega_u'^2 + \omega_v'^2}\ dudv
+</div>
+<script type="math/tex; mode=display">
+S:\begin{cases}x = \varphi(u,v)\\
+y = \psi(u,v)\\
+z = \omega(u,v)
+\end{cases}\\
+引入向量函数r(u,v) = (\varphi(u,v), \psi(u,v),\omega(u,v))\\
+\sigma(S) = \iint |r'_u \times r'_v|\ dudv\\
+特别的，若可以表示为\\
+S:\begin{cases}x = u\\
+y = v\\
+z = \omega(u,v)
+\end{cases}\\
+\sigma(S) = \iint \sqrt{1 + \omega_u'^2 + \omega_v'^2}\ dudv
+</script>
+</div>
+<blockquote>
+<p>叉乘表示面积</p>
+</blockquote>
+<h3 id="green-gauss-stokes">Green公式 Gauss公式 Stokes公式<a class="headerlink" href="#green-gauss-stokes" title="Permanent link">&para;</a></h3>
+<p>格林公式
+$$
+\int_c Pdx + Qdy =\iint ({\part Q\over \part x} - {\part P\over \part y})dxdy
+$$</p>
+<blockquote>
+<p>第二类曲线积分<span class="arithmatex"><span class="MathJax_Preview">\iff</span><script type="math/tex">\iff</script></span>二重积分</p>
+<p>又因为第一类曲线积分与第二类曲线积分的关系
+$$</p>
+<p>$$</p>
+</blockquote>
+<p>高斯公式
+$$
+\iint _S Pdydz + Qdzdx + Rdxdy = \iiint_V ({\part P\over \part x} + {\part Q \over \part y } + {\part R\over  \part z})dxdydz
+$$</p>
+<blockquote>
+<p>gauss公式是将green公式的思想推广到三维.</p>
+<p>闭合曲线的曲线积分等于曲面内部的平面上的二重积分</p>
+<p>闭合曲面的曲面积分等于曲面内部的空间上的三重积分</p>
+</blockquote>
+<p>斯托克斯公式 
+$$
+\int_{\Gamma} P \mathrm{~d} x+Q \mathrm{~d} y+R \mathrm{~d} z=\iint_{S}\left|\begin{array}{ccc}
+\mathrm{d} y \mathrm{~d} z &amp; \mathrm{~d} z \mathrm{~d} x &amp; \mathrm{~d} x \mathrm{~d} y \
+\frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \
+P &amp; Q &amp; R
+\end{array}\right| .
+$$</p>
+<blockquote>
+<p>stokes公式其实就是三维空间里的green公式</p>
+<p>将三维空间中曲面上的曲面积分转化为曲面边界的曲线积分</p>
+</blockquote>
+<h3 id="-">第二类曲面积分 - 投影法<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<p>投影法是将形如<span class="arithmatex"><span class="MathJax_Preview">\displaystyle \iint Pdxdy + Qdydz + dzdx</span><script type="math/tex">\displaystyle \iint Pdxdy + Qdydz + dzdx</script></span>的积分转化为</p>
+<p>换元
+$$
+(1) r_1'\times r'_2 = (f'_x, f'_y, -1)
+$$
+投影与法向量的联系
+$$
+\iint Rdxdy  = (0,0,R)\cdot (*, *, 0)dS = 0
+$$</p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../Calculus-II-notes-chapt2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: chap 2" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              chap 2
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Calculus-II-notes-chapt4/" class="md-footer__link md-footer__link--next" aria-label="下一页: chap 4" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              chap 4
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

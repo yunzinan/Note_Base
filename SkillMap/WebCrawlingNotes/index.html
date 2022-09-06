@@ -1,0 +1,2428 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="yunzinan">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>WebCrawlingNotes - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-web-crawling-notes" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              WebCrawlingNotes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt1/" class="md-tabs__link">
+        数学
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        计算机科学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link md-tabs__link--active">
+        技能树
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          计算机科学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机科学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机科学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          技能树
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技能树" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          技能树
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          爬虫
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        爬虫
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    爬虫概述
+  </a>
+  
+    <nav class="md-nav" aria-label="爬虫概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    爬虫在使用场景中的分类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    通用爬虫
+  </a>
+  
+    <nav class="md-nav" aria-label="通用爬虫">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    通过request模块进行网络请求
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    实战训练
+  </a>
+  
+    <nav class="md-nav" aria-label="实战训练">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    爬取搜狗页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    网页采集器
+  </a>
+  
+    <nav class="md-nav" aria-label="网页采集器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-agent" class="md-nav__link">
+    反反爬策略: User-Agent伪装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    破解百度翻译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    爬取豆瓣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    爬取肯德基餐厅位置信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    综合练习之爬取药监总局
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web请求过程剖析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP协议
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    请求
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    响应
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    请求头中最常见的一些重要内容
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    响应头中一些重要内容
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    请求方式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    聚焦爬虫
+  </a>
+  
+    <nav class="md-nav" aria-label="聚焦爬虫">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    数据解析分类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    数据解析原理概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bs4" class="md-nav__link">
+    BS4 数据解析
+  </a>
+  
+    <nav class="md-nav" aria-label="BS4 数据解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    实例: 爬取三国演义篇目
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xpath" class="md-nav__link">
+    xpath解析
+  </a>
+  
+    <nav class="md-nav" aria-label="xpath解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etree" class="md-nav__link">
+    如何实例化一个etree对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xpath_1" class="md-nav__link">
+    xpath表达式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    补充:遇到汉字编码错误的问题
+  </a>
+  
+    <nav class="md-nav" aria-label="补充:遇到汉字编码错误的问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    实战: 爬取图片
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    作业: 爬取站长素材中的免费简历模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    验证码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    模拟登录
+  </a>
+  
+    <nav class="md-nav" aria-label="模拟登录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookie" class="md-nav__link">
+    cookie
+  </a>
+  
+    <nav class="md-nav" aria-label="cookie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookie_1" class="md-nav__link">
+    手动cookie处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    自动处理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    代理
+  </a>
+  
+    <nav class="md-nav" aria-label="代理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    什么是代理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    相关网站
+  </a>
+  
+    <nav class="md-nav" aria-label="相关网站">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    代理IP的类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip_1" class="md-nav__link">
+    代理IP的匿名度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    高性能异步爬虫鸽
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selenium" class="md-nav__link">
+    selenium
+  </a>
+  
+    <nav class="md-nav" aria-label="selenium">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selenium_1" class="md-nav__link">
+    selenium介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_element" class="md-nav__link">
+    find_element()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iframe" class="md-nav__link">
+    处理iframe+动作链
+  </a>
+  
+    <nav class="md-nav" aria-label="处理iframe+动作链">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    规避检测风险
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课堂笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          课堂笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="随笔" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    爬虫概述
+  </a>
+  
+    <nav class="md-nav" aria-label="爬虫概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    爬虫在使用场景中的分类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    通用爬虫
+  </a>
+  
+    <nav class="md-nav" aria-label="通用爬虫">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    通过request模块进行网络请求
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    实战训练
+  </a>
+  
+    <nav class="md-nav" aria-label="实战训练">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    爬取搜狗页面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    网页采集器
+  </a>
+  
+    <nav class="md-nav" aria-label="网页采集器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-agent" class="md-nav__link">
+    反反爬策略: User-Agent伪装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    破解百度翻译
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    爬取豆瓣
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    爬取肯德基餐厅位置信息
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    综合练习之爬取药监总局
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    Web请求过程剖析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    HTTP协议
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    请求
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    响应
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    请求头中最常见的一些重要内容
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    响应头中一些重要内容
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    请求方式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    聚焦爬虫
+  </a>
+  
+    <nav class="md-nav" aria-label="聚焦爬虫">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    数据解析分类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    数据解析原理概述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bs4" class="md-nav__link">
+    BS4 数据解析
+  </a>
+  
+    <nav class="md-nav" aria-label="BS4 数据解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    实例: 爬取三国演义篇目
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xpath" class="md-nav__link">
+    xpath解析
+  </a>
+  
+    <nav class="md-nav" aria-label="xpath解析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etree" class="md-nav__link">
+    如何实例化一个etree对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xpath_1" class="md-nav__link">
+    xpath表达式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    补充:遇到汉字编码错误的问题
+  </a>
+  
+    <nav class="md-nav" aria-label="补充:遇到汉字编码错误的问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    实战: 爬取图片
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    作业: 爬取站长素材中的免费简历模板
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    验证码
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    模拟登录
+  </a>
+  
+    <nav class="md-nav" aria-label="模拟登录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookie" class="md-nav__link">
+    cookie
+  </a>
+  
+    <nav class="md-nav" aria-label="cookie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cookie_1" class="md-nav__link">
+    手动cookie处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    自动处理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    代理
+  </a>
+  
+    <nav class="md-nav" aria-label="代理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    什么是代理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    相关网站
+  </a>
+  
+    <nav class="md-nav" aria-label="相关网站">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip" class="md-nav__link">
+    代理IP的类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip_1" class="md-nav__link">
+    代理IP的匿名度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    高性能异步爬虫鸽
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selenium" class="md-nav__link">
+    selenium
+  </a>
+  
+    <nav class="md-nav" aria-label="selenium">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selenium_1" class="md-nav__link">
+    selenium介绍
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#find_element" class="md-nav__link">
+    find_element()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iframe" class="md-nav__link">
+    处理iframe+动作链
+  </a>
+  
+    <nav class="md-nav" aria-label="处理iframe+动作链">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    规避检测风险
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="python-web-crawling-notes">Python Web Crawling Notes<a class="headerlink" href="#python-web-crawling-notes" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>参考B站视频: <a href="https://www.bilibili.com/video/BV1Yh411o7Sz?spm_id_from=333.337.search-card.all.click&amp;vd_source=4d1339aa01c80d5f92c8bfa68d7b7c41">Python爬虫全套课程</a></p>
+</blockquote>
+<h2 id="_1">爬虫概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">爬虫在使用场景中的分类<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>通用爬虫: 抓取系统重要组成部分, 抓取的是一整张页面数据</li>
+<li>聚焦爬虫: 抓取的只是页面中特定的数据</li>
+<li>增量式爬虫: 检测网站中数据更新的情况</li>
+</ol>
+<h2 id="_3">通用爬虫<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="request">通过<code>request</code>模块进行网络请求<a class="headerlink" href="#request" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>request</code>模块: python中原生的一款网络请求的模块,模拟浏览器发请求</li>
+<li>使用步骤:</li>
+<li>指定URL</li>
+<li>发起请求</li>
+<li>获取响应数据</li>
+<li>持久化存储</li>
+</ul>
+<h3 id="_4">实战训练<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">爬取搜狗页面<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://www.sogou.com/&quot;</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="n">page_text</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">page_text</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./sougou.html&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">page_text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;finished!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="_6">网页采集器<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<h5 id="user-agent">反反爬策略: User-Agent伪装<a class="headerlink" href="#user-agent" title="Permanent link">&para;</a></h5>
+<p>门户网站的服务器会检测对应请求的载体身份标识(<code>UA检测</code>), 如果检测到的请求的载体的身份标识是<code>某一款浏览器</code>, 说明这是一次正常请求, 因此不会拒绝;</p>
+<p>但是如果检测到请求载体身份不是任何一款浏览器时, 则表示该请求是基于爬虫的, 很可能会拒绝请求.(如下图所示)</p>
+<p><img src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/07/image-20220813151852619.png" alt="image-20220813151852619" style="zoom:25%;" /></p>
+<div class="highlight"><pre><span></span><code>    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.sogou.com/web&#39;</span>
+
+    <span class="c1">#User-Agent Info</span>
+
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 Edg/104.0.1293.54&#39;</span>
+
+    <span class="p">}</span>
+
+    <span class="n">kw</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;enter a word: &#39;</span><span class="p">)</span>
+
+    <span class="c1">#parameters </span>
+    <span class="n">param</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;query&#39;</span><span class="p">:</span> <span class="n">kw</span>
+    <span class="p">}</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">param</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+    <span class="n">page_text</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">fileName</span> <span class="o">=</span> <span class="n">kw</span> <span class="o">+</span> <span class="s1">&#39;.html&#39;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">page_text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;finished!&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="_7">破解百度翻译<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p><code>post</code>请求: </p>
+<ul>
+<li>携带参数</li>
+<li>响应数据是一组JSON数据</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+
+    <span class="n">post_url</span> <span class="o">=</span> <span class="s2">&quot;https://fanyi.baidu.com/sug&quot;</span>
+
+    <span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;type in a word: &#39;</span><span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;kw&#39;</span><span class="p">:</span> <span class="n">word</span>
+    <span class="p">}</span>
+
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 &#39;</span>
+                      <span class="s1">&#39;(KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 Edg/104.0.1293.54&#39;</span>
+    <span class="p">}</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">post_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="c1"># .json 方法返回的是obj(先确认响应头里的Content-Type是JSON才行)</span>
+    <span class="n">dic_obj</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">dic_obj</span><span class="p">)</span>
+    <span class="n">fileName</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="s1">&#39;.json&#39;</span>
+    <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dic_obj</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="n">fp</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># 这里ensure_ascii=False是使得存储的汉字直接以汉字形式表示, 否则会是\xxxx之类的</span>
+</code></pre></div>
+<h4 id="_8">爬取豆瓣<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>延伸阅读</strong>: <code>AJAX</code></p>
+<p>现象: 页面修改 但是网址不变</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://movie.douban.com/j/chart/top_list&#39;</span>
+
+    <span class="c1"># start = input(&#39;type in the start number&#39;)</span>
+
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 Edg/104.0.1293.54&#39;</span>
+    <span class="p">}</span>
+
+    <span class="n">param</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;24&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;interval_id&#39;</span><span class="p">:</span> <span class="s1">&#39;100:90&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;action&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;start&#39;</span><span class="p">:</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;limit&#39;</span><span class="p">:</span> <span class="s1">&#39;20&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">param</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+    <span class="n">list_data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+
+    <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./douban.json&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">list_data</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="n">fp</span><span class="p">,</span> <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="_9">爬取肯德基餐厅位置信息<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;http://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx&#39;</span>
+
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 Edg/104.0.1293.54&#39;</span>
+    <span class="p">}</span>
+
+    <span class="n">location</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;type in the city name: &#39;</span><span class="p">)</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;cname&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;pid&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;keyword&#39;</span><span class="p">:</span> <span class="n">location</span><span class="p">,</span>
+        <span class="s1">&#39;pageIndex&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;pageSize&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span>
+    <span class="p">}</span>
+
+    <span class="n">param</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;op&#39;</span><span class="p">:</span> <span class="s1">&#39;keyword&#39;</span>
+    <span class="p">}</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">param</span><span class="p">)</span>
+
+    <span class="n">page_text</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+
+    <span class="n">fileName</span> <span class="o">=</span> <span class="n">location</span> <span class="o">+</span> <span class="s1">&#39;.html&#39;</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fileName</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">page_text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;over!&#39;</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>经过摸索发现</p>
+<p><code>requests.post</code>的<code>params</code>和<code>data</code>参数的关系: </p>
+<p><code>data</code>是你提供给服务器的信息</p>
+<p><code>params</code>则是一些方式上的要求, 例如这里<code>'op': 'keyword'</code>就是以'keyword'查询, 即使我提供的<code>data</code>里可能提供了不止'keyword'的信息.</p>
+</blockquote>
+<h4 id="_10">综合练习之爬取药监总局<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>动态加载数据: 请求一章页面 不能得到需要的全部信息</p>
+<p><strong>总结</strong> </p>
+<p>先摸清楚网站的数据库运行思路</p>
+<p>然后顺藤摸瓜, 逐步完成爬虫</p>
+</blockquote>
+<h2 id="web">Web请求过程剖析<a class="headerlink" href="#web" title="Permanent link">&para;</a></h2>
+<p>1.<code>服务器渲染</code>: 在服务器端直接把数据和html整合在一起, 返回给客户端</p>
+<div class="highlight"><pre><span></span><code>graph LR;
+A[浏览器] ---baidu.com/周杰伦--&gt; B[百度服务器]
+B-.带有周杰伦检索信息的html内容.-&gt;A
+</code></pre></div>
+<ol>
+<li><code>客户端渲染</code>:第一次请求只要一个html骨架. 第二次请求拿到数据, 进行数据展示,因此在源代码中**看不到数据**.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>graph LR;
+A[浏览器] ---请求豆瓣排行榜网页--&gt; B[豆瓣]
+B--给你一个html骨架--&gt;A
+A-.要数据.-&gt;B
+B-.给数据.-&gt;A
+</code></pre></div>
+<h2 id="http">HTTP协议<a class="headerlink" href="#http" title="Permanent link">&para;</a></h2>
+<p>Hyper Text Transfer Protocol 超文本传输协议</p>
+<h3 id="_11">请求<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>请求行 -&gt; 请求方式(get/post) 请求URL地址 协议
+请求头 -&gt; 放一些服务器要用的附加信息
+
+请求体 -&gt; 一般放请求参数
+</code></pre></div>
+<h3 id="_12">响应<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>状态行 -&gt; 协议 状态码
+响应头 -&gt; 放一些客户端要使用的一些附加信息
+
+响应体 -&gt; 服务器返回的真正客户端要用的内容(HTML, JSON)等
+</code></pre></div>
+<h3 id="_13">请求头中最常见的一些重要内容<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ol>
+<li><code>User-Agent</code> 请求载体的身份标识(用啥发送的)</li>
+<li><code>Referer</code> 防盗链(这次请求是从哪个页面来的? 反爬会用到)</li>
+<li><code>cookie</code> 本地字符串数据信息(用户登录信息, 反爬的token)</li>
+</ol>
+<h3 id="_14">响应头中一些重要内容<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ol>
+<li><code>cookie</code> 本地字符串数据信息(用户登录信息, 反爬的token)</li>
+<li><code>各种神奇的莫名其妙的字符串</code>(一般都是token字样, 防止各种攻击和反爬)</li>
+</ol>
+<h3 id="_15">请求方式<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p><code>GET</code> </p>
+<p><code>POST</code> </p>
+<h2 id="_16">聚焦爬虫<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<h3 id="_17">数据解析分类<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>正则表达式</li>
+<li>bs4</li>
+<li><strong>xpath</strong>(通用性强)</li>
+</ul>
+<h3 id="_18">数据解析原理概述<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>解析的局部文本内容都会在标签之间或者标签对应的属性中进行存储</li>
+<li>进行指定标签的定位</li>
+<li>标签或者标签对应的属性中存储的数据值进行提取(解析)</li>
+<li>编码流程:</li>
+<li>指定URL</li>
+<li>发起请求</li>
+<li>获取响应数据</li>
+<li>数据解析</li>
+<li>持久化存储</li>
+</ul>
+<h3 id="bs4">BS4 数据解析<a class="headerlink" href="#bs4" title="Permanent link">&para;</a></h3>
+<p>数据解析的原理:</p>
+<ul>
+<li>标签定位</li>
+<li>提取标签\变迁属性中存储的数据值</li>
+</ul>
+<p>bs4数据解析的原理:</p>
+<ul>
+<li>实例化一个<code>BeautifulSoup</code>对象, 并且将页面源代码数据加载到该对象中</li>
+<li>通过调用<code>BeautifulSoup</code>对象中相关的属性或者方法进行标签定位和数据提取</li>
+</ul>
+<p>环境安装</p>
+<div class="highlight"><pre><span></span><code>pip install bs4
+pip install lxml
+</code></pre></div>
+<h4 id="_19">实例: 爬取三国演义篇目<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 Edg/104.0.1293.54&#39;</span>
+    <span class="p">}</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://www.shicimingju.com/book/sanguoyanyi.html&#39;</span>
+    <span class="n">page_text</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">page_text</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+    <span class="c1"># 获取详情页和章节标题</span>
+    <span class="n">li_list</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;.book-mulu &gt; ul &gt; li&#39;</span><span class="p">)</span>
+    <span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./sanguo.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">li</span> <span class="ow">in</span> <span class="n">li_list</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">li</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">string</span>
+        <span class="n">detail_url</span> <span class="o">=</span> <span class="s1">&#39;http://www.shicimingju.com&#39;</span> <span class="o">+</span> <span class="n">li</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+        <span class="n">detail_page_text</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">detail_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+        <span class="n">detail_soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">detail_page_text</span><span class="p">,</span> <span class="s1">&#39;lxml&#39;</span><span class="p">)</span>
+        <span class="n">div_tag</span> <span class="o">=</span> <span class="n">detail_soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">&#39;chapter_content&#39;</span><span class="p">)</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">div_tag</span><span class="o">.</span><span class="n">text</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">title</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span> <span class="o">+</span> <span class="n">content</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="s2">&quot;爬取成功&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="xpath">xpath解析<a class="headerlink" href="#xpath" title="Permanent link">&para;</a></h3>
+<p>解析原理:</p>
+<ol>
+<li>
+<p>实例化一个<code>etree</code>对象, 且需要将被解析的页面源码数据加载到该对象中</p>
+</li>
+<li>
+<p>调用<code>etree</code>对象中的<code>xpath</code>方法结合着xpath表达式实现标签的定位和内容的捕获</p>
+</li>
+</ol>
+<h5 id="etree">如何实例化一个etree对象<a class="headerlink" href="#etree" title="Permanent link">&para;</a></h5>
+<ul>
+<li>本地html文档的源码数据加载到etree对象中</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">filePath</span><span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>可以将互联网上获取的源码数据加载到该对象中</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;page_text&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="xpath_1">xpath表达式<a class="headerlink" href="#xpath_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>/</code> 表示的是从根节点开始定位, 表示的是一个层级</li>
+<li><code>//</code> 表示的是多个层级, 可以表示从任意位置开始定位</li>
+<li>属性定位:<code>//tagName[@attr='attrVal']</code></li>
+<li>索引定位:<code>//div[@class='song']/p[3]</code>索引是从**1**开始的</li>
+<li>取文本:</li>
+<li><code>/text()</code>获取的是标签中直系的文本内容</li>
+<li><code>//text()</code>获取的是标签中所有的文本内容</li>
+<li>取属性:</li>
+<li><code>/@attrName</code></li>
+</ul>
+<h2 id="_20">补充:遇到汉字编码错误的问题<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<ul>
+<li>方法一:<code>response.encoding='utf-8'</code></li>
+<li>方法二:<code>img_name = img_name.encode('iso-8859-1').decode('gbk')</code></li>
+</ul>
+<h4 id="_21">实战: 爬取图片<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 Edg/104.0.1293.54&#39;</span>
+<span class="p">}</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://pic.netbian.com/4kmeinv/&quot;</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="c1"># response.encoding = &#39;utf-8&#39;</span>
+<span class="n">page_text</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span>
+<span class="c1"># print(page_text)</span>
+
+<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">page_text</span><span class="p">)</span>
+
+<span class="n">li_list</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//div[@class=&quot;slist&quot;]/ul[@class=&quot;clearfix&quot;]/li&#39;</span><span class="p">)</span>
+<span class="c1"># print(li_list)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;./picLibs&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;./picLibs&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">li</span> <span class="ow">in</span> <span class="n">li_list</span><span class="p">:</span>
+    <span class="n">img_src</span> <span class="o">=</span> <span class="s1">&#39;http://pic.netbian.com&#39;</span> <span class="o">+</span> <span class="n">li</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;./a/img/@src&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">img_name</span> <span class="o">=</span> <span class="n">li</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;./a/img/@alt&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39;.jpg&#39;</span>
+    <span class="n">img_name</span> <span class="o">=</span> <span class="n">img_name</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;iso-8859-1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;gbk&#39;</span><span class="p">)</span>
+    <span class="c1"># print(img_name, img_src)</span>
+    <span class="n">img_data</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">img_src</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
+    <span class="n">img_path</span> <span class="o">=</span> <span class="s2">&quot;./picLibs/&quot;</span> <span class="o">+</span> <span class="n">img_name</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">img_path</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">img_data</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">img_name</span><span class="p">,</span> <span class="s2">&quot;success!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<blockquote>
+<p>一次查询多个<code>xpath</code> 路径:</p>
+<p><code>a_list = tree.xpath('//div[@class="bottom"]/ul/li/a | //div[@class="bottom"]/ul/div[2]/li/a')</code></p>
+</blockquote>
+<h4 id="_22">作业: 爬取站长素材中的免费简历模板<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">lxml</span> <span class="kn">import</span> <span class="n">etree</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">流程分析:</span>
+<span class="sd">1.  爬取主页, 解析出所有模板子页的URL</span>
+<span class="sd">2. 爬取子页, 解析出其中的下载url</span>
+<span class="sd">3. 对下载URL发请求, 保存下载的结果</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.81 Safari/537.36 Edg/104.0.1293.54&#39;</span>
+<span class="p">}</span>
+
+<span class="n">url_main</span> <span class="o">=</span> <span class="s2">&quot;https://sc.chinaz.com/jianli/free.html&quot;</span>
+
+<span class="n">page_text</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url_main</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+<span class="c1"># print(page_text)</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">page_text</span><span class="p">)</span>
+
+<span class="n">div_list</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;/html/body/div[4]/div[3]/div/div/div&#39;</span><span class="p">)</span>
+<span class="c1"># print(div_list)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;./download&#39;</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">&#39;./download&#39;</span><span class="p">)</span>
+<span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">div</span> <span class="ow">in</span> <span class="n">div_list</span><span class="p">:</span>
+    <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">src</span> <span class="o">=</span> <span class="s1">&#39;https:&#39;</span> <span class="o">+</span> <span class="n">div</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;./a/@href&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># name = div.xpath(&#39;./a/img/@alt&#39;)[0]</span>
+    <span class="c1"># print(name)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+    <span class="n">targetPageText</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">src</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="c1"># with open(&#39;./test.html&#39;, &#39;w&#39;, encoding=&#39;utf-8&#39;) as fp:</span>
+    <span class="c1">#     fp.write(targetPageText)</span>
+    <span class="c1"># # print(targetPageText)</span>
+    <span class="n">tree_2</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">targetPageText</span><span class="p">)</span>
+    <span class="n">targetSrc</span> <span class="o">=</span> <span class="n">tree_2</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;/html/body/div[4]/div[2]/div[2]/div[1]/div[7]/div[2]/ul/li[1]/a/@href&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">targetSrc</span><span class="p">)</span>
+    <span class="c1"># targetName = tree_2.xpath(&#39;/html/body/div[6]/div[2]/div[2]/div[1]/div[1]/h1/text()&#39;)</span>
+    <span class="c1"># print(targetName, targetSrc)</span>
+    <span class="n">targetData</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">targetSrc</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">content</span>
+    <span class="n">filePath</span> <span class="o">=</span> <span class="s1">&#39;./download/&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">cnt</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.rar&#39;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filePath</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+        <span class="n">fp</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">targetData</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="_23">验证码<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>反爬机制: 验证码. 识别验证码图片中的数据, 用于模拟登录操作.</p>
+<p>识别验证码的操作:</p>
+<ul>
+<li>人工肉眼识别(不推荐)</li>
+<li>第三方自动识别</li>
+</ul>
+<h3 id="_24">模拟登录<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>爬取基于某些用户的用户信息, 但是需要登录才能获取</li>
+</ul>
+<p><code>http/https</code> 协议特性: 无状态</p>
+<p>没有请求到对应页面数据的原因:</p>
+<p>​   发起的第二次请求是基于个人主页页面请求的时候, 服务器端并不知道该次请求是基于登录状态下的请求.</p>
+<h4 id="cookie">cookie<a class="headerlink" href="#cookie" title="Permanent link">&para;</a></h4>
+<p>用来让服务器端记录客户端的状态</p>
+<h5 id="cookie_1">手动cookie处理<a class="headerlink" href="#cookie_1" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Cookie&#39;</span><span class="p">:</span> <span class="s1">&#39;xxxx&#39;</span>
+    <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;xxx&#39;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>问题:</p>
+<ol>
+<li>部分网站的<code>cookie</code>存在有效时长限制, 不能持久化</li>
+<li>需要手动复制, 比较麻烦</li>
+</ol>
+</blockquote>
+<h5 id="_25">自动处理<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h5>
+<ul>
+<li><code>cookie</code>值的来源是哪里?</li>
+</ul>
+<p>模拟登录<code>post</code>请求之后, 有服务器端创建</p>
+<ul>
+<li>
+<p><code>session</code>会话对象</p>
+</li>
+<li>
+<p>可以用于请求的发送</p>
+</li>
+<li>
+<p>如果请求过程中产生了cookie, 则该cookie会被自动存储/携带在该session对象中, </p>
+</li>
+<li>
+<p>使用session对象进行模拟登录post请求的发送(响应的cookie会存储在session中)</p>
+</li>
+<li>
+<p>session对象对个人主页对应的get请求进行发送</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>graph TB;
+A[创建session对象]---&gt;B[通过session进行post请求模拟登录]
+B-.响应的cookie会存储到session中.-&gt;A
+B--&gt;C[使用携带cookie的session进行get请求抓取个人页面信息]
+</code></pre></div>
+<h3 id="_26">代理<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>报错:请求次数过多-&gt;拒绝该次请求, 封禁该IP的请求</p>
+</blockquote>
+<p>反反爬机制: 破解封IP这种反爬机制</p>
+<h4 id="_27">什么是代理<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<p><code>代理服务器</code>.</p>
+<p>作用: </p>
+<ul>
+<li>突破自身IP访问的限制</li>
+<li>隐藏自身真实IP免受攻击</li>
+</ul>
+<h3 id="_28">相关网站<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<ul>
+<li>快代理</li>
+<li>西祠代理</li>
+<li><a href="http://www.goubanjia.com">www.goubanjia.com</a></li>
+</ul>
+<h4 id="ip">代理IP的类型<a class="headerlink" href="#ip" title="Permanent link">&para;</a></h4>
+<ul>
+<li>http: 应用到http协议对应的url中</li>
+<li>https: 应用到https协议对应的url中</li>
+</ul>
+<h4 id="ip_1">代理IP的匿名度<a class="headerlink" href="#ip_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>透明: 服务器知道该次请求使用了代理, 也知道请求对应的真实IP</li>
+<li>匿名: 知道使用了代理, 不知道真实IP</li>
+<li>高匿: 不知道使用了代理, 更不知道真实IP</li>
+</ul>
+<h2 id="_29">高性能异步爬虫<sup>鸽</sup><a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
+<p>目的: 在爬虫中使用异步实现高性能的数据爬取操作</p>
+<p>对比单线程串行: 部分方法阻塞程序</p>
+<p>多线程,多进程: 好处, 可以为相关阻塞的操作单独开启线程或者进程, 阻塞操作就可以异步执行.</p>
+<p>线程池\进程池</p>
+<h2 id="selenium">selenium<a class="headerlink" href="#selenium" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>问题: selenium和爬虫有什么关系?</p>
+</blockquote>
+<p>作用:</p>
+<ul>
+<li>便捷的获取网站中<code>动态加载</code>的数据</li>
+<li>便捷实现<code>模拟登录</code></li>
+</ul>
+<h3 id="selenium_1">selenium介绍<a class="headerlink" href="#selenium_1" title="Permanent link">&para;</a></h3>
+<p>基于浏览器自动化的一个模块</p>
+<p>流程:</p>
+<ol>
+<li>
+<p><code>pip install selenium</code></p>
+</li>
+<li>
+<p>下载一个浏览器的驱动程序(edge为例)</p>
+</li>
+</ol>
+<blockquote>
+<p><a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft Edge WebDriver - Microsoft Edge Developer</a></p>
+<p><strong>注意</strong>: 需要下载适配浏览器版本的版本</p>
+</blockquote>
+<ol>
+<li>
+<p>将压缩文件中的<code>msedgedriver.exe</code>放到python解释器所在的文件夹中, 并确保该文件夹路径已经添加到<code>环境变量</code>中</p>
+</li>
+<li>
+<p><code>python
+   '''
+   测试
+   '''
+   from selenium.webdriver import Edge
+   #1.创建浏览器对象
+   web = Edge()
+   #2.打开网址
+   web.get('http://www.baidu.com')</code></p>
+</li>
+</ol>
+<h3 id="find_element">find_element()<a class="headerlink" href="#find_element" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">By</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Set of supported locator strategies.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">ID</span> <span class="o">=</span> <span class="s2">&quot;id&quot;</span>
+    <span class="n">XPATH</span> <span class="o">=</span> <span class="s2">&quot;xpath&quot;</span>
+    <span class="n">LINK_TEXT</span> <span class="o">=</span> <span class="s2">&quot;link text&quot;</span>
+    <span class="n">PARTIAL_LINK_TEXT</span> <span class="o">=</span> <span class="s2">&quot;partial link text&quot;</span>
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s2">&quot;name&quot;</span>
+    <span class="n">TAG_NAME</span> <span class="o">=</span> <span class="s2">&quot;tag name&quot;</span>
+    <span class="n">CLASS_NAME</span> <span class="o">=</span> <span class="s2">&quot;class name&quot;</span>
+    <span class="n">CSS_SELECTOR</span> <span class="o">=</span> <span class="s2">&quot;css selector&quot;</span>
+</code></pre></div>
+<h3 id="iframe">处理iframe+动作链<a class="headerlink" href="#iframe" title="Permanent link">&para;</a></h3>
+<h4 id="_30">规避检测风险<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver</span> <span class="kn">import</span> <span class="n">ActionChains</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver</span> <span class="kn">import</span> <span class="n">EdgeOptions</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+
+<span class="n">option</span> <span class="o">=</span> <span class="n">EdgeOptions</span><span class="p">()</span>
+
+<span class="n">option</span><span class="o">.</span><span class="n">add_experimental_option</span><span class="p">(</span><span class="s1">&#39;excludeSwitches&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;enable-automation&#39;</span><span class="p">])</span>
+
+<span class="n">bro</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Edge</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">option</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Jupyter Notebook" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              Jupyter Notebook
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-footer__link md-footer__link--next" aria-label="下一页: 马原" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              马原
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

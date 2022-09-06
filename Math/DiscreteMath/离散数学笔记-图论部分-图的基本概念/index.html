@@ -1,0 +1,1961 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>离散数学笔记-图论部分-图的基本概念 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              离散数学笔记-图论部分-图的基本概念
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt1/" class="md-tabs__link md-tabs__link--active">
+        数学
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        计算机科学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+        技能树
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          图的基本概念
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        图的基本概念
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    知识点
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    图的连通性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    图的矩阵表示
+  </a>
+  
+    <nav class="md-nav" aria-label="图的矩阵表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    关联矩阵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    邻接矩阵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    可达矩阵
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    扩大路径法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    图的同构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    图的连通性
+  </a>
+  
+    <nav class="md-nav" aria-label="图的连通性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    割点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    割边
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    一些概念的区分
+  </a>
+  
+    <nav class="md-nav" aria-label="一些概念的区分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    零图 平凡图 空图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    邻域 闭邻域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    有向完全图 竞赛图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    回路 简单回路 初级回路（圈） 环 自环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    子图 生成子图 导出子图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    关联与邻接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    弱连通图 单向连通图 强连通图
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    习题选录（按照题型）
+  </a>
+  
+    <nav class="md-nav" aria-label="习题选录（按照题型）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    度序列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    握手定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    画出所有满足要求的非同构图问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    完全图、正则图、补图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    扩大路径法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    图的连通性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    完全图与二部图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    邻接矩阵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    图的应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          计算机科学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机科学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机科学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          技能树
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技能树" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          技能树
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课堂笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          课堂笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="随笔" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    知识点
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    图的连通性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    图的矩阵表示
+  </a>
+  
+    <nav class="md-nav" aria-label="图的矩阵表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    关联矩阵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    邻接矩阵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    可达矩阵
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    扩大路径法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    图的同构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    图的连通性
+  </a>
+  
+    <nav class="md-nav" aria-label="图的连通性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    割点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    割边
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    一些概念的区分
+  </a>
+  
+    <nav class="md-nav" aria-label="一些概念的区分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    零图 平凡图 空图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    邻域 闭邻域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    有向完全图 竞赛图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    回路 简单回路 初级回路（圈） 环 自环
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    子图 生成子图 导出子图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    关联与邻接
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    弱连通图 单向连通图 强连通图
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    习题选录（按照题型）
+  </a>
+  
+    <nav class="md-nav" aria-label="习题选录（按照题型）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    度序列
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    握手定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    画出所有满足要求的非同构图问题
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    完全图、正则图、补图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    扩大路径法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    图的连通性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    完全图与二部图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    邻接矩阵
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    图的应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<blockquote>
+<h1 id="_1">图论：图的基本概念<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">知识点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>注：这部分内容参考Rosen. &amp;屈婉玲.</p>
+<p>知识梳理参考资料：</p>
+<ul>
+<li>
+<p><a href="https://yhx-12243.github.io/OI-transit/memos/14.html">图论概念梳理 (yhx-12243.github.io)</a></p>
+</li>
+<li>
+<p><a href="https://zhuanlan.zhihu.com/p/62056687">《离散数学》学习记录 - 图论 - 知乎 (zhihu.com)</a></p>
+</li>
+<li>
+<p><a href="https://zifan.site/article/wqc/?page=1">Zifan的小站-离散数学</a></p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p><strong>简单图</strong> (Simple graph)：若一个图中没有*自环*和*重边*时，它被称为简单图</p>
+</li>
+<li>
+<p>度序列：注意，度序列的顺序是根据标定的标号顺序排列的，而不是根据度升序。</p>
+</li>
+<li>
+<p>有向图的度数列等于出度列+入度列（均取正值）。</p>
+</li>
+<li>
+<p>补图：对于无向简单图 <span class="arithmatex"><span class="MathJax_Preview">G=(V, E)</span><script type="math/tex">G=(V, E)</script></span> ，它的补图 (Complement graph)指的是这样的一张图，记作 <span class="arithmatex"><span class="MathJax_Preview">\bar{G}</span><script type="math/tex">\bar{G}</script></span> ，满足 <span class="arithmatex"><span class="MathJax_Preview">V(\bar{G})=V(G)</span><script type="math/tex">V(\bar{G})=V(G)</script></span> ，且对任意顶点对 <span class="arithmatex"><span class="MathJax_Preview">(u, v)</span><script type="math/tex">(u, v)</script></span> ， <span class="arithmatex"><span class="MathJax_Preview">(u, v) \in E(G)</span><script type="math/tex">(u, v) \in E(G)</script></span> 当且仅当 <span class="arithmatex"><span class="MathJax_Preview">(u, v) \notin E\left(G^{\prime}\right)</span><script type="math/tex">(u, v) \notin E\left(G^{\prime}\right)</script></span> 。</p>
+</li>
+<li>
+<p>有向图中的平行边要求起点和终点都要相同。</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">k-</span><script type="math/tex">k-</script></span>正则图：各点的度都为<span class="arithmatex"><span class="MathJax_Preview">k.</span><script type="math/tex">k.</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">k-</span><script type="math/tex">k-</script></span>连通图：最小点连通度<span class="arithmatex"><span class="MathJax_Preview">\ge k</span><script type="math/tex">\ge k</script></span>，这意味着去除任何<span class="arithmatex"><span class="MathJax_Preview">k-1</span><script type="math/tex">k-1</script></span>个点得到的导出子图都是连通的。去除<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>个点未必（不一定就是需要的那k个点，也不一定最小点连通度就是k）。</p>
+</li>
+<li>
+<p>无向图短程线<span class="arithmatex"><span class="MathJax_Preview">d(u_i, v_i)</span><script type="math/tex">d(u_i, v_i)</script></span>，有向图短程线<span class="arithmatex"><span class="MathJax_Preview">d<u_i,v_i> <span class="arithmatex"><span class="MathJax_Preview">不一定等于</span><script type="math/tex">不一定等于</script></span>d<v_i,u_i>.d<v_i,u_i>.</span><script type="math/tex">d<u_i,v_i> <span class="arithmatex"><span class="MathJax_Preview">不一定等于</span><script type="math/tex">不一定等于</script></span>d<v_i,u_i>.d<v_i,u_i>.</script></span> 无向完全图、有向完全图中任意两点的短程线都为1，但是竞赛图中任意两点的短程线是不定的。</p>
+</li>
+</ul>
+<h3 id="_3">图的连通性<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>对于任何的无向图G，有
+$$
+\kappa(G)  \leqslant \lambda(G) \leqslant \delta(G)
+$$</p>
+<h3 id="_4">图的矩阵表示<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">关联矩阵<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+M = (a_{ij})_{m\times n}表示G = &lt;V,E&gt;,|V| = m, |E| = n, a_{ij}表示边E_j与点V_i的关联次数.
+</div>
+<script type="math/tex; mode=display">
+M = (a_{ij})_{m\times n}表示G = <V,E>,|V| = m, |E| = n, a_{ij}表示边E_j与点V_i的关联次数.
+</script>
+</div>
+<h4 id="_6">邻接矩阵<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+M = (a_{ij})_{n\times n}表示D = &lt;V, E&gt;,其中a_{ij}表示点V_i邻接到V_j的次数.
+</div>
+<script type="math/tex; mode=display">
+M = (a_{ij})_{n\times n}表示D = <V, E>,其中a_{ij}表示点V_i邻接到V_j的次数.
+</script>
+</div>
+<blockquote>
+<p>注意：有向图的临界矩阵不一定是对称阵！无向图的临界矩阵一定是对称阵。</p>
+<p>对于有向图，每行元素之和<span class="arithmatex"><span class="MathJax_Preview">\sum_{j = 1}^na_{ij}</span><script type="math/tex">\sum_{j = 1}^na_{ij}</script></span>表示第<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>个元素的**出度**，每列元素之和<span class="arithmatex"><span class="MathJax_Preview">\sum_{i = 1}^na_{ij}</span><script type="math/tex">\sum_{i = 1}^na_{ij}</script></span>表示第<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>个元素的**入度**。</p>
+</blockquote>
+<h4 id="_7">可达矩阵<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h3 id="_8">扩大路径法<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_9">图的同构<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 如何判断两个图是否同构？</li>
+</ul>
+<p>必要条件：</p>
+<ul>
+<li>相同的度序列</li>
+</ul>
+<p>充要条件：能够找到双射</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 如何全面的枚举所有非同构的图？</li>
+</ul>
+<p>参考阅读：<a href="https://zhuanlan.zhihu.com/p/140471632?ivk_sa=1024320u">非同构图介绍及其获取方案 - 知乎 (zhihu.com)</a></p>
+<ul>
+<li>一个trick ：<span class="arithmatex"><span class="MathJax_Preview">G_1 \cong G_2 \iff \overline{G_1} \cong \overline{G_2}.</span><script type="math/tex">G_1 \cong G_2 \iff \overline{G_1} \cong \overline{G_2}.</script></span>这意味着可以从补图突破。</li>
+</ul>
+<h3 id="_10">图的连通性<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h4 id="_11">割点<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li>等价表述：<span class="arithmatex"><span class="MathJax_Preview">p(G-v) &gt; p(G).</span><script type="math/tex">p(G-v) > p(G).</script></span></li>
+</ul>
+<h4 id="_12">割边<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>等价表述： <span class="arithmatex"><span class="MathJax_Preview">p(G-e) &gt; p(G).</span><script type="math/tex">p(G-e) > p(G).</script></span></li>
+</ul>
+<h2 id="_13">一些概念的区分<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h4 id="_14">零图 平凡图 空图<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>零图: 边集为空的集合 n阶零图记为<span class="arithmatex"><span class="MathJax_Preview">N_n</span><script type="math/tex">N_n</script></span> </li>
+<li>
+<p>平凡图：一阶零图$N_1，即只有一个点，没有边的图</p>
+</li>
+<li>
+<p>空图：<mark>图的定义中规定顶点集<span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>为非空集</mark>，但在图的运算中可能产生顶点集为空的运算结果，因此规定顶点集为空的图为空图，记为 <span class="arithmatex"><span class="MathJax_Preview">\varnothing.</span><script type="math/tex">\varnothing.</script></span></p>
+</li>
+</ul>
+<h4 id="_15">邻域 闭邻域<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>无向图 邻域：与u相邻的点构成的集合为u的邻域</p>
+</li>
+<li>
+<p>无向图 闭邻域：在邻域基础上包括u自身</p>
+</li>
+<li>
+<p>无向图 关联：与u关联的边的集合</p>
+</li>
+<li>
+<p>有向图 后继：从u出发达到的点</p>
+</li>
+</ul>
+<blockquote>
+<p>注：根据屈婉玲版本，若存在自环，后继和前驱中是**不包括自身**的。推测无向图中若存在自环，邻域中应该也不包含自身。</p>
+</blockquote>
+<ul>
+<li>
+<p>有向图 前驱：可到达u的点</p>
+</li>
+<li>
+<p>有向图 邻域：后继和前驱的并集</p>
+</li>
+<li>有向图 闭邻域： 邻域基础上加上自身</li>
+</ul>
+<h4 id="_16">有向完全图 竞赛图<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>二者都是有向简单图。</p>
+<ul>
+<li>有向完全图：任意两个点之间都有**双向的**边。</li>
+<li>竞赛图：<strong>基图</strong>（有向图去掉所有的方向退化为的无向图）为完全图的有向图，这意味着任意两点之间有且仅有一条边。</li>
+</ul>
+<h4 id="_17">回路 简单回路 初级回路（圈） 环 自环<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li>途径 (Walk): 一个点和边的交错序列，其中首尾是点 <span class="arithmatex"><span class="MathJax_Preview">-v_{0}, e_{1}, v_{1}, e_{2}, v_{2}, \cdots, e_{k}, v_{k}</span><script type="math/tex">-v_{0}, e_{1}, v_{1}, e_{2}, v_{2}, \cdots, e_{k}, v_{k}</script></span> ，有时简写为 <span class="arithmatex"><span class="MathJax_Preview">v_{0} \rightarrow v_{1} \rightarrow v_{2} \rightarrow \cdots \rightarrow v_{k}</span><script type="math/tex">v_{0} \rightarrow v_{1} \rightarrow v_{2} \rightarrow \cdots \rightarrow v_{k}</script></span> 。其中 <span class="arithmatex"><span class="MathJax_Preview">e_{i}</span><script type="math/tex">e_{i}</script></span> 的两个端点分别为 <span class="arithmatex"><span class="MathJax_Preview">v_{i-1}</span><script type="math/tex">v_{i-1}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">v_{i}</span><script type="math/tex">v_{i}</script></span> (以下默认设 <span class="arithmatex"><span class="MathJax_Preview">w=\left[v_{0}, e_{1}, v_{1}, e_{2}, v_{2}, \cdots, e_{k}, v_{k}\right]</span><script type="math/tex">w=\left[v_{0}, e_{1}, v_{1}, e_{2}, v_{2}, \cdots, e_{k}, v_{k}\right]</script></span> 。</li>
+<li>迹 (Trail)：对于一条途径 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> ，若 <span class="arithmatex"><span class="MathJax_Preview">e_{1}, e_{2}, \cdots, e_{k}</span><script type="math/tex">e_{1}, e_{2}, \cdots, e_{k}</script></span> 两两互不相同，则称 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 是一条迹。</li>
+<li>路径 (Path) (又称简单路径 (Simple path))：对于一条迹 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> ，除了 <span class="arithmatex"><span class="MathJax_Preview">v_{0}</span><script type="math/tex">v_{0}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">v_{k}</span><script type="math/tex">v_{k}</script></span> 允许相同外，其余点两两互不相同，则称 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 是一条路径。</li>
+<li>回路 (Circuit)：对于一个迹 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> ，若 <span class="arithmatex"><span class="MathJax_Preview">v_{0}=v_{k}</span><script type="math/tex">v_{0}=v_{k}</script></span> ，则称 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 是一个回路。</li>
+<li>环圈 (Cycle) (又称简单回路 (Simple circuit))：对于一条简单路径 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> ，若 <span class="arithmatex"><span class="MathJax_Preview">v_{0}=v_{k}</span><script type="math/tex">v_{0}=v_{k}</script></span> ，则称 <span class="arithmatex"><span class="MathJax_Preview">w</span><script type="math/tex">w</script></span> 是一个环。</li>
+</ul>
+<p><img alt="image-20220515152407324" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220515152407324.png" /></p>
+<h4 id="_18">子图 生成子图 导出子图<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>子图
+  定义：子图G’中所有的顶点和边均包含于原图G。即E’∈E，并且V’∈V。</p>
+</li>
+<li>
+<p>生成子图（Spanning Subgraph）
+  定义：生成子图G’中**顶点个数V’必须和原图G中V的数量相同**，而E’∈E即可。</p>
+</li>
+<li>导出子图(Induced Subgraph)
+  定义：导出子图G’，V’∈V，<strong>但对于V’中任一顶点，只要在原图G中有对应边，那么就要出现在E’中</strong>。</li>
+</ul>
+<p><img alt="image-20220515152822708" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220515152822708.png" /></p>
+<h4 id="_19">关联与邻接<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<ul>
+<li>关联(incident): 指一条边和一个点关联。</li>
+<li>相邻、邻接(adjacent): 指两个点或者两条边相邻、邻接。</li>
+</ul>
+<h4 id="_20">弱连通图 单向连通图 强连通图<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>弱连通图：基图为连通图。</p>
+</li>
+<li>
+<p>单向连通图：任意两点之间至少有一个方向是可达的。</p>
+</li>
+</ul>
+<p>​ <span class="arithmatex"><span class="MathJax_Preview">D为单向连通图\iff D中存在经过每个点至少一次的通路.</span><script type="math/tex">D为单向连通图\iff D中存在经过每个点至少一次的通路.</script></span></p>
+<ul>
+<li>强连通图：任意两点之间两个方向可达。</li>
+</ul>
+<p><span class="arithmatex"><span class="MathJax_Preview">D为强连通图\iff D中存在经过每个点至少一次的回路．</span><script type="math/tex">D为强连通图\iff D中存在经过每个点至少一次的回路．</script></span></p>
+<blockquote>
+<p>三者为递进关系。</p>
+</blockquote>
+<h2 id="_21">习题选录（按照题型）<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<h3 id="_22">度序列<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>注意：无向图自环对度的贡献为2；有向图自环分别对出度和入度贡献1。</li>
+</ul>
+<h3 id="_23">握手定理<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>证明三维空间中不存在有奇数个面，且每个面都有奇数条棱的几何体。</p>
+</li>
+<li>
+<p>证明若无向图G中有且仅有两个奇度顶点，那么这两个顶点必然连通。</p>
+</li>
+</ol>
+<blockquote>
+<p>反证法，反设两个奇数度顶点不连通，那么G中可以找到两个独立的连通分量<span class="arithmatex"><span class="MathJax_Preview">G_A, G_B</span><script type="math/tex">G_A, G_B</script></span>，分别包含A、B，那么在这两个子图中，有且只有A或B为奇度顶点，而其他点都为偶度点，这与握手定理矛盾<span class="arithmatex"><span class="MathJax_Preview">\square.</span><script type="math/tex">\square.</script></span></p>
+</blockquote>
+<h3 id="_24">画出所有满足要求的非同构图问题<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>从度序列思考：可以有哪些不同的度序列？</li>
+<li>思考每一种度序列会有几种非同构的图</li>
+<li><mark>对于稠密图，从反面思考，画它的补图的所有非同构图</mark></li>
+</ul>
+<h3 id="_25">完全图、正则图、补图<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<ol>
+<li>讨论<span class="arithmatex"><span class="MathJax_Preview">k-</span><script type="math/tex">k-</script></span>正则图的不同构的生成子图为正则图的种数。</li>
+</ol>
+<blockquote>
+<p>注意：<mark>对于确定的k，不同构的正则不一定是唯一的</mark>！！</p>
+<p>由握手定理，对于k为奇数的情况，其生成子图只能取到<span class="arithmatex"><span class="MathJax_Preview">0\sim n</span><script type="math/tex">0\sim n</script></span>中的偶数情况。</p>
+<p>对于k为偶数的情况，其生成子图可以取到全部情况。</p>
+</blockquote>
+<ol>
+<li>结论： <span class="arithmatex"><span class="MathJax_Preview">\delta(G)+\Delta(\overline G) = n-1\\ \Delta(G) + \delta(\overline G) = n-1</span><script type="math/tex">\delta(G)+\Delta(\overline G) = n-1\\ \Delta(G) + \delta(\overline G) = n-1</script></span></li>
+<li>设G是6阶无向简单图，证明：<span class="arithmatex"><span class="MathJax_Preview">G或它的补图\overline{G}中存在3个点彼此相邻.</span><script type="math/tex">G或它的补图\overline{G}中存在3个点彼此相邻.</script></span></li>
+</ol>
+<blockquote>
+<p><img alt="image-20220516161606961" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220516161606961.png" /></p>
+</blockquote>
+<h3 id="_26">扩大路径法<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<ol>
+<li>设G是无向简单图，<span class="arithmatex"><span class="MathJax_Preview">\delta(G) \ge 2</span><script type="math/tex">\delta(G) \ge 2</script></span>，证明：G中存在长度大于等于<span class="arithmatex"><span class="MathJax_Preview">\delta(G)+1</span><script type="math/tex">\delta(G)+1</script></span>的圈。</li>
+</ol>
+<blockquote>
+<p>**笔者解答**采用构造法证明。考虑最坏的情况。</p>
+<p>构造一个顶点序列<span class="arithmatex"><span class="MathJax_Preview">\{u_1,u_2, \cdots,u_{\delta(G)},u_{\delta(G)+1}\}</span><script type="math/tex">\{u_1,u_2, \cdots,u_{\delta(G)},u_{\delta(G)+1}\}</script></span>，表示按照顺序不断加入新的点。在最坏的情况下，所有的新加入的点都尽可能不与外界的点相连，也就是保证与已经加入序列的点都有边的相连，，同时，所有的点的度都只有<span class="arithmatex"><span class="MathJax_Preview">\delta(G)</span><script type="math/tex">\delta(G)</script></span>，那么依次会有<span class="arithmatex"><span class="MathJax_Preview">\{\delta(G),\delta(G)-1, \delta(G)-2,\dots, \delta(G)-\delta(G) = 0\}</span><script type="math/tex">\{\delta(G),\delta(G)-1, \delta(G)-2,\dots, \delta(G)-\delta(G) = 0\}</script></span>个度是与外界相连的，可以发现直到第<span class="arithmatex"><span class="MathJax_Preview">\delta(G)+1</span><script type="math/tex">\delta(G)+1</script></span>个点时，不再可以与外界相连，也就是说不能再新加入点了，而此时形成的最大圈长度为<span class="arithmatex"><span class="MathJax_Preview">\delta(G)+1.\square</span><script type="math/tex">\delta(G)+1.\square</script></span></p>
+<p><strong>参考答案</strong> 用**扩大路径法**证明. 证明线索如下. 设 <span class="arithmatex"><span class="MathJax_Preview">\Gamma=v_{0} v_{1} \cdots v_{l}</span><script type="math/tex">\Gamma=v_{0} v_{1} \cdots v_{l}</script></span> 为极大路径 (可用扩大路径法得到), 则 <span class="arithmatex"><span class="MathJax_Preview">l \geqslant \delta(G)</span><script type="math/tex">l \geqslant \delta(G)</script></span> (为什么?). 由极大路径的性质 <span class="arithmatex"><span class="MathJax_Preview">\left(\Gamma\right.</span><script type="math/tex">\left(\Gamma\right.</script></span> 的两个端点 <span class="arithmatex"><span class="MathJax_Preview">v_{0}</span><script type="math/tex">v_{0}</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">v_{l}</span><script type="math/tex">v_{l}</script></span> 不与 <span class="arithmatex"><span class="MathJax_Preview">\Gamma</span><script type="math/tex">\Gamma</script></span> 外顶点相邻) 以及简单 图茨定义可知, <span class="arithmatex"><span class="MathJax_Preview">v_{0}</span><script type="math/tex">v_{0}</script></span> 要达到其度数 <span class="arithmatex"><span class="MathJax_Preview">d\left(v_{0}\right) \geqslant \delta(G)</span><script type="math/tex">d\left(v_{0}\right) \geqslant \delta(G)</script></span>, 必须与 <span class="arithmatex"><span class="MathJax_Preview">\Gamma</span><script type="math/tex">\Gamma</script></span> 上至少 <span class="arithmatex"><span class="MathJax_Preview">\delta(G)</span><script type="math/tex">\delta(G)</script></span> 个顶点相邻, 设其为 <span class="arithmatex"><span class="MathJax_Preview">v_{i_{1}}=</span><script type="math/tex">v_{i_{1}}=</script></span> <span class="arithmatex"><span class="MathJax_Preview">v_{1}, v_{i_{2}}, \cdots, v_{i_{\delta}}</span><script type="math/tex">v_{1}, v_{i_{2}}, \cdots, v_{i_{\delta}}</script></span>. 于是, 圈 <span class="arithmatex"><span class="MathJax_Preview">v_{0} v_{i_{1}} \cdots v_{i_{2}} \cdots v_{i_{\delta}} v_{0}</span><script type="math/tex">v_{0} v_{i_{1}} \cdots v_{i_{2}} \cdots v_{i_{\delta}} v_{0}</script></span> 长度大于等于 <span class="arithmatex"><span class="MathJax_Preview">\delta(G)+1</span><script type="math/tex">\delta(G)+1</script></span>, 式中的 <span class="arithmatex"><span class="MathJax_Preview">\delta=\delta(G)</span><script type="math/tex">\delta=\delta(G)</script></span>. 参见主教材中的例 <span class="arithmatex"><span class="MathJax_Preview">14.8</span><script type="math/tex">14.8</script></span>.</p>
+</blockquote>
+<h3 id="_27">图的连通性<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ol>
+<li>一个不是强连通图的单向连通图至少要加几条边，就能使之成为一个强连通图？</li>
+</ol>
+<blockquote>
+<p>利用二者的充要表示。</p>
+<ul>
+<li>单向连通图：任意两点之间至少有一个方向是可达的。</li>
+</ul>
+<p>​   <span class="arithmatex"><span class="MathJax_Preview">D为单向连通图\iff D中存在经过每个点至少一次的通路.</span><script type="math/tex">D为单向连通图\iff D中存在经过每个点至少一次的通路.</script></span></p>
+<ul>
+<li>强连通图：任意两点之间两个方向可达。</li>
+</ul>
+<p><span class="arithmatex"><span class="MathJax_Preview">D为强连通图\iff D中存在经过每个点至少一次的回路．</span><script type="math/tex">D为强连通图\iff D中存在经过每个点至少一次的回路．</script></span></p>
+</blockquote>
+<ol>
+<li>证明<span class="arithmatex"><span class="MathJax_Preview">n阶(n \ge 2)</span><script type="math/tex">n阶(n \ge 2)</script></span>简单连通图G中至少有两个顶点不是割点。</li>
+</ol>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">Pf.</span><script type="math/tex">Pf.</script></span>首先证明两个命题：</p>
+<ol>
+<li>
+<p>悬挂顶点不是割点。</p>
+</li>
+<li>
+<p>设G为n阶无向连通图，则在G中任何两个顶点之间加一条新边，所得的n阶图G'中的割点数小于等于G中的割点数。</p>
+</li>
+</ol>
+<p>利用**生成树**的思想，因为G连通，故G有生成树，设T为G中一颗生成树。由于<span class="arithmatex"><span class="MathJax_Preview">n \ge 2</span><script type="math/tex">n \ge 2</script></span>，所以T中至少有两片树叶（两个叶节点），由命题1可知这些叶节点不是割点。当T加边还原成G时，由命题2可知，G中至少有两个点不是割点<span class="arithmatex"><span class="MathJax_Preview">\square.</span><script type="math/tex">\square.</script></span></p>
+</blockquote>
+<ol>
+<li>设<span class="arithmatex"><span class="MathJax_Preview">D = &lt;V,E&gt;</span><script type="math/tex">D = <V,E></script></span>是简单有向图，<span class="arithmatex"><span class="MathJax_Preview">\delta(G) \ge 2</span><script type="math/tex">\delta(G) \ge 2</script></span>，<span class="arithmatex"><span class="MathJax_Preview">\delta^-(G) &gt; 0, \delta^+(G) &gt; 0,</span><script type="math/tex">\delta^-(G) > 0, \delta^+(G) > 0,</script></span>证明：D中存在长度大于等于<span class="arithmatex"><span class="MathJax_Preview">\max\{\delta^-(G),\delta^+(G)\}+1</span><script type="math/tex">\max\{\delta^-(G),\delta^+(G)\}+1</script></span>的圈。</li>
+</ol>
+<blockquote>
+<p>类似上题，可以证明
+$$
+(1)存在长度\ge \delta^-(G) + 1 的圈.\
+(2)存在长度\ge \delta^+(G) + 1 的圈.
+$$
+因此得证。</p>
+</blockquote>
+<ol>
+<li>设G是n阶m条边的无向连通图，证明：<span class="arithmatex"><span class="MathJax_Preview">m \ge n-1.</span><script type="math/tex">m \ge n-1.</script></span></li>
+</ol>
+<blockquote>
+<p>此题的结论是很直观的——我们似乎无法构造一个少于n-1条边的无向连通图。然而，这样的说明是缺乏说服力的。因此考虑数学归纳法，对n归纳：
+$$
+(1)&amp;Basis.n = 1, m = 0\to 平凡图，显然成立.\
+(2)&amp;I.H.设\forall n \le k时成立,\
+(3)&amp;I.S.n = k+1时,任取其中一点v,除去该点得到G' = G-v,G'的连通分支G_1, G_2, \cdots,G_s,1\le s \le \delta(G)\&amp;设G_i的阶数和边数分别为V_i, E_i, V_i \le k,由归纳假设,E_i \ge V_i -1,\
+&amp; \Rightarrow \sum E_i \ge \sum V_i - s\ &amp;又\because 删去的边E \ge \delta(G), \sum V_i = k, 1\le s \le \delta(G)\ &amp;\Rightarrow m = E + \sum E_i\ge \delta(G) + k - s \ge k = (k+1) - 1\
+&amp;由(1)(2)(3),\square.
+$$</p>
+</blockquote>
+<h3 id="_28">完全图与二部图<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在无向完全图中，寻找边数最多的生成子图，使得其成为完全二部图。</li>
+</ol>
+<blockquote>
+<p>完全图转完全二部图的过程：</p>
+<ul>
+<li>将顶点集划分为两个互补的顶点子集<span class="arithmatex"><span class="MathJax_Preview">V_1,V_2,|V_1| = r, |V_2| = s</span><script type="math/tex">V_1,V_2,|V_1| = r, |V_2| = s</script></span></li>
+<li>删去所有<span class="arithmatex"><span class="MathJax_Preview">e_i = {v_i, v_j}, v_i, v_j \in V_1或者\in V_2</span><script type="math/tex">e_i = {v_i, v_j}, v_i, v_j \in V_1或者\in V_2</script></span></li>
+</ul>
+<p>得到的完全二部图边数为<span class="arithmatex"><span class="MathJax_Preview">rs</span><script type="math/tex">rs</script></span>，删去的边的数量为<span class="arithmatex"><span class="MathJax_Preview">C_r^2 + C_s^2.</span><script type="math/tex">C_r^2 + C_s^2.</script></span></p>
+</blockquote>
+<ol>
+<li>
+<p>完全二部图<span class="arithmatex"><span class="MathJax_Preview">K_{r,s}, r,s \ge 2</span><script type="math/tex">K_{r,s}, r,s \ge 2</script></span>，则：</p>
+</li>
+<li>
+<p>含有多少个非同构的圈？<span class="arithmatex"><span class="MathJax_Preview">\min\{r,s\}-1</span><script type="math/tex">\min\{r,s\}-1</script></span></p>
+</li>
+<li>
+<p>至多有多少个顶点彼此不相邻？<span class="arithmatex"><span class="MathJax_Preview">\max\{r,s\}</span><script type="math/tex">\max\{r,s\}</script></span></p>
+</li>
+<li>
+<p>至多有多少条边彼此不相邻？</p>
+<blockquote>
+<p>考虑任意两条边<span class="arithmatex"><span class="MathJax_Preview">e_1 = \{u_1, v_1\}, e_2 = \{u_2, v_2\}</span><script type="math/tex">e_1 = \{u_1, v_1\}, e_2 = \{u_2, v_2\}</script></span>，注意到两个端点只要有一个是相同的， 那么两条边就相邻了，因此对于所有的边，它们处于<span class="arithmatex"><span class="MathJax_Preview">V_r,V_s</span><script type="math/tex">V_r,V_s</script></span>中的点要户部相同，因此至多有<span class="arithmatex"><span class="MathJax_Preview">\min\{r,s\}</span><script type="math/tex">\min\{r,s\}</script></span>条。</p>
+</blockquote>
+</li>
+<li>
+<p>点连通度<span class="arithmatex"><span class="MathJax_Preview">\kappa</span><script type="math/tex">\kappa</script></span>为几？边连通度<span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>为几？<span class="arithmatex"><span class="MathJax_Preview">\kappa(K) = \min\{r,s\},\lambda(K) = \min\{r,s\}.</span><script type="math/tex">\kappa(K) = \min\{r,s\},\lambda(K) = \min\{r,s\}.</script></span></p>
+</li>
+</ol>
+<h3 id="_29">邻接矩阵<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<ol>
+<li><img alt="image-20220516151251180" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220516151251180.png" /></li>
+</ol>
+<blockquote>
+<p><img alt="解答" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220516151322236.png" /></p>
+</blockquote>
+<h3 id="_30">图的应用<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<ol>
+<li>有三个油瓶，分别是1斤装，7两装，3两装（注：一斤=十两）。现在一斤的瓶子里装满了油，另外两个是空瓶。如何用这3个油瓶将1斤油分成2个5两？至少进行多少次？</li>
+</ol>
+<blockquote>
+<p><strong>参考答案</strong></p>
+<p>将三个瓶子里油量写成三元有序对<span class="arithmatex"><span class="MathJax_Preview">(v_1, v_2, v_3),</span><script type="math/tex">(v_1, v_2, v_3),</script></span>则初始状态为（10，0，0），最终状态为（5，5，0），画出完整的**状态转移图**，如下图：</p>
+<p><img alt="image-20220516173228647" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220516173228647.png" /></p>
+<p>不难得出短程线，及最短距离9。</p>
+<p><strong>笔者解法</strong> 编程来处理</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp"></span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">mm</span><span class="w"> </span><span class="n">mm</span><span class="p">;</span><span class="w"></span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">mm</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="c1">//这里还发现一个坑：如果使用set，且类型为自定义的结构体时，需要重载operator&lt;！！</span>
+<span class="c1">//原因是set维护时会对数据升序处理，</span>
+<span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">&lt;</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">mm</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">mm</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">)</span><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">set</span><span class="o">&lt;</span><span class="n">mm</span><span class="o">&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"></span>
+<span class="n">stack</span><span class="o">&lt;</span><span class="n">mm</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stk</span><span class="p">;</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="n">mm</span><span class="w"> </span><span class="n">cur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w">  </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">inc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">mm</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">inc</span><span class="p">,</span><span class="w">  </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">inc</span><span class="p">,</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">stk</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">inc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">mm</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">inc</span><span class="p">,</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">inc</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">stk</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">mm</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">stk</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">inc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">mm</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">inc</span><span class="p">,</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">inc</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">stk</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">mm</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">stk</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">inc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">mm</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">inc</span><span class="p">,</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">inc</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">stk</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100000</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="n">mm</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span><span class="w"></span>
+<span class="n">stk</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">start</span><span class="p">);</span><span class="w"></span>
+<span class="n">s</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">start</span><span class="p">);</span><span class="w"></span>
+<span class="n">foo</span><span class="p">(</span><span class="n">start</span><span class="p">);</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="k">while</span><span class="p">(</span><span class="o">!</span><span class="n">stk</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">mm</span><span class="w"> </span><span class="n">cur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stk</span><span class="p">.</span><span class="n">top</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="n">stk</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span><span class="w"> </span><span class="n">cnt</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">cnt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="n">foo</span><span class="p">(</span><span class="n">cur</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">cur</span><span class="p">.</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cur</span><span class="p">.</span><span class="n">c</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="n">cnt</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cnt</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>输出结果（部分）：</p>
+<div class="highlight"><pre><span></span><code>7 0 3
+7 3 0
+4 3 3
+4 6 0
+1 6 3
+1 7 2
+8 0 2
+8 2 0
+5 2 3
+5 5 0
+cntLen = 9
+</code></pre></div>
+</blockquote>
+<ol>
+<li>类似1的问题：（农夫、狗、羊、白菜过河问题）</li>
+</ol>
+<blockquote>
+<p>有一个农夫带一只羊、一筐菜和一只狼过河.果没有农夫看管，则狼要吃羊，羊要吃菜.但是船很小，只够农夫带一样东西过河。问农夫该如何解此难题？</p>
+<p>参考解答：</p>
+<p><a href="https://blog.csdn.net/timepe/article/details/7425272">农夫、狼、羊、白菜（回溯法求解）</a></p>
+</blockquote>
+</blockquote>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 树" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              树
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-footer__link md-footer__link--next" aria-label="下一页: 课堂笔记" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              课堂笔记
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

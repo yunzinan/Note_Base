@@ -1,0 +1,4201 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>离散数学课堂笔记 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              离散数学课堂笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt1/" class="md-tabs__link md-tabs__link--active">
+        数学
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        计算机科学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+        技能树
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        课堂笔记
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命题逻辑
+  </a>
+  
+    <nav class="md-nav" aria-label="命题逻辑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    语义蕴含
+  </a>
+  
+    <nav class="md-nav" aria-label="语义蕴含">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    命题逻辑的判定性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    命题逻辑的自然演绎规则
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    谓词逻辑初步
+  </a>
+  
+    <nav class="md-nav" aria-label="谓词逻辑初步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#predicate" class="md-nav__link">
+    谓词（Predicate）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formula" class="md-nav__link">
+    逻辑公式（Formula）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    量化公式的变元
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    量化公式的真假
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    常用逻辑等价式
+  </a>
+  
+    <nav class="md-nav" aria-label="常用逻辑等价式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    主析取/合取范式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prenex-normal-form" class="md-nav__link">
+    前束范式（Prenex Normal Form）
+  </a>
+  
+    <nav class="md-nav" aria-label="前束范式（Prenex Normal Form）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pdnf" class="md-nav__link">
+    前束析取范式（PDNF）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcnf" class="md-nav__link">
+    前束合取范式（PCNF）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    基于规则的推理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fol" class="md-nav__link">
+    一阶谓词逻辑FOL的一些定论
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    证明方法
+  </a>
+  
+    <nav class="md-nav" aria-label="证明方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    证明过程
+  </a>
+  
+    <nav class="md-nav" aria-label="证明过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    直接法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-q-q-p" class="md-nav__link">
+    反证法： p -&gt; q == ~q -&gt; ~p
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-q-f" class="md-nav__link">
+    归谬法：q == ~q -&gt; F
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    分情形证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    集合及其运算
+  </a>
+  
+    <nav class="md-nav" aria-label="集合及其运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    集合的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    集合的描述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    集合相等
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    集合的包含关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality" class="md-nav__link">
+    集合的大小（势）//cardinality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    相对补
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    对称差
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    广义并 广义交
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peano-axioms-for-natural-numbers" class="md-nav__link">
+    皮亚诺公理(Peano axioms for natural numbers)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#russel-paradox" class="md-nav__link">
+    Russel paradox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zfc" class="md-nav__link">
+    ZFC公理（*）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    笛卡尔乘积
+  </a>
+  
+    <nav class="md-nav" aria-label="笛卡尔乘积">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    有序偶
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    集合的笛卡尔乘积
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    集合相关命题的基本证明方式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    关系及其运算
+  </a>
+  
+    <nav class="md-nav" aria-label="关系及其运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordered-pair" class="md-nav__link">
+    有序对（Ordered Pair）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartesian-product" class="md-nav__link">
+    笛卡尔乘积（Cartesian Product）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    （二元）关系的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    关系的表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    关系的运算
+  </a>
+  
+    <nav class="md-nav" aria-label="关系的运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-1" class="md-nav__link">
+    0-1矩阵运算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    关系的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="关系的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflexivity" class="md-nav__link">
+    自反性（Reflexivity）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetry" class="md-nav__link">
+    对称性（Symmetry）
+  </a>
+  
+    <nav class="md-nav" aria-label="对称性（Symmetry）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    对称关系与逆关系：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitivity" class="md-nav__link">
+    传递性（Transitivity）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    函数及其运算
+  </a>
+  
+    <nav class="md-nav" aria-label="函数及其运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-mapping-transformation" class="md-nav__link">
+    函数（function, mapping, transformation）的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    函数的集合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    函数性质
+  </a>
+  
+    <nav class="md-nav" aria-label="函数性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forall-y-in-b-exist-x-in-a-st-fx-yforall-y-in-b-exist-x-in-a-st-fx-y" class="md-nav__link">
+    \forall y \in B, \exist x \in A ,s.t.\ f(x) = y\forall y \in B, \exist x \in A ,s.t.\ f(x) = y
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    函数的复合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    集合的基数
+  </a>
+  
+    <nav class="md-nav" aria-label="集合的基数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-approx-ba-approx-b" class="md-nav__link">
+    集合的等势关系（A \approx BA \approx B）【找双射】
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    有限集与无限集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    可列集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    集合的优势关系（取代等势/三明治定理）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrrhonrhon" class="md-nav__link">
+    \R\R和\rho(\N)\rho(\N)等势
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    连续统假设
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    数论初步
+  </a>
+  
+    <nav class="md-nav" aria-label="数论初步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    整数
+  </a>
+  
+    <nav class="md-nav" aria-label="整数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    整除关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    余数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aequivequivbmod-k" class="md-nav__link">
+    同余(a\equiv\equivb(mod k))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    质数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    基本算术定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bezouts-identity" class="md-nav__link">
+    裴蜀定理/贝祖定理（Bézout's identity）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    最大公约数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    中国剩余定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    欧拉函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    归纳与递归
+  </a>
+  
+    <nav class="md-nav" aria-label="归纳与递归">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    数学归纳证明要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    思考题：扔煎饼
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    常见错误
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    强数学归纳法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    良序原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    递归
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    结构归纳法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    广义归纳
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    证明程序的正确性和复杂性
+  </a>
+  
+    <nav class="md-nav" aria-label="证明程序的正确性和复杂性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    欧几里得算法的正确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    欧几里得算法的复杂度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    计数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    生成函数
+  </a>
+  
+    <nav class="md-nav" aria-label="生成函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    生成函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    离散概率
+  </a>
+  
+    <nav class="md-nav" aria-label="离散概率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    直觉的概率分析
+  </a>
+  
+    <nav class="md-nav" aria-label="直觉的概率分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    四步法
+  </a>
+  
+    <nav class="md-nav" aria-label="四步法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find-the-sample-space" class="md-nav__link">
+    选定样本空间 (Find the sample space)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-events-of-interests" class="md-nav__link">
+    定义相关事件 (Define events of interests)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determine-outcome-probabilities" class="md-nav__link">
+    确定结果概率 (Determine outcome probabilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-event-probabilities" class="md-nav__link">
+    计算事件概率 (Compute event probabilities)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    概率空间: 基于集合论给概率以 数学定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    基于集合论的概率计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    条件概率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    贝叶斯定理
+  </a>
+  
+    <nav class="md-nav" aria-label="贝叶斯定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    贝叶斯定理的推导
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    一些常用说法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    事件独立性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    随机变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    条件期望
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    闭包
+  </a>
+  
+    <nav class="md-nav" aria-label="闭包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    闭包的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    闭包的计算公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warshall" class="md-nav__link">
+    传递闭包的Warshall算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    等价关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    等价类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-rr-mathrmamathrma-forall-x-in-mathrmaforall-x-in-mathrma-x_ry-mid-y-in-mathrma-wedge-x-r-yx_ry-mid-y-in-mathrma-wedge-x-r-y" class="md-nav__link">
+    - RR 是非空集合 \mathrm{A}\mathrm{A} 上的等价关系, \forall x \in \mathrm{A}\forall x \in \mathrm{A}, 等价类 {[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}{[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}（等价类是一个**集合**）
+  </a>
+  
+    <nav class="md-nav" aria-label="- RR 是非空集合 \mathrm{A}\mathrm{A} 上的等价关系, \forall x \in \mathrm{A}\forall x \in \mathrm{A}, 等价类 {[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}{[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}（等价类是一个**集合**）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    商集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_85" class="md-nav__link">
+    集合的划分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partail-order" class="md-nav__link">
+    偏序关系（partail order）
+  </a>
+  
+    <nav class="md-nav" aria-label="偏序关系（partail order）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_86" class="md-nav__link">
+    全序（线性序）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_87" class="md-nav__link">
+    覆盖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poset" class="md-nav__link">
+    偏序集（p.o.set）与哈斯图
+  </a>
+  
+    <nav class="md-nav" aria-label="偏序集（p.o.set）与哈斯图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_88" class="md-nav__link">
+    偏序集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasse-diagrams" class="md-nav__link">
+    哈斯图（Hasse Diagrams）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          计算机科学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机科学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机科学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          技能树
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技能树" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          技能树
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课堂笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          课堂笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="随笔" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    命题逻辑
+  </a>
+  
+    <nav class="md-nav" aria-label="命题逻辑">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    语义蕴含
+  </a>
+  
+    <nav class="md-nav" aria-label="语义蕴含">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    命题逻辑的判定性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    命题逻辑的自然演绎规则
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    谓词逻辑初步
+  </a>
+  
+    <nav class="md-nav" aria-label="谓词逻辑初步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#predicate" class="md-nav__link">
+    谓词（Predicate）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formula" class="md-nav__link">
+    逻辑公式（Formula）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    量化公式的变元
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    量化公式的真假
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    常用逻辑等价式
+  </a>
+  
+    <nav class="md-nav" aria-label="常用逻辑等价式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    主析取/合取范式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prenex-normal-form" class="md-nav__link">
+    前束范式（Prenex Normal Form）
+  </a>
+  
+    <nav class="md-nav" aria-label="前束范式（Prenex Normal Form）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pdnf" class="md-nav__link">
+    前束析取范式（PDNF）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pcnf" class="md-nav__link">
+    前束合取范式（PCNF）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    基于规则的推理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fol" class="md-nav__link">
+    一阶谓词逻辑FOL的一些定论
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    证明方法
+  </a>
+  
+    <nav class="md-nav" aria-label="证明方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    证明过程
+  </a>
+  
+    <nav class="md-nav" aria-label="证明过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    直接法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-q-q-p" class="md-nav__link">
+    反证法： p -&gt; q == ~q -&gt; ~p
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q-q-f" class="md-nav__link">
+    归谬法：q == ~q -&gt; F
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    分情形证明
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    集合及其运算
+  </a>
+  
+    <nav class="md-nav" aria-label="集合及其运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    集合的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    集合的描述
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    集合相等
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    集合的包含关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cardinality" class="md-nav__link">
+    集合的大小（势）//cardinality
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    相对补
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    对称差
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    广义并 广义交
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peano-axioms-for-natural-numbers" class="md-nav__link">
+    皮亚诺公理(Peano axioms for natural numbers)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#russel-paradox" class="md-nav__link">
+    Russel paradox
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zfc" class="md-nav__link">
+    ZFC公理（*）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    笛卡尔乘积
+  </a>
+  
+    <nav class="md-nav" aria-label="笛卡尔乘积">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    有序偶
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    集合的笛卡尔乘积
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    集合相关命题的基本证明方式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    关系及其运算
+  </a>
+  
+    <nav class="md-nav" aria-label="关系及其运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordered-pair" class="md-nav__link">
+    有序对（Ordered Pair）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartesian-product" class="md-nav__link">
+    笛卡尔乘积（Cartesian Product）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    （二元）关系的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    关系的表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    关系的运算
+  </a>
+  
+    <nav class="md-nav" aria-label="关系的运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0-1" class="md-nav__link">
+    0-1矩阵运算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    关系的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="关系的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reflexivity" class="md-nav__link">
+    自反性（Reflexivity）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#symmetry" class="md-nav__link">
+    对称性（Symmetry）
+  </a>
+  
+    <nav class="md-nav" aria-label="对称性（Symmetry）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    对称关系与逆关系：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitivity" class="md-nav__link">
+    传递性（Transitivity）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    函数及其运算
+  </a>
+  
+    <nav class="md-nav" aria-label="函数及其运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-mapping-transformation" class="md-nav__link">
+    函数（function, mapping, transformation）的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    函数的集合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    函数性质
+  </a>
+  
+    <nav class="md-nav" aria-label="函数性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forall-y-in-b-exist-x-in-a-st-fx-yforall-y-in-b-exist-x-in-a-st-fx-y" class="md-nav__link">
+    \forall y \in B, \exist x \in A ,s.t.\ f(x) = y\forall y \in B, \exist x \in A ,s.t.\ f(x) = y
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    函数的复合
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    集合的基数
+  </a>
+  
+    <nav class="md-nav" aria-label="集合的基数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-approx-ba-approx-b" class="md-nav__link">
+    集合的等势关系（A \approx BA \approx B）【找双射】
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    有限集与无限集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    可列集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    集合的优势关系（取代等势/三明治定理）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rrrhonrhon" class="md-nav__link">
+    \R\R和\rho(\N)\rho(\N)等势
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    连续统假设
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    数论初步
+  </a>
+  
+    <nav class="md-nav" aria-label="数论初步">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    整数
+  </a>
+  
+    <nav class="md-nav" aria-label="整数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    整除关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    余数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aequivequivbmod-k" class="md-nav__link">
+    同余(a\equiv\equivb(mod k))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    质数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    基本算术定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bezouts-identity" class="md-nav__link">
+    裴蜀定理/贝祖定理（Bézout's identity）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    最大公约数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    中国剩余定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    欧拉函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    归纳与递归
+  </a>
+  
+    <nav class="md-nav" aria-label="归纳与递归">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    数学归纳证明要点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    思考题：扔煎饼
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    常见错误
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    强数学归纳法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    良序原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    递归
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    结构归纳法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    广义归纳
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    证明程序的正确性和复杂性
+  </a>
+  
+    <nav class="md-nav" aria-label="证明程序的正确性和复杂性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    欧几里得算法的正确性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    欧几里得算法的复杂度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    计数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    生成函数
+  </a>
+  
+    <nav class="md-nav" aria-label="生成函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    生成函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    离散概率
+  </a>
+  
+    <nav class="md-nav" aria-label="离散概率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    直觉的概率分析
+  </a>
+  
+    <nav class="md-nav" aria-label="直觉的概率分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    四步法
+  </a>
+  
+    <nav class="md-nav" aria-label="四步法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#find-the-sample-space" class="md-nav__link">
+    选定样本空间 (Find the sample space)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#define-events-of-interests" class="md-nav__link">
+    定义相关事件 (Define events of interests)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determine-outcome-probabilities" class="md-nav__link">
+    确定结果概率 (Determine outcome probabilities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-event-probabilities" class="md-nav__link">
+    计算事件概率 (Compute event probabilities)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    概率空间: 基于集合论给概率以 数学定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    基于集合论的概率计算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    条件概率
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    贝叶斯定理
+  </a>
+  
+    <nav class="md-nav" aria-label="贝叶斯定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    贝叶斯定理的推导
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    一些常用说法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    事件独立性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    随机变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    条件期望
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    闭包
+  </a>
+  
+    <nav class="md-nav" aria-label="闭包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    闭包的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    闭包的计算公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#warshall" class="md-nav__link">
+    传递闭包的Warshall算法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    等价关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    等价类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-rr-mathrmamathrma-forall-x-in-mathrmaforall-x-in-mathrma-x_ry-mid-y-in-mathrma-wedge-x-r-yx_ry-mid-y-in-mathrma-wedge-x-r-y" class="md-nav__link">
+    - RR 是非空集合 \mathrm{A}\mathrm{A} 上的等价关系, \forall x \in \mathrm{A}\forall x \in \mathrm{A}, 等价类 {[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}{[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}（等价类是一个**集合**）
+  </a>
+  
+    <nav class="md-nav" aria-label="- RR 是非空集合 \mathrm{A}\mathrm{A} 上的等价关系, \forall x \in \mathrm{A}\forall x \in \mathrm{A}, 等价类 {[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}{[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}（等价类是一个**集合**）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    商集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_85" class="md-nav__link">
+    集合的划分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#partail-order" class="md-nav__link">
+    偏序关系（partail order）
+  </a>
+  
+    <nav class="md-nav" aria-label="偏序关系（partail order）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_86" class="md-nav__link">
+    全序（线性序）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_87" class="md-nav__link">
+    覆盖
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poset" class="md-nav__link">
+    偏序集（p.o.set）与哈斯图
+  </a>
+  
+    <nav class="md-nav" aria-label="偏序集（p.o.set）与哈斯图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_88" class="md-nav__link">
+    偏序集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hasse-diagrams" class="md-nav__link">
+    哈斯图（Hasse Diagrams）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="_1">离散数学课堂笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">命题逻辑<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>程序分析时需要考虑布尔表达式的可满足性</p>
+</li>
+<li>
+<p>程序验证有关表达式逻辑推理</p>
+</li>
+<li>
+<p>布尔运算符</p>
+</li>
+<li>
+<p>与 </p>
+</li>
+<li>或</li>
+<li>
+<p>非</p>
+</li>
+<li>
+<p>命题 陈述句 i.e.陈述事实的句子</p>
+</li>
+<li>
+<p>原子命题与复合命题</p>
+</li>
+<li>
+<p>命题表达式</p>
+</li>
+<li>
+<p>命题变元</p>
+</li>
+<li>
+<p>运算符：</p>
+</li>
+<li>
+<p>否定</p>
+</li>
+<li>合取</li>
+<li>析取</li>
+<li>蕴含</li>
+<li>
+<p>双（向）蕴含</p>
+</li>
+<li>
+<p>运算符的优先级：<strong>!</strong> &gt; <strong>&amp;&amp;</strong> &gt; <strong>||</strong> &gt;  <strong>-&gt;</strong>  &gt;  <strong>&lt;-&gt;</strong></p>
+</li>
+<li>
+<p>命题的真值表</p>
+</li>
+<li>
+<p>成真指派</p>
+</li>
+<li>
+<p>成假指派</p>
+</li>
+<li>
+<p>永真式、矛盾式</p>
+</li>
+<li>
+<p>逻辑等价</p>
+</li>
+</ul>
+<p>iff 对任意的变元赋值，两个命题取值总是相同</p>
+<p>两个命题构成的双向蕴含命题为永真</p>
+<ul>
+<li>双重否定律</li>
+<li>幂等律</li>
+<li>交换律</li>
+<li>结合律</li>
+<li><mark>分配律</mark></li>
+<li><mark>德摩根律</mark></li>
+<li>吸收律</li>
+<li>支配律</li>
+<li>恒等律</li>
+<li>排中律</li>
+<li>矛盾律</li>
+<li>假言易位i.e.逆否命题</li>
+<li>归谬论</li>
+</ul>
+<h4 id="_3">语义蕴含<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220216101335769" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220216101335769.png" /></p>
+<p>可以构造一个复合命题，说明其为永真的。</p>
+<p>逻辑等价：双向蕴含的命题永真</p>
+<p>可满足性：存在一组成真指派</p>
+<h5 id="_4">命题逻辑的判定性<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p>​   是否有通用的算法，判定命题是否永真？</p>
+<p>命题的合取范式(Conjunctive normal form) CNF </p>
+<p>​   判断命题是否永真</p>
+<p>命题的析取范式(Disjunctive nromal form)</p>
+<p>DNF</p>
+<p>​   求解命题的所有成真指派</p>
+<h5 id="_5">命题逻辑的自然演绎规则<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<p>​   假言推理（A推B，且A，则B）</p>
+<p>​   取拒式（A推出B,且非B,那么非A）</p>
+<p>​   假言三段论（A推出B， B推出C，则A推出C）</p>
+<p>​   析取三段论（要么A要么B，且不是A，则B）</p>
+<p>​   附加律(or一个别的东西)</p>
+<p>​   化简律（取其中一个）</p>
+<p>​   合取律（两个命题连接）</p>
+<p>​   消解律（A或B，　非A或C，则或C）</p>
+<h2 id="_6">谓词逻辑初步<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="predicate">谓词（Predicate）<a class="headerlink" href="#predicate" title="Permanent link">&para;</a></h3>
+<ul>
+<li>真值依赖于x的取值</li>
+<li><mark>论域</mark>(domain of discourse)：变量x的取值范围</li>
+</ul>
+<h3 id="formula">逻辑公式（Formula）<a class="headerlink" href="#formula" title="Permanent link">&para;</a></h3>
+<ul>
+<li>原子陈述是逻辑公式</li>
+<li>若P是逻辑公式，x是自由变量，则对于所有的x/存在x，满足P 也是逻辑公式</li>
+<li>若P和Q是逻辑公式，则非 并 交 蕴含都是逻辑公式</li>
+<li><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">注意</span><script type="math/tex">注意</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">注意</span><script type="math/tex">注意</script></span></script></span>：量词的优先级高于其他逻辑运算符</li>
+<li>计算机编程：解析树</li>
+</ul>
+<h3 id="_7">量化公式的变元<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>约束变元：作用域受限或者被赋值的变量</li>
+<li>自由变元：</li>
+</ul>
+<p><img alt="image-20220221100729232" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220221100729232.png" /></p>
+<h3 id="_8">量化公式的真假<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>多个量词并用交换全称和存在性量词，命题不一定一样</p>
+<p>论域的无限性，加深了推理的困难。</p>
+<h3 id="_9">常用逻辑等价式<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>非 所有 = 存在 非</p>
+</li>
+<li>
+<p>非 存在 = 所有 非</p>
+</li>
+</ul>
+<p><img alt="image-20220221103226412" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220221103226412.png" /></p>
+<p><mark>注意：下面两种情形是单项蕴含！！</mark></p>
+<p>全称/存在量词中与变量无关的命题可以提出</p>
+<p><img alt="image-20220221104125416" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220221104125416.png" /></p>
+<p><mark>注意：下面两种情形的量词会发生改变！（运用量词的德摩根律）</mark></p>
+<h4 id="_10">主析取/合取范式<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>析取范式</p>
+</li>
+<li>
+<p>合取范式</p>
+</li>
+</ul>
+<h4 id="prenex-normal-form">前束范式（Prenex Normal Form）<a class="headerlink" href="#prenex-normal-form" title="Permanent link">&para;</a></h4>
+<h5 id="pdnf">前束析取范式（PDNF）<a class="headerlink" href="#pdnf" title="Permanent link">&para;</a></h5>
+<h5 id="pcnf">前束合取范式（PCNF）<a class="headerlink" href="#pcnf" title="Permanent link">&para;</a></h5>
+<h3 id="_11">基于规则的推理<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h3 id="fol">一阶谓词逻辑FOL的一些定论<a class="headerlink" href="#fol" title="Permanent link">&para;</a></h3>
+<ul>
+<li>自然演绎规则（含量词相关的）是正确的、完备的。</li>
+<li>不可判定的：</li>
+</ul>
+<h2 id="_12">证明方法<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="_13">证明过程<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<h4 id="_14">直接法<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<h4 id="p-q-q-p">反证法： p -&gt; q == ~q -&gt; ~p<a class="headerlink" href="#p-q-q-p" title="Permanent link">&para;</a></h4>
+<h4 id="q-q-f">归谬法：q == ~q -&gt; F<a class="headerlink" href="#q-q-f" title="Permanent link">&para;</a></h4>
+<h4 id="_15">分情形证明<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<h2 id="_16">集合及其运算<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<h3 id="_17">集合的定义<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ul>
+<li>无序 确定</li>
+<li>definite distinct objects</li>
+<li>朴素集合论 naive set theory</li>
+</ul>
+<h3 id="_18">集合的描述<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<ul>
+<li>文氏图的局限性：四个以上集合的关系表示困难</li>
+</ul>
+<h3 id="_19">集合相等<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<ul>
+<li>集合A中的元素在B中，反之亦然（定义）</li>
+<li>A包含于B，反之亦然（定理）</li>
+</ul>
+<h3 id="_20">集合的包含关系<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex"><span class="MathJax_Preview">A \subseteq B</span><script type="math/tex">A \subseteq B</script></span> 表示集合A包含于集合 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{B}</span><script type="math/tex">\mathrm{B}</script></span> ，等价于A的元素都是 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{B}</span><script type="math/tex">\mathrm{B}</script></span> 的元素，也就是
+$$
+(x \in A \Rightarrow x \in B) \Leftrightarrow A \subseteq B
+$$
+<span class="arithmatex"><span class="MathJax_Preview">A \subset B</span><script type="math/tex">A \subset B</script></span> 表示集合A真包含于集合 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{B}</span><script type="math/tex">\mathrm{B}</script></span> ，等价于 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{A}</span><script type="math/tex">\mathrm{A}</script></span> 的元素都是 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{B}</span><script type="math/tex">\mathrm{B}</script></span> 的元素并且 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{B}</span><script type="math/tex">\mathrm{B}</script></span> 中元素一定比 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{A}</span><script type="math/tex">\mathrm{A}</script></span> 多，排除了 相等的情况，也就是 <span class="arithmatex"><span class="MathJax_Preview">(x \in A \Rightarrow x \in B \wedge A \neq B) \Leftrightarrow A \subset B</span><script type="math/tex">(x \in A \Rightarrow x \in B \wedge A \neq B) \Leftrightarrow A \subset B</script></span></p>
+<h3 id="cardinality">集合的大小（势）//cardinality<a class="headerlink" href="#cardinality" title="Permanent link">&para;</a></h3>
+<ul>
+<li>card(X)  or |X|</li>
+<li>空集：</li>
+<li><img alt="image-20220228103425341" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220228103425341.png" /></li>
+<li>幂集：S是一个集合，**S的幂集**是S的==所有子集==的集合 //<mark>所有S的子集都是S的幂集的元素</mark></li>
+<li>推论：<img alt="image-20220228104113073" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220228104113073.png" /></li>
+<li>反之亦然</li>
+</ul>
+<h3 id="_21">相对补<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A - B == B对A的补集</li>
+<li>U - B == ~B //B的补集</li>
+</ul>
+<h3 id="_22">对称差<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>异或</li>
+</ul>
+<h3 id="_23">广义并 广义交<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<ul>
+<li>广义并</li>
+<li><img alt="image-20220228111636170" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220228111636170.png" /></li>
+<li>A的层次比U A 高一级 //A是集合的集合， U A是集合的元素的元素的集合，故UA与A的子集是同层次的</li>
+<li>广义交</li>
+<li><img alt="image-20220228112205402" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220228112205402.png" /></li>
+<li><mark>注意:限制条件是A非空, 否则无意义(<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">y \in A</span><script type="math/tex">y \in A</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">y \in A</span><script type="math/tex">y \in A</script></span></script></span>为假)</mark></li>
+</ul>
+<h3 id="peano-axioms-for-natural-numbers">皮亚诺公理(Peano axioms for natural numbers)<a class="headerlink" href="#peano-axioms-for-natural-numbers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>利用集合的关系来表示自然数</li>
+</ul>
+<p><img alt="image-20220228114100433" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220228114100433.png" /></p>
+<ul>
+<li>构造后继: n -&gt; n+1 : A -&gt; A U {A}</li>
+<li>比大小: $$3 \cup 2 $$ == max(3, 2) </li>
+<li></li>
+<li>加法</li>
+</ul>
+<h3 id="russel-paradox">Russel paradox<a class="headerlink" href="#russel-paradox" title="Permanent link">&para;</a></h3>
+<ul>
+<li>理发师悖论</li>
+</ul>
+<h3 id="zfc">ZFC公理（*）<a class="headerlink" href="#zfc" title="Permanent link">&para;</a></h3>
+<h3 id="_24">笛卡尔乘积<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<h4 id="_25">有序偶<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<h4 id="_26">集合的笛卡尔乘积<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<h3 id="_27">集合相关命题的基本证明方式<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>核心思想：将==集合==的关系转换为==元素==的关系，从元素的角度来思考。</li>
+<li>利用运算定义作逻辑等值式推演</li>
+<li>
+<p>集合 - 元素 - 集合</p>
+</li>
+<li>
+<p>利用已知恒等式或等式作集合代数推演</p>
+</li>
+<li>
+<p>跳过元素，直接利用结论</p>
+</li>
+<li>集合 - 集合</li>
+<li>
+<p>F == ~A <span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">\cap</span><script type="math/tex">\cap</script></span></script></span> ~A  T == A U～A</p>
+</li>
+<li>
+<p><img alt="image-20220302104518573" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220302104518573.png" /></p>
+</li>
+<li><img alt="image-20220302104611288" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220302104611288.png" /></li>
+<li>
+<p><img alt="image-20220302104621542" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220302104621542.png" /></p>
+</li>
+<li>
+<p>文氏图帮助推结论</p>
+</li>
+</ul>
+<h2 id="_28">关系及其运算<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<h3 id="ordered-pair">有序对（Ordered Pair）<a class="headerlink" href="#ordered-pair" title="Permanent link">&para;</a></h3>
+<ul>
+<li>次序的体现</li>
+</ul>
+<h3 id="cartesian-product">笛卡尔乘积（Cartesian Product）<a class="headerlink" href="#cartesian-product" title="Permanent link">&para;</a></h3>
+<ul>
+<li>笛卡尔乘积也是集合</li>
+</ul>
+<h3 id="_29">（二元）关系的定义<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><mark>注意：关系一定要强调论域：**在XX上的**XX关系</mark></p>
+</li>
+<li>
+<p>笛卡尔积的一个子集</p>
+</li>
+<li>元素是有序对</li>
+<li>笛卡尔积是全（域）关系</li>
+<li>空集是空关系</li>
+<li>**从A到B的**关系R（relation）；<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">R \subseteq A \times B</span><script type="math/tex">R \subseteq A \times B</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">R \subseteq A \times B</span><script type="math/tex">R \subseteq A \times B</script></span></script></span></li>
+<li>若A==B， 称为“**集合A上**的二元关系”</li>
+<li>函数是一种特殊的关系</li>
+</ul>
+<h3 id="_30">关系的表示<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<p>二元关系 -&gt; 有向图</p>
+<h3 id="_31">关系的运算<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>所有的集合运算都使用</p>
+</li>
+<li>
+<p>逆运算</p>
+</li>
+<li>
+<p>逆运算的复合类似矩阵的转置的复合</p>
+</li>
+<li>
+<p><mark>关系的复合</mark> <img alt="image-20220302113727344" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220302113727344.png" /></p>
+</li>
+<li>
+<p><strong>中间桥梁</strong></p>
+</li>
+<li>
+<p>注意：先后结合的顺序遵循就近原则</p>
+</li>
+</ul>
+<p><img alt="image-20220302115310518" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220302115310518.png" /></p>
+<h4 id="0-1">0-1矩阵运算<a class="headerlink" href="#0-1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">A\cap B;  A\cup B</div>
+<script type="math/tex; mode=display">A\cap B;  A\cup B</script>
+</div>
+</li>
+<li>关系的迭代 == 矩阵的乘法</li>
+<li>
+<p><img alt="image-20220307102320107" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220307102320107.png" /></p>
+</li>
+<li>
+<p><mark>注意：0-1矩阵的运算符号、关系的运算符号</mark></p>
+</li>
+</ul>
+<h3 id="_32">关系的性质<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<h4 id="reflexivity">自反性（Reflexivity）<a class="headerlink" href="#reflexivity" title="Permanent link">&para;</a></h4>
+<p>自反/ 反自反/ 既不是自反，又不是反自反</p>
+<ul>
+<li><mark>注意：反自反是一个比较强的概念，要求对于所有的元素都不具有自反性</mark></li>
+<li>有向图的表示：每一个节点都有环/每一个节点都没有环/有的有，有的没有</li>
+<li>矩阵的表示：主对角线全1/主对角线全0/...</li>
+<li><img alt="image-20220307103200924" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220307103200924.png" /></li>
+<li><mark>自反性判断的条件</mark>：一个关系具有自反性，当且仅当，恒等关系包含于该关系。</li>
+</ul>
+<h4 id="symmetry">对称性（Symmetry）<a class="headerlink" href="#symmetry" title="Permanent link">&para;</a></h4>
+<p>对称的/ 反对称的（anti-）/ 既不是对称的，也不是反对称的 / 既是对称的，也是反对称的</p>
+<ul>
+<li>
+<p>反对称性：去除恒等关系后，不具有任何的对称关系。</p>
+</li>
+<li>
+<p>有向图的表示：不同节点间的箭头数为0/2，对于节点是否有环不作要求 // 不同节点间的箭头数为0/1</p>
+</li>
+<li>
+<p>空关系既是对称关系，也是反对称关系</p>
+</li>
+<li>
+<h5 id="_33">对称关系与逆关系：<img alt="image-20220307104048678" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220307104048678.png" /><a class="headerlink" href="#_33" title="Permanent link">&para;</a></h5>
+</li>
+</ul>
+<h4 id="transitivity">传递性（Transitivity）<a class="headerlink" href="#transitivity" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>类似关系的复合</p>
+</li>
+<li>
+<p>空关系是传递的</p>
+</li>
+</ul>
+<p>##### 传递性与==关系的乘幂==：</p>
+<p>#####  关系的复合运算满足结合律</p>
+<ul>
+<li>关系运算与性质的保持</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">自反</th>
+<th align="center">反自反</th>
+<th align="center">对称</th>
+<th align="center">反对称</th>
+<th align="center">传递</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">R_(1)^(-1)</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">R_(1)nnR_(2)</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td align="center">R_(1)uuR_(2)</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">✓</td>
+<td align="center">x</td>
+<td align="center">x</td>
+</tr>
+<tr>
+<td align="center">R_(1)^(@)R_(2)</td>
+<td align="center">✓</td>
+<td align="center">x</td>
+<td align="center">x</td>
+<td align="center">x</td>
+<td align="center">x</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_34">函数及其运算<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<ul>
+<li>思考：若A有n个人元素，在A上的不同关系有多少个？</li>
+</ul>
+<h4 id="function-mapping-transformation">函数（function, mapping, transformation）的定义<a class="headerlink" href="#function-mapping-transformation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Well defined(良定义)</li>
+<li>函数的型构</li>
+<li>象（image）、原象</li>
+<li>定义域(domain)</li>
+<li>值域(range)</li>
+<li>伴域(codomain)</li>
+</ul>
+<h4 id="_35">函数的集合<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>记 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{B}^{A}</span><script type="math/tex">\boldsymbol{B}^{A}</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 所有函数集合, 即 <span class="arithmatex"><span class="MathJax_Preview">\{\boldsymbol{F} \mid \boldsymbol{F}: \boldsymbol{A} \rightarrow \boldsymbol{B}\}</span><script type="math/tex">\{\boldsymbol{F} \mid \boldsymbol{F}: \boldsymbol{A} \rightarrow \boldsymbol{B}\}</script></span>, 读作 " <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 上 $A $"</p>
+</li>
+<li>
+<p>A:定义域， B：陪域</p>
+</li>
+</ul>
+<p>命题: 设 <span class="arithmatex"><span class="MathJax_Preview">|A|=m,|B|=n</span><script type="math/tex">|A|=m,|B|=n</script></span>, 则:
+  $$
+  \left|B<sup>{A}\right|=|B|</sup>{|A|}=n^{m}
+  $$</p>
+<p>$$
+  f(\mathrm{X} \cap \mathrm{Y}) \subseteq f(\mathrm{X}) \cap f(\mathrm{Y})
+  $$</p>
+<h3 id="_36">函数性质<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>单射（一对一）</p>
+</li>
+<li>
+<p>injection, one-to-one function</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\forall x_1,x_2\in A, if \quad x_1 \neq x_2, then \quad  f(x_1) \neq f(x_2)</span><script type="math/tex">\forall x_1,x_2\in A, if \quad x_1 \neq x_2, then \quad  f(x_1) \neq f(x_2)</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\forall x_1, x_2, if \quad f(x_1) = f(x_2), then \quad x_1 = x_2</span><script type="math/tex">\forall x_1, x_2, if \quad f(x_1) = f(x_2), then \quad x_1 = x_2</script></span></p>
+</li>
+<li>
+<p>满射（映上的）</p>
+</li>
+<li>
+<p>surjection, onto function</p>
+</li>
+<li>
+<h4 id="forall-y-in-b-exist-x-in-a-st-fx-yforall-y-in-b-exist-x-in-a-st-fx-y"><span class="arithmatex"><span class="MathJax_Preview">\forall y \in B, \exist x \in A ,s.t.\ f(x) = y</span><script type="math/tex">\forall y \in B, \exist x \in A ,s.t.\ f(x) = y</script></span><a class="headerlink" href="#forall-y-in-b-exist-x-in-a-st-fx-yforall-y-in-b-exist-x-in-a-st-fx-y" title="Permanent link">&para;</a></h4>
+</li>
+<li>
+<p>双射</p>
+</li>
+<li>
+<p><mark>证明技巧</mark>：利用单射/满射 + 集合的基数+反证来证明（鸽笼原理）</p>
+</li>
+</ul>
+<p>$$1 - 1 function : |A| \leq |B| \ onto function: |A| \geq |B|  $$</p>
+<h3 id="_37">函数的复合<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>- 单射（单射） == 单射
+- 满射（满射） == 满射
+- 对于加法、乘法是封闭的
+</code></pre></div>
+
+<ul>
+<li>
+<p>问题：若 <span class="arithmatex"><span class="MathJax_Preview">f \circ g</span><script type="math/tex">f \circ g</script></span> 是满射, 能推出 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 是满射吗?</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 一定是满射, <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 不一定是满射。
+    若 <span class="arithmatex"><span class="MathJax_Preview">f \circ g</span><script type="math/tex">f \circ g</script></span> 是单射, 能推出 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 是单射吗?</p>
+</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 一定是单射, <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 不一定是单射。</li>
+</ul>
+<h2 id="_38">集合的基数<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h2>
+<h3 id="a-approx-ba-approx-b">集合的等势关系（<span class="arithmatex"><span class="MathJax_Preview">A \approx B</span><script type="math/tex">A \approx B</script></span>）【找双射】<a class="headerlink" href="#a-approx-ba-approx-b" title="Permanent link">&para;</a></h3>
+<p>A， B中的元素可以找到一种方法，使得“一一对应”(1-1 function &amp; onto function) [双射]</p>
+<p>等势是等价关系</p>
+<h3 id="_39">有限集与无限集<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>传统公理：整体大于部分 </p>
+</blockquote>
+<p>在无限集情况下不成立。</p>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">S为无限集, iff.\ \exist S' \subseteq S,\ s.t. \ S'\approx S\\ i.e. 存在部分“等于”整体</div>
+<script type="math/tex; mode=display">S为无限集, iff.\ \exist S' \subseteq S,\ s.t. \ S'\approx S\\ i.e. 存在部分“等于”整体</script>
+</div>
+</li>
+<li>证明：类似希尔伯特旅馆问题。</li>
+<li>自然数集是“最小的”无限集。</li>
+<li>康托尔定理</li>
+<li>任何集合与其幂集不等势.即: <span class="arithmatex"><span class="MathJax_Preview">A \approx \rho(A)</span><script type="math/tex">A \approx \rho(A)</script></span></li>
+<li>证明要点:
+    设 <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 是从 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{A}</span><script type="math/tex">\mathrm{A}</script></span> 到 <span class="arithmatex"><span class="MathJax_Preview">\rho(\mathrm{A})</span><script type="math/tex">\rho(\mathrm{A})</script></span> 的函数, 构造集合B如下:
+    <span class="arithmatex"><span class="MathJax_Preview">\mathrm{B}=\{\mathrm{x} \mid \mathrm{x} \in \mathrm{A}</span><script type="math/tex">\mathrm{B}=\{\mathrm{x} \mid \mathrm{x} \in \mathrm{A}</script></span>, 但 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{x} \notin g(\mathrm{x})\}</span><script type="math/tex">\mathrm{x} \notin g(\mathrm{x})\}</script></span>
+    则 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{B} \in \rho(\mathrm{A})</span><script type="math/tex">\mathrm{B} \in \rho(\mathrm{A})</script></span>, 但不可能存在 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{x} \in \mathrm{A}</span><script type="math/tex">\mathrm{x} \in \mathrm{A}</script></span>, 能满足 <span class="arithmatex"><span class="MathJax_Preview">g(\mathrm{x})=\mathrm{B}</span><script type="math/tex">g(\mathrm{x})=\mathrm{B}</script></span>, 因为, 如果有 这样的 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, 则 <span class="arithmatex"><span class="MathJax_Preview">x \in B</span><script type="math/tex">x \in B</script></span> iff. <span class="arithmatex"><span class="MathJax_Preview">x \notin B</span><script type="math/tex">x \notin B</script></span> 。
+    因此, <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 不可能是满射。</li>
+<li>[没看懂。。。]</li>
+<li>自然数集 点集($$) 曲线</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\aleph_0\: \Z\ \Q\ \N\times \N\\ \aleph_1\: \R\ (0,1)\ [0,1] \\ \aleph_2</span><script type="math/tex">\aleph_0\: \Z\ \Q\ \N\times \N\\ \aleph_1\: \R\ (0,1)\ [0,1] \\ \aleph_2</script></span></li>
+</ul>
+<h3 id="_40">可列集<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>直观概念：集合的元素可以按**确定的顺序**线性排列。确定的顺序，是指，<strong>对于序列中的任一元素，可以说出它“前一个”“后一个”元素是什么</strong></p>
+</li>
+<li>
+<p>自然数集的笛卡尔积为可列集</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">l(m, n)=\frac{1}{2} \sum_{i=1}^{m+n} i+(m+1)=\frac{(m+n)(m+n+1)}{2}+(m+1)</span><script type="math/tex">l(m, n)=\frac{1}{2} \sum_{i=1}^{m+n} i+(m+1)=\frac{(m+n)(m+n+1)}{2}+(m+1)</script></span></p>
+</li>
+<li>
+<p><mark>问题</mark>：三维的笛卡尔积的排列方式？</p>
+</li>
+<li>
+<p>Cantor's diagonalization argument : to prove <span class="arithmatex"><span class="MathJax_Preview">\R</span><script type="math/tex">\R</script></span> is not a countable set</p>
+</li>
+</ul>
+<h3 id="_41">集合的优势关系（取代等势/三明治定理）<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h3>
+<p>存在单射A-B, 则 B优势于A</p>
+<p>自反性、反对称性、传递性-&gt; 偏序集</p>
+<p>真优势于（优势且不等势）</p>
+<h3 id="rrrhonrhon"><span class="arithmatex"><span class="MathJax_Preview">\R</span><script type="math/tex">\R</script></span>和<span class="arithmatex"><span class="MathJax_Preview">\rho(\N)</span><script type="math/tex">\rho(\N)</script></span>等势<a class="headerlink" href="#rrrhonrhon" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">[0,1) \approx\{0,1\}^{N}</span><script type="math/tex">[0,1) \approx\{0,1\}^{N}</script></span> 从而 <span class="arithmatex"><span class="MathJax_Preview">R \approx \rho(N)</span><script type="math/tex">R \approx \rho(N)</script></span></p>
+</blockquote>
+<ul>
+<li>注：右式可以视作一个由R映射到{0，1}的函数，也可以视作对R中元素的选择，即R的幂集；左式已经证明等势于R。</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">[0,1)</span><script type="math/tex">[0,1)</script></span> 中的数唯一地表示为 <span class="arithmatex"><span class="MathJax_Preview">0 . b_{1} \mathbf{b}_{2} b_{3} \mathbf{b}_{4} \cdots</span><script type="math/tex">0 . b_{1} \mathbf{b}_{2} b_{3} \mathbf{b}_{4} \cdots</script></span>
+不容许连续无数个 1 , 比如 <span class="arithmatex"><span class="MathJax_Preview">1 / 2=0.1000 \ldots</span><script type="math/tex">1 / 2=0.1000 \ldots</script></span> (NOT 0.0111...)</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">f:[0,1) \rightarrow\{0,1\}^{N}</span><script type="math/tex">f:[0,1) \rightarrow\{0,1\}^{N}</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">\mathbf{0 .} \mathbf{b}_{1} \mathbf{b}_{2} \mathbf{b}_{3} \mathbf{b}_{4} \cdots \rightarrow \mathbf{b}_{1}, \mathbf{b}_{2}, \mathbf{b}_{3}, \mathbf{b}_{4} \cdots</span><script type="math/tex">\mathbf{0 .} \mathbf{b}_{1} \mathbf{b}_{2} \mathbf{b}_{3} \mathbf{b}_{4} \cdots \rightarrow \mathbf{b}_{1}, \mathbf{b}_{2}, \mathbf{b}_{3}, \mathbf{b}_{4} \cdots</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 是单射</p>
+</blockquote>
+<ul>
+<li><strong>注</strong>：这里小数是二进制的。即，任一个有唯一的二进制表示，二进制的第i位的0/1表示<span class="arithmatex"><span class="MathJax_Preview">n_i</span><script type="math/tex">n_i</script></span>在/不在该集合中。</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">g:\{0,1\}^{\mathrm{N}} \rightarrow[\mathbf{0}, 1)</span><script type="math/tex">g:\{0,1\}^{\mathrm{N}} \rightarrow[\mathbf{0}, 1)</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">\mathbf{b}_{1}, \mathbf{b}_{2}, \mathbf{b}_{3}, \mathbf{b}_{4} \ldots \rightarrow \mathbf{0 . b _ { 1 }} \mathbf{b}_{2} \mathbf{b}_{3} \mathbf{b}_{4} \ldots</span><script type="math/tex">\mathbf{b}_{1}, \mathbf{b}_{2}, \mathbf{b}_{3}, \mathbf{b}_{4} \ldots \rightarrow \mathbf{0 . b _ { 1 }} \mathbf{b}_{2} \mathbf{b}_{3} \mathbf{b}_{4} \ldots</script></span>.//看做十进制数
+<span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> 是单射</p>
+<p>根据Bernstein定理, 得证</p>
+</blockquote>
+<h3 id="_42">连续统假设<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20220309115340793" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220309115340793.png" /></p>
+<h2 id="_43">数论初步<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h2>
+<h3 id="_44">整数<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h3>
+<ul>
+<li>全序集 无上界 无下界</li>
+</ul>
+<h4 id="_45">整除关系<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
+<ul>
+<li>可加性</li>
+<li>可乘性</li>
+<li>传递性</li>
+</ul>
+<h4 id="_46">余数<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
+<p>模的基本性质: 令 <span class="arithmatex"><span class="MathJax_Preview">a, b \in \mathbb{Z}, d \in \mathbb{Z}^{+}</span><script type="math/tex">a, b \in \mathbb{Z}, d \in \mathbb{Z}^{+}</script></span>, 则:
+<span class="arithmatex"><span class="MathJax_Preview">\circ(a+b) \bmod d=(a \bmod d+b \bmod d) \bmod d</span><script type="math/tex">\circ(a+b) \bmod d=(a \bmod d+b \bmod d) \bmod d</script></span>
+<span class="arithmatex"><span class="MathJax_Preview">\circ(a \times b) \bmod d=[(a \bmod d)(b \bmod d)] \bmod d</span><script type="math/tex">\circ(a \times b) \bmod d=[(a \bmod d)(b \bmod d)] \bmod d</script></span></p>
+<ul>
+<li>$Pf. let a = q_1d + r. $</li>
+</ul>
+<h4 id="aequivequivbmod-k">同余(a<span class="arithmatex"><span class="MathJax_Preview">\equiv</span><script type="math/tex">\equiv</script></span>b(mod k))<a class="headerlink" href="#aequivequivbmod-k" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>结论：<span class="arithmatex"><span class="MathJax_Preview">if\ p | q, then\ 2^p-1|2^q-1.\\ Pf.</span><script type="math/tex">if\ p | q, then\ 2^p-1|2^q-1.\\ Pf.</script></span></p>
+</blockquote>
+<h4 id="_47">质数<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>prime number; not composite number</p>
+</li>
+<li>
+<p><mark>问题</mark>：</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\forall n \in \N, can\ we\ find\ n\ continuous\ composite\ numbers\ ?</span><script type="math/tex">\forall n \in \N, can\ we\ find\ n\ continuous\ composite\ numbers\ ?</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">Hint.\ let\ a_i= n ! + i</span><script type="math/tex">Hint.\ let\ a_i= n ! + i</script></span></p>
+</li>
+<li>
+<p>命题：有无穷多质数。</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">Pf.反证法。设所有的质数P_i,令n = \Pi P_i,利用贝祖定理，gcd(n,n+1) = 1,即n+1为质数</span><script type="math/tex">Pf.反证法。设所有的质数P_i,令n = \Pi P_i,利用贝祖定理，gcd(n,n+1) = 1,即n+1为质数</script></span></p>
+</li>
+<li>
+<p>质数定理：</p>
+</li>
+<li>
+<p>设 <span class="arithmatex"><span class="MathJax_Preview">x \in \mathbb{R}^{+}, \pi(x)</span><script type="math/tex">x \in \mathbb{R}^{+}, \pi(x)</script></span> 为质数 计数函数（i.e. 不大于 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的质数的个数）, 有
+    $$
+    \lim _{x \rightarrow \infty} \frac{\pi(x)}{x / \ln x}=1
+    $$</p>
+<ul>
+<li>质数定理表明从不 的概率约为 <span class="arithmatex"><span class="MathJax_Preview">1 / \ln n</span><script type="math/tex">1 / \ln n</script></span>
+  质数的分布随着 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的增大逐渐稀疏
+  孪生质数猜想（twin prime conjecture, Hilbert 1900）：</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\liminf _{n \rightarrow \infty}\left(p_{n+1}-p_{n}\right)=2
+\\ 2013(张益唐): \liminf_{n\rightarrow \infty}\left(p_{n+1}-p_{n}\right) &lt; 7 \times 10^7
+\\ now: \liminf_{n\rightarrow \infty}\left(p_{n+1}-p_{n}\right) &lt; 200^+
+</div>
+<script type="math/tex; mode=display">
+\liminf _{n \rightarrow \infty}\left(p_{n+1}-p_{n}\right)=2
+\\ 2013(张益唐): \liminf_{n\rightarrow \infty}\left(p_{n+1}-p_{n}\right) < 7 \times 10^7
+\\ now: \liminf_{n\rightarrow \infty}\left(p_{n+1}-p_{n}\right) < 200^+
+</script>
+</div>
+</li>
+</ul>
+<h3 id="_48">基本算术定理<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
+<p>定理（算术基本定理）：每个大于 1 的整数皆 可分解为有限个质数之积（这些质数称为质因子），若不考虑顺序, 则分解唯一
+  <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{n}=\boldsymbol{p}_{1}^{\alpha_{1}} p_{2}^{\alpha_{2}} \cdots p_{k}^{\alpha_{k}}\left(p_{1}&lt;p_{2}&lt;\cdots&lt;p_{k}, \alpha_{i} \in \mathbb{Z}^{+}\right)</span><script type="math/tex">\boldsymbol{n}=\boldsymbol{p}_{1}^{\alpha_{1}} p_{2}^{\alpha_{2}} \cdots p_{k}^{\alpha_{k}}\left(p_{1}<p_{2}<\cdots<p_{k}, \alpha_{i} \in \mathbb{Z}^{+}\right)</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Pf. Hint. using\ lemma.1.</span><script type="math/tex">Pf. Hint. using\ lemma.1.</script></span></p>
+<h3 id="bezouts-identity"><mark>裴蜀定理/贝祖定理</mark>（Bézout's identity）<a class="headerlink" href="#bezouts-identity" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex"><span class="MathJax_Preview">\forall a,b\in \Z^+, \exist s,t\in \Z s.t.\  gcd(a,b) = sa +tb</span><script type="math/tex">\forall a,b\in \Z^+, \exist s,t\in \Z s.t.\  gcd(a,b) = sa +tb</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Pf.\ let \ x = minimun\ positive\ number\ that\ x = s'a+t'b\\let \ a= qx+r\\ let\ q = \lfloor {a\over x}\rfloor,r = a -xq, 0 \leq r &lt; x\\ the n\ r = a - (s'a + t'b)q = (1-s')\cdot a + t'q\cdot b\\ then\ we\ find\ r\ is\ also\ the\ form\ r = sa + tb\\ but\ since\ x\ is\ the\ minimun\ one\ so\ r\ can\ only\ be\ 0.\\ \therefore q\ | {a\over x}, x| a, similarly, x|b, and\ x\ is\ the\ minimun\ one\\ so\ x = gcd(a,b).Q.E.D</span><script type="math/tex">Pf.\ let \ x = minimun\ positive\ number\ that\ x = s'a+t'b\\let \ a= qx+r\\ let\ q = \lfloor {a\over x}\rfloor,r = a -xq, 0 \leq r < x\\ the n\ r = a - (s'a + t'b)q = (1-s')\cdot a + t'q\cdot b\\ then\ we\ find\ r\ is\ also\ the\ form\ r = sa + tb\\ but\ since\ x\ is\ the\ minimun\ one\ so\ r\ can\ only\ be\ 0.\\ \therefore q\ | {a\over x}, x| a, similarly, x|b, and\ x\ is\ the\ minimun\ one\\ so\ x = gcd(a,b).Q.E.D</script></span></p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">lemma.1. p|ab\Rightarrow p|a \or p|b</span><script type="math/tex">lemma.1. p|ab\Rightarrow p|a \or p|b</script></span></li>
+</ul>
+<h3 id="_49">最大公约数<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h3>
+<ul>
+<li>定理 (线性合成): 设 <span class="arithmatex"><span class="MathJax_Preview">a, b \in \mathbb{Z}^{+}</span><script type="math/tex">a, b \in \mathbb{Z}^{+}</script></span>, 则:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(\exists s, t \in \mathbb{Z})(\operatorname{gcd}(a, b)=s a+t b)
+</div>
+<script type="math/tex; mode=display">
+(\exists s, t \in \mathbb{Z})(\operatorname{gcd}(a, b)=s a+t b)
+</script>
+</div>
+<ul>
+<li>定理 (辗转相减): 设 <span class="arithmatex"><span class="MathJax_Preview">a, b \in \mathbb{Z}^{+}, a&lt;b</span><script type="math/tex">a, b \in \mathbb{Z}^{+}, a<b</script></span>, 则:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\operatorname{gcd}(a, b)=\operatorname{gcd}(a, b-a)
+</div>
+<script type="math/tex; mode=display">
+\operatorname{gcd}(a, b)=\operatorname{gcd}(a, b-a)
+</script>
+</div>
+<ul>
+<li>定理 (辗转相除): 设 <span class="arithmatex"><span class="MathJax_Preview">a, b \in \mathbb{Z}^{+}, a&gt;b</span><script type="math/tex">a, b \in \mathbb{Z}^{+}, a>b</script></span>, 则:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\operatorname{gcd}(a, b)=\operatorname{gcd}(b, a \bmod b)
+</div>
+<script type="math/tex; mode=display">
+\operatorname{gcd}(a, b)=\operatorname{gcd}(b, a \bmod b)
+</script>
+</div>
+<h3 id="_50">中国剩余定理<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h3>
+<h3 id="_51">欧拉函数<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h3>
+<p>定义（欧拉函数）：对任意 <span class="arithmatex"><span class="MathJax_Preview">n \in \mathbb{Z}^{+}</span><script type="math/tex">n \in \mathbb{Z}^{+}</script></span>,
+$$
+\varphi(n)=\left|\left{m \in \mathbb{Z}^{+} \mid m \leq n \wedge(m, n)=1\right}\right|
+$$
+例: <span class="arithmatex"><span class="MathJax_Preview">\varphi(3)=2, \varphi(4)=2, \varphi(12)=4</span><script type="math/tex">\varphi(3)=2, \varphi(4)=2, \varphi(12)=4</script></span>
+由容反原理 (末来课程详述) 可证 :
+$$
+\varphi(n)=n \prod_{p \mid n}\left(1-\frac{1}{p}\right)
+$$
+其中 <span class="arithmatex"><span class="MathJax_Preview">\{p\}</span><script type="math/tex">\{p\}</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 的所有质因子</p>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">(m, n)=1 \rightarrow \varphi(m n)=\varphi(m) \varphi(n)</span><script type="math/tex">(m, n)=1 \rightarrow \varphi(m n)=\varphi(m) \varphi(n)</script></span></p>
+</blockquote>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">Pf.展开即可</span><script type="math/tex">Pf.展开即可</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">example.\ (2,5) = 1, so\\ \ \varphi(2\times 5) = \varphi(10) = \varphi(2)\times \varphi(5) = |\{1\}|\times |\{1,2,3,4\}| = \varphi(10) = |\{1,3,7,9\}| = 4</span><script type="math/tex">example.\ (2,5) = 1, so\\ \ \varphi(2\times 5) = \varphi(10) = \varphi(2)\times \varphi(5) = |\{1\}|\times |\{1,2,3,4\}| = \varphi(10) = |\{1,3,7,9\}| = 4</script></span></li>
+</ul>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 为质数 <span class="arithmatex"><span class="MathJax_Preview">\rightarrow \varphi(p)=p-1</span><script type="math/tex">\rightarrow \varphi(p)=p-1</script></span></p>
+<p>定理 (Euler定理): 对 <span class="arithmatex"><span class="MathJax_Preview">a, n \in \mathbb{Z}^{+}</span><script type="math/tex">a, n \in \mathbb{Z}^{+}</script></span>, 若 <span class="arithmatex"><span class="MathJax_Preview">(a, n)=1</span><script type="math/tex">(a, n)=1</script></span>, 则 </p>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+a^{\varphi(n)} \equiv 1(\bmod n)
+</div>
+<script type="math/tex; mode=display">
+a^{\varphi(n)} \equiv 1(\bmod n)
+</script>
+</div>
+<p>若上述 <span class="arithmatex"><span class="MathJax_Preview">n \in \mathbb{Z}^{+}</span><script type="math/tex">n \in \mathbb{Z}^{+}</script></span>为质数, 由欧拉函数的性质易得到:</p>
+<blockquote>
+<p>定理（Fermat小定理）：设正整数 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 不是质数 <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> 之倍数，则</p>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+a^{p-1} \equiv 1(\bmod p)
+</div>
+<script type="math/tex; mode=display">
+a^{p-1} \equiv 1(\bmod p)
+</script>
+</div>
+<ul>
+<li><em>注</em>：费马小定理是在欧拉定理基础上，将<span class="arithmatex"><span class="MathJax_Preview">\varphi(n) \rightarrow \varphi(p),其中p为质数，故\varphi(p) = p-1</span><script type="math/tex">\varphi(n) \rightarrow \varphi(p),其中p为质数，故\varphi(p) = p-1</script></span>得到</li>
+<li>例：求 <span class="arithmatex"><span class="MathJax_Preview">7^{222}</span><script type="math/tex">7^{222}</script></span> 的个位数字
+  <span class="arithmatex"><span class="MathJax_Preview">p \mid a^{p}-a</span><script type="math/tex">p \mid a^{p}-a</script></span>
+  解：待求即为 <span class="arithmatex"><span class="MathJax_Preview">7^{222} \bmod 10</span><script type="math/tex">7^{222} \bmod 10</script></span>, 上式可写为 <span class="arithmatex"><span class="MathJax_Preview">7^{2} \cdot\left(7^{4}\right)^{55} \bmod 10</span><script type="math/tex">7^{2} \cdot\left(7^{4}\right)^{55} \bmod 10</script></span> 。由于 <span class="arithmatex"><span class="MathJax_Preview">(7,10)=1</span><script type="math/tex">(7,10)=1</script></span>, 由 Euler 定理, <span class="arithmatex"><span class="MathJax_Preview">7^{2} \cdot\left(7^{4}\right)^{55} \equiv 7^{2} \cdot 1^{55}(\bmod 10)</span><script type="math/tex">7^{2} \cdot\left(7^{4}\right)^{55} \equiv 7^{2} \cdot 1^{55}(\bmod 10)</script></span>, 故 <span class="arithmatex"><span class="MathJax_Preview">7^{222} \bmod 10=9</span><script type="math/tex">7^{222} \bmod 10=9</script></span> 即为 <span class="arithmatex"><span class="MathJax_Preview">7^{222}</span><script type="math/tex">7^{222}</script></span> 之个位数字</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">注: 利用Euler 定理,(a = 7, n = 10) = 1, so\ a^{\varphi(n)} = 7^{\varphi(10)} = 7^4 \equiv 1(mod\ 10)\\ 故将7^{222}拆成尽可能多的7^4即可</div>
+<script type="math/tex; mode=display">注: 利用Euler 定理,(a = 7, n = 10) = 1, so\ a^{\varphi(n)} = 7^{\varphi(10)} = 7^4 \equiv 1(mod\ 10)\\ 故将7^{222}拆成尽可能多的7^4即可</script>
+</div>
+</li>
+</ul>
+<h2 id="_52">归纳与递归<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h2>
+<h3 id="_53">数学归纳证明要点<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>证明目标
+  <span class="arithmatex"><span class="MathJax_Preview">P(n)</span><script type="math/tex">P(n)</script></span> 对所有的自然数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 成立. <span class="arithmatex"><span class="MathJax_Preview">/ /</span><script type="math/tex">/ /</script></span> 需明确定义 <span class="arithmatex"><span class="MathJax_Preview">P(n)</span><script type="math/tex">P(n)</script></span>.</p>
+</li>
+<li>
+<p>证明框架
+  <span class="arithmatex"><span class="MathJax_Preview">/ /</span><script type="math/tex">/ /</script></span> 例如: 我们对 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 做归纳.
+  说明将通过归纳来证明.</p>
+</li>
+<li>
+<p>基础步骤:
+  // 通常比较简单.
+  写出 <span class="arithmatex"><span class="MathJax_Preview">P(0)</span><script type="math/tex">P(0)</script></span></p>
+</li>
+<li>归纳步骤: 写出归纳假设 <span class="arithmatex"><span class="MathJax_Preview">P(k)</span><script type="math/tex">P(k)</script></span>, 和待证明的 <span class="arithmatex"><span class="MathJax_Preview">P(k+1)</span><script type="math/tex">P(k+1)</script></span>, 而后证明之。</li>
+<li>说明归纳证明完毕.
+  // 必要时重复原命题: 因此, <span class="arithmatex"><span class="MathJax_Preview">P(n)</span><script type="math/tex">P(n)</script></span> 对所有的自然数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 成立.
+  // 或者简单说证毕. 以及<span class="arithmatex"><span class="MathJax_Preview">\square</span><script type="math/tex">\square</script></span></li>
+</ul>
+<h3 id="_54">思考题：扔煎饼<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>平地上有奇数个人，人之间的距离各不相同。现所有人都朝距其最近的那个人扔煎饼。</p>
+</li>
+<li>
+<p>试证明：至少有一个人没有挨着煎饼。</p>
+</li>
+</ul>
+<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">Pf.利用归纳法证明\\let\ n = 2k+1, P(n) = 2n+1人参与游戏\\  1) 基础步骤.P(0):trivial\\ 2)归纳步骤: 假设P(k), \\ P(k+1): 考虑(x,y)表示距离最短的两人，显然他们会互相扔煎饼。\\ 对于剩下2k+1人，若不向这两人扔煎饼，则满足P(k),至少有一人不被扔到；\\ 若有人向这两人扔煎饼，那么由鸽笼原理，这2k+1人必有人没被扔到.\square</span><script type="math/tex">Pf.利用归纳法证明\\let\ n = 2k+1, P(n) = 2n+1人参与游戏\\  1) 基础步骤.P(0):trivial\\ 2)归纳步骤: 假设P(k), \\ P(k+1): 考虑(x,y)表示距离最短的两人，显然他们会互相扔煎饼。\\ 对于剩下2k+1人，若不向这两人扔煎饼，则满足P(k),至少有一人不被扔到；\\ 若有人向这两人扔煎饼，那么由鸽笼原理，这2k+1人必有人没被扔到.\square</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">Pf.利用归纳法证明\\let\ n = 2k+1, P(n) = 2n+1人参与游戏\\  1) 基础步骤.P(0):trivial\\ 2)归纳步骤: 假设P(k), \\ P(k+1): 考虑(x,y)表示距离最短的两人，显然他们会互相扔煎饼。\\ 对于剩下2k+1人，若不向这两人扔煎饼，则满足P(k),至少有一人不被扔到；\\ 若有人向这两人扔煎饼，那么由鸽笼原理，这2k+1人必有人没被扔到.\square</span><script type="math/tex">Pf.利用归纳法证明\\let\ n = 2k+1, P(n) = 2n+1人参与游戏\\  1) 基础步骤.P(0):trivial\\ 2)归纳步骤: 假设P(k), \\ P(k+1): 考虑(x,y)表示距离最短的两人，显然他们会互相扔煎饼。\\ 对于剩下2k+1人，若不向这两人扔煎饼，则满足P(k),至少有一人不被扔到；\\ 若有人向这两人扔煎饼，那么由鸽笼原理，这2k+1人必有人没被扔到.\square</script></span></script></span></p>
+<h3 id="_55">常见错误<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h3>
+<p>平面上任何 <span class="arithmatex"><span class="MathJax_Preview">n \geq 2</span><script type="math/tex">n \geq 2</script></span> 条互不平行的直线必交于一点。 证明: 我们对 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 做归纳.</p>
+<ul>
+<li>基础步骤: 两条不平行的直线必交于一点</li>
+<li>
+<p>归纳步骤: 假设任何 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 条互不平行的直线交于一点.
+  对于任意 <span class="arithmatex"><span class="MathJax_Preview">k+1</span><script type="math/tex">k+1</script></span> 条互不平行的直线, 其中:
+  前 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 条必交于一点, 记为 <span class="arithmatex"><span class="MathJax_Preview">p_{1}</span><script type="math/tex">p_{1}</script></span>;
+  后 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 条必交于一点, 记为 <span class="arithmatex"><span class="MathJax_Preview">p_{2}</span><script type="math/tex">p_{2}</script></span>;
+  考虑到同时属于前 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 条与后 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 条的直线, 必有
+  <span class="arithmatex"><span class="MathJax_Preview">\begin{aligned} &amp; p_{1}=p_{2} \\ \text { 于是这 } k+1 \text { 条互不平行的直线交于一点。 } \end{aligned}</span><script type="math/tex">\begin{aligned} & p_{1}=p_{2} \\ \text { 于是这 } k+1 \text { 条互不平行的直线交于一点。 } \end{aligned}</script></span>
+  原命题归纳证明完毕.</p>
+</li>
+<li>
+<p>==问题：==错误在于归纳步骤的第一步是错误的。（和后面的情形不同）</p>
+</li>
+</ul>
+<h3 id="_56">强数学归纳法<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>设 <span class="arithmatex"><span class="MathJax_Preview">P(n)</span><script type="math/tex">P(n)</script></span> 是与整数 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 有关的陈述, <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 是两个给定的 整数, 且 <span class="arithmatex"><span class="MathJax_Preview">a \leq b</span><script type="math/tex">a \leq b</script></span>.
+  如果能够证明下列陈述</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">P(a), P(a+1), \ldots, P(b)</span><script type="math/tex">P(a), P(a+1), \ldots, P(b)</script></span>.</p>
+</li>
+<li>对任意 <span class="arithmatex"><span class="MathJax_Preview">k \geq b, P(a) \wedge \ldots \wedge P(k) \rightarrow P(k+1)</span><script type="math/tex">k \geq b, P(a) \wedge \ldots \wedge P(k) \rightarrow P(k+1)</script></span>
+  则下夗陈述成立</li>
+<li>对任意 <span class="arithmatex"><span class="MathJax_Preview">n \geq a, P(n)</span><script type="math/tex">n \geq a, P(n)</script></span>.</li>
+</ul>
+<h3 id="_57">良序原理<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h3>
+<blockquote>
+<ul>
+<li>
+<p>良序原理：自然数N的任何非空子集 <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 均有最小元素.
+  所谓“ <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 有最小元素” 即 $\exists a \in S(\forall b \in S(a \neq b \rightarrow a&lt;b))</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">良序原理与数学归纳法 (归纳公理)的关系 【严格说有差异】</span><script type="math/tex">良序原理与数学归纳法 (归纳公理)的关系 【严格说有差异】</script></span></p>
+</li>
+</ul>
+<p><span class="arithmatex"><span class="MathJax_Preview">\Rightarrow</span><script type="math/tex">\Rightarrow</script></span> 【概要】【注：需在皮亚诺公理1-4基础上额外假设每个非 0 自然数都有一个直接前驱】 假设 <span class="arithmatex"><span class="MathJax_Preview">\forall n \in \mathbf{N} P(n)</span><script type="math/tex">\forall n \in \mathbf{N} P(n)</script></span> 不成立, 则 <span class="arithmatex"><span class="MathJax_Preview">\exists n(\neg P(n))</span><script type="math/tex">\exists n(\neg P(n))</script></span> 成立. 令 <span class="arithmatex"><span class="MathJax_Preview">S=\{n \in \mathbf{N} \mid \neg P(n)\}</span><script type="math/tex">S=\{n \in \mathbf{N} \mid \neg P(n)\}</script></span>, S非空.
+  根据良序原理, <span class="arithmatex"><span class="MathJax_Preview">S</span><script type="math/tex">S</script></span> 有最小元素, 记为 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>, 由奠基步骤, <span class="arithmatex"><span class="MathJax_Preview">m \neq 0</span><script type="math/tex">m \neq 0</script></span>
+  由 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的最小性, <span class="arithmatex"><span class="MathJax_Preview">(m-1) \notin \mathrm{S}</span><script type="math/tex">(m-1) \notin \mathrm{S}</script></span>, 即 <span class="arithmatex"><span class="MathJax_Preview">P(m-1)</span><script type="math/tex">P(m-1)</script></span> 成立.
+  根据归纳步骤, <span class="arithmatex"><span class="MathJax_Preview">P(m)</span><script type="math/tex">P(m)</script></span> 成立, 即 <span class="arithmatex"><span class="MathJax_Preview">m \notin \mathrm{S}</span><script type="math/tex">m \notin \mathrm{S}</script></span>, 矛盾.
+  因此, <span class="arithmatex"><span class="MathJax_Preview">\forall n \in \mathbf{N} P(n)</span><script type="math/tex">\forall n \in \mathbf{N} P(n)</script></span> 成立.
+  <span class="arithmatex"><span class="MathJax_Preview">\Leftarrow</span><script type="math/tex">\Leftarrow</script></span> 【概要】令 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}</span><script type="math/tex">\mathbf{N}</script></span> 的无最小元的非空子集, <span class="arithmatex"><span class="MathJax_Preview">B=\mathbf{N}-A</span><script type="math/tex">B=\mathbf{N}-A</script></span>.
+  基础步骤: <span class="arithmatex"><span class="MathJax_Preview">0 \in B</span><script type="math/tex">0 \in B</script></span>. 这是因为 <span class="arithmatex"><span class="MathJax_Preview">0 \notin A</span><script type="math/tex">0 \notin A</script></span>, 否则0即其最小元.
+  归纳步骤: 若 <span class="arithmatex"><span class="MathJax_Preview">0, \ldots, n \in B</span><script type="math/tex">0, \ldots, n \in B</script></span>, 则 <span class="arithmatex"><span class="MathJax_Preview">(n+1) \in B</span><script type="math/tex">(n+1) \in B</script></span>. 否则 <span class="arithmatex"><span class="MathJax_Preview">n+1</span><script type="math/tex">n+1</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的最小元.
+  根据归纳原理 <span class="arithmatex"><span class="MathJax_Preview">B=\mathbf{N}</span><script type="math/tex">B=\mathbf{N}</script></span>. 这与 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 非空矛盾.</p>
+</blockquote>
+<h3 id="_58">递归<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h3>
+<ul>
+<li>基础步骤</li>
+<li>递归步骤</li>
+<li>排斥规则</li>
+</ul>
+<h3 id="_59">结构归纳法<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h3>
+<h3 id="_60">广义归纳<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h3>
+<ul>
+<li>集合上的良基关系：不存在无限下降的极小元</li>
+<li>广义归纳:
+  对于一个性质 <span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>,一个集合 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span>, 及其上的良基关系く,
+  基础步骤: <span class="arithmatex"><span class="MathJax_Preview">P(x)</span><script type="math/tex">P(x)</script></span> 对所有 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 上的极小元 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 成立.</li>
+<li>归纳步骤：如果<span class="arithmatex"><span class="MathJax_Preview">P(x)</span><script type="math/tex">P(x)</script></span>对X上 的所有<span class="arithmatex"><span class="MathJax_Preview">y &lt; x'</span><script type="math/tex">y < x'</script></span>成立， 那么<span class="arithmatex"><span class="MathJax_Preview">P(x')成立</span><script type="math/tex">P(x')成立</script></span>于是 <span class="arithmatex"><span class="MathJax_Preview">P(x)</span><script type="math/tex">P(x)</script></span> 对所有 <span class="arithmatex"><span class="MathJax_Preview">x \in X</span><script type="math/tex">x \in X</script></span> 成立.</li>
+</ul>
+<h3 id="_61">证明程序的正确性和复杂性<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Hoare三元组：<span class="arithmatex"><span class="MathJax_Preview">\{P\}S\{Q\}</span><script type="math/tex">\{P\}S\{Q\}</script></span></li>
+<li>P成立是权利，Q成立是义务。</li>
+<li>部分正确性：不能确保S在有限步内完成</li>
+<li>完全正确性</li>
+</ul>
+<h4 id="_62">欧几里得算法的正确性<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h4>
+<p>只要证明：<span class="arithmatex"><span class="MathJax_Preview">\gcd(a_0,b_0) = \gcd(a_k,b_k)\\Pf.\gcd(a,b) = \gcd(b,a\ mod\ b)</span><script type="math/tex">\gcd(a_0,b_0) = \gcd(a_k,b_k)\\Pf.\gcd(a,b) = \gcd(b,a\ mod\ b)</script></span></p>
+<h4 id="_63">欧几里得算法的复杂度<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
+<p>拉梅定理: 设 <span class="arithmatex"><span class="MathJax_Preview">a</span><script type="math/tex">a</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 是满足 <span class="arithmatex"><span class="MathJax_Preview">a \geq b</span><script type="math/tex">a \geq b</script></span> 的正整数。则欧几里德算 法为求出 <span class="arithmatex"><span class="MathJax_Preview">\operatorname{gcd}(a, b)</span><script type="math/tex">\operatorname{gcd}(a, b)</script></span> 而使用除法的次数小于或等于 <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> 的十 进制位数的 5 倍。 <span class="arithmatex"><span class="MathJax_Preview">5\left(\left\lfloor\log _{10} b\right\rfloor+1\right)</span><script type="math/tex">5\left(\left\lfloor\log _{10} b\right\rfloor+1\right)</script></span></p>
+<h2 id="_64">计数<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h2>
+<h2 id="_65">生成函数<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h2>
+<h3 id="_66">生成函数<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>简单的说，生成函数是一种把**无限数列**表示成**幂序列的系数**的表示方法。</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">F(x) = f_0 + f_1 x + f_2 x^2 + f_3 x^3 + \cdots.</span><script type="math/tex">F(x) = f_0 + f_1 x + f_2 x^2 + f_3 x^3 + \cdots.</script></span></p>
+</li>
+<li>
+<p>我们用<span class="arithmatex"><span class="MathJax_Preview">[x^n]F(x)</span><script type="math/tex">[x^n]F(x)</script></span>来指代这个生成函数中<span class="arithmatex"><span class="MathJax_Preview">x^n</span><script type="math/tex">x^n</script></span>的系数<span class="arithmatex"><span class="MathJax_Preview">f_n.</span><script type="math/tex">f_n.</script></span></p>
+</li>
+<li>
+<p>例如, 用几何级数的系数来表示数列 <span class="arithmatex"><span class="MathJax_Preview">1,1,1, \cdots</span><script type="math/tex">1,1,1, \cdots</script></span>
+  $$
+  G(x)=1+x+x<sup>{2}+x</sup>{3}+\cdots .
+  $$
+  又如, <span class="arithmatex"><span class="MathJax_Preview">H(x)=1-2 x+3 x^{2}-4 x^{3}+\cdots</span><script type="math/tex">H(x)=1-2 x+3 x^{2}-4 x^{3}+\cdots</script></span> 表示 <span class="arithmatex"><span class="MathJax_Preview">1,-2,3,-4, \cdots</span><script type="math/tex">1,-2,3,-4, \cdots</script></span>.</p>
+</li>
+</ul>
+<h2 id="_67">离散概率<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h2>
+<h3 id="_68">直觉的概率分析<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h3>
+<h4 id="_69">四步法<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<h5 id="find-the-sample-space">选定样本空间 (Find the sample space)<a class="headerlink" href="#find-the-sample-space" title="Permanent link">&para;</a></h5>
+</li>
+<li>
+<p>样本空间：所有可能结果的集合</p>
+</li>
+<li>
+<h5 id="define-events-of-interests">定义相关事件 (Define events of interests)<a class="headerlink" href="#define-events-of-interests" title="Permanent link">&para;</a></h5>
+</li>
+<li>
+<h5 id="determine-outcome-probabilities">确定结果概率 (Determine outcome probabilities<a class="headerlink" href="#determine-outcome-probabilities" title="Permanent link">&para;</a></h5>
+</li>
+<li>
+<h5 id="compute-event-probabilities">计算事件概率 (Compute event probabilities)<a class="headerlink" href="#compute-event-probabilities" title="Permanent link">&para;</a></h5>
+</li>
+</ol>
+<h3 id="_70">概率空间: 基于集合论给概率以 数学定义<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h3>
+<ul>
+<li>定义: 可数**样本空间** <span class="arithmatex"><span class="MathJax_Preview">\mathcal{S}</span><script type="math/tex">\mathcal{S}</script></span> 乃一个可数集合。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> 的每一个元素 <span class="arithmatex"><span class="MathJax_Preview">\omega</span><script type="math/tex">\omega</script></span> 称为一个结果。</li>
+<li>定义: 满足下列条件的函数 Pr: <span class="arithmatex"><span class="MathJax_Preview">\mathcal{S} \rightarrow \mathbb{R}</span><script type="math/tex">\mathcal{S} \rightarrow \mathbb{R}</script></span> 称为样本空 间 <span class="arithmatex"><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> 上的一个概率函数:</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\forall_{\omega \in \mathcal{S}} \operatorname{Pr}[\omega] \geq 0</span><script type="math/tex">\forall_{\omega \in \mathcal{S}} \operatorname{Pr}[\omega] \geq 0</script></span>, 且</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\Sigma_{\omega \in \mathcal{S}} \operatorname{Pr}[\omega]=1</span><script type="math/tex">\Sigma_{\omega \in \mathcal{S}} \operatorname{Pr}[\omega]=1</script></span>.</li>
+<li>定义: <span class="arithmatex"><span class="MathJax_Preview">\mathcal{S}</span><script type="math/tex">\mathcal{S}</script></span> 的一个子集 <span class="arithmatex"><span class="MathJax_Preview">E \subseteq \mathcal{S}</span><script type="math/tex">E \subseteq \mathcal{S}</script></span> 称为一个事件。</li>
+<li>事件 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 的概率 <span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[E]::=\sum_{\omega \in E} \operatorname{Pr}[\omega]</span><script type="math/tex">\operatorname{Pr}[E]::=\sum_{\omega \in E} \operatorname{Pr}[\omega]</script></span></li>
+</ul>
+<h3 id="_71">基于集合论的概率计算<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h3>
+<ul>
+<li>定理 1: 设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是样本空间 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{S}</span><script type="math/tex">\mathcal{S}</script></span> 中的一个事件，事 件 <span class="arithmatex"><span class="MathJax_Preview">\bar{E}</span><script type="math/tex">\bar{E}</script></span> （事件 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 的补事件）的概率为:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\operatorname{Pr}[\bar{E}]=1-\operatorname{Pr}[E]
+</div>
+<script type="math/tex; mode=display">
+\operatorname{Pr}[\bar{E}]=1-\operatorname{Pr}[E]
+</script>
+</div>
+<ul>
+<li>定理 2 : 设 <span class="arithmatex"><span class="MathJax_Preview">E_{1}</span><script type="math/tex">E_{1}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">E_{2}</span><script type="math/tex">E_{2}</script></span> 是样本空间 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{S}</span><script type="math/tex">\mathcal{S}</script></span> 中的事件, 那么</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\operatorname{Pr}\left[E_{1} \cup E_{2}\right]=\operatorname{Pr}\left[E_{1}\right]+\operatorname{Pr}\left[E_{2}\right]-\operatorname{Pr}\left[E_{1} \cap E_{2}\right]
+</div>
+<script type="math/tex; mode=display">
+\operatorname{Pr}\left[E_{1} \cup E_{2}\right]=\operatorname{Pr}\left[E_{1}\right]+\operatorname{Pr}\left[E_{2}\right]-\operatorname{Pr}\left[E_{1} \cap E_{2}\right]
+</script>
+</div>
+<h3 id="_72">条件概率<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h3>
+<ul>
+<li>定义: 设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 是事件,且 <span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[F]&gt;0 . E</span><script type="math/tex">\operatorname{Pr}[F]>0 . E</script></span> 在给定 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 条件下的概率, 记作 <span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[E \mid F]</span><script type="math/tex">\operatorname{Pr}[E \mid F]</script></span>, 定义为</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\operatorname{Pr}[E \mid F]::=\frac{\operatorname{Pr}[E \cap F]}{\operatorname{Pr}[F]}
+</div>
+<script type="math/tex; mode=display">
+\operatorname{Pr}[E \mid F]::=\frac{\operatorname{Pr}[E \cap F]}{\operatorname{Pr}[F]}
+</script>
+</div>
+<h3 id="_73">贝叶斯定理<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h3>
+<ul>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 是样本空间 <span class="arithmatex"><span class="MathJax_Preview">\delta</span><script type="math/tex">\delta</script></span> 中的事件, <span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[E] \neq 0, \operatorname{Pr}[F] \neq 0</span><script type="math/tex">\operatorname{Pr}[E] \neq 0, \operatorname{Pr}[F] \neq 0</script></span>, 则</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{aligned}
+\operatorname{Pr}[F \mid E] &amp;=\frac{\operatorname{Pr}[E \mid F] \operatorname{Pr}[F]}{\operatorname{Pr}[E]} \\
+&amp;=\frac{\operatorname{Pr}[E \mid F] \operatorname{Pr}[F]}{\operatorname{Pr}[E \mid F] \operatorname{Pr}[F]+\operatorname{Pr}[E \mid \bar{F}] \operatorname{Pr}[\bar{F}]}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\operatorname{Pr}[F \mid E] &=\frac{\operatorname{Pr}[E \mid F] \operatorname{Pr}[F]}{\operatorname{Pr}[E]} \\
+&=\frac{\operatorname{Pr}[E \mid F] \operatorname{Pr}[F]}{\operatorname{Pr}[E \mid F] \operatorname{Pr}[F]+\operatorname{Pr}[E \mid \bar{F}] \operatorname{Pr}[\bar{F}]}
+\end{aligned}
+</script>
+</div>
+<h4 id="_74">贝叶斯定理的推导<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h4>
+<ul>
+<li>由条件概率定义</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{aligned}
+&amp;\operatorname{Pr}[F \mid E] \operatorname{Pr}[E]=\operatorname{Pr}[F \cap E] \\
+&amp;\quad=\operatorname{Pr}[E \cap F]=\operatorname{Pr}[E \mid F] \operatorname{Pr}[F]
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&\operatorname{Pr}[F \mid E] \operatorname{Pr}[E]=\operatorname{Pr}[F \cap E] \\
+&\quad=\operatorname{Pr}[E \cap F]=\operatorname{Pr}[E \mid F] \operatorname{Pr}[F]
+\end{aligned}
+</script>
+</div>
+<ul>
+<li>又</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{aligned}
+\operatorname{Pr}[E]=&amp; \operatorname{Pr}[(E \cap F) \cup(E \cup \bar{F})] \\
+&amp;=\operatorname{Pr}[(E \cap F)]+\operatorname{Pr}[(E \cap \bar{F})] \\
+=&amp; \operatorname{Pr}[E \mid F] \operatorname{Pr}[F]+\operatorname{Pr}[E \mid \bar{F}] \operatorname{Pr}[\bar{F}]
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\operatorname{Pr}[E]=& \operatorname{Pr}[(E \cap F) \cup(E \cup \bar{F})] \\
+&=\operatorname{Pr}[(E \cap F)]+\operatorname{Pr}[(E \cap \bar{F})] \\
+=& \operatorname{Pr}[E \mid F] \operatorname{Pr}[F]+\operatorname{Pr}[E \mid \bar{F}] \operatorname{Pr}[\bar{F}]
+\end{aligned}
+</script>
+</div>
+<h4 id="_75">一些常用说法<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[A]</span><script type="math/tex">\operatorname{Pr}[A]</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的**先验**概率。之所以称为 “先验”是因为它不考虑任何 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 方面的因素。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[A \mid B]</span><script type="math/tex">\operatorname{Pr}[A \mid B]</script></span> 是已知 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 发生后 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的条件概率或后验概率。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[B \mid A]</span><script type="math/tex">\operatorname{Pr}[B \mid A]</script></span> 是已知 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 发生后 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的条件概率或后验概率。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[B]</span><script type="math/tex">\operatorname{Pr}[B]</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 的先验概率, 也作**标准化常量** (normalizing constant)。</li>
+</ul>
+<h3 id="_76">事件独立性<a class="headerlink" href="#_76" title="Permanent link">&para;</a></h3>
+<ul>
+<li>定义: 事件 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 是相互独立的当且仅当 <span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[E \cap F]=\operatorname{Pr}[E] \cdot \operatorname{Pr}[F]</span><script type="math/tex">\operatorname{Pr}[E \cap F]=\operatorname{Pr}[E] \cdot \operatorname{Pr}[F]</script></span>
+  例: 一个有两个孩子的家庭有四种情形 (BB, GG, BG,GB), 假设是等可能的。事件 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 是两个孩子的家庭有两个男 孩, 事件 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 是两个孩子的家庭至少有一个男孩。事件 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 是否独立?
+  解: <span class="arithmatex"><span class="MathJax_Preview">\operatorname{Pr}[E]=\frac{1}{4^{\prime}} \operatorname{Pr}[F]=\frac{3}{4^{\prime}} \operatorname{Pr}[E \cap F]=\frac{1}{4}</span><script type="math/tex">\operatorname{Pr}[E]=\frac{1}{4^{\prime}} \operatorname{Pr}[F]=\frac{3}{4^{\prime}} \operatorname{Pr}[E \cap F]=\frac{1}{4}</script></span></li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\operatorname{Pr}[E] \cdot \operatorname{Pr}[F]=\frac{3}{16} \neq \frac{1}{4}=\operatorname{Pr}[E \cap F]
+</div>
+<script type="math/tex; mode=display">
+\operatorname{Pr}[E] \cdot \operatorname{Pr}[F]=\frac{3}{16} \neq \frac{1}{4}=\operatorname{Pr}[E \cap F]
+</script>
+</div>
+<p>故 <span class="arithmatex"><span class="MathJax_Preview">E</span><script type="math/tex">E</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">F</span><script type="math/tex">F</script></span> 不是相互独立的。</p>
+<h3 id="_77">随机变量<a class="headerlink" href="#_77" title="Permanent link">&para;</a></h3>
+<ul>
+<li>一个随机变量 <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span> 是一个定义域为某样本空间 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{S}</span><script type="math/tex">\mathcal{S}</script></span> 的函数 。</li>
+<li>其伴域(codomain)可为任意非空集合, 但通常取实 数集 <span class="arithmatex"><span class="MathJax_Preview">\mathbb{R}</span><script type="math/tex">\mathbb{R}</script></span> 。即: <span class="arithmatex"><span class="MathJax_Preview">X: \mathcal{S} \rightarrow \mathbb{R}</span><script type="math/tex">X: \mathcal{S} \rightarrow \mathbb{R}</script></span></li>
+<li><mark>一个随机变量是一个函数。它既不是一个变量, 也不是随机的。</mark></li>
+</ul>
+<h3 id="_78">条件期望<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h3>
+<ul>
+<li>给定一个随机变量 <span class="arithmatex"><span class="MathJax_Preview">R, R</span><script type="math/tex">R, R</script></span> 在已知事件 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 条件下的 期望值是 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 中结果上的取值的概率加权平 均值:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\operatorname{Ex}[R \mid A]=\sum_{r \in \operatorname{range}(R)} r \cdot \operatorname{Pr}[R=r \mid A]
+</div>
+<script type="math/tex; mode=display">
+\operatorname{Ex}[R \mid A]=\sum_{r \in \operatorname{range}(R)} r \cdot \operatorname{Pr}[R=r \mid A]
+</script>
+</div>
+<ul>
+<li>例: 已知一个公平骱子投出的点数不小于 4 点, 此条件下 投出的点数的期望值是多少?</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\operatorname{Ex}[R \mid R \geq 4]=\sum_{i=1}^{6} i \cdot \operatorname{Pr}[R=i \mid R \geq 4]
+</div>
+<script type="math/tex; mode=display">
+\operatorname{Ex}[R \mid R \geq 4]=\sum_{i=1}^{6} i \cdot \operatorname{Pr}[R=i \mid R \geq 4]
+</script>
+</div>
+<h2 id="_79">闭包<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h2>
+<h3 id="_80">闭包的定义<a class="headerlink" href="#_80" title="Permanent link">&para;</a></h3>
+<ul>
+<li>设 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是集合 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{A}</span><script type="math/tex">\mathrm{A}</script></span> 上的关系， <span class="arithmatex"><span class="MathJax_Preview">\mathrm{P}</span><script type="math/tex">\mathrm{P}</script></span> 是给定的某种性质（如： 自反、对称、传递），满足下列所有条件的关系 <span class="arithmatex"><span class="MathJax_Preview">R_{1}</span><script type="math/tex">R_{1}</script></span> 称为 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 的==关于 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{P}</span><script type="math/tex">\mathrm{P}</script></span>== 的闭包:</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">R \subseteq R_{1}</span><script type="math/tex">R \subseteq R_{1}</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">R_{1}</span><script type="math/tex">R_{1}</script></span> 满足性质 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{P}</span><script type="math/tex">\mathrm{P}</script></span></li>
+<li>如果存在集合 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 上的关系 <span class="arithmatex"><span class="MathJax_Preview">R^{\prime}, R^{\prime}</span><script type="math/tex">R^{\prime}, R^{\prime}</script></span> 满足性质 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{P}</span><script type="math/tex">\mathrm{P}</script></span> 并包含 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span>, 则 <span class="arithmatex"><span class="MathJax_Preview">R_{1} \subseteq R^{\prime}</span><script type="math/tex">R_{1} \subseteq R^{\prime}</script></span>,</li>
+<li>自反闭包 <span class="arithmatex"><span class="MathJax_Preview">r(R)</span><script type="math/tex">r(R)</script></span> 、对称闭包 <span class="arithmatex"><span class="MathJax_Preview">s(R)</span><script type="math/tex">s(R)</script></span> 、传递闭包 <span class="arithmatex"><span class="MathJax_Preview">t(R)</span><script type="math/tex">t(R)</script></span></li>
+</ul>
+<h3 id="_81">闭包的计算公式<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h3>
+<h3 id="warshall">传递闭包的Warshall算法<a class="headerlink" href="#warshall" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>传递闭包：<span class="arithmatex"><span class="MathJax_Preview">t(R) = R\cup R^2 \cup R^3 \cdots \cup R^n</span><script type="math/tex">t(R) = R\cup R^2 \cup R^3 \cdots \cup R^n</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\therefore M_{t(R)} = M_R \or M_R^2 \or M_R^3 \or M^n_R</span><script type="math/tex">\therefore M_{t(R)} = M_R \or M_R^2 \or M_R^3 \or M^n_R</script></span></p>
+<p>复杂度： <span class="arithmatex"><span class="MathJax_Preview">O(N^4)</span><script type="math/tex">O(N^4)</script></span></p>
+</blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">反思：如果在之前的情况下\\ 已经得到了a -b有长度为n-1的路径，\\那么没有必要现再寻找是否存在长度为n的路径</span><script type="math/tex">反思：如果在之前的情况下\\ 已经得到了a -b有长度为n-1的路径，\\那么没有必要现再寻找是否存在长度为n的路径</script></span></p>
+<p>Warshall: 
+$$
+W_k[i,j] = 1\ iff. W_{k-1}[i,j] = 1\
+or ( W_{k-1}[i, k] = 1)\and( W_{k-1}[k, j] = 1)\
+复杂度：O(N^3)
+$$</p>
+<h3 id="_82">等价关系<a class="headerlink" href="#_82" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>满足性质：自反、对称、传递。</p>
+</li>
+<li>
+<p>“等于”关系的推广</p>
+</li>
+<li>
+<p>例子</p>
+</li>
+</ul>
+<p>对3同余关系</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">R \subseteq N \times N, x R y</span><script type="math/tex">R \subseteq N \times N, x R y</script></span> iff 存在正整数 <span class="arithmatex"><span class="MathJax_Preview">k, l</span><script type="math/tex">k, l</script></span>, 使得 <span class="arithmatex"><span class="MathJax_Preview">x^{\mathrm{k}}=y^{\mathrm{l}}</span><script type="math/tex">x^{\mathrm{k}}=y^{\mathrm{l}}</script></span> 。</p>
+<ul>
+<li>自反: 若 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 是任意自然数, 当然 <span class="arithmatex"><span class="MathJax_Preview">x^{k}=x^{k}</span><script type="math/tex">x^{k}=x^{k}</script></span>;</li>
+<li>对称: 若有 <span class="arithmatex"><span class="MathJax_Preview">k, l</span><script type="math/tex">k, l</script></span>, 使 <span class="arithmatex"><span class="MathJax_Preview">x^{k}=y^{l}</span><script type="math/tex">x^{k}=y^{l}</script></span>; 也就有 <span class="arithmatex"><span class="MathJax_Preview">l, k</span><script type="math/tex">l, k</script></span>, 使 <span class="arithmatex"><span class="MathJax_Preview">y^{l}=x^{k}</span><script type="math/tex">y^{l}=x^{k}</script></span>;</li>
+<li>传递: 若有 <span class="arithmatex"><span class="MathJax_Preview">k, l</span><script type="math/tex">k, l</script></span>, 使 <span class="arithmatex"><span class="MathJax_Preview">x^{\mathrm{k}=y^{1}}</span><script type="math/tex">x^{\mathrm{k}=y^{1}}</script></span>; 并有 <span class="arithmatex"><span class="MathJax_Preview">m, \mathrm{n}</span><script type="math/tex">m, \mathrm{n}</script></span>, 使 <span class="arithmatex"><span class="MathJax_Preview">y^{\mathrm{n}}=z^{\mathrm{m}}</span><script type="math/tex">y^{\mathrm{n}}=z^{\mathrm{m}}</script></span>; 则有 <span class="arithmatex"><span class="MathJax_Preview">x^\mathrm{kn}=z^{\mathrm{ml}}</span><script type="math/tex">x^\mathrm{kn}=z^{\mathrm{ml}}</script></span></li>
+</ul>
+<h3 id="_83">等价类<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h3>
+<h2 id="-rr-mathrmamathrma-forall-x-in-mathrmaforall-x-in-mathrma-x_ry-mid-y-in-mathrma-wedge-x-r-yx_ry-mid-y-in-mathrma-wedge-x-r-y">- <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是非空集合 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{A}</span><script type="math/tex">\mathrm{A}</script></span> 上的等价关系, <span class="arithmatex"><span class="MathJax_Preview">\forall x \in \mathrm{A}</span><script type="math/tex">\forall x \in \mathrm{A}</script></span>, 等价类 <span class="arithmatex"><span class="MathJax_Preview">{[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}</span><script type="math/tex">{[x]_{R}}=\{y \mid y \in \mathrm{A} \wedge x R y\}</script></span>（等价类是一个**集合**）<a class="headerlink" href="#-rr-mathrmamathrma-forall-x-in-mathrmaforall-x-in-mathrma-x_ry-mid-y-in-mathrma-wedge-x-r-yx_ry-mid-y-in-mathrma-wedge-x-r-y" title="Permanent link">&para;</a></h2>
+<ul>
+<li>每个等价类是A的一个非空子集。</li>
+<li>例子: 对 3 同余关系: <span class="arithmatex"><span class="MathJax_Preview">R \subseteq Z \times Z, x R y</span><script type="math/tex">R \subseteq Z \times Z, x R y</script></span> 当且仅当 <span class="arithmatex"><span class="MathJax_Preview">\frac{|x-y|}{3}</span><script type="math/tex">\frac{|x-y|}{3}</script></span> 是整数。</li>
+<li>3 个等价类</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{aligned}
+&amp;[0]=\{\ldots,-6,-3,0,3,6,9, \ldots\};\\
+&amp;{[1]=\{\ldots,-5,-2,1,4,7, \ldots\} ;} \\
+&amp;{[2]=\{\ldots,-4,-1,2,5,8,11, \ldots\}}
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&[0]=\{\ldots,-6,-3,0,3,6,9, \ldots\};\\
+&{[1]=\{\ldots,-5,-2,1,4,7, \ldots\} ;} \\
+&{[2]=\{\ldots,-4,-1,2,5,8,11, \ldots\}}
+\end{aligned}
+</script>
+</div>
+<h3 id="_84">商集<a class="headerlink" href="#_84" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> 是非空集合 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 上的等价关系, <span class="arithmatex"><span class="MathJax_Preview">\forall x \in A</span><script type="math/tex">\forall x \in A</script></span>, 则其所有 等价类的集合称为商集, <span class="arithmatex"><span class="MathJax_Preview">A / R</span><script type="math/tex">A / R</script></span></li>
+<li>集合 <span class="arithmatex"><span class="MathJax_Preview">A=\left\{a_{1}, a_{2}, \ldots, a_{\mathrm{n}}\right\}</span><script type="math/tex">A=\left\{a_{1}, a_{2}, \ldots, a_{\mathrm{n}}\right\}</script></span> 上的恒等关系 <span class="arithmatex"><span class="MathJax_Preview">I_{\mathrm{A}}</span><script type="math/tex">I_{\mathrm{A}}</script></span> 是等价关系, 商集 <span class="arithmatex"><span class="MathJax_Preview">A / I_{\mathrm{A}}=\left\{\left\{a_{1}\right\},\left\{a_{2}\right\}, \ldots,\left\{a_{\mathrm{n}}\right\}\right\}</span><script type="math/tex">A / I_{\mathrm{A}}=\left\{\left\{a_{1}\right\},\left\{a_{2}\right\}, \ldots,\left\{a_{\mathrm{n}}\right\}\right\}</script></span></li>
+<li>定义自然数集的笛卡儿乘积上的关系 <span class="arithmatex"><span class="MathJax_Preview">R</span><script type="math/tex">R</script></span> :
+  <span class="arithmatex"><span class="MathJax_Preview">(a, b) R(c, d)</span><script type="math/tex">(a, b) R(c, d)</script></span> 当且仅当 <span class="arithmatex"><span class="MathJax_Preview">a+d=b+c</span><script type="math/tex">a+d=b+c</script></span> 证明这是等价关系, 并给出其商集.</li>
+</ul>
+<h3 id="_85">集合的划分<a class="headerlink" href="#_85" title="Permanent link">&para;</a></h3>
+<ul>
+<li>把一个集合分为若干**不相交**的块，并保证这些块加和为全集</li>
+</ul>
+<h2 id="partail-order">偏序关系（partail order）<a class="headerlink" href="#partail-order" title="Permanent link">&para;</a></h2>
+<ul>
+<li>自反、反对称、传递</li>
+</ul>
+<h3 id="_86">全序（线性序）<a class="headerlink" href="#_86" title="Permanent link">&para;</a></h3>
+<p>定义：R为非空集合A上的偏序关系</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\forall x,y \in A, x与y都是可比的，则称R为全序</span><script type="math/tex">\forall x,y \in A, x与y都是可比的，则称R为全序</script></span></p>
+<p>实例：数集上的小于或等于关系是全序关系</p>
+<p>整除关系不是正整数集合上的全序关系</p>
+<h3 id="_87">覆盖<a class="headerlink" href="#_87" title="Permanent link">&para;</a></h3>
+<p>定义：<span class="arithmatex"><span class="MathJax_Preview">x,y \in A,如果x &lt; y且不存在z使得z \in A 使得 x &lt; z &lt; y,则称y覆盖x.</span><script type="math/tex">x,y \in A,如果x < y且不存在z使得z \in A 使得 x < z < y,则称y覆盖x.</script></span></p>
+<h3 id="poset">偏序集（p.o.set）与哈斯图<a class="headerlink" href="#poset" title="Permanent link">&para;</a></h3>
+<h4 id="_88">偏序集<a class="headerlink" href="#_88" title="Permanent link">&para;</a></h4>
+<h4 id="hasse-diagrams">哈斯图（Hasse Diagrams）<a class="headerlink" href="#hasse-diagrams" title="Permanent link">&para;</a></h4>
+<p>偏序关系简化</p>
+<ul>
+<li>
+<p>省略所有顶点上的环（(a,a),(b,b),(c,c)）</p>
+</li>
+<li>
+<p>省略所有因传递关系而引出的边（去除**非覆盖边**）((a,c))<span class="arithmatex"><span class="MathJax_Preview">i.e.确保每条边都是覆盖关系</span><script type="math/tex">i.e.确保每条边都是覆盖关系</script></span></p>
+</li>
+<li>
+<p>根据箭头方向自下而上重排列所有顶点，而后将所有的有向边替换为无向边</p>
+</li>
+</ul>
+<p><img alt="image-20220402112419025" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220402112419025.png" /></p>
+<p><img alt="image-20220402112616698" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220402112616698.png" /></p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 图的基本概念" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              图的基本概念
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../LinearAlgebra/Linear-algebra-notes/" class="md-footer__link md-footer__link--next" aria-label="下一页: 线性代数" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              线性代数
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

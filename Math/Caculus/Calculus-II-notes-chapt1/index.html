@@ -1,0 +1,2212 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>Calculus_II_notes_chapt1 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Calculus_II_notes_chapt1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        数学
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        计算机科学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+        技能树
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          chap 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        chap 1
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5 多元函数微分学
+  </a>
+  
+    <nav class="md-nav" aria-label="5 多元函数微分学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1 多元函数的极限与连续性
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 多元函数的极限与连续性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    5.1.1 点集的基本性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    5.1.2 多元函数的概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513" class="md-nav__link">
+    5.1.3 多元函数的极限
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.3 多元函数的极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二重极限
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    累次极限
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514" class="md-nav__link">
+    5.1.4 多元函数的连续性
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.4 多元函数的连续性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    连续性定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    连续性的性质（都是在==有界闭区域==条件下）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2 偏导数与全微分
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 偏导数与全微分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    5.2.1 偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.1 偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    可偏导和连续的关系
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522" class="md-nav__link">
+    5.2.2 高阶偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.2 高阶偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    混合偏导数与求导次序无关的充分条件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523" class="md-nav__link">
+    5.2.3 全微分
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.3 全微分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    证明可微的方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    连续可微
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3 复合函数与隐函数的偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 复合函数与隐函数的偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531" class="md-nav__link">
+    5.3.1 复合函数的偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3.1 复合函数的偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    链式法则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    一阶全微分的形式不变性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    复合函数的高阶偏导数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532" class="md-nav__link">
+    5.3.2 隐函数的偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3.2 隐函数的偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    由一个方程确定的隐函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    由方程组确定的隐函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    5.4 二元函数的泰勒公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    5.5 多元向量函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    5.6 偏导数在几何上的应用
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6 偏导数在几何上的应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#561" class="md-nav__link">
+    5.6.1 空间曲线的切线与法平面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#562" class="md-nav__link">
+    5.6.2 空间曲面的切平面与法线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    5.7 极值与条件极值
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7 极值与条件极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#571" class="md-nav__link">
+    5.7.1 二元函数的极值
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7.1 二元函数的极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    驻点：偏导数都为0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    可疑极值点（驻点+不可偏导的点）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    求极值点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#572" class="md-nav__link">
+    5.7.2 最大值与最小值
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7.2 最大值与最小值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    一般方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#573" class="md-nav__link">
+    5.7.3 条件极值
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7.3 条件极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    方法一：消元法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    方法二：拉格朗日乘数法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    条件极值与方向向量（二元函数求条件极值）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    5.8 方向导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.8 方向导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    等高线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    方向向量与梯度的关系
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          计算机科学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机科学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机科学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          技能树
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技能树" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          技能树
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课堂笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          课堂笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="随笔" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    5 多元函数微分学
+  </a>
+  
+    <nav class="md-nav" aria-label="5 多元函数微分学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    5.1 多元函数的极限与连续性
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 多元函数的极限与连续性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    5.1.1 点集的基本性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    5.1.2 多元函数的概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513" class="md-nav__link">
+    5.1.3 多元函数的极限
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.3 多元函数的极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二重极限
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    累次极限
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514" class="md-nav__link">
+    5.1.4 多元函数的连续性
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1.4 多元函数的连续性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    连续性定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    连续性的性质（都是在==有界闭区域==条件下）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    5.2 偏导数与全微分
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 偏导数与全微分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    5.2.1 偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.1 偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    可偏导和连续的关系
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522" class="md-nav__link">
+    5.2.2 高阶偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.2 高阶偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    混合偏导数与求导次序无关的充分条件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523" class="md-nav__link">
+    5.2.3 全微分
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.3 全微分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    概念
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    证明可微的方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    连续可微
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    5.3 复合函数与隐函数的偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 复合函数与隐函数的偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531" class="md-nav__link">
+    5.3.1 复合函数的偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3.1 复合函数的偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    链式法则
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    一阶全微分的形式不变性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    复合函数的高阶偏导数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532" class="md-nav__link">
+    5.3.2 隐函数的偏导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3.2 隐函数的偏导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    由一个方程确定的隐函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    由方程组确定的隐函数
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    5.4 二元函数的泰勒公式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    5.5 多元向量函数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#56" class="md-nav__link">
+    5.6 偏导数在几何上的应用
+  </a>
+  
+    <nav class="md-nav" aria-label="5.6 偏导数在几何上的应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#561" class="md-nav__link">
+    5.6.1 空间曲线的切线与法平面
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#562" class="md-nav__link">
+    5.6.2 空间曲面的切平面与法线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#57" class="md-nav__link">
+    5.7 极值与条件极值
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7 极值与条件极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#571" class="md-nav__link">
+    5.7.1 二元函数的极值
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7.1 二元函数的极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    驻点：偏导数都为0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    可疑极值点（驻点+不可偏导的点）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    求极值点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#572" class="md-nav__link">
+    5.7.2 最大值与最小值
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7.2 最大值与最小值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    一般方法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#573" class="md-nav__link">
+    5.7.3 条件极值
+  </a>
+  
+    <nav class="md-nav" aria-label="5.7.3 条件极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    方法一：消元法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    方法二：拉格朗日乘数法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    条件极值与方向向量（二元函数求条件极值）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#58" class="md-nav__link">
+    5.8 方向导数
+  </a>
+  
+    <nav class="md-nav" aria-label="5.8 方向导数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    等高线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    方向向量与梯度的关系
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="_1">微积分复习笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="5">5 多元函数微分学<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="51">5.1 多元函数的极限与连续性<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<h4 id="511">5.1.1 点集的基本性质<a class="headerlink" href="#511" title="Permanent link">&para;</a></h4>
+<p>考虑n维空间下点的性质，以描述n空间的性质</p>
+<ul>
+<li>
+<p>距离的量度<span class="arithmatex"><span class="MathJax_Preview">\rho=\sqrt {(a_i-b_i)^2}</span><script type="math/tex">\rho=\sqrt {(a_i-b_i)^2}</script></span></p>
+</li>
+<li>
+<p>邻域 <span class="arithmatex"><span class="MathJax_Preview">N_\delta(P_0)</span><script type="math/tex">N_\delta(P_0)</script></span></p>
+</li>
+<li>去心邻域 <span class="arithmatex"><span class="MathJax_Preview">\mathring{N}_\delta(P_0)</span><script type="math/tex">\mathring{N}_\delta(P_0)</script></span> </li>
+<li>内点：G的内面的一个点走一个足够小的距离，仍然在内面</li>
+<li>内部<span class="arithmatex"><span class="MathJax_Preview">G^o</span><script type="math/tex">G^o</script></span>：内点的集合</li>
+<li><strong>问题</strong>：“G的内点”和“属于G”的区别？<ul>
+<li>属于G，可能为G的内点或边界点</li>
+</ul>
+</li>
+<li>外点：G的外面的一个点走一个足够小的距离，仍然在外面</li>
+<li>外部：外点的集合</li>
+<li>边界点<span class="arithmatex"><span class="MathJax_Preview">\partial G</span><script type="math/tex">\partial G</script></span>：走一个任意大小的距离，都有邻域中的部分点为内点，另一部分为外点</li>
+<li>聚点：对于任意大小的**去心邻域**中，总有点属于G</li>
+<li><strong>问题</strong>：数列中的聚点为子数列的极限 ？</li>
+<li><strong>问题</strong>：聚点是什么？</li>
+<li>开集：G中所有的点都是G的内点，即G的内部 == G</li>
+<li>开集一定不包含边界点。</li>
+<li>闭集：全集对开集的补集就是闭集。即，闭集外的点，走任意小的距离，仍然在闭集外。</li>
+<li>闭集一定包含边界点。</li>
+<li>归纳：<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">R^n = E^o \cup \partial E \cup (E^c)^o \\ 开集: E = E^o \\ 闭集： E = E^o \cup \partial E  \and E^c = (E^c)^o</span><script type="math/tex">R^n = E^o \cup \partial E \cup (E^c)^o \\ 开集: E = E^o \\ 闭集： E = E^o \cup \partial E  \and E^c = (E^c)^o</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">R^n = E^o \cup \partial E \cup (E^c)^o \\ 开集: E = E^o \\ 闭集： E = E^o \cup \partial E  \and E^c = (E^c)^o</span><script type="math/tex">R^n = E^o \cup \partial E \cup (E^c)^o \\ 开集: E = E^o \\ 闭集： E = E^o \cup \partial E  \and E^c = (E^c)^o</script></span></script></span></li>
+<li>连通集：G内任意两点都可以被一条曲线连接，且该曲线上的点都属于G。</li>
+<li>开区域：开集+连通集</li>
+<li>空集是开区域</li>
+<li><strong>闭区域</strong>：**非空**开区域+边界</li>
+<li><strong>问题</strong>：为什么定义为：闭集+连通集？</li>
+<li>区域：开区域、闭区域</li>
+<li>空集和全空间既是开集，又是闭集</li>
+<li>有界集</li>
+<li>直径：<span class="arithmatex"><span class="MathJax_Preview">d(G) = sup{\{\rho(P_1, P_2)|\forall P_1,P_2 \in G\}}</span><script type="math/tex">d(G) = sup{\{\rho(P_1, P_2)|\forall P_1,P_2 \in G\}}</script></span></li>
+<li>无界集</li>
+</ul>
+<p>关于集合论的阅读：请问开集和闭集如何理解？ - sola的回答 - 知乎 <a href="https://www.zhihu.com/question/378515815/answer/1071427708">https://www.zhihu.com/question/378515815/answer/1071427708</a></p>
+<h4 id="512">5.1.2 多元函数的概念<a class="headerlink" href="#512" title="Permanent link">&para;</a></h4>
+<h4 id="513">5.1.3 多元函数的极限<a class="headerlink" href="#513" title="Permanent link">&para;</a></h4>
+<h5 id="_2">二重极限<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h5>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">P_0(x_0, y_0)</span><script type="math/tex">P_0(x_0, y_0)</script></span>为D的**聚点**，<span class="arithmatex"><span class="MathJax_Preview">\epsilon-\delta</span><script type="math/tex">\epsilon-\delta</script></span>语言</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">0 &lt; \sqrt{(x - x_0)^2 + (y- y_0) ^ 2} &lt; \delta</span><script type="math/tex">0 < \sqrt{(x - x_0)^2 + (y- y_0) ^ 2} < \delta</script></span></li>
+<li>
+<p>$ |f(x, y) - A| &lt; \epsilon$</p>
+</li>
+<li>
+<p>证明/求二重极限的方法：</p>
+<ul>
+<li>定义法：配方/放缩<span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span>凑<span class="arithmatex"><span class="MathJax_Preview">\rho</span><script type="math/tex">\rho</script></span></li>
+<li>若函数在该点连续且极限存在，则可以直接带入得到答案。</li>
+<li>对于不定型：夹逼/局部有界性。</li>
+<li>注：对于极限为0的证明，可以任意添加或去除绝对值符号。可以据此进行放缩/夹逼。</li>
+</ul>
+</li>
+<li>
+<p>二重极限的复杂性在于点P在平面上趋近<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span>的方式是多重多样的。（一重极限的趋近方式只有左极限 | 右极限）</p>
+</li>
+<li>
+<p>判定二重极限不存在的方法：找到两种趋近<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span> 的方式，使得<span class="arithmatex"><span class="MathJax_Preview">f(x,y)</span><script type="math/tex">f(x,y)</script></span>趋近不同的值（包括极限不存在）。</p>
+</li>
+</ul>
+<h5 id="_3">累次极限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<h4 id="514">5.1.4 多元函数的连续性<a class="headerlink" href="#514" title="Permanent link">&para;</a></h4>
+<h5 id="_4">连续性定义<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p><span class="arithmatex"><span class="MathJax_Preview">设Ｇ\subseteq G,函数f在G上有定义，P_0是G的</span><script type="math/tex">设Ｇ\subseteq G,函数f在G上有定义，P_0是G的</script></span><strong>聚点</strong>（边界点/内点）<span class="arithmatex"><span class="MathJax_Preview">, 且P_0\in G, 若 \displaystyle\ \lim_{P \to P_0} = f(P_0)</span><script type="math/tex">, 且P_0\in G, 若 \displaystyle\ \lim_{P \to P_0} = f(P_0)</script></span>,则函数在<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span>处连续。</p>
+<ul>
+<li>若处处连续，则在G上连续。</li>
+<li>等价定义：<span class="arithmatex"><span class="MathJax_Preview">\Delta z \rightarrow 0(\Delta x \rightarrow 0, \Delta y \rightarrow 0)</span><script type="math/tex">\Delta z \rightarrow 0(\Delta x \rightarrow 0, \Delta y \rightarrow 0)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">f(x,y)在(x_0, y_0)处关于x连续</span><script type="math/tex">f(x,y)在(x_0, y_0)处关于x连续</script></span>：固定<span class="arithmatex"><span class="MathJax_Preview">y = y_0</span><script type="math/tex">y = y_0</script></span>，一元极限。</li>
+</ul>
+<h5 id="_5">连续性的性质（都是在==有界闭区域==条件下）<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<ul>
+<li>零点定理</li>
+<li>介质定理</li>
+<li>有界性定理</li>
+<li>最值定理</li>
+</ul>
+<h3 id="52">5.2 偏导数与全微分<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<h4 id="521">5.2.1 偏导数<a class="headerlink" href="#521" title="Permanent link">&para;</a></h4>
+<h5 id="_6">定义<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<p><span class="arithmatex"><span class="MathJax_Preview">函数z = f(x, y)在点(x_0, y_0)处对x的偏导数，记作\\{\partial f \over \partial x}(x_0, y_0)</span><script type="math/tex">函数z = f(x, y)在点(x_0, y_0)处对x的偏导数，记作\\{\partial f \over \partial x}(x_0, y_0)</script></span></p>
+<ul>
+<li>偏导数都存在（未必相等），则函数在该点可偏导。偏导数存在，说明左偏导数=右偏导数。</li>
+</ul>
+<h5 id="_7">可偏导和连续的关系<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<ul>
+<li>回顾：一元函数：</li>
+</ul>
+<p>$可导\implies连续 \ \lim_{\Delta x\rightarrow0}{f(x+ \Delta x) - f(x)\over\Delta x} = A \implies \lim(f(x+\Delta x) - f(x)) = \lim(A\Delta x+o(\Delta x)) = 0(\Delta x\rightarrow 0)\连续 \not\Rightarrow 可导\ 左导数 \neq 右导数 or 左/右导数可能不存在f(x) = {1\over x} 在x = 0处   $</p>
+<ul>
+<li>
+<p>多元函数在某一点可偏导$\not\Rightarrow $在这一点连续。</p>
+</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">Thm. 函数在点P的某邻域内可偏导，且偏导数在该邻域内有界，则函数在P处连续\\Pf.插入中间量，使用微分中值定理</div>
+<script type="math/tex; mode=display">Thm. 函数在点P的某邻域内可偏导，且偏导数在该邻域内有界，则函数在P处连续\\Pf.插入中间量，使用微分中值定理</script>
+</div>
+</li>
+<li>
+<p><img alt="image-20220312155408739" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220312155408739.png" /></p>
+</li>
+<li>
+<p>[参考资料]二元微分：连续、可微、可偏导、偏导连续的超强通俗解析！ - kaysen学长的文章 - 知乎 <a href="https://zhuanlan.zhihu.com/p/331732466">https://zhuanlan.zhihu.com/p/331732466</a></p>
+</li>
+</ul>
+<h4 id="522">5.2.2 高阶偏导数<a class="headerlink" href="#522" title="Permanent link">&para;</a></h4>
+<h5 id="_8">混合偏导数与求导次序无关的充分条件<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">Thm.若二阶混合偏导数f''_{xy}(x,y)与f''_{yx}(x,y) 在 (x,y)处连续，则f''_{xy}(x,y) = f''_{yx}(x,y)  \\Pf.运用拉格朗日中值定理</div>
+<script type="math/tex; mode=display">Thm.若二阶混合偏导数f''_{xy}(x,y)与f''_{yx}(x,y) 在 (x,y)处连续，则f''_{xy}(x,y) = f''_{yx}(x,y)  \\Pf.运用拉格朗日中值定理</script>
+</div>
+</li>
+</ul>
+<h4 id="523">5.2.3 全微分<a class="headerlink" href="#523" title="Permanent link">&para;</a></h4>
+<h5 id="_9">概念<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>用全微分<span class="arithmatex"><span class="MathJax_Preview">dz</span><script type="math/tex">dz</script></span>代替全增量<span class="arithmatex"><span class="MathJax_Preview">\Delta z</span><script type="math/tex">\Delta z</script></span>来研究函数<span class="arithmatex"><span class="MathJax_Preview">f(x,y)在(x,y)</span><script type="math/tex">f(x,y)在(x,y)</script></span>附近的变化情况</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\Delta z = A \Delta x + B\Delta y + o(\rho), \rho = \sqrt{(\Delta x)^2 +(\Delta y)^2}</span><script type="math/tex">\Delta z = A \Delta x + B\Delta y + o(\rho), \rho = \sqrt{(\Delta x)^2 +(\Delta y)^2}</script></span></p>
+</li>
+<li>连续和可偏导是可微的必要条件（容易证明），但不是充分条件。</li>
+<li>我的理解：</li>
+<li>一元可微（可导）：线性表示曲线（用一条小直线近似该点处的曲线，忽略非线性项）</li>
+<li>二元可微：线性表示曲面（用一个小平面近似该点处的曲面，忽略非线性项）</li>
+</ul>
+<h5 id="_10">证明可微的方法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
+<ul>
+<li>一个充分条件：</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">Thm. 函数z = f(x,y)在(x,y)的某个邻域内可偏导，且f'_x(x,y),f'_y(x,y)在(x,y)处连续，则函数在该点可微</span><script type="math/tex">Thm. 函数z = f(x,y)在(x,y)的某个邻域内可偏导，且f'_x(x,y),f'_y(x,y)在(x,y)处连续，则函数在该点可微</script></span></li>
+<li>做题常用：<span class="arithmatex"><span class="MathJax_Preview">证明{\omega\over\rho}\rightarrow 0(\rho \to 0^+),\omega = f(x+\Delta x, y+\Delta y)- f_1'(x,y)\Delta x - f_2'(x,y)\Delta y- f(x,y)</span><script type="math/tex">证明{\omega\over\rho}\rightarrow 0(\rho \to 0^+),\omega = f(x+\Delta x, y+\Delta y)- f_1'(x,y)\Delta x - f_2'(x,y)\Delta y- f(x,y)</script></span> </li>
+</ul>
+<h5 id="_11">连续可微<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>若函数在点P的某邻域内可偏导，且**偏导数在该点都连续**，则称函数在该点连续可微（可以推广到整个开区域G）</p>
+</li>
+<li>
+<p>联系：一元函数：连续可导，指导函数连续</p>
+</li>
+</ul>
+<h3 id="53">5.3 复合函数与隐函数的偏导数<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<h4 id="531">5.3.1 复合函数的偏导数<a class="headerlink" href="#531" title="Permanent link">&para;</a></h4>
+<h5 id="_12">链式法则<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h5>
+<h5 id="_13">一阶全微分的形式不变性<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h5>
+<h5 id="_14">复合函数的高阶偏导数<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h5>
+<p>注意到一般性质比较好的函数的混合高阶偏导数（都连续）是相等的。即，<span class="arithmatex"><span class="MathJax_Preview">f''_{xy}(x,y) = f''_{yx}(x,y)</span><script type="math/tex">f''_{xy}(x,y) = f''_{yx}(x,y)</script></span></p>
+<h4 id="532">5.3.2 隐函数的偏导数<a class="headerlink" href="#532" title="Permanent link">&para;</a></h4>
+<h5 id="_15">由一个方程确定的隐函数<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
+<ul>
+<li>二元函数</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">Thm.1.\ let\ P(x_0,y_0)\in \R^2, G = N_\delta(P_0),if\\   1)函数F在G上连续可微\\ 2)F(P_0)=0\\3)F'_y(P-0) \neq 0\\ then\exist! y = f(x),s.t. \\ f连续可微，且在一个邻域内f'(x) = -{F'_x(x,y)\over F'_y(x,y)}\\Pf.\ let\  g(x) = F(x, f(x))= 0\\对g求导恒为零\\\Rightarrow F_1' + F_2'\cdot f' = 0 \\ \Rightarrow f' = -{F_1'\over F_x'}</div>
+<script type="math/tex; mode=display">Thm.1.\ let\ P(x_0,y_0)\in \R^2, G = N_\delta(P_0),if\\   1)函数F在G上连续可微\\ 2)F(P_0)=0\\3)F'_y(P-0) \neq 0\\ then\exist! y = f(x),s.t. \\ f连续可微，且在一个邻域内f'(x) = -{F'_x(x,y)\over F'_y(x,y)}\\Pf.\ let\  g(x) = F(x, f(x))= 0\\对g求导恒为零\\\Rightarrow F_1' + F_2'\cdot f' = 0 \\ \Rightarrow f' = -{F_1'\over F_x'}</script>
+</div>
+<ul>
+<li>三元函数</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">Thm.2.\ for\ F(x, y, z) = 0, \exist!z = f(x,y),s.t. \\Pf. \ let g(x,y) = F(x, y, f(x,y)) = 0.\\\because g(x,y)为常值函数,g'_x(x,y) = g_y'(x,y)恒为零\\ \therefore g_x' = {\part F\over \part x} + {\part F \over \part z}\cdot {\part f\over \part x} = 0 \\ \Rightarrow {\part f\over \part x } = -{F_1'\over F_3'}</div>
+<script type="math/tex; mode=display">Thm.2.\ for\ F(x, y, z) = 0, \exist!z = f(x,y),s.t. \\Pf. \ let g(x,y) = F(x, y, f(x,y)) = 0.\\\because g(x,y)为常值函数,g'_x(x,y) = g_y'(x,y)恒为零\\ \therefore g_x' = {\part F\over \part x} + {\part F \over \part z}\cdot {\part f\over \part x} = 0 \\ \Rightarrow {\part f\over \part x } = -{F_1'\over F_3'}</script>
+</div>
+<h5 id="_16">由方程组确定的隐函数<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h5>
+<div class="arithmatex">
+<div class="MathJax_Preview">1)\ F(x,y,u,v) = 0\\2)\ H(x,y,u,v) = 0 \\let \ f(x,y) = F(x,y,u(x,y),v(x,y)) = 0 \\ h(x,y) = H(x,y,u(x,y),v(x,y)) = 0 \\then \ f_1' = F_1' + F_3'\cdot u_1' + F_4'\cdot v_1' = 0\quad (1)\\ g_1' = H_1' + H_3'\cdot u_1' + H_4' \cdot v_1' = 0\quad (2)\\ by (1)(2),\Rightarrow \\ \begin{pmatrix}F_3' &amp; F_4'\\ H_3'&amp; H_4' \end{pmatrix}\cdot \begin{pmatrix}u_1'\\ v_1' \end{pmatrix} = \begin{pmatrix} -F_1' \\ -H_1' \end{pmatrix} \\ by\ Cramer\ Rule\ you\ can\ solve\ it</div>
+<script type="math/tex; mode=display">1)\ F(x,y,u,v) = 0\\2)\ H(x,y,u,v) = 0 \\let \ f(x,y) = F(x,y,u(x,y),v(x,y)) = 0 \\ h(x,y) = H(x,y,u(x,y),v(x,y)) = 0 \\then \ f_1' = F_1' + F_3'\cdot u_1' + F_4'\cdot v_1' = 0\quad (1)\\ g_1' = H_1' + H_3'\cdot u_1' + H_4' \cdot v_1' = 0\quad (2)\\ by (1)(2),\Rightarrow \\ \begin{pmatrix}F_3' & F_4'\\ H_3'& H_4' \end{pmatrix}\cdot \begin{pmatrix}u_1'\\ v_1' \end{pmatrix} = \begin{pmatrix} -F_1' \\ -H_1' \end{pmatrix} \\ by\ Cramer\ Rule\ you\ can\ solve\ it</script>
+</div>
+<h3 id="54">5.4 二元函数的泰勒公式<a class="headerlink" href="#54" title="Permanent link">&para;</a></h3>
+<h3 id="55">5.5 多元向量函数<a class="headerlink" href="#55" title="Permanent link">&para;</a></h3>
+<h3 id="56">5.6 偏导数在几何上的应用<a class="headerlink" href="#56" title="Permanent link">&para;</a></h3>
+<h4 id="561">5.6.1 空间曲线的切线与法平面<a class="headerlink" href="#561" title="Permanent link">&para;</a></h4>
+<ul>
+<li>形象理解：切向量就是速度矢量，法平面就是垂直于切向量的平面（即法平面的法向量为切向量）</li>
+<li>情形一：参数化</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">let\ x = \varphi(t), y = \psi(t), z = \omega(t),\\ 显然切向量为(\varphi'(t), \psi'(t), \omega'(t))</span><script type="math/tex">let\ x = \varphi(t), y = \psi(t), z = \omega(t),\\ 显然切向量为(\varphi'(t), \psi'(t), \omega'(t))</script></span></li>
+<li>情形二：一般式（即两曲面相交得到曲线）</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">{\begin{cases}F(\varphi(t),\psi(t),\omega(t)) = 0\\ H(\varphi(t),\psi(t),\omega(t)) = 0 \end{cases}}\\ 对于两个平面，尝试分别对t求导\\ {dF\over dt} = F_1'\cdot \varphi' + F_2'\cdot \psi'+F_3'\cdot \omega' = 0 \\ \iff (F_1', F_2', F_3') \cdot (\varphi',\psi',\omega') = 0\\ then\ we\ find\ \vec{n_1} \cdot \vec{v} = \vec{0} \\ similarly\ we\ have\ \vec{n_2} \cdot \vec{v} = \vec{0}\\ then\ \vec{v}\ can\ be\ \vec{n_1} \times \vec{n_2}</span><script type="math/tex">{\begin{cases}F(\varphi(t),\psi(t),\omega(t)) = 0\\ H(\varphi(t),\psi(t),\omega(t)) = 0 \end{cases}}\\ 对于两个平面，尝试分别对t求导\\ {dF\over dt} = F_1'\cdot \varphi' + F_2'\cdot \psi'+F_3'\cdot \omega' = 0 \\ \iff (F_1', F_2', F_3') \cdot (\varphi',\psi',\omega') = 0\\ then\ we\ find\ \vec{n_1} \cdot \vec{v} = \vec{0} \\ similarly\ we\ have\ \vec{n_2} \cdot \vec{v} = \vec{0}\\ then\ \vec{v}\ can\ be\ \vec{n_1} \times \vec{n_2}</script></span></li>
+</ul>
+<h4 id="562">5.6.2 空间曲面的切平面与法线<a class="headerlink" href="#562" title="Permanent link">&para;</a></h4>
+<ul>
+<li>个人感觉切平面和微分的关系很大</li>
+<li>情形一：参数化-一元参数t</li>
+<li>$对于F(x,y,z) = 0,考虑过该点的任一条曲线\ x = \varphi(t), y = \psi(t), z = \omega(t),\ then,F(\varphi(t),\psi(t),\omega(t)) = 0\\Rightarrow {dF\over dt} = F_1'\cdot \varphi' + F_2'\cdot \psi'+F_3'\cdot \omega' = 0 \ \iff (F_1', F_2', F_3') \cdot (\varphi',\psi',\omega') = 0\ then we find (F_1', F_2', F_3') \cdot \vec{v} = \vec{0}\\because \forall t,即曲线任取,\ \therefore \vec{v}可以沿该曲面上的任意方向，都与(F_1', F_2', F_3')垂直,\ \therefore\nabla F =  (F_1', F_2', F_3') = \vec{n}. $</li>
+<li>情形二：参数化-二元参数u, v</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">F(x(u,v),y(u,v),z(u,v)) = 0\\ 对u,v求偏导\\ {\begin{cases} F_1'\cdot x_1' + F_2'\cdot y_1' + F_3'\cdot z_1'= 0\\ F_1'\cdot x_2' + F_2'\cdot y_2' + F_3'\cdot z_2'= 0\end{cases}}\\ so\ (F_1',F_2',F_3')\cdot (x_1',y_1',z_1') = 0\\ (F_1',F_2',F_3')\cdot (x_2',y_2',z_2') = 0\\ so\ \vec{n}\ can\ be\ (x_1',y_1',z_1')\times (x_2',y_2',z_2')</div>
+<script type="math/tex; mode=display">F(x(u,v),y(u,v),z(u,v)) = 0\\ 对u,v求偏导\\ {\begin{cases} F_1'\cdot x_1' + F_2'\cdot y_1' + F_3'\cdot z_1'= 0\\ F_1'\cdot x_2' + F_2'\cdot y_2' + F_3'\cdot z_2'= 0\end{cases}}\\ so\ (F_1',F_2',F_3')\cdot (x_1',y_1',z_1') = 0\\ (F_1',F_2',F_3')\cdot (x_2',y_2',z_2') = 0\\ so\ \vec{n}\ can\ be\ (x_1',y_1',z_1')\times (x_2',y_2',z_2')</script>
+</div>
+</li>
+</ul>
+<h3 id="57">5.7 极值与条件极值<a class="headerlink" href="#57" title="Permanent link">&para;</a></h3>
+<h4 id="571">5.7.1 二元函数的极值<a class="headerlink" href="#571" title="Permanent link">&para;</a></h4>
+<h5 id="0">驻点：偏导数都为0<a class="headerlink" href="#0" title="Permanent link">&para;</a></h5>
+<h5 id="_17">可疑极值点（驻点+不可偏导的点）<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h5>
+<h5 id="_18">求极值点<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">Thm.\ G = N_\delta(P_0),f在G内二阶连续可微(二阶偏导连续),且f'_x = f_y' = 0,\\ let\ A = f_{xx}'', B = f_{xy}'', C = f_{yy}''\\ 1)B^2-AC &lt; 0, A&gt;0\Rightarrow f(P)取得极小值\\  2)B^2-AC &lt; 0 ,A &lt; 0\Rightarrow 取得极大值\\ 3) B^2-AC &gt; 0\Rightarrow f(P)不是极值\\ 4)B^2-AC = 0\ or B^2-AC &lt; 0\and A = 0 \Rightarrow 无法判断，需单独讨论\\ Pf(略)</div>
+<script type="math/tex; mode=display">Thm.\ G = N_\delta(P_0),f在G内二阶连续可微(二阶偏导连续),且f'_x = f_y' = 0,\\ let\ A = f_{xx}'', B = f_{xy}'', C = f_{yy}''\\ 1)B^2-AC < 0, A>0\Rightarrow f(P)取得极小值\\  2)B^2-AC < 0 ,A < 0\Rightarrow 取得极大值\\ 3) B^2-AC > 0\Rightarrow f(P)不是极值\\ 4)B^2-AC = 0\ or B^2-AC < 0\and A = 0 \Rightarrow 无法判断，需单独讨论\\ Pf(略)</script>
+</div>
+</li>
+<li>
+<p>定理的应用：</p>
+</li>
+<li>
+<p>对形如<span class="arithmatex"><span class="MathJax_Preview">f(x,y)</span><script type="math/tex">f(x,y)</script></span>求极值</p>
+</li>
+<li>
+<p>直接求偏导，根据<span class="arithmatex"><span class="MathJax_Preview">f_1' = f_2' = 0</span><script type="math/tex">f_1' = f_2' = 0</script></span>得到驻点</p>
+</li>
+<li>据此进一步求出<span class="arithmatex"><span class="MathJax_Preview">f_{11}'',f_{12}'',f_{22}''</span><script type="math/tex">f_{11}'',f_{12}'',f_{22}''</script></span>，对每一个驻点讨论<span class="arithmatex"><span class="MathJax_Preview">B^2-AC,A</span><script type="math/tex">B^2-AC,A</script></span>的符号</li>
+<li>
+<p>若有特殊情况，单独讨论</p>
+</li>
+<li>
+<p>对由形如<span class="arithmatex"><span class="MathJax_Preview">F(x,y,z) = 0确定z = f(x,y)</span><script type="math/tex">F(x,y,z) = 0确定z = f(x,y)</script></span>的隐函数求极值</p>
+</li>
+<li>
+<p>改写成<span class="arithmatex"><span class="MathJax_Preview">F(x,y,f(x,y))</span><script type="math/tex">F(x,y,f(x,y))</script></span>的形式，求偏导，得到两个方程（1），令<span class="arithmatex"><span class="MathJax_Preview">f_1' = f_2'= 0</span><script type="math/tex">f_1' = f_2'= 0</script></span>，得到两个关于x,y,z的方程（2），（2）与原方程联立，得到具体的驻点。</p>
+</li>
+<li>对得到的两个方程（1）进一步求偏导（高阶偏导数的求法），得到三个方程，代入<span class="arithmatex"><span class="MathJax_Preview">f_1' = f_2' = 0,x_0,y_0,z_0</span><script type="math/tex">f_1' = f_2' = 0,x_0,y_0,z_0</script></span>，据此求解具体的A、B、C，讨论极值。</li>
+<li><strong>注</strong>：也可以直接显式求出偏导表达式（不过可能形式比较复杂），然后同1.</li>
+</ul>
+<h4 id="572">5.7.2 最大值与最小值<a class="headerlink" href="#572" title="Permanent link">&para;</a></h4>
+<h5 id="_19">一般方法<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h5>
+<p>函数<span class="arithmatex"><span class="MathJax_Preview">f(x,y)</span><script type="math/tex">f(x,y)</script></span>，对于有界闭区域D，</p>
+<ul>
+<li>求出所有D内的驻点对应的函数值</li>
+<li>求出在<span class="arithmatex"><span class="MathJax_Preview">\part D</span><script type="math/tex">\part D</script></span>上的最大值、最小值</li>
+</ul>
+<h4 id="573">5.7.3 条件极值<a class="headerlink" href="#573" title="Permanent link">&para;</a></h4>
+<p>定义：<span class="arithmatex"><span class="MathJax_Preview">F(x,y,z)</span><script type="math/tex">F(x,y,z)</script></span>在约束方程<span class="arithmatex"><span class="MathJax_Preview">\varphi(x,y,z) = 0</span><script type="math/tex">\varphi(x,y,z) = 0</script></span>下的极值</p>
+<h5 id="_20">方法一：消元法<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h5>
+<p>转换为<span class="arithmatex"><span class="MathJax_Preview">F(x,y,z(x,y))</span><script type="math/tex">F(x,y,z(x,y))</script></span>的二元函数的求极值问题</p>
+<p>问题：通常不好根据<span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span>转化为<span class="arithmatex"><span class="MathJax_Preview">z = z(x,y)</span><script type="math/tex">z = z(x,y)</script></span></p>
+<h5 id="_21">方法二：拉格朗日乘数法<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h5>
+<ul>
+<li>三元函数求条件极值</li>
+</ul>
+<p><span class="arithmatex"><span class="MathJax_Preview">Thm.\ 设f(x,y,z)连续可微,函数\varphi(x,y,z)连续可微,且\varphi_z'\neq 0,\\ 函数f(x,y,z)满足约束方程\varphi(x,y,z)的条件极值在点P_0(x_0,y_0,z_0)处取得,\\ let\ F(x,y,z,\lambda) = f(x,y,z) + \lambda \varphi(x,y,z)\\ then \nabla F = \vec{0}\\ i.e.{\begin{cases} F_1' = 0\\ F_2' = 0\\ F_3' = 0\\ F_4' = 0 \end{cases}}\\ Pf. 作简单说明:\\ 1)\varphi视作等高面,\\ 在等高面，有\nabla \varphi \bot切平面i.e.\nabla \varphi//\vec{n}\\ 2)f在该点沿其切平面内任意向量方向前进，值都不能变化，\\ 故\nabla f\bot 切平面i.e.\nabla f// \vec{n}\\ 3)该点在切平面C:\varphi(x,y,z) = 0上</span><script type="math/tex">Thm.\ 设f(x,y,z)连续可微,函数\varphi(x,y,z)连续可微,且\varphi_z'\neq 0,\\ 函数f(x,y,z)满足约束方程\varphi(x,y,z)的条件极值在点P_0(x_0,y_0,z_0)处取得,\\ let\ F(x,y,z,\lambda) = f(x,y,z) + \lambda \varphi(x,y,z)\\ then \nabla F = \vec{0}\\ i.e.{\begin{cases} F_1' = 0\\ F_2' = 0\\ F_3' = 0\\ F_4' = 0 \end{cases}}\\ Pf. 作简单说明:\\ 1)\varphi视作等高面,\\ 在等高面，有\nabla \varphi \bot切平面i.e.\nabla \varphi//\vec{n}\\ 2)f在该点沿其切平面内任意向量方向前进，值都不能变化，\\ 故\nabla f\bot 切平面i.e.\nabla f// \vec{n}\\ 3)该点在切平面C:\varphi(x,y,z) = 0上</script></span></p>
+<ul>
+<li>
+<p>式中<span class="arithmatex"><span class="MathJax_Preview">F为拉格朗日函数，\lambda为拉格朗日乘数</span><script type="math/tex">F为拉格朗日函数，\lambda为拉格朗日乘数</script></span></p>
+</li>
+<li>
+<p>推广：如果有多个约束方程，那么建立拉格朗日方程形如$F(x,y,z,\lambda,\mu), \nabla F = \vec{0} $</p>
+</li>
+<li>
+<h5 id="_22">条件极值与方向向量（二元函数求条件极值）<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h5>
+</li>
+<li>
+<p>我们现在考虑二元连续可微函数<span class="arithmatex"><span class="MathJax_Preview">f(x,y)</span><script type="math/tex">f(x,y)</script></span>限制在曲线C : g(x, y) = 0 上
+    的取值情况。我们称<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span> = (a, b) 为条件极值点，如果∀P ∈ C, f(P) ≥ f(<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span>)
+    或者∀P ∈ C, f(P) ≤ f(<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span>)。其中P = (x, y) ∈ C 的涵义等价于g(x, y) = 0。
+    假设我们站在极值点<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span>，考虑行径方向<span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>（一共有两个方向：前进，后
+    退）。若<span class="arithmatex"><span class="MathJax_Preview">{\part f\over  \part l}(P_0)&gt;0</span><script type="math/tex">{\part f\over  \part l}(P_0)>0</script></span>, 则预示着我们往<span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>方向前进（更准确地说，我们需要
+    一边走一边调整方向，以保持我们始终在C 上），可以看到<span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>取值增加，
+    往<span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>的反方向前进，我们会看到<span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>的取值减小，因此<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span>不会是极值点；若<span class="arithmatex"><span class="MathJax_Preview">{\part f\over  \part l}(P_0)&lt;0</span><script type="math/tex">{\part f\over  \part l}(P_0)<0</script></span>, 则预示着我们往<span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span> 方向前进，可以看到<span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>取值减小，往反方向
+    前线，则f 取值增加，因此<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span> 不会是极值点。于是，我们只有剩下的一种可能:<span class="arithmatex"><span class="MathJax_Preview">{\part f\over  \part l}(P_0)=0.\ i.e.\nabla f \bot l</span><script type="math/tex">{\part f\over  \part l}(P_0)=0.\ i.e.\nabla f \bot l</script></span></p>
+</li>
+<li>
+<p>因为行径方向和<span class="arithmatex"><span class="MathJax_Preview">C:g(x,y) = 0</span><script type="math/tex">C:g(x,y) = 0</script></span>在<span class="arithmatex"><span class="MathJax_Preview">P_0</span><script type="math/tex">P_0</script></span>点切向量同向或反向，因此也有<span class="arithmatex"><span class="MathJax_Preview">\nabla g\bot l</span><script type="math/tex">\nabla g\bot l</script></span></p>
+</li>
+</ul>
+<h3 id="58">5.8 方向导数<a class="headerlink" href="#58" title="Permanent link">&para;</a></h3>
+<h5 id="_23">定义<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h5>
+<p><span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">f在P=(a,b)沿l方向的方向导数为\\ {\part f\over \part l}(P) =\displaystyle \lim_{t \to 0^+}{f(P+tl)-f(P)\over t}</span><script type="math/tex">f在P=(a,b)沿l方向的方向导数为\\ {\part f\over \part l}(P) =\displaystyle \lim_{t \to 0^+}{f(P+tl)-f(P)\over t}</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">f在P=(a,b)沿l方向的方向导数为\\ {\part f\over \part l}(P) =\displaystyle \lim_{t \to 0^+}{f(P+tl)-f(P)\over t}</span><script type="math/tex">f在P=(a,b)沿l方向的方向导数为\\ {\part f\over \part l}(P) =\displaystyle \lim_{t \to 0^+}{f(P+tl)-f(P)\over t}</script></span></script></span></p>
+<h5 id="_24">等高线<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h5>
+<p>等高线<span class="arithmatex"><span class="MathJax_Preview">f(x,y) = k</span><script type="math/tex">f(x,y) = k</script></span>的切向量与<span class="arithmatex"><span class="MathJax_Preview">\nabla f</span><script type="math/tex">\nabla f</script></span>垂直</p>
+<h5 id="_25">方向向量与梯度的关系<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">Thm. let\ |l| = 1,then\\ {\part f\over \part l}(P) = \nabla f\cdot \vec{l}= |\nabla f(P)|\cos\theta</span><script type="math/tex">Thm. let\ |l| = 1,then\\ {\part f\over \part l}(P) = \nabla f\cdot \vec{l}= |\nabla f(P)|\cos\theta</script></span></p>
+</li>
+<li>
+<p>假设<span class="arithmatex"><span class="MathJax_Preview">\nabla f(P)\neq 0 <span class="arithmatex"><span class="MathJax_Preview">。易知，若</span><script type="math/tex">。易知，若</script></span>ll</span><script type="math/tex">\nabla f(P)\neq 0 <span class="arithmatex"><span class="MathJax_Preview">。易知，若</span><script type="math/tex">。易知，若</script></span>ll</script></span>与<span class="arithmatex"><span class="MathJax_Preview">\nabla f</span><script type="math/tex">\nabla f</script></span> 同方向，则方向导数取到最大
+  值；若反方向，则取到最小值。</p>
+</li>
+<li>
+<p>假设我们站在点P, 并且沿<span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>方向移动。如果该方向的方向导数&gt; 0, 我们预期看到<span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span>的取值会变大；若&lt; 0, 取值会变小；若= 0, 取值不会变（更准确地说，我们需要一边移动一边随时调整方向，保证方向导数一值为0 才可以）。</p>
+</li>
+</ul>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="上一页: 主页" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              主页
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Calculus-II-notes-chapt2/" class="md-footer__link md-footer__link--next" aria-label="下一页: chap 2" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              chap 2
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

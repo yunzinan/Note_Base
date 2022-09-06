@@ -1,0 +1,2355 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>普通物理I复习笔记 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              普通物理I复习笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt1/" class="md-tabs__link">
+        数学
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        计算机科学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+        技能树
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link md-tabs__link--active">
+        课堂笔记
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          计算机科学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机科学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机科学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          技能树
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技能树" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          技能树
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课堂笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          课堂笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          普通物理I
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        普通物理I
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    考试范围
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ppt" class="md-nav__link">
+    课堂PPT复习
+  </a>
+  
+    <nav class="md-nav" aria-label="课堂PPT复习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    质点运动学与动力学
+  </a>
+  
+    <nav class="md-nav" aria-label="质点运动学与动力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vt-vxvt-vx" class="md-nav__link">
+    求v(t), v(x)v(t), v(x)类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    自然坐标系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    极坐标系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    曲率半径计算公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    功能原理
+  </a>
+  
+    <nav class="md-nav" aria-label="功能原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    惯性离心力势能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    刚体
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    静电学
+  </a>
+  
+    <nav class="md-nav" aria-label="静电学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    电偶极子
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    知识点
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    运动学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    力学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    刚体
+  </a>
+  
+    <nav class="md-nav" aria-label="刚体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    冲量 动量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    变质量问题
+  </a>
+  
+    <nav class="md-nav" aria-label="变质量问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    绳子落地模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    火箭加速模型
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    静电学
+  </a>
+  
+    <nav class="md-nav" aria-label="静电学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    电场能量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    电流
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    电容
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    静磁学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    热学
+  </a>
+  
+    <nav class="md-nav" aria-label="热学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    熵
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    注意点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    刷题记录
+  </a>
+  
+    <nav class="md-nav" aria-label="刷题记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chap-5" class="md-nav__link">
+    chap 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chap-7" class="md-nav__link">
+    chap 7
+  </a>
+  
+    <nav class="md-nav" aria-label="chap 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rc-p300" class="md-nav__link">
+    RC回路充电放电 p300
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc-p318" class="md-nav__link">
+    地球与大气层构成RC回路 p318
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    习题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chap-8" class="md-nav__link">
+    chap 8
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="随笔" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    考试范围
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ppt" class="md-nav__link">
+    课堂PPT复习
+  </a>
+  
+    <nav class="md-nav" aria-label="课堂PPT复习">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    质点运动学与动力学
+  </a>
+  
+    <nav class="md-nav" aria-label="质点运动学与动力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vt-vxvt-vx" class="md-nav__link">
+    求v(t), v(x)v(t), v(x)类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    自然坐标系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    极坐标系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    曲率半径计算公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    功能原理
+  </a>
+  
+    <nav class="md-nav" aria-label="功能原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    惯性离心力势能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    刚体
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    静电学
+  </a>
+  
+    <nav class="md-nav" aria-label="静电学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    电偶极子
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    知识点
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    运动学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    力学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    刚体
+  </a>
+  
+    <nav class="md-nav" aria-label="刚体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    冲量 动量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    变质量问题
+  </a>
+  
+    <nav class="md-nav" aria-label="变质量问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    绳子落地模型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    火箭加速模型
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    静电学
+  </a>
+  
+    <nav class="md-nav" aria-label="静电学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    电场能量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    电流
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    电容
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    静磁学
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    热学
+  </a>
+  
+    <nav class="md-nav" aria-label="热学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    熵
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    注意点
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    刷题记录
+  </a>
+  
+    <nav class="md-nav" aria-label="刷题记录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chap-5" class="md-nav__link">
+    chap 5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chap-7" class="md-nav__link">
+    chap 7
+  </a>
+  
+    <nav class="md-nav" aria-label="chap 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rc-p300" class="md-nav__link">
+    RC回路充电放电 p300
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc-p318" class="md-nav__link">
+    地球与大气层构成RC回路 p318
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    习题
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chap-8" class="md-nav__link">
+    chap 8
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<blockquote>
+<p>不得不说, 计算机系开设的普物实在是太水了...几近高中难度</p>
+<p>笔记整理的比较混乱 大概属于是电子垃圾了</p>
+</blockquote>
+<h1 id="_1">普通物理 期末复习<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">考试范围<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><mark>力和运动</mark> √</p>
+</li>
+<li>
+<p><mark>运动的守恒量和守恒定律</mark> √</p>
+</li>
+<li>
+<p><mark>刚体和流体的运动</mark> √</p>
+</li>
+</ol>
+<p>牛顿定律、惯性力、动量定理及守恒律、角动量定理及守恒律</p>
+<p>功、能、势、动能定理、机械能守恒律、等刚体转动定律、刚体的动能定理、角动量定理等</p>
+<p>流体不考</p>
+<ol>
+<li>
+<p><del>相对论基础</del></p>
+</li>
+<li>
+<p>气体动理论 √</p>
+</li>
+</ol>
+<p>麦克斯韦速率分布律 气体内能等</p>
+<ol>
+<li>热力学基础 √</li>
+</ol>
+<p>考察基本概念: 热力学第一定律\热力学第二定律\理想气体物态方程\卡诺定理\熵的定义等等</p>
+<ol>
+<li><mark>静止电荷的电场</mark> √</li>
+</ol>
+<p>7-1~7-7 + 7-10 库仑定律、电场的高斯定理、环路定理、电场力做功、电势、静电场中的导体，电容、静电场的能量等、   其它节不考</p>
+<ol>
+<li><mark>恒定电流的磁场</mark> √</li>
+</ol>
+<p>第8-1到8-5节，电流、磁场、毕萨定律、高斯定理和环路定理，带电粒子的运动等、其它节不考</p>
+<ol>
+<li>电磁感应 电磁场理论 √</li>
+</ol>
+<p>第9-1到9-3节，例：法拉第电磁感应定律、动生电动势、感生电动势等、其它节不考</p>
+<blockquote>
+<p>复习以课件PPT为纲，重点关注PPT里面例题以及课后作业题</p>
+</blockquote>
+<h2 id="ppt">课堂PPT复习<a class="headerlink" href="#ppt" title="Permanent link">&para;</a></h2>
+<h3 id="_3">质点运动学与动力学<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h4 id="vt-vxvt-vx">求<span class="arithmatex"><span class="MathJax_Preview">v(t), v(x)</span><script type="math/tex">v(t), v(x)</script></span>类型<a class="headerlink" href="#vt-vxvt-vx" title="Permanent link">&para;</a></h4>
+<ul>
+<li>从<span class="arithmatex"><span class="MathJax_Preview">m\displaystyle{dv\over dt} = \sum F_i</span><script type="math/tex">m\displaystyle{dv\over dt} = \sum F_i</script></span>入手</li>
+<li>如果方程形如<span class="arithmatex"><span class="MathJax_Preview">F(v', x)</span><script type="math/tex">F(v', x)</script></span>,则做一步转化<span class="arithmatex"><span class="MathJax_Preview">\displaystyle {dv\over dt} = {dv\over ds}\cdot v</span><script type="math/tex">\displaystyle {dv\over dt} = {dv\over ds}\cdot v</script></span></li>
+<li>如果方程形如<span class="arithmatex"><span class="MathJax_Preview">F(v',\theta)</span><script type="math/tex">F(v',\theta)</script></span>,则做一步转化<span class="arithmatex"><span class="MathJax_Preview">\displaystyle {dv\over dt}  = {dv\over d\theta}\cdot \omega = {dv\over dt}\cdot{v\over l}</span><script type="math/tex">\displaystyle {dv\over dt}  = {dv\over d\theta}\cdot \omega = {dv\over dt}\cdot{v\over l}</script></span></li>
+<li>解完要带入初值条件</li>
+</ul>
+<h4 id="_4">自然坐标系<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220616103508581" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220616103508581.png" />
+$$
+\vec{v} = s'\vec{e_\tau}, v = \dot{s}\
+{d\vec{e_\tau}\over dt} = |\vec{e_\tau}|\dot{\theta}\vec{e_n} = \dot{\theta}\vec{e_n}\
+\because \rho = {ds\over d \theta}\
+\therefore \vec{a} = \ddot{s}\vec{e_\tau} + \dot{s}{d\theta \over ds}{ds\over dt}\vec{e_n} = \ddot{s}\vec{e_\tau}+ {v^2\over \rho}\vec{e_n}.
+$$</p>
+<h4 id="_5">极坐标系<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+{d{\hat{\rho}}\over dt} = \dot{\theta}\hat{\theta}, {d\hat{\theta}\over dt} = -\dot{\theta}\hat{\rho}\\
+\vec{r} = r\hat{\rho}\\
+\vec{v} = \dot{r}\hat{\rho} + r\dot{\theta}\hat{\theta}
+\\\vec{a} = (\ddot{r} - r\dot\theta^2)\hat{\rho} +(2\dot{\rho}\dot{\theta}+r\ddot{\theta})\hat{\theta}.
+</div>
+<script type="math/tex; mode=display">
+{d{\hat{\rho}}\over dt} = \dot{\theta}\hat{\theta}, {d\hat{\theta}\over dt} = -\dot{\theta}\hat{\rho}\\
+\vec{r} = r\hat{\rho}\\
+\vec{v} = \dot{r}\hat{\rho} + r\dot{\theta}\hat{\theta}
+\\\vec{a} = (\ddot{r} - r\dot\theta^2)\hat{\rho} +(2\dot{\rho}\dot{\theta}+r\ddot{\theta})\hat{\theta}.
+</script>
+</div>
+<blockquote>
+<p>难点在于<span class="arithmatex"><span class="MathJax_Preview">\displaystyle {d{\hat{\rho} }\over dt} = \dot{\theta}\hat{\theta}, {d\hat{\theta}\over dt} = -\dot{\theta}\hat{\rho}</span><script type="math/tex">\displaystyle {d{\hat{\rho} }\over dt} = \dot{\theta}\hat{\theta}, {d\hat{\theta}\over dt} = -\dot{\theta}\hat{\rho}</script></span>的推导.尤其是后者.</p>
+<p><img alt="image-20220620154550322" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220620154550322.png" /></p>
+<p><mark>问题</mark>:如何理解"旋转的向心项"?</p>
+</blockquote>
+<h4 id="_6">曲率半径计算公式<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+{1\over R} = |{y''\over [1 + (y')^2]^{3\over 2}}|
+</div>
+<script type="math/tex; mode=display">
+{1\over R} = |{y''\over [1 + (y')^2]^{3\over 2}}|
+</script>
+</div>
+<h3 id="_7">功能原理<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ol>
+<li><img alt="image-20220616144947125" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220616144947125.png" /></li>
+</ol>
+<blockquote>
+<p>注意: 这里应该是缓慢拉动, 分析非保守力做功对应机械能的变化.</p>
+</blockquote>
+<h4 id="_8">惯性离心力势能<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p><strong>例</strong> 海平面方程</p>
+<p><img alt="image-20220620161423221" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220620161423221.png" /></p>
+<p><img alt="image-20220620162726126" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220620162726126.png" /></p>
+<blockquote>
+<p><strong>解析</strong></p>
+<p>回顾势能的定义: 对于保守力, 机械能是不变的,因此在保守场中, 只发生动能与势能的转化. 定义<span class="arithmatex"><span class="MathJax_Preview">-A = \displaystyle -\int_0^x \vec{f}\cdot d\vec{r} = \phi_x - \phi_0</span><script type="math/tex">-A = \displaystyle -\int_0^x \vec{f}\cdot d\vec{r} = \phi_x - \phi_0</script></span>, 因为我们知道当功为正时,系统的动能增加,当物体做负功时,动能就转化为"只与位置相关的储存起来的能量",显然,转化后的位置能量更大.当我们定义势能零点<span class="arithmatex"><span class="MathJax_Preview">V_0 = \phi_0 = 0</span><script type="math/tex">V_0 = \phi_0 = 0</script></span>时,  <span class="arithmatex"><span class="MathJax_Preview">\Delta V= \phi_x = -A = -\Delta E_k, V_x = -A.</span><script type="math/tex">\Delta V= \phi_x = -A = -\Delta E_k, V_x = -A.</script></span></p>
+<p>于是很显然可以定义**惯性离心力势能** <span class="arithmatex"><span class="MathJax_Preview">E = -A = -\displaystyle \int\vec{f^*}\cdot d\vec{r} =   -\int_0^r m\omega^2rdr = -{1\over 2}m\omega^2r^2</span><script type="math/tex">E = -A = -\displaystyle \int\vec{f^*}\cdot d\vec{r} =   -\int_0^r m\omega^2rdr = -{1\over 2}m\omega^2r^2</script></span></p>
+<p><mark>注意</mark>: 这个功A必须是从定义的势能零点积过来的!</p>
+</blockquote>
+<p><img alt="image-20220620161109108" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220620161109108.png" /></p>
+<blockquote>
+<p><strong>另解</strong> (从惯性离心力势能角度)</p>
+<p>考虑到水面是一个等势面,即**水面上的任一位置的重力势能和惯性离心力势能之和相等**
+$$
+E = mgz - {1\over 2}m\omega<sup>2r</sup>2 = C\
+\Rightarrow z = {\omega^2\over 2g}r^2 + z_0.\square
+$$</p>
+</blockquote>
+<h4 id="_9">刚体<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p><img alt="s.com/2022/05/image-20220616161345648.pn" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220616161345648.png" /></p>
+<p><img alt="image-20220616161840681" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220616161840681.png" /></p>
+<h3 id="_10">静电学<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h4 id="_11">电偶极子<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220616165838949" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220616165838949.png" /></p>
+<p><img alt="image-20220616194816113" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220616194816113.png" /></p>
+<blockquote>
+<p>此题提供了一种求电场的方法: <span class="arithmatex"><span class="MathJax_Preview">\displaystyle E_x = -{\partial U\over \partial x}</span><script type="math/tex">\displaystyle E_x = -{\partial U\over \partial x}</script></span></p>
+<p><img alt="image-20220616195019688" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220616195019688.png" /></p>
+</blockquote>
+<h2 id="_12">知识点<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<h3 id="_13">运动学<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  m{dv\over dt} = m{dv\over ds}\cdot v = \sum F_i
+  </div>
+<script type="math/tex; mode=display">
+  m{dv\over dt} = m{dv\over ds}\cdot v = \sum F_i
+  </script>
+</div>
+</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  {1\over \rho} = \left|{y''\over [1 + (y')^2]^{3\over 2}}\right|\\
+  a_n = {v^2\over \rho} \Rightarrow\rho = {v^2\over a_n}
+  </div>
+<script type="math/tex; mode=display">
+  {1\over \rho} = \left|{y''\over [1 + (y')^2]^{3\over 2}}\right|\\
+  a_n = {v^2\over \rho} \Rightarrow\rho = {v^2\over a_n}
+  </script>
+</div>
+</li>
+<li></li>
+</ul>
+<h3 id="_14">力学<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  dV =  -dA\\
+  \Delta V = \int_{r_0}^{r_t} dV = -\int_{x_0}^{x_t} Fdx
+  </div>
+<script type="math/tex; mode=display">
+  dV =  -dA\\
+  \Delta V = \int_{r_0}^{r_t} dV = -\int_{x_0}^{x_t} Fdx
+  </script>
+</div>
+</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  dA = dE_k
+  </div>
+<script type="math/tex; mode=display">
+  dA = dE_k
+  </script>
+</div>
+</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \Delta E_k = A^{c}  + 
+  A^{nc} = - \Delta V + A^{nc}\\
+  \Rightarrow A^{nc} = \Delta E_k +  \Delta V = \Delta E_{m}
+  </div>
+<script type="math/tex; mode=display">
+  \Delta E_k = A^{c}  + 
+  A^{nc} = - \Delta V + A^{nc}\\
+  \Rightarrow A^{nc} = \Delta E_k +  \Delta V = \Delta E_{m}
+  </script>
+</div>
+</li>
+</ul>
+<h3 id="_15">刚体<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \begin{align}
+  (1)&amp; 总: J = \sum m_i r_i^2 = \int_V r^2dm\\
+  (2)&amp; 圆环,转轴沿直径: J = 2\int_0^{\pi} \lambda Rd\theta \cdot (R\sin \theta )^2 =\lambda \pi R^3 = {1\over 2}m R^2\\
+  (3)&amp; 薄圆盘,转轴通过中心,与圆盘垂直: J = m \int_0^R rdr = {1\over 2 } mR^2\\
+  (4)&amp; 圆筒,转轴沿几何轴,内径r_1,外径r_2: J ={1\over 2 } \pi\rho(r_2^4 - r_1^4)  = \pi \rho (r_2^2 - r_1^2)\cdot (r_1^2 + r_2^2) = {1\over 2}m(r_1^2+r_2^2)\\
+  (5)&amp; 细棒,转轴通过中心,与几何轴垂直: J = {1 \over 12}m l^2.\\
+  &amp; Pf. 设J =  kml^2.利用转动惯量的线性性,将细棒拆成两小段.于是有,\\
+  &amp; kml^2 = 2[k({m\over 2 })({l\over 2})^2 + ({m\over 2})({l\over 4})^2] \Rightarrow k = {1\over 12 }.(利用到了平行轴定理.)\\
+  (6)&amp; 细棒,转轴过端点与棒垂直:J = {1\over 12} m l^2 + m ({l\over 2})^2 = {1\over 3}ml^2\\
+  (7)&amp; 球壳,转轴沿直径: J = {2\over 3}mR^2\\
+  &amp; Pf.I = \int r^2dm= \int (R\sin \theta )^2 \sigma2\pi R\sin \theta R\sin \theta  = {1\over 2 }\int_0^{\pi\over 2}mR^2\sin^3\theta d\theta = {2\over 3}mR^2  \\
+  (8)&amp; 球体,转轴沿直径: J = {2\over 5}mR^2\\
+  &amp; Pf. I = \int dI = \int_0^R {2\over 3}r^2{4\pi^2r^2dr\over {4\over 3}\pi R^3}m = \int_0^R{2m\over R^3}r^4dr = {2\over 5}mR^2
+  \end{align}
+  </div>
+<script type="math/tex; mode=display">
+  \begin{align}
+  (1)& 总: J = \sum m_i r_i^2 = \int_V r^2dm\\
+  (2)& 圆环,转轴沿直径: J = 2\int_0^{\pi} \lambda Rd\theta \cdot (R\sin \theta )^2 =\lambda \pi R^3 = {1\over 2}m R^2\\
+  (3)& 薄圆盘,转轴通过中心,与圆盘垂直: J = m \int_0^R rdr = {1\over 2 } mR^2\\
+  (4)& 圆筒,转轴沿几何轴,内径r_1,外径r_2: J ={1\over 2 } \pi\rho(r_2^4 - r_1^4)  = \pi \rho (r_2^2 - r_1^2)\cdot (r_1^2 + r_2^2) = {1\over 2}m(r_1^2+r_2^2)\\
+  (5)& 细棒,转轴通过中心,与几何轴垂直: J = {1 \over 12}m l^2.\\
+  & Pf. 设J =  kml^2.利用转动惯量的线性性,将细棒拆成两小段.于是有,\\
+  & kml^2 = 2[k({m\over 2 })({l\over 2})^2 + ({m\over 2})({l\over 4})^2] \Rightarrow k = {1\over 12 }.(利用到了平行轴定理.)\\
+  (6)& 细棒,转轴过端点与棒垂直:J = {1\over 12} m l^2 + m ({l\over 2})^2 = {1\over 3}ml^2\\
+  (7)& 球壳,转轴沿直径: J = {2\over 3}mR^2\\
+  & Pf.I = \int r^2dm= \int (R\sin \theta )^2 \sigma2\pi R\sin \theta R\sin \theta  = {1\over 2 }\int_0^{\pi\over 2}mR^2\sin^3\theta d\theta = {2\over 3}mR^2  \\
+  (8)& 球体,转轴沿直径: J = {2\over 5}mR^2\\
+  & Pf. I = \int dI = \int_0^R {2\over 3}r^2{4\pi^2r^2dr\over {4\over 3}\pi R^3}m = \int_0^R{2m\over R^3}r^4dr = {2\over 5}mR^2
+  \end{align}
+  </script>
+</div>
+</li>
+<li>
+<p>垂直轴定理(仅用于薄平板) <span class="arithmatex"><span class="MathJax_Preview">I = \sum m_i(x_i^2 + y_i^2) = I_x +I_y</span><script type="math/tex">I = \sum m_i(x_i^2 + y_i^2) = I_x +I_y</script></span></p>
+</li>
+<li>
+<p>刚体抓住类比关系</p>
+</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{cases}
+  r \sim \theta\\
+  v \sim \omega\\
+  a \sim \alpha\\
+  F \sim M\\
+  m \sim J
+  \end{cases}
+</div>
+<script type="math/tex; mode=display">
+\begin{cases}
+  r \sim \theta\\
+  v \sim \omega\\
+  a \sim \alpha\\
+  F \sim M\\
+  m \sim J
+  \end{cases}
+</script>
+</div>
+<ul>
+<li>刚体动力学问题的步骤</li>
+<li>受力分析: <span class="arithmatex"><span class="MathJax_Preview">\sum f_i = ma</span><script type="math/tex">\sum f_i = ma</script></span> </li>
+<li>角动量定理<span class="arithmatex"><span class="MathJax_Preview">\sum M_i = J\beta</span><script type="math/tex">\sum M_i = J\beta</script></span></li>
+<li>加速度和角加速度的运动学关系<span class="arithmatex"><span class="MathJax_Preview">a = \beta r</span><script type="math/tex">a = \beta r</script></span></li>
+<li>计算得出加速度后 利用运动学公式求解速度等</li>
+<li><img alt="image-20220620202506814" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220620202506814.png" /></li>
+</ul>
+<h4 id="_16">冲量 动量<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>对于多数碰撞过程,有<span class="arithmatex"><span class="MathJax_Preview">\tau \to 0, \int_0^{\tau} Gdt \approx 0.</span><script type="math/tex">\tau \to 0, \int_0^{\tau} Gdt \approx 0.</script></span>或者说是瞬间的冲击力<span class="arithmatex"><span class="MathJax_Preview">F \gg G</span><script type="math/tex">F \gg G</script></span>,因此可以忽略瞬间的重力的冲量.</p>
+</li>
+<li>
+<p>碰撞问题<img alt="image-20220620200738806" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220620200738806.png" /></p>
+</li>
+</ul>
+<blockquote>
+<p>注意: 凡是碰撞问题 碰转过程一定会损失能量, 这个过程可以利用动量守恒/角动量守恒, 由碰撞前的速度求得碰撞后的速度, 此后的运动可以使用能量守恒!</p>
+</blockquote>
+<h4 id="_17">变质量问题<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<h5 id="_18">绳子落地模型<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h5>
+<h5 id="_19">火箭加速模型<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h5>
+<h3 id="_20">静电学<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p>几种典型电场</p>
+<ul>
+<li>无限长直导线</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \oint_S E \cdot d\vec{S} = E\cdot 2\pi r h = {\lambda h\over \varepsilon_0}\Rightarrow E = {\lambda\over 2\pi \varepsilon_0 r}
+</div>
+<script type="math/tex; mode=display">
+  \oint_S E \cdot d\vec{S} = E\cdot 2\pi r h = {\lambda h\over \varepsilon_0}\Rightarrow E = {\lambda\over 2\pi \varepsilon_0 r}
+</script>
+</div>
+<ul>
+<li>无限大平板</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \oint_S E\cdot d\vec{S} = E\cdot 2S = {\sigma S\over \varepsilon_0}\Rightarrow E = {\sigma\over 2\varepsilon_0}
+</div>
+<script type="math/tex; mode=display">
+  \oint_S E\cdot d\vec{S} = E\cdot 2S = {\sigma S\over \varepsilon_0}\Rightarrow E = {\sigma\over 2\varepsilon_0}
+</script>
+</div>
+<ul>
+<li>
+<p><img alt="image-20220616201217559" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220616201217559.png" /></p>
+</li>
+<li>
+<p>实心球体
+  $$
+  设矢径为\vec{r}, \
+  \oiint_S \vec{E}\cdot d\vec{S} = \vec{E} \cdot 4\pi r^2= {\rho {4\over 3}\pi r^3\over \varepsilon_0}\hat{r}\
+  \Rightarrow \vec{E} = {\rho\over 3\varepsilon_0}\vec{r}
+  $$</p>
+</li>
+</ul>
+<h4 id="_21">电场能量<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  E = \sum {1\over 2}q_iV_i\\
+  V_i为除该点自身产生的电势之外的电势,如果考虑自身电势的话,就没有意义了.
+  </div>
+<script type="math/tex; mode=display">
+  E = \sum {1\over 2}q_iV_i\\
+  V_i为除该点自身产生的电势之外的电势,如果考虑自身电势的话,就没有意义了.
+  </script>
+</div>
+</li>
+<li>
+<p>平板电容器的静电能 <span class="arithmatex"><span class="MathJax_Preview">E = {1\over 2}{Q^2\over C}  = {1\over 2}CU^2</span><script type="math/tex">E = {1\over 2}{Q^2\over C}  = {1\over 2}CU^2</script></span></p>
+</li>
+<li>
+<p>电场密度$E = \displaystyle \iiint_V \omega dV = \iiint {1\over 2}\varepsilon E^2dV $</p>
+</li>
+</ul>
+<h4 id="_22">电流<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  dI = {dV\over R} = {dV\over \rho dl/ds} = {dVds\over\rho dl} = \sigma{dVds\over dl}\\
+  \Rightarrow {dI\over ds}= \sigma {dV\over dl}\\
+  \Rightarrow \vec{j} = \sigma\vec{E}.
+  </div>
+<script type="math/tex; mode=display">
+  dI = {dV\over R} = {dV\over \rho dl/ds} = {dVds\over\rho dl} = \sigma{dVds\over dl}\\
+  \Rightarrow {dI\over ds}= \sigma {dV\over dl}\\
+  \Rightarrow \vec{j} = \sigma\vec{E}.
+  </script>
+</div>
+</li>
+</ul>
+<blockquote>
+<p>这个公式说明了这其实是欧姆定律的微观形式.</p>
+</blockquote>
+<ul>
+<li>等效环形电流<span class="arithmatex"><span class="MathJax_Preview">dI = \displaystyle {dq\over T}</span><script type="math/tex">dI = \displaystyle {dq\over T}</script></span>.</li>
+</ul>
+<h4 id="_23">电容<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>几种常见的电容</p>
+</li>
+<li>
+<p>平行板电容 <span class="arithmatex"><span class="MathJax_Preview">C = {Q\over U} = {\sigma S \over{\sigma\over \varepsilon_0} } = \varepsilon_0 S</span><script type="math/tex">C = {Q\over U} = {\sigma S \over{\sigma\over \varepsilon_0} } = \varepsilon_0 S</script></span></p>
+</li>
+<li>
+<p>球形电容 
+    $$
+    E(x) = {q\over \varepsilon_0 4\pi x^2}\
+    U_{ab} = \int_{R_a}^{R_b} {q\over \varepsilon_0 4\pi x^2} dx = {q\over  4\pi \varepsilon_0} {R_b- R_a\over R_a R_b}.\
+    C = {Q\over U} = 4\pi \varepsilon_0 {R_aR_b\over R_b - R_a}.
+    $$</p>
+</li>
+<li>
+<p>球形孤立电容
+    $$
+    E(x) = {q\over \varepsilon_0 4\pi x^2}\
+    U = \int_{R}^\infty {q\over \varepsilon_0 4\pi x^2} dx = {q\over  4\pi \varepsilon_0} {1\over R}.\
+    C = {Q\over U} = 4\pi \varepsilon_0 {R}.
+    $$</p>
+</li>
+</ul>
+<h3 id="_24">静磁学<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>几种常见磁感应强度</p>
+</li>
+<li>
+<p><img alt="image-20220617134635579" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220617134635579.png" /></p>
+</li>
+<li>
+<p><img alt="image-20220617140516423" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220617140516423.png" /></p>
+</li>
+<li>
+<p>通电螺线管</p>
+</li>
+</ul>
+<p><img alt="image-20220617150001948" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220617150001948.png" /></p>
+<ul>
+<li>螺绕环
+  $$
+  \oint B\cdot dl = B2\pi r = NI\
+  B = {N\over 2\pi r}I \approx nI(l \gg 环的截面半径)\
+  $$</li>
+</ul>
+<h3 id="_25">热学<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>基本公式
+  $$
+  \begin{align}
+  (1)&amp; pV = \nu RT\
+  (2)&amp; p = {2\over 3}n\bar{\varepsilon_k},式中\bar{\varepsilon_k}为平均平动动能,n为单位体积内的分子数 \
+  (3)&amp; \bar{\varepsilon_k} = {3\over 2}kT\
+  (4)&amp; E = \nu {i\over 2}RT\
+  (5)&amp; {dN\over N} = f(v)dv \Rightarrow {\Delta N\over N} =  f(v)\Delta v, \int_0^{\infty} f(v)dv = 1\
+  (6)&amp; f(v) = 4\pi ({m_0\over 2\pi kT})^{3\over 2}e^{-{m_0 v^2\over 2kT} }v^2\
+  (7)&amp; \bar{v} = \int vf(v)dv = \sqrt{8kT\over \pi m} = \sqrt{8RT\over \pi M} \approx 1.60\sqrt{RT\over M}\
+  (8)&amp; v_{rms} = \sqrt{\bar{v^2}} = \sqrt{3kT\over m} = \sqrt{3RT\over M} \approx 1.73\sqrt{RT\over M}\
+  (9)&amp; {df\over dv} = 0\Rightarrow v_p = \sqrt{2kT\over m} = \sqrt{2RT\over M} \approx 1.41\sqrt{RT\over M}\
+  (10)&amp; \bar{\lambda} ={1\over \sqrt{2} \pi d^2n} = {kT\over \sqrt{2} \pi d^2 p}\
+  (11)&amp; \overline{Z} = \sqrt{2}\pi d^2 n \bar{v}\ 
+  \end{align}
+  $$</p>
+</li>
+<li>
+<p>热力学四定律</p>
+</li>
+<li>
+<p>第零定律: 如果两个物体与都处于确定状态的第三物体处于热平衡, 则该两个物体彼此处于热平衡.</p>
+</li>
+<li>第一定律: 外界对系统传递的热量, 一部分是使系统的内能增加, 另一部分是用于系统对外做功.</li>
+<li>
+<p>第二定律: </p>
+<ul>
+<li>开尔文表述: 不可能制成一种循环动作的热机, 只从一个热源吸收热量, 使之全部变为有用的功,而不产生其他影响</li>
+<li>克劳修斯表述: 热量不可能自动地从低温物体传向高温物体.</li>
+</ul>
+</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  dA = pdV,dV为正表明气体对外作正功.
+  dQ = dE + dA = dE + pdV
+  </div>
+<script type="math/tex; mode=display">
+  dA = pdV,dV为正表明气体对外作正功.
+  dQ = dE + dA = dE + pdV
+  </script>
+</div>
+</li>
+<li>
+<p>准静态过程
+  $$
+  \begin{align}
+  (1)&amp; 等体: dA = 0, C_{V,m} = {i\over 2} R, \
+  (2)&amp; 等压: C_{p,m} = {i+2\over 2}, \gamma = {i+2\over i} &gt; 1\
+  (3)&amp; 等稳: dE = 0, Q = A = \nu RT\ln {p_1\over p_2}\
+  (4)&amp; 绝热: dQ = 0, dA = pdV = - dE pV^{\gamma} = C.\
+  \end{align}
+  $$</p>
+</li>
+<li>
+<p>卡诺定理: </p>
+</li>
+<li>
+<p>在同样的高低温热源之间工作的一切可逆机, 不论用什么工作物, 效率都等于<span class="arithmatex"><span class="MathJax_Preview">(1 - 
+    {T_2\over T_1}).</span><script type="math/tex">(1 - 
+    {T_2\over T_1}).</script></span></p>
+</li>
+<li>工作于两个确定温度之间的热机中， 可逆热机的效率最高。</li>
+</ul>
+<p>$$
+  \eta_{热机} = {A\over Q_{吸}} = {Q_{吸} - Q_{放}\over Q_{吸}} = 1 - {T_{低}\over T_{高}}\
+  \eta_{制冷机} = {Q_{吸}\over A} = {T_{低}\over T_{高} - T_{低}}
+  $$</p>
+<h4 id="_26">熵<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+dS = \left({dQ\over T}\right)_{可逆}\\
+\Delta S = \int {dQ\over T}\\
+S = k\ln W\\
+</div>
+<script type="math/tex; mode=display">
+dS = \left({dQ\over T}\right)_{可逆}\\
+\Delta S = \int {dQ\over T}\\
+S = k\ln W\\
+</script>
+</div>
+<p>### 数学基础</p>
+<ul>
+<li>
+<p>立体角</p>
+<p><img alt="image-20220617161549665" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/06/image-20220617161549665.png" /></p>
+</li>
+</ul>
+<h2 id="_27">注意点<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h2>
+<ol>
+<li>力学题做题步骤:</li>
+<li>选对象</li>
+<li>看运动</li>
+<li>分析力</li>
+<li>列方程</li>
+<li>验结果/量纲</li>
+<li>过渡到特殊值(消去微分方程解常数C,得到特解)</li>
+<li>
+<p>变化趋势: 思考这个结论是否符合直观(合理)</p>
+</li>
+<li>
+<p>写完记得检查量纲!</p>
+</li>
+<li>注意$\displaystyle U_{ab} = U_a - U_b =-\int_b^a \vec{E}\cdot d\vec{r} = \int_a^b \vec{E}\cdot d\vec{l} $ 因为<span class="arithmatex"><span class="MathJax_Preview">\displaystyle \Delta V = V_t - V_0 = -A = - \int_{r_0}^{r_t} \vec{f}\cdot d\vec{r}</span><script type="math/tex">\displaystyle \Delta V = V_t - V_0 = -A = - \int_{r_0}^{r_t} \vec{f}\cdot d\vec{r}</script></span> 因为<span class="arithmatex"><span class="MathJax_Preview">E_x = \displaystyle -{\partial U\over \partial x}</span><script type="math/tex">E_x = \displaystyle -{\partial U\over \partial x}</script></span> .</li>
+<li>电容器注意是连接电动势的状态,则<span class="arithmatex"><span class="MathJax_Preview">U</span><script type="math/tex">U</script></span>不变,否则<span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span>不变.</li>
+<li>势能总是要先说明**势能零点**!</li>
+<li>角动量守恒不要忘了滑轮自身的角动量!</li>
+<li>高斯定理取高斯面后计算电通量时注意==穿出为正,穿进为负==!</li>
+</ol>
+<h2 id="_28">问题<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h2>
+<ol>
+<li>接地问题? 接地等价于什么?</li>
+<li>薄球壳也要视作内表面和外表面?</li>
+<li>什么时候切断接地导线有/无影响?</li>
+</ol>
+<h2 id="_29">刷题记录<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h2>
+<h3 id="chap-5">chap 5<a class="headerlink" href="#chap-5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>5-11 求速率大小在<span class="arithmatex"><span class="MathJax_Preview">v_p\sim 1.01v_p</span><script type="math/tex">v_p\sim 1.01v_p</script></span>之间的气体分子占总分子数的百分率.</li>
+</ul>
+<blockquote>
+<p>利用<span class="arithmatex"><span class="MathJax_Preview">f(v)\Delta v = {\Delta N\over N}</span><script type="math/tex">f(v)\Delta v = {\Delta N\over N}</script></span>.本题中取为<span class="arithmatex"><span class="MathJax_Preview">f(v_p)</span><script type="math/tex">f(v_p)</script></span> 利用<span class="arithmatex"><span class="MathJax_Preview">v_p</span><script type="math/tex">v_p</script></span>改写麦克斯韦速率分布律,
+$$
+v_p = \sqrt{2RT\over M},用v_p改写麦克斯韦速率分布,\
+{\Delta N\over N} = f(v)\Delta v = 4\pi ({m_0\over 2\pi kT})^{3\over 2}e^{-{m_0 v^2\over 2kT} }v^2\Delta v= {4\over \sqrt{\pi}}({v\over v_p})^2 e^{-({v\over v_p})^2}({\Delta v\over v_p})\ 
+令W = {v\over v_p} ,\Delta W = {\Delta v\over v_p},\
+f(v)\Delta v = {4\over \sqrt{\pi}} W^2 e<sup>{-W</sup>2}\Delta W\
+带入W = 1, \Delta W = 0.01,\
+{\Delta N\over N} = 0.83\%.
+$$</p>
+</blockquote>
+<h3 id="chap-7">chap 7<a class="headerlink" href="#chap-7" title="Permanent link">&para;</a></h3>
+<h4 id="rc-p300">RC回路充电放电 p300<a class="headerlink" href="#rc-p300" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>充电过程
+  $$
+  \mathscr{E} = U_R +U_C = {dq\over dt}R + {q\over C}\
+  \Rightarrow R{dq\over \mathscr{E} - {q\over C}} = dt\
+  \Rightarrow -CR\ln(\mathscr{E} - {q\over C}) = t + C^*\
+  带入初值条件 t= 0, q=0.\
+  q = C\mathscr{E}(1 - e^{-{t\over RC}}).
+  $$</p>
+</li>
+<li>
+<p>放电过程
+  $$
+  0 = R{dq\over dt} + {q\over C}\
+  \Rightarrow q = q_0e^{-{t\over RC}}.
+  $$</p>
+</li>
+</ul>
+<blockquote>
+<p>电容器的充放电过程快慢取决于乘积<span class="arithmatex"><span class="MathJax_Preview">\tau = RC</span><script type="math/tex">\tau = RC</script></span>,它具有时间的量纲,叫做RC电路的==时间常数==或==犹豫时间==.在经过<span class="arithmatex"><span class="MathJax_Preview">3\tau \sim 5\tau</span><script type="math/tex">3\tau \sim 5\tau</script></span>后, 充放电基本已经结束.</p>
+</blockquote>
+<h4 id="rc-p318">地球与大气层构成RC回路 p318<a class="headerlink" href="#rc-p318" title="Permanent link">&para;</a></h4>
+<h4 id="_30">习题<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>7-11 电场叠加原理</p>
+</li>
+<li>
+<p>7-12 电场叠加原理 难度在于积分方式</p>
+</li>
+</ul>
+<blockquote>
+<p><a href="https://www.doc88.com/p-54887013118222.html">均匀带电半球面球心处场强的多种求解方法 - 道客巴巴 (doc88.com)</a></p>
+<p>最自然的方法是建立极坐标系积分</p>
+<p>也可以套用圆环的电场结论</p>
+<p>还可以直接利用<span class="arithmatex"><span class="MathJax_Preview">E = -\nabla V</span><script type="math/tex">E = -\nabla V</script></span> 问题是: 为什么<span class="arithmatex"><span class="MathJax_Preview">E = -{\partial V\over \partial R}</span><script type="math/tex">E = -{\partial V\over \partial R}</script></span>?</p>
+</blockquote>
+<ul>
+<li>
+<p>7-18 Gauss公式</p>
+</li>
+<li>
+<p>7-34 平行板电容器的电场公式运用</p>
+</li>
+<li>
+<p>7-35 内外球壳 考察对接地的理解</p>
+</li>
+<li>
+<p>7-39 电容器 接地</p>
+</li>
+<li>
+<p>7-46 电容器 插入新板</p>
+</li>
+<li>
+<p>7-49 ==电介质==电容器(不讲武德)</p>
+</li>
+<li>
+<p>7-51 简单RC放电过程 电容器能量</p>
+</li>
+<li>
+<p>7-55 电位移 电容器 电介质</p>
+</li>
+<li>
+<p>7-60 <mark>好题</mark>! 大球套小球 一题多解</p>
+</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">Sol\ 1 .</span><script type="math/tex">Sol\ 1 .</script></span>分析电荷分布,得到电场分布,对全空间用能量密度积分.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">Sol\ 2.</span><script type="math/tex">Sol\ 2.</script></span>看做是双球电容+孤立电容的串联</p>
+</blockquote>
+<ul>
+<li>7-61 电容器能量</li>
+</ul>
+<h3 id="chap-8">chap 8<a class="headerlink" href="#chap-8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>8-8 磁通量计算<span class="arithmatex"><span class="MathJax_Preview">\phi  = \vec{B}\cdot \vec{S} = BS\cos \alpha</span><script type="math/tex">\phi  = \vec{B}\cdot \vec{S} = BS\cos \alpha</script></span></p>
+</li>
+<li>
+<p>8-9 磁感应强度的矢量叠加</p>
+</li>
+<li>
+<p>8-10 运用有限长指导线的磁场公式<span class="arithmatex"><span class="MathJax_Preview">B =\displaystyle  {\mu_0I\over 2\pi}(\cos\alpha - \cos \beta)</span><script type="math/tex">B =\displaystyle  {\mu_0I\over 2\pi}(\cos\alpha - \cos \beta)</script></span>.</p>
+</li>
+<li>
+<p>8-11 同上</p>
+</li>
+<li>
+<p>8-12 半无限长直导线 + 部分圆形导线叠加</p>
+</li>
+<li>
+<p>8-13 简单电路 磁感应强度的叠加</p>
+</li>
+<li>
+<p>8-17 稍微考察建模分析能力 无限长直导线的有向叠加</p>
+</li>
+<li>
+<p>8-18 比较经典的旋转体等效环路电流</p>
+</li>
+</ul>
+<blockquote>
+<p><strong>解析</strong> 在圆盘上取半径为<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>宽为<span class="arithmatex"><span class="MathJax_Preview">dr</span><script type="math/tex">dr</script></span>的细圆环，环上的电量为<span class="arithmatex"><span class="MathJax_Preview">dq = \sigma 2\pi rdr = {2q\over R^2}rdr</span><script type="math/tex">dq = \sigma 2\pi rdr = {2q\over R^2}rdr</script></span>.</p>
+<p>根据电流的定义<span class="arithmatex"><span class="MathJax_Preview">dI = {dq\over dt}</span><script type="math/tex">dI = {dq\over dt}</script></span>,<span class="arithmatex"><span class="MathJax_Preview">dq</span><script type="math/tex">dq</script></span>就是在圆盘绕轴转动的一个周期内，通过盘的径向宽为<span class="arithmatex"><span class="MathJax_Preview">dr</span><script type="math/tex">dr</script></span>线段的电荷量。所以，有<span class="arithmatex"><span class="MathJax_Preview">dI = \displaystyle {dq\over T}</span><script type="math/tex">dI = \displaystyle {dq\over T}</script></span>（其实很好理解，在一个周期T内，这个环带上的所有电荷都经过了一次*这条线*，利用平均的思想即可）
+$$
+dI = {dq\over T} = \omega{dq\over 2\pi} = {q\omega\over \pi R^2}rdr\
+dB = {\mu_0q\omega \over 2\pi R^2}dr.
+$$
+然后对r积分即可。</p>
+</blockquote>
+<ul>
+<li>
+<p>8-21 等效环形电流 注意不要漏！</p>
+</li>
+<li>
+<p>8-22 无限长直导线磁感应强度 磁通量<span class="arithmatex"><span class="MathJax_Preview">\Phi =\displaystyle  \int\vec{B} \cdot d\vec{S}</span><script type="math/tex">\Phi =\displaystyle  \int\vec{B} \cdot d\vec{S}</script></span></p>
+</li>
+<li>
+<p>8-24 安培环路简单应用</p>
+</li>
+<li>
+<p>8-36 安培力的矢量积分</p>
+</li>
+<li>
+<p>8-48 螺绕环 相对磁导率 磁化电场-</p>
+</li>
+<li>
+<p>8-50 磁介质</p>
+</li>
+</ul>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 马原" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              马原
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-footer__link md-footer__link--next" aria-label="下一页: 可积一定有原函数吗?" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              可积一定有原函数吗?
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

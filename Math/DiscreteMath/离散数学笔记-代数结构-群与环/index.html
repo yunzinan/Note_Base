@@ -1,0 +1,2302 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>离散数学笔记-代数结构-群与环 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              离散数学笔记-代数结构-群与环
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      主页
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt1/" class="md-tabs__link md-tabs__link--active">
+        数学
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+        计算机科学
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+        技能树
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+        随笔
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="数学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          群与环
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        群与环
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    知识点
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    群的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    典型的群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k" class="md-nav__link">
+    元素的幂 k阶元
+  </a>
+  
+    <nav class="md-nav" aria-label="元素的幂 k阶元">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    幂的运算性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    群的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="群的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    消去律
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    元素的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    子群
+  </a>
+  
+    <nav class="md-nav" aria-label="子群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    判定定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    由元素a生成的子群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    由B生成的子群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    子群格
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    群的分解
+  </a>
+  
+    <nav class="md-nav" aria-label="群的分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    陪集
+  </a>
+  
+    <nav class="md-nav" aria-label="陪集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    右陪集的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    右陪集的划分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    正规子群(不变子群)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    左右陪集的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lagrange" class="md-nav__link">
+    Lagrange定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cauchy" class="md-nav__link">
+    Cauchy定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    循环群
+  </a>
+  
+    <nav class="md-nav" aria-label="循环群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    求所有生成元
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    求循环群的所有子群
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    置换群
+  </a>
+  
+    <nav class="md-nav" aria-label="置换群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    置换作为运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    置换作为群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    元素的阶
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cayley" class="md-nav__link">
+    Cayley 定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    环与域
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    习题
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    群的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    证明元素的阶相同 求元素的阶
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    证明群/子群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    判断是否为循环群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    求陪集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    子群格的结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lagrangecauchy" class="md-nav__link">
+    Lagrange定理(Cauchy定理)的应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          计算机科学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="计算机科学" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          计算机科学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          技能树
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="技能树" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          技能树
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          课堂笔记
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="课堂笔记" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          课堂笔记
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          随笔
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="随笔" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          随笔
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    知识点
+  </a>
+  
+    <nav class="md-nav" aria-label="知识点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    群的定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    典型的群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k" class="md-nav__link">
+    元素的幂 k阶元
+  </a>
+  
+    <nav class="md-nav" aria-label="元素的幂 k阶元">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    幂的运算性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    群的性质
+  </a>
+  
+    <nav class="md-nav" aria-label="群的性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    消去律
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    元素的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    子群
+  </a>
+  
+    <nav class="md-nav" aria-label="子群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    判定定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    由元素a生成的子群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    由B生成的子群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    子群格
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    群的分解
+  </a>
+  
+    <nav class="md-nav" aria-label="群的分解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    陪集
+  </a>
+  
+    <nav class="md-nav" aria-label="陪集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    右陪集的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    右陪集的划分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    正规子群(不变子群)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    左右陪集的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lagrange" class="md-nav__link">
+    Lagrange定理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cauchy" class="md-nav__link">
+    Cauchy定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    循环群
+  </a>
+  
+    <nav class="md-nav" aria-label="循环群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    求所有生成元
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    求循环群的所有子群
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    置换群
+  </a>
+  
+    <nav class="md-nav" aria-label="置换群">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    置换作为运算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    置换作为群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    元素的阶
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cayley" class="md-nav__link">
+    Cayley 定理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    环与域
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    习题
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    群的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    证明元素的阶相同 求元素的阶
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    证明群/子群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    判断是否为循环群
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    求陪集
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    子群格的结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lagrangecauchy" class="md-nav__link">
+    Lagrange定理(Cauchy定理)的应用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="-">代数系统-群与环<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
+<p><a href="https://zhuanlan.zhihu.com/p/260343968">处理小阶群的技巧, 15阶以下群的分类 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://www.zhihu.com/question/23091609/answer/127659716">如何直观地理解群论？ - 知乎 (zhihu.com)</a></p>
+<h2 id="_1">知识点<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">群的定义<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>半群\独异点\群都是**一个**二元运算的**代数系统**.</p>
+<ol>
+<li>**可结合**的<span class="arithmatex"><span class="MathJax_Preview">\to</span><script type="math/tex">\to</script></span>半群[semi-group]</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">可结合\and有单位元\to</span><script type="math/tex">可结合\and有单位元\to</script></span>幺半群(独异点) [monoid]<span class="arithmatex"><span class="MathJax_Preview">V=&lt;S, \circ, e&gt;</span><script type="math/tex">V=<S, \circ, e></script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">独异点\and 任意元素有逆元\to</span><script type="math/tex">独异点\and 任意元素有逆元\to</script></span> 群 <span class="arithmatex"><span class="MathJax_Preview">G= &lt;S, \circ, e, -1&gt;</span><script type="math/tex">G= <S, \circ, e, -1></script></span></li>
+</ol>
+<blockquote>
+<p>**结合律**是群的出发点,几个要素:</p>
+<ul>
+<li>(封闭性)</li>
+<li>结合律</li>
+<li>单位元</li>
+<li>逆元</li>
+</ul>
+</blockquote>
+<h3 id="_3">典型的群<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>整数加群 有理数加群 实数加群 复数加群</li>
+<li>模n剩余加群</li>
+</ul>
+<p>八阶以下群的结构:</p>
+<p><img alt="img" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/5525869-abae343c4a01ca6f.png" /></p>
+<p><img alt="img" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/5525869-7673cda8ba790136.png" /></p>
+<p><img alt="img" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/5525869-e17866844496641b.png" /></p>
+<p><img alt="img" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/5525869-6df6ed5182884d4e.png" /></p>
+<p><img alt="img" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/5525869-1fa3fce97644888e.png" /></p>
+<p><img alt="img" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/5525869-d42c4f517e635f13.png" /></p>
+<p><img alt="img" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/5525869-1da3fda4718bbf9f.png" /></p>
+<p>总结:</p>
+<ol>
+<li>
+<p>一阶群(1)</p>
+</li>
+<li>
+<p>二阶群(1)</p>
+</li>
+<li>
+<p>三阶群(1)</p>
+</li>
+<li>
+<p>四阶群(2)</p>
+</li>
+<li>
+<p>Klein四元群</p>
+<blockquote>
+<ul>
+<li>可交换</li>
+<li>每个元素逆元就是自己</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">a,b,c</span><script type="math/tex">a,b,c</script></span>中任意两个元素运算结果为另一个.</li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>四阶循环群</p>
+</li>
+<li>
+<p>五阶群(1)</p>
+</li>
+<li>
+<p>六阶群(2)</p>
+</li>
+<li>
+<p>二面体群<span class="arithmatex"><span class="MathJax_Preview">D_3</span><script type="math/tex">D_3</script></span></p>
+</li>
+<li>
+<p>六阶循环群</p>
+</li>
+<li>
+<p>七阶群(1)</p>
+</li>
+<li>
+<p>八阶群(5)</p>
+</li>
+</ol>
+<h3 id="k">元素的幂 k阶元<a class="headerlink" href="#k" title="Permanent link">&para;</a></h3>
+<p>定义群中元素的幂
+$$
+a^n = \begin{cases}
+e,&amp; n = 0\
+a^{n-1}a,&amp; n &gt; 0\
+(a<sup>{-1})</sup>m,&amp; n &lt;0, m = -n.
+\end{cases}
+$$</p>
+<blockquote>
+<p>这个定义可以推广到半群(n为正数),独异点(n为自然数).</p>
+</blockquote>
+<p>定义使得等式<span class="arithmatex"><span class="MathJax_Preview">a^k = e</span><script type="math/tex">a^k = e</script></span>成立的**最小正整数k**成为a的阶,记作<span class="arithmatex"><span class="MathJax_Preview">|a| = k</span><script type="math/tex">|a| = k</script></span>,若不存在这样的k,则成a为无限阶元.</p>
+<h4 id="_4">幂的运算性质<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">(ab)^{-1} = b^{-1}a^{-1}</span><script type="math/tex">(ab)^{-1} = b^{-1}a^{-1}</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">(a^m)^n = a^{mn}</span><script type="math/tex">(a^m)^n = a^{mn}</script></span></p>
+</li>
+<li>
+<p><strong>若G为交换群</strong>,则<span class="arithmatex"><span class="MathJax_Preview">(ab)^n = a^nb^n</span><script type="math/tex">(ab)^n = a^nb^n</script></span></p>
+</li>
+</ol>
+<blockquote>
+<p>不要想当然,群**默认是不满足交换律的**!!</p>
+</blockquote>
+<h3 id="_5">群的性质<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h4 id="_6">消去律<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p><a href="https://www.jianshu.com/p/b50d3ada743b">群结构，八阶及以下的群 - 简书 (jianshu.com)</a></p>
+<h4 id="_7">元素的性质<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>设G为群,<span class="arithmatex"><span class="MathJax_Preview">a\in G</span><script type="math/tex">a\in G</script></span>,且<span class="arithmatex"><span class="MathJax_Preview">|a| = r</span><script type="math/tex">|a| = r</script></span>.</p>
+<ol>
+<li><span class="arithmatex"><span class="MathJax_Preview">a^k = e \iff r|k</span><script type="math/tex">a^k = e \iff r|k</script></span></li>
+</ol>
+<blockquote>
+<p><mark>注意</mark>:这个公式非常重要!</p>
+<p>简单来说,如果能够证明<span class="arithmatex"><span class="MathJax_Preview">a^k= e</span><script type="math/tex">a^k= e</script></span>那么这个数一定是a的阶的整数倍.涉及元素阶的问题经常使用这个定理.</p>
+</blockquote>
+<ol>
+<li><span class="arithmatex"><span class="MathJax_Preview">|a^{-1}| = |a|</span><script type="math/tex">|a^{-1}| = |a|</script></span></li>
+</ol>
+<h4 id="_8">子群<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h5 id="_9">判定定理<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<ol>
+<li>
+<p>验证对乘法\逆元封闭</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\forall a,b \in H \to ab^{-1} \in H</span><script type="math/tex">\forall a,b \in H \to ab^{-1} \in H</script></span>(可以视为1的等价表示)</p>
+</li>
+<li>
+<p>(有穷集)<span class="arithmatex"><span class="MathJax_Preview">\forall a,b\in H \to ab\in H</span><script type="math/tex">\forall a,b\in H \to ab\in H</script></span>.(说明对于有穷集合,只需验证对乘法封闭)</p>
+</li>
+</ol>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">Pf. let\ S = \{a,a^2, \dots \}(a \ne e),\\ \because |S|\ is \ finite, \therefore \exist i &lt; j, a^i = a^j \Rightarrow a^{j-i} = e(j-i &gt; 1)\\ \Rightarrow a\cdot a^{j-i-1} = e \Rightarrow a^{-1 } = a^{j-i-1}.</span><script type="math/tex">Pf. let\ S = \{a,a^2, \dots \}(a \ne e),\\ \because |S|\ is \ finite, \therefore \exist i < j, a^i = a^j \Rightarrow a^{j-i} = e(j-i > 1)\\ \Rightarrow a\cdot a^{j-i-1} = e \Rightarrow a^{-1 } = a^{j-i-1}.</script></span></p>
+<p>这就验证了逆运算的封闭性.</p>
+</blockquote>
+<h5 id="a">由元素a生成的子群<a class="headerlink" href="#a" title="Permanent link">&para;</a></h5>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H = \{a^k| k\in \Z\} = &lt;a&gt;.
+</div>
+<script type="math/tex; mode=display">
+H = \{a^k| k\in \Z\} = <a>.
+</script>
+</div>
+<h5 id="b">由B生成的子群<a class="headerlink" href="#b" title="Permanent link">&para;</a></h5>
+<p>B是G的一个子集,记所有包含B的子群的交(可以证明也是子群),记作<span class="arithmatex"><span class="MathJax_Preview">&lt;B&gt;= \cap\{H|B\sube H \and H \le G\}</span><script type="math/tex"><B>= \cap\{H|B\sube H \and H \le G\}</script></span>.</p>
+<p>这个子群的所有元素都是B中元素或其逆元.</p>
+<blockquote>
+<p>注意到,这里子群使用了"<span class="arithmatex"><span class="MathJax_Preview">\le</span><script type="math/tex">\le</script></span>"符号,因为其满足偏序关系,由此我们可以定义**子群格**</p>
+</blockquote>
+<h5 id="_10">子群格<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
+<p><span class="arithmatex"><span class="MathJax_Preview">S = {所有G的子群},\forall A,B \in S, ARB \iff A \le B</span><script type="math/tex">S = {所有G的子群},\forall A,B \in S, ARB \iff A \le B</script></span></p>
+<blockquote>
+<p><mark>思考</mark>:为什么子群能够构成格?</p>
+</blockquote>
+<p>例子: 3元对称群的子群格(Subgroup Lattice)</p>
+<p><img alt="image-20220530100630884" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220530100630884.png" /></p>
+<h3 id="_11">群的分解<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h4 id="_12">陪集<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<p>设H是G的子群,<span class="arithmatex"><span class="MathJax_Preview">a\in G</span><script type="math/tex">a\in G</script></span>,令
+$$
+Ha = {ha| h \in H}
+$$
+称Ha是子群H在G中的右陪集,称a为Ha的代表元素.</p>
+<h5 id="_13">右陪集的性质<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h5>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+H \le G,\forall a,b \in G,\\
+a\in Hb \iff ab^{-1} \in H \iff Ha = Hb.
+</div>
+<script type="math/tex; mode=display">
+H \le G,\forall a,b \in G,\\
+a\in Hb \iff ab^{-1} \in H \iff Ha = Hb.
+</script>
+</div>
+<blockquote>
+<p>证明不难,抓住群的逆元和结合律即可.</p>
+<p>但是要看到宏观的含义:</p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">a\in Hb \iff Ha = Hb</span><script type="math/tex">a\in Hb \iff Ha = Hb</script></span> 这有益于**陪集的划分**.</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">a\in Hb \iff ab^{-1} \in H \iff Ha = Hb</span><script type="math/tex">a\in Hb \iff ab^{-1} \in H \iff Ha = Hb</script></span>给出了两个右陪集相等的充要条件.并且说明**右陪集中任一元素都可以作为其代表元素!!**</p>
+</li>
+</ul>
+</blockquote>
+<h5 id="_14">右陪集的划分<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h5>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+定义G上二元关系,\forall a,b \in G,\\
+&lt;a,b&gt; \in R \iff ab^{-1}\in H \iff a \in Hb \iff Ha = Hb.
+</div>
+<script type="math/tex; mode=display">
+定义G上二元关系,\forall a,b \in G,\\
+<a,b> \in R \iff ab^{-1}\in H \iff a \in Hb \iff Ha = Hb.
+</script>
+</div>
+<blockquote>
+<p>这个关系具有自反\对称\传递性.是等价关系.因此可以据此对所有右陪集进行**划分**.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">[a]_R = Ha</span><script type="math/tex">[a]_R = Ha</script></span></p>
+</blockquote>
+<p><strong>推论</strong>
+$$
+(1) Ha = Hb \or Ha \cap Hb = \empty\
+(2) \cup{Ha| a \in G} = G
+$$</p>
+<blockquote>
+<p>推论2很重要,这说明陪集和群的关系.</p>
+</blockquote>
+<h4 id="_15">正规子群(不变子群)<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex"><span class="MathJax_Preview">Ha = aH</span><script type="math/tex">Ha = aH</script></span>.即一个群的左右陪集相等.</p>
+<p>注：</p>
+<p>(1) 任何群G都有正规子群，因为G的两个平凡子群G和{e}都是G的正规子群。(对于任意群G, <span class="arithmatex"><span class="MathJax_Preview">aG = Ga  =G</span><script type="math/tex">aG = Ga  =G</script></span>)</p>
+<p>(2) 若G是交换群， 则G的所有子群都是正规子群。(显然)</p>
+<h4 id="_16">左右陪集的关系<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<p>H在G中的左右陪集的个数是相同的.</p>
+<p>因此统称左陪集数和右陪集数为H在G中的陪集数,也称作H在G中的**指数**,记作<span class="arithmatex"><span class="MathJax_Preview">[G:H]</span><script type="math/tex">[G:H]</script></span>.</p>
+<h4 id="lagrange">Lagrange定理<a class="headerlink" href="#lagrange" title="Permanent link">&para;</a></h4>
+<p>G为有限群,H是G的子群,则**群G的阶数**等于**子群H的阶数**与**H关于G的指数**之积, 即
+$$
+|G| = |H|\cdot [G:H]
+$$</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+Pf.\\
+|G| = \sum |Ha_i|, i = 1,2,\dots, r\\
+\because |Ha_i| = |H|(可用反证法证明)\\
+\therefore \sum |Ha_i| = [G:H]\cdot |H|.\square
+</div>
+<script type="math/tex; mode=display">
+Pf.\\
+|G| = \sum |Ha_i|, i = 1,2,\dots, r\\
+\because |Ha_i| = |H|(可用反证法证明)\\
+\therefore \sum |Ha_i| = [G:H]\cdot |H|.\square
+</script>
+</div>
+<blockquote>
+<p>注意到H是G的任意子群,这就说明任意子群的阶数都是G的阶数的因子.</p>
+</blockquote>
+<p><strong>推论</strong></p>
+<ul>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  设G是n阶群,则\forall a \in G, |a|是n的因子,且a^n = e.\\
+  Pf. 由Lagrange\ Thm. 因为&lt;a&gt;是G的子群,因此|&lt;a&gt;|是n的因子,后半部分显然.
+  </div>
+<script type="math/tex; mode=display">
+  设G是n阶群,则\forall a \in G, |a|是n的因子,且a^n = e.\\
+  Pf. 由Lagrange\ Thm. 因为<a>是G的子群,因此|<a>|是n的因子,后半部分显然.
+  </script>
+</div>
+</li>
+<li>
+<p>若G是**素数阶**群,则存在<span class="arithmatex"><span class="MathJax_Preview">a\in G \to &lt;a&gt; = G</span><script type="math/tex">a\in G \to <a> = G</script></span>.</p>
+</li>
+</ul>
+<blockquote>
+<p>这个结论往往用来等价表示一个群(循环群).</p>
+</blockquote>
+<h4 id="cauchy">Cauchy定理<a class="headerlink" href="#cauchy" title="Permanent link">&para;</a></h4>
+<p><a href="https://zhuanlan.zhihu.com/p/62364786">群论Cauchy定理的另一种证法，以及引申 - 知乎 (zhihu.com)</a>
+$$
+\text { Cauchy定理：若群 } G \text { 的元素个数能被素数 } p \text { 整除，则其必有以 } p \text { 为阶的元素。 }
+$$</p>
+<h3 id="_17">循环群<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h4 id="_18">定义<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>若存在<span class="arithmatex"><span class="MathJax_Preview">a\in G, &lt;a&gt; = G</span><script type="math/tex">a\in G, <a> = G</script></span>, 则称G为循环群.a为G的生成元.</p>
+<p>根据a的阶数,可以分为:</p>
+<ul>
+<li>n阶循环群</li>
+<li>无限循环群</li>
+</ul>
+<h4 id="_19">求所有生成元<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<ul>
+<li>无限循环群<span class="arithmatex"><span class="MathJax_Preview">&lt;a&gt;</span><script type="math/tex"><a></script></span>的生成元只有<span class="arithmatex"><span class="MathJax_Preview">a, a^{-1}.</span><script type="math/tex">a, a^{-1}.</script></span></li>
+<li>n阶循环群有<span class="arithmatex"><span class="MathJax_Preview">\phi(n)</span><script type="math/tex">\phi(n)</script></span>个生成元,对于任何小于n且与n互素的自然数<span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span>,<span class="arithmatex"><span class="MathJax_Preview">a^r</span><script type="math/tex">a^r</script></span>是G的生成元.</li>
+</ul>
+<h4 id="_20">求循环群的所有子群<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<ol>
+<li><span class="arithmatex"><span class="MathJax_Preview">G = &lt;a&gt;</span><script type="math/tex">G = <a></script></span>是循环群,则G的子群仍是循环群.</li>
+<li>G是n阶循环群,则对于n的每一个正因子d,G**恰好有一个**d阶子群.</li>
+</ol>
+<blockquote>
+<p>对于n阶循环群,先求出n的所有因子d,对于每一个正因子d,<span class="arithmatex"><span class="MathJax_Preview">&lt;a^{n\over d}&gt;</span><script type="math/tex"><a^{n\over d}></script></span>是G唯一的d阶子群(任意阶循环群只有一个).</p>
+<p><mark>注意</mark>:循环群的所有子群都可以由群的元素生成. 非循环群不是如此, 例如, 没有任何一个元素能够生成这个群自身.</p>
+</blockquote>
+<h3 id="_21">置换群<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p><a href="https://zhuanlan.zhihu.com/p/260378483">群论(3): 置换群 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://www.bilibili.com/video/BV1BW411n7gw?p=57">离散数学（全）-北京大学_哔哩哔哩_bilibili</a> P 57</p>
+<h4 id="_22">置换作为运算<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<p>设<span class="arithmatex"><span class="MathJax_Preview">S= \{1,2,\cdots, n\}</span><script type="math/tex">S= \{1,2,\cdots, n\}</script></span>,S上的任何**双射**函数:<span class="arithmatex"><span class="MathJax_Preview">S^S</span><script type="math/tex">S^S</script></span>成为S上的n元置换.</p>
+<blockquote>
+<p>强调置换的一个重要性质: 双射</p>
+</blockquote>
+<p>对于 <span class="arithmatex"><span class="MathJax_Preview">\forall \sigma \in S_{n}</span><script type="math/tex">\forall \sigma \in S_{n}</script></span>, 我们记 <span class="arithmatex"><span class="MathJax_Preview">\sigma=\left[\begin{array}{cccc}1 &amp; 2 &amp; \cdots &amp; n \\ \sigma(1) &amp; \sigma(2) &amp; \cdots &amp; \sigma(n)\end{array}\right]</span><script type="math/tex">\sigma=\left[\begin{array}{cccc}1 & 2 & \cdots & n \\ \sigma(1) & \sigma(2) & \cdots & \sigma(n)\end{array}\right]</script></span>.</p>
+<ul>
+<li>
+<p>置换的乘积:置换的置换仍是置换,类似于函数的复合.<strong>(满足封闭性)</strong></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>-轮换,特别的<span class="arithmatex"><span class="MathJax_Preview">k=2</span><script type="math/tex">k=2</script></span>时,成为对换</p>
+</li>
+<li>
+<p>置换的分解:</p>
+</li>
+<li>
+<p>置换可以分解为**不交的**轮换之积,且"表示法唯一"(忽略交换这些轮换的顺序)</p>
+<blockquote>
+<p>因此,我们可以分析一个置换的结构:</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\sigma = 1^{C_1(\sigma)}2^{C_2(\sigma)}\cdots n^{C_n(\sigma)}</span><script type="math/tex">\sigma = 1^{C_1(\sigma)}2^{C_2(\sigma)}\cdots n^{C_n(\sigma)}</script></span>,其中<span class="arithmatex"><span class="MathJax_Preview">C_n(\sigma)</span><script type="math/tex">C_n(\sigma)</script></span>表示n轮换的个数</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\sum i\cdot C_i(\sigma) = n.</span><script type="math/tex">\sum i\cdot C_i(\sigma) = n.</script></span></p>
+</blockquote>
+</li>
+<li>
+<p>进一步的,任何置换可以表示成**奇偶性相同的**若干对换之积(奇偶性相同是指对换的数目的奇偶性相同),(注意这样的分解结果是不唯一的,如果你乐意,你甚至可以一直对换下去)</p>
+<blockquote>
+<p>按照这个标准,所有的置换可以分为**奇置换**与**偶置换**.</p>
+</blockquote>
+</li>
+<li>
+<p>置换的乘法：函数的合成
+  例如: 8 元置换 <span class="arithmatex"><span class="MathJax_Preview">\sigma=(132)(56-18), \tau=(18246573)</span><script type="math/tex">\sigma=(132)(56-18), \tau=(18246573)</script></span>, 则
+  $$
+  \sigma \tau=(15728)(3)(4)(\sigma)=(15728)
+  $$
+  置换求逆：求反函数
+  $$
+  \sigma=(132)(5648), \quad \sigma^{-1}=(8465)(231) \text {, }
+  $$</p>
+</li>
+</ul>
+<blockquote>
+<p>Trick:在理解轮换运算时,可以画成轮图:</p>
+<p><img src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220530094632748.png" alt="image-20220530094632748" style="zoom:25%;" /></p>
+<p>这些过程可以联系 线性代数的行变换</p>
+</blockquote>
+<h4 id="_23">置换作为群<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<p>由上,不难发现置换运算满足群的定义.因此,</p>
+<p>令 <span class="arithmatex"><span class="MathJax_Preview">S_{n}</span><script type="math/tex">S_{n}</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">\{1,2, \ldots, n\}</span><script type="math/tex">\{1,2, \ldots, n\}</script></span> 上所在n元置换的集合.</p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">S_{n}</span><script type="math/tex">S_{n}</script></span> 关于置换乘法构成群, 称为 <span class="arithmatex"><span class="MathJax_Preview">\bold{n}</span><script type="math/tex">\bold{n}</script></span> <strong>元对称群</strong>.<span class="arithmatex"><span class="MathJax_Preview">|S_n| = n!</span><script type="math/tex">|S_n| = n!</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">S_{n}</span><script type="math/tex">S_{n}</script></span> 的**子群**称为 <span class="arithmatex"><span class="MathJax_Preview">\bold{n}</span><script type="math/tex">\bold{n}</script></span> <strong>元置换群</strong>.</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">S_n</span><script type="math/tex">S_n</script></span> 的所有偶置换的集合构成**n元交错群**.<span class="arithmatex"><span class="MathJax_Preview">A_n \le S_n,A_n = {n!\over 2}</span><script type="math/tex">A_n \le S_n,A_n = {n!\over 2}</script></span></p>
+</li>
+<li>
+<p>对于<span class="arithmatex"><span class="MathJax_Preview">S_n</span><script type="math/tex">S_n</script></span>来说,它的所有子群都称作n元置换群,n元对称群<span class="arithmatex"><span class="MathJax_Preview">S_n</span><script type="math/tex">S_n</script></span>\n元交错群<span class="arithmatex"><span class="MathJax_Preview">A_n</span><script type="math/tex">A_n</script></span>都是n元置换群的特例(虽然感觉这么说怪怪的)</p>
+</li>
+</ul>
+<p>例 3 元对称群 <span class="arithmatex"><span class="MathJax_Preview">S_{3}=\{(1),(12),(13),(23),(123),(132)\}</span><script type="math/tex">S_{3}=\{(1),(12),(13),(23),(123),(132)\}</script></span>
+3元交代群 <span class="arithmatex"><span class="MathJax_Preview">A_{3}=\{(1),(123),(132)\}</span><script type="math/tex">A_{3}=\{(1),(123),(132)\}</script></span></p>
+<h4 id="_24">元素的阶<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220530100030806" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220530100030806.png" /></p>
+<blockquote>
+<p><strong>说明</strong></p>
+<ul>
+<li>元素的阶定义: 最小正整数<span class="arithmatex"><span class="MathJax_Preview">k, s.t.\ a^k = e</span><script type="math/tex">k, s.t.\ a^k = e</script></span>,对于k阶轮换,容易发现至少需要重复k次才能回到原点.因此<span class="arithmatex"><span class="MathJax_Preview">\tau^k = e = (1).</span><script type="math/tex">\tau^k = e = (1).</script></span></li>
+<li>因此对于任意一个置换,我们总可以分解为若干轮换之积,那么该元素的阶就是所有轮换的**最小公倍数**.</li>
+</ul>
+</blockquote>
+<h4 id="cayley">Cayley 定理<a class="headerlink" href="#cayley" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220530100802134" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220530100802134.png" /></p>
+<h3 id="_25">环与域<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<h2 id="_26">习题<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h2>
+<h3 id="_27">群的性质<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>总结:</p>
+<ul>
+<li>证明群中元素相等的办法就是用结合律\消去律\单位元及逆元的性质\群的幂运算规则等对等式进行**变形和化简**.</li>
+<li>证明子集相等的基本方法就是证明两个集合相互包含</li>
+<li>证明两个元素的阶相等\整除的基本方法是利用*元素的阶的那个定理*</li>
+<li>可能用到1阶或2阶元的充分必要条件是<span class="arithmatex"><span class="MathJax_Preview">a^{-1} = a</span><script type="math/tex">a^{-1} = a</script></span>.</li>
+</ul>
+</blockquote>
+<ol>
+<li>设<span class="arithmatex"><span class="MathJax_Preview">G = \{a_i|i = 1, 2, \cdots ,n\}, a_iG = \{a_ia_j|j =  = 1, 2, \cdots ,n, \}</span><script type="math/tex">G = \{a_i|i = 1, 2, \cdots ,n\}, a_iG = \{a_ia_j|j =  = 1, 2, \cdots ,n, \}</script></span>证明<span class="arithmatex"><span class="MathJax_Preview">a_iG = G</span><script type="math/tex">a_iG = G</script></span></li>
+</ol>
+<blockquote>
+<p>即证(1) <span class="arithmatex"><span class="MathJax_Preview">a_iG \sub G</span><script type="math/tex">a_iG \sub G</script></span> (2)<span class="arithmatex"><span class="MathJax_Preview">a_iG <span class="arithmatex"><span class="MathJax_Preview">不是</span><script type="math/tex">不是</script></span>GG</span><script type="math/tex">a_iG <span class="arithmatex"><span class="MathJax_Preview">不是</span><script type="math/tex">不是</script></span>GG</script></span>的真子集</p>
+<p>(1)显然</p>
+<p>(2)反证,若是,则有<span class="arithmatex"><span class="MathJax_Preview">|a_iG| &lt; |G| \Rightarrow j \ne k, a_ia_i = a_ia_k \Rightarrow a_k = a_j,与|G| = n</span><script type="math/tex">|a_iG| < |G| \Rightarrow j \ne k, a_ia_i = a_ia_k \Rightarrow a_k = a_j,与|G| = n</script></span>矛盾.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\because a_iG = G</span><script type="math/tex">\because a_iG = G</script></span>,而<span class="arithmatex"><span class="MathJax_Preview">a_iG</span><script type="math/tex">a_iG</script></span>在G的运算表中就是第i行的所有运算结果,这就说明**G的运算表中每一行(列)都是G的元素的一个排列**,注意这是一个必要条件,也就是说,如果一个运算表不满足这个性质,那么一定不是群,反之不然.</p>
+</blockquote>
+<ol>
+<li>证明偶阶群必含2阶元</li>
+</ol>
+<blockquote>
+<p>[<strong>笔者解法</strong>]</p>
+<p>反证法</p>
+<p>若不含2阶元,则不含任意偶数阶元,即所有元素的阶数都是奇数.</p>
+<p>因此整个群的结构可以表示为<span class="arithmatex"><span class="MathJax_Preview">\{e, i_1,i_1^2, \cdots ,i_1^{2k_1}, i_2, i_2^2,\cdots i_2^{2k_2}, \cdots   \}</span><script type="math/tex">\{e, i_1,i_1^2, \cdots ,i_1^{2k_1}, i_2, i_2^2,\cdots i_2^{2k_2}, \cdots   \}</script></span>,因此这个群的阶数为奇数,与前提矛盾.</p>
+<p>[<strong>课本解法</strong>]</p>
+<p>注意到$x^2=  e \iff |x| = 1 \or |x| =2 $</p>
+<p>又因为<span class="arithmatex"><span class="MathJax_Preview">|x| = |x^{-1}|,</span><script type="math/tex">|x| = |x^{-1}|,</script></span>而对于阶数大于2的元素,有<span class="arithmatex"><span class="MathJax_Preview">x \ne x^{-1}.</span><script type="math/tex">x \ne x^{-1}.</script></span></p>
+<p>因此所有大于等于3阶的元素都是与其逆**成双成对**出现的,这部分的元素个数为偶数.</p>
+<p>又因为不含二阶元,那就只剩下单位元,</p>
+<p>那么群的阶数就是奇数,与前提矛盾.</p>
+</blockquote>
+<h3 id="_28">证明元素的阶相同 求元素的阶<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<p>这类题目的证明往往用到<span class="arithmatex"><span class="MathJax_Preview">if\ |a| = r, a^n =  e \to r |n .</span><script type="math/tex">if\ |a| = r, a^n =  e \to r |n .</script></span></p>
+<p>如果要证明<span class="arithmatex"><span class="MathJax_Preview">r_1 = r_2</span><script type="math/tex">r_1 = r_2</script></span>,往往证明
+$$
+a_2^{r_1} = e \Rightarrow r_2 |r_1\ a_1^{r_2} = e \Rightarrow r_1|r_2 \ \Rightarrow r_1 = r_2.
+$$</p>
+<ol>
+<li>
+<p>若元素 <span class="arithmatex"><span class="MathJax_Preview">x, g \in G</span><script type="math/tex">x, g \in G</script></span> ，证明: <span class="arithmatex"><span class="MathJax_Preview">\operatorname{order}(x)=\operatorname{order}\left(g x g^{-1}\right)</span><script type="math/tex">\operatorname{order}(x)=\operatorname{order}\left(g x g^{-1}\right)</script></span> 。对于任意两个元素 <span class="arithmatex"><span class="MathJax_Preview">x, y \in G</span><script type="math/tex">x, y \in G</script></span> ，证明: order <span class="arithmatex"><span class="MathJax_Preview">(x y)=\operatorname{order}(y x)</span><script type="math/tex">(x y)=\operatorname{order}(y x)</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">设G为群,x,y \in G, yxy^{-1} = x^2, 其中x不是单位元,y是二阶元,求x的阶.</span><script type="math/tex">设G为群,x,y \in G, yxy^{-1} = x^2, 其中x不是单位元,y是二阶元,求x的阶.</script></span></p>
+</li>
+</ol>
+<blockquote>
+<p>此题难度在于充分利用群的性质将公式合理变形(但是只要你相信可以化出来,就一定可以化出来)
+$$
+\begin{align}
+(1)&amp; yx<sup>2y</sup>{-1} = x^4\
+(2)&amp; x^2y = yx\
+&amp;\because |y| = 2 \therefore y^{-1} = y ,\
+(3)&amp; x^4 = yx^2y = yyx  =x\
+&amp;\because x \ne e\
+&amp;\therefore x^3 = e, |x| = 3.
+\end{align}
+$$</p>
+</blockquote>
+<ol>
+<li></li>
+</ol>
+<h3 id="_29">证明群/子群<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>注意: 群的四大性质中, 对于同一个运算, 结合性\单位元\任意元素的逆元都是唯一的, 因此如果一个群满足这些条件, 那么显然它的所有元素具有结合律, 每个元素都有逆元, 单位元存在且唯一.</p>
+<p>那么, 对于G的子代数H,  我们只需要验证:</p>
+<ol>
+<li>满足运算封闭性</li>
+<li>(结合律可以说明,但是必然满足)</li>
+<li>单位元在H中</li>
+<li>任意元素的逆元在H中</li>
+</ol>
+</blockquote>
+<ol>
+<li>证明:若<span class="arithmatex"><span class="MathJax_Preview">H,K</span><script type="math/tex">H,K</script></span>是<span class="arithmatex"><span class="MathJax_Preview">G</span><script type="math/tex">G</script></span>的子群
+   $$
+   (1)H\cap K也是G的子群\
+   (2)H\cup K是G的子群\iff H \sube K \or K\sube H.
+   $$</li>
+</ol>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">Hint.</span><script type="math/tex">Hint.</script></span>证明利用到集合的交并的性质.</p>
+<p>第二问利用反证法,考虑不属于公共部分的两个元素,证明<span class="arithmatex"><span class="MathJax_Preview">hk^{-1}\not \in H\cup K.</span><script type="math/tex">hk^{-1}\not \in H\cup K.</script></span></p>
+</blockquote>
+<ol>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+   \text { 假设 } G \text { 是阿贝尔群， } H \text { 是群 } G \text { 中所有阶为有限的元素构成的集合，证明: } H \text { 是子群 }
+   </div>
+<script type="math/tex; mode=display">
+   \text { 假设 } G \text { 是阿贝尔群， } H \text { 是群 } G \text { 中所有阶为有限的元素构成的集合，证明: } H \text { 是子群 }
+   </script>
+</div>
+</li>
+</ol>
+<blockquote>
+<p>依次验证群的四大性质</p>
+<ul>
+<li>封闭性: <span class="arithmatex"><span class="MathJax_Preview">\forall x, y \in R, <span class="arithmatex"><span class="MathJax_Preview">设</span><script type="math/tex">设</script></span>|x| = a, |y| = b, \because (xy)^{lcm(a,b)} = x^{lcm(a,b)} y^{lcm (a,b)} = e|x| = a, |y| = b, \because (xy)^{lcm(a,b)} = x^{lcm(a,b)} y^{lcm (a,b)} = e</span><script type="math/tex">\forall x, y \in R, <span class="arithmatex"><span class="MathJax_Preview">设</span><script type="math/tex">设</script></span>|x| = a, |y| = b, \because (xy)^{lcm(a,b)} = x^{lcm(a,b)} y^{lcm (a,b)} = e|x| = a, |y| = b, \because (xy)^{lcm(a,b)} = x^{lcm(a,b)} y^{lcm (a,b)} = e</script></span>,这意味着<span class="arithmatex"><span class="MathJax_Preview">xy</span><script type="math/tex">xy</script></span>的阶也是有限的,且不超过<span class="arithmatex"><span class="MathJax_Preview">lcm (a,b)</span><script type="math/tex">lcm (a,b)</script></span>,注意,这里用到了G是阿贝尔群,意味着这个运算具有交换律,因此才可以得出这个结论,再根据H的定义,<span class="arithmatex"><span class="MathJax_Preview">\therefore H \le G</span><script type="math/tex">\therefore H \le G</script></span>.</li>
+<li>结合律: 由于G是群,H中的元素属于G,因此也满足结合律</li>
+<li>单位元: 单位元就是G的单位元,显然也属于H.</li>
+<li>逆元:注意到<span class="arithmatex"><span class="MathJax_Preview">\forall a \in H, |a| = r, <span class="arithmatex"><span class="MathJax_Preview">那么对于</span><script type="math/tex">那么对于</script></span>a^1, a^2, \dots , a</span><script type="math/tex">\forall a \in H, |a| = r, <span class="arithmatex"><span class="MathJax_Preview">那么对于</span><script type="math/tex">那么对于</script></span>a^1, a^2, \dots , a<sup>{r-1}a</sup>1, a^2, \dots , a^{r-1}</script></span>都为有限阶元,且阶数<span class="arithmatex"><span class="MathJax_Preview">={r\over gcd(i, r)}</span><script type="math/tex">={r\over gcd(i, r)}</script></span>,因此逆元即<span class="arithmatex"><span class="MathJax_Preview">a^{r-1}</span><script type="math/tex">a^{r-1}</script></span>也在H中.$\square $</li>
+</ul>
+</blockquote>
+<ol>
+<li>设G是群,a是G中的二阶元,证明G中与a可交换的元素构成G的子群</li>
+</ol>
+<blockquote>
+<p>依次验证群的四大性质:</p>
+<ul>
+<li>封闭性: <span class="arithmatex"><span class="MathJax_Preview">\forall x,y \in H, ax = xa , ay = ya \Rightarrow axy = xay = xya \Rightarrow xy \in H</span><script type="math/tex">\forall x,y \in H, ax = xa , ay = ya \Rightarrow axy = xay = xya \Rightarrow xy \in H</script></span></li>
+<li>可结合性: 因为H中的元素都属于G,而G是群,G中元素满足结合律,因此H中元素也满足结合律</li>
+<li>单位元: 显然单位元e也在H中</li>
+<li>逆元: $\because \forall x \in H, x \cdot x^{-1} = x^{-1}\cdot x = e \therefore x^{-1} \in H.\square $</li>
+</ul>
+</blockquote>
+<h3 id="_30">判断是否为循环群<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>几种充分条件:</p>
+<ul>
+<li>找到一个元素能够生成这个群</li>
+<li>找到一个元素的阶等于这个群的阶</li>
+<li>素数阶群一定是循环群</li>
+<li>循环群的子群一定是循环群</li>
+</ul>
+</blockquote>
+<h3 id="_31">求陪集<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<p>一般采用枚举的方法计算H的陪集,以右陪集为例,解题步骤:</p>
+<ul>
+<li>计算H对G的指数<span class="arithmatex"><span class="MathJax_Preview">[G:H] = {|G| \over |H|}</span><script type="math/tex">[G:H] = {|G| \over |H|}</script></span></li>
+<li>第1个陪集就是<span class="arithmatex"><span class="MathJax_Preview">He =H</span><script type="math/tex">He =H</script></span></li>
+<li>任选元素<span class="arithmatex"><span class="MathJax_Preview">a \in G-H</span><script type="math/tex">a \in G-H</script></span>,求陪集,为第2个</li>
+<li>任选元素<span class="arithmatex"><span class="MathJax_Preview">b \in G - (H \cup Ha)</span><script type="math/tex">b \in G - (H \cup Ha)</script></span>,求陪集,为第3个</li>
+</ul>
+<p>以此类推,由于指数限制,在有限步内求得全部陪集</p>
+<blockquote>
+<p>这里用到<span class="arithmatex"><span class="MathJax_Preview">a \in Hb \iff  Ha = Hb</span><script type="math/tex">a \in Hb \iff  Ha = Hb</script></span></p>
+<p>因此如果已经找到陪集<span class="arithmatex"><span class="MathJax_Preview">Ha</span><script type="math/tex">Ha</script></span>,那么接下来就不用在<span class="arithmatex"><span class="MathJax_Preview">Ha</span><script type="math/tex">Ha</script></span>中寻找新的陪集,因为如果在<span class="arithmatex"><span class="MathJax_Preview">Ha</span><script type="math/tex">Ha</script></span>中任取元素<span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, <span class="arithmatex"><span class="MathJax_Preview">Hx = Ha</span><script type="math/tex">Hx = Ha</script></span>,也就是说这样生成的陪集是与刚才相同的.</p>
+</blockquote>
+<h3 id="_32">子群格的结构<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>可以从小到大枚举G的子群,还没有高效的对每个群都适用的枚举算法.可以</p>
+<ul>
+<li>写出每个元素的阶</li>
+<li>找到由每个元素生成的子群</li>
+<li>按照它们的包含关系作成一个偏序结构</li>
+</ul>
+<p>对于循环群, 可以保证所有的子群可以由每个元素生成</p>
+<p>对于非循环群,求出所有子群的过程会比较艰难</p>
+<ul>
+<li>从下到上检查子群的并集,看看它们是否构成新的更大的子群,</li>
+<li>如果能,就把它加入到这个偏序结构中</li>
+<li>如果不能,就不断向其中加入新的元素直至代数系统封闭,这时就构成群.将其加入偏序结构中.</li>
+</ul>
+</blockquote>
+<h3 id="lagrangecauchy">Lagrange定理(Cauchy定理)的应用<a class="headerlink" href="#lagrangecauchy" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>这个很重要!</p>
+</blockquote>
+<ol>
+<li>证明6阶群必有3阶元.</li>
+</ol>
+<blockquote>
+<p>分类讨论.</p>
+<p>(1)G含有6阶元a,则<span class="arithmatex"><span class="MathJax_Preview">a^2</span><script type="math/tex">a^2</script></span>为3阶元</p>
+<p>(2)G中不含有6阶元,则由拉格朗日定理推论,若不存在3阶元,则只存在1\2阶元,容易构造H= <span class="arithmatex"><span class="MathJax_Preview">\{e,a,b,ab\}</span><script type="math/tex">\{e,a,b,ab\}</script></span>,显然H 是G的子群,但是4不是6的因子,矛盾.</p>
+</blockquote>
+<ol>
+<li>证明阶小于6的群都是阿贝尔群.</li>
+</ol>
+<blockquote>
+<p>引理1:由一个元素生成的群都是阿贝尔群.</p>
+<p>引理2:<span class="arithmatex"><span class="MathJax_Preview">\forall a \in G, a^2 = e \to G 为阿贝尔群.</span><script type="math/tex">\forall a \in G, a^2 = e \to G 为阿贝尔群.</script></span></p>
+</blockquote>
+<p>分类讨论:</p>
+<ul>
+<li>1阶群是平凡的</li>
+<li>2,3,5阶群都是素数阶群,由拉格朗日定理,一定存在一个元素使得<span class="arithmatex"><span class="MathJax_Preview">&lt;a&gt; = G</span><script type="math/tex"><a> = G</script></span>,则由引理1可证</li>
+<li>
+<p>4阶群 分类</p>
+<ul>
+<li>含有4阶元,同上</li>
+<li>不含4阶元,则只含1,2阶元,由引理2可证.</li>
+</ul>
+</li>
+<li>
+<p>证明20阶群必有5阶元.</p>
+</li>
+</ul>
+<blockquote>
+<p>这题有点超纲.</p>
+<p>[Lagrange定理]对20阶群G可能含有的元素的阶进行分类讨论</p>
+<ul>
+<li>
+<p>若含有20阶元/10阶元/5阶元,则容易找到5阶元,于是可以由其生成5阶子群</p>
+</li>
+<li>
+<p>若不含以上这些,则一定含有单位元,2阶元, 可能含有4阶元</p>
+</li>
+<li>
+<p>若不含四阶元,</p>
+<ul>
+<li>
+<p>法1 构造<span class="arithmatex"><span class="MathJax_Preview">H = \{e,a,b,c,ab,ac,bc,abc\},</span><script type="math/tex">H = \{e,a,b,c,ab,ac,bc,abc\},</script></span>则显然<span class="arithmatex"><span class="MathJax_Preview">H\sub G</span><script type="math/tex">H\sub G</script></span>,但是由Lagrange定理, H的阶数必须是G的因子,矛盾.</p>
+</li>
+<li>
+<p>法2 证明一个引理: 若一个群只含有1,2阶元,那么这个群的阶数一定是<span class="arithmatex"><span class="MathJax_Preview">2^k</span><script type="math/tex">2^k</script></span>.则显然矛盾.</p>
+</li>
+</ul>
+<p>这个证明需要用到: 若$\forall x\in G, x^2 = e \to $G是阿贝尔群.</p>
+<p>于是我们可以证明: 对于G的任意两个不同的元素,它们的乘积也是2阶元.(<span class="arithmatex"><span class="MathJax_Preview">\forall x, y, \in G, (xy)^2 = x^2y^2 = e</span><script type="math/tex">\forall x, y, \in G, (xy)^2 = x^2y^2 = e</script></span>)</p>
+<p>于是问题转化为求G的所有不重复的乘积,不难发现所有的2阶元数等于<span class="arithmatex"><span class="MathJax_Preview">(\sum_{i = 1}^{n} C_n^i)</span><script type="math/tex">(\sum_{i = 1}^{n} C_n^i)</script></span>.由二项式定理,<span class="arithmatex"><span class="MathJax_Preview">|G| = 2^n, n</span><script type="math/tex">|G| = 2^n, n</script></span>为所有*最初的元素*个数.例如<span class="arithmatex"><span class="MathJax_Preview">H = \{e,a,b,c,ab,ac,bc,abc\}</span><script type="math/tex">H = \{e,a,b,c,ab,ac,bc,abc\}</script></span>,其中除了单位元都是2阶元.</p>
+</li>
+</ul>
+</blockquote>
+<ol>
+<li>设<span class="arithmatex"><span class="MathJax_Preview">H_1,H_2</span><script type="math/tex">H_1,H_2</script></span>分别是G的<span class="arithmatex"><span class="MathJax_Preview">r,s</span><script type="math/tex">r,s</script></span>阶子群,且r,s互素,证明: <span class="arithmatex"><span class="MathJax_Preview">H_1\cap H_2 = \{e\}.</span><script type="math/tex">H_1\cap H_2 = \{e\}.</script></span></li>
+</ol>
+<blockquote>
+<p>引理: <span class="arithmatex"><span class="MathJax_Preview">H_1 \cap H_2</span><script type="math/tex">H_1 \cap H_2</script></span>也是G的子群.
+$$
+Pf.\
+记|H_1\cap H_2| = x.
+\because H_1\cap H_2 \le H_1\
+\therefore x | r\
+同理, x|s\
+\Rightarrow x | gcd(r,s) = 1\
+\Rightarrow x =1.\square
+$$</p>
+</blockquote>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 代数系统" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              代数系统
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-footer__link md-footer__link--next" aria-label="下一页: 格与布尔代数" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              格与布尔代数
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
