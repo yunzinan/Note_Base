@@ -1,0 +1,88 @@
+site_name: Yunzinan的知识库
+site_description: 存放和分享笔者的一些笔记和随笔
+site_author: Yunzinan
+
+theme:
+  name: material
+  features:
+  - navigation.tabs
+  language: 'zh'
+  palette:
+    primary: 'Blue'
+    accent: 'Lime'
+  feature:
+  
+    tabs: true
+  font:
+    text: 'Jetbrains Mono'
+    code: 'Jetbrains Mono'
+  language: 'zh'
+  
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+extra:
+  search:
+    language: 'jp'
+
+extra_javascript:
+    - 'js/extra.js'
+    - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+nav: # 导航
+  - Home Page: index.md
+  - Maths:
+    - 微积分II: 
+      - chap 1: Math/Caculus/Calculus-II-notes-chapt1.md
+      - chap 2: Math/Caculus/Calculus-II-notes-chapt2.md
+      - chap 3: Math/Caculus/Calculus-II-notes-chapt3.md
+      - chap 4: Math/Caculus/Calculus-II-notes-chapt4.md
+      - chap 5: Math/Caculus/Calculus-II-notes-chapt5.md
+      - chap 6: Math/Caculus/Calculus-II-notes-chapt6.md
+      - midterm review: Math/Caculus/Calculus-II-midterm-review.md
+      - final review: Math/Caculus/Calculus-II-final-review.md
+    - 离散数学: 
+      - 代数系统: Math/DiscreteMath/离散数学笔记-代数结构-代数系统.md
+      - 群与环: Math/DiscreteMath/离散数学笔记-代数结构-群与环.md
+      - 格与布尔代数: Math/DiscreteMath/离散数学笔记-代数系统-格与布尔代数.md
+      - 支配与着色: Math/DiscreteMath/离散数学笔记-图论-支配与着色.md
+      - 欧拉图与哈密顿图: Math/DiscreteMath/离散数学笔记-图论部分-欧拉图与哈密顿图.md
+      - 树: Math/DiscreteMath/离散数学笔记-图论部分-树.md
+      - 图的基本概念: Math/DiscreteMath/离散数学笔记-图论部分-图的基本概念.md
+      - 课堂笔记: Math/DiscreteMath/离散数学课堂笔记.md
+    - 线性代数: Math/LinearAlgebra/Linear-algebra-notes.md
+  - Computer Science:
+    - 力扣刷题笔记: ComputerScience/力扣刷题笔记.md
+  - Skill Map:
+    - Jupyter Notebook: SkillMap/Jupyter-notebook快速入门.md
+    - 爬虫: SkillMap/WebCrawlingNotes.md
+  - Lecture Note: 
+    - 马原: LectureNotes/马原复习提纲.md
+    - 普通物理I: LectureNotes/普通物理I复习笔记.md
+  - Informal Essay:
+    - 可积一定有原函数吗?: InformalEssay/一个小问题-可积一定有原函数吗.md
+    - 22SummerReview: InformalEssay/22SummerReview.md

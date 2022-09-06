@@ -1,0 +1,2591 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>线性代数 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              线性代数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home Page
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Maths
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Maths" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Maths
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt2/" class="md-nav__link">
+        chap 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Caculus/Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          线性代数
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        线性代数
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    行列式
+  </a>
+  
+    <nav class="md-nav" aria-label="行列式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    一些特殊行列式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    行列式的计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    矩阵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    线性方程组
+  </a>
+  
+    <nav class="md-nav" aria-label="线性方程组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    线性相关
+  </a>
+  
+    <nav class="md-nav" aria-label="线性相关">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    判断线性相关性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    求向量组的一个极大无关组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    秩的不等式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    解线性方程组
+  </a>
+  
+    <nav class="md-nav" aria-label="解线性方程组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    齐次方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    非齐次方程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    非齐次方程组解的结构
+  </a>
+  
+    <nav class="md-nav" aria-label="非齐次方程组解的结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    无解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    有唯一解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    有无穷多解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    解答矩阵（非常有用的技巧）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    特征值和特征向量
+  </a>
+  
+    <nav class="md-nav" aria-label="特征值和特征向量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    特征值和特征向量的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    特征值与秩的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    矩阵相似
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    矩阵对角化
+  </a>
+  
+    <nav class="md-nav" aria-label="矩阵对角化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    矩阵可对角化的充要条件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    实对称矩阵的对角化
+  </a>
+  
+    <nav class="md-nav" aria-label="实对称矩阵的对角化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    正交矩阵的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    将向量组施密特正交化\标准正交化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    对角化的方法(相似变换矩阵P的求法)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    正交矩阵的求法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    惯性定理
+  </a>
+  
+    <nav class="md-nav" aria-label="惯性定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    惯性指数的求法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    正定矩阵
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    线性空间
+  </a>
+  
+    <nav class="md-nav" aria-label="线性空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    线性空间的判定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    线性空间的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    空间的基、维数、坐标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    基(底)变换与坐标变换
+  </a>
+  
+    <nav class="md-nav" aria-label="基(底)变换与坐标变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    判断两组基下是否存在相同坐标的非零向量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    线性子空间
+  </a>
+  
+    <nav class="md-nav" aria-label="线性子空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    直和
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    线性变换
+  </a>
+  
+    <nav class="md-nav" aria-label="线性变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    线性变换的矩阵表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    线性变换在不同基底下的矩阵的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    线性变换的特征值与特征向量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Computer Science
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computer Science" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Skill Map
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Skill Map" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Skill Map
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Lecture Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lecture Note" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Lecture Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Informal Essay
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Informal Essay" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Informal Essay
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    行列式
+  </a>
+  
+    <nav class="md-nav" aria-label="行列式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    一些特殊行列式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    行列式的计算
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    矩阵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    线性方程组
+  </a>
+  
+    <nav class="md-nav" aria-label="线性方程组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    线性相关
+  </a>
+  
+    <nav class="md-nav" aria-label="线性相关">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    判断线性相关性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    求向量组的一个极大无关组
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    秩的不等式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    解线性方程组
+  </a>
+  
+    <nav class="md-nav" aria-label="解线性方程组">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    齐次方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    非齐次方程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    非齐次方程组解的结构
+  </a>
+  
+    <nav class="md-nav" aria-label="非齐次方程组解的结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    无解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    有唯一解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    有无穷多解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    解答矩阵（非常有用的技巧）
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    特征值和特征向量
+  </a>
+  
+    <nav class="md-nav" aria-label="特征值和特征向量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    特征值和特征向量的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    特征值与秩的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    矩阵相似
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    矩阵对角化
+  </a>
+  
+    <nav class="md-nav" aria-label="矩阵对角化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    矩阵可对角化的充要条件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    实对称矩阵的对角化
+  </a>
+  
+    <nav class="md-nav" aria-label="实对称矩阵的对角化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    正交矩阵的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    将向量组施密特正交化\标准正交化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p" class="md-nav__link">
+    对角化的方法(相似变换矩阵P的求法)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    正交矩阵的求法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    惯性定理
+  </a>
+  
+    <nav class="md-nav" aria-label="惯性定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    惯性指数的求法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    正定矩阵
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    线性空间
+  </a>
+  
+    <nav class="md-nav" aria-label="线性空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    线性空间的判定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    线性空间的性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    空间的基、维数、坐标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    基(底)变换与坐标变换
+  </a>
+  
+    <nav class="md-nav" aria-label="基(底)变换与坐标变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    判断两组基下是否存在相同坐标的非零向量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    线性子空间
+  </a>
+  
+    <nav class="md-nav" aria-label="线性子空间">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    直和
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    线性变换
+  </a>
+  
+    <nav class="md-nav" aria-label="线性变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    线性变换的矩阵表示
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    线性变换在不同基底下的矩阵的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    线性变换的特征值与特征向量
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="_1">线性代数复习笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">行列式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><strong>行列式交换两行要变号</strong>！</p>
+<p>行列式的交换在证明题更推荐每次只交换相邻行。（如副对角行列式、副对角分块行列式）</p>
+<h3 id="_3">一些特殊行列式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>范德蒙行列式</strong></li>
+</ul>
+<blockquote>
+<p>形如
+$$
+\left|\begin{array}{cccc}
+1 &amp; 1 &amp; \ldots &amp; 1 \
+x_{1} &amp; x_{2} &amp; \ldots &amp; x_{n} \
+\vdots &amp; \vdots &amp; &amp; \vdots \
+x_{1}^{n-1} &amp; x_{2}^{n-1} &amp; \ldots &amp; x_{n}^{n-1}
+\end{array}\right|
+$$
+的n阶行列式称为范德蒙行列式。
+若 <span class="arithmatex"><span class="MathJax_Preview">D_{n}</span><script type="math/tex">D_{n}</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 阶范德蒙行列式 <span class="arithmatex"><span class="MathJax_Preview">(n \geq 2)</span><script type="math/tex">(n \geq 2)</script></span> ，则有 
+$$
+D_{n}=\prod_{1 \leq j&lt;i \leq n}\left(x_{i}-x_{j}\right)
+$$
+<strong>注意是后面的减前面的！！</strong></p>
+</blockquote>
+<ul>
+<li>分块行列式</li>
+<li>上下三角行列式和主对角行列式</li>
+<li>副对角行列式</li>
+</ul>
+<h3 id="_4">行列式的计算<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>三阶不含参行列式直接降阶成二阶，除非一眼看出特殊性</li>
+<li>含参行列式一定要先化简！对行列式的化简会比多项式容易直观</li>
+<li>四阶及以上行列式先看看有没有特殊性（<strong>每行（列）元素相等、能产生零行</strong>），不行一般化为上三角行列式，利用对角行列式的结论。</li>
+<li>行列式方程的求解形如<span class="arithmatex"><span class="MathJax_Preview">Ax =0</span><script type="math/tex">Ax =0</script></span></li>
+<li>先猜根，根据行列式为零的情形<ul>
+<li>行列式每一行或列相加相等</li>
+<li>行列式有两行相同</li>
+</ul>
+</li>
+<li>n阶行列式最多有n次多项式，因此最多有n的不同的解，猜不到的解就化简行列式，化简+降阶展开，最后得到多项式</li>
+<li>证明行列式相等：</li>
+<li>左推右</li>
+<li>右推左</li>
+<li>两遍分别转化或者直接求出答案，判断是否相等</li>
+<li>对于沿对角线存在自相似关系的行列式，尝试降阶得到<span class="arithmatex"><span class="MathJax_Preview">D_n与D_{n-1}\ D_{n-2}</span><script type="math/tex">D_n与D_{n-1}\ D_{n-2}</script></span>的递推关系，有时还要借助数学归纳法（先找规律，再证明）</li>
+<li>如果行列式中每个元素均为（可以看成）两个数之和，利用行列式的线性性，化为<span class="arithmatex"><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span>个行列式之和，很多为零，或者很好求。</li>
+<li>范德蒙行列式要能看出来</li>
+<li>看看能不能交换一些行或者列，转化成分块行列式。</li>
+</ul>
+<h2 id="_5">矩阵<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>反对称阵：<span class="arithmatex"><span class="MathJax_Preview">A^T = -A</span><script type="math/tex">A^T = -A</script></span></p>
+</blockquote>
+<p>矩阵不满足消去律！即使<span class="arithmatex"><span class="MathJax_Preview">AB = AC \and A \ne O</span><script type="math/tex">AB = AC \and A \ne O</script></span>！，除非A可逆！</p>
+<ul>
+<li>
+<p>对于含参较为复杂的矩阵方程，化为行梯形后，不方便再化为行简化，那么就可以直接退化为方程组，解方程组。</p>
+</li>
+<li>
+<p>对于含参的矩阵，尽可能把含参的部分放到下边，右边（如果允许列变换）</p>
+</li>
+<li>
+<p>求解线性方程组讲增广矩阵化为梯形矩阵的过程中，不能用倍加列变换和倍乘列变换，而两列交换可以用，此时相对应的未知元也要对换。</p>
+</li>
+<li>
+<p>尽可能避免将某行<span class="arithmatex"><span class="MathJax_Preview">\times {k \over a}</span><script type="math/tex">\times {k \over a}</script></span>加到别的行上去，这样需要对a是否为0进行讨论。这也就是为什么需要尽可能将含参数的部分换到右下角去的原因。</p>
+</li>
+<li>
+<p>为使消元计算比较方便，要尽可能先用初等行变换将第1行第1列的元素化为1，然后再将其余行化为0，对于2，3，4，列同理。</p>
+</li>
+<li>
+<p>求<span class="arithmatex"><span class="MathJax_Preview">A^n</span><script type="math/tex">A^n</script></span>的题目</p>
+</li>
+<li>
+<p>先求求<span class="arithmatex"><span class="MathJax_Preview">A^2, A^3</span><script type="math/tex">A^2, A^3</script></span>，找规律</p>
+</li>
+<li>
+<p>看<span class="arithmatex"><span class="MathJax_Preview">A能否拆成(B+kI)的形式</span><script type="math/tex">A能否拆成(B+kI)的形式</script></span>，利用二项式定理，往往<span class="arithmatex"><span class="MathJax_Preview">B^k, k \geq k_0</span><script type="math/tex">B^k, k \geq k_0</script></span>时<span class="arithmatex"><span class="MathJax_Preview">B^k = 0</span><script type="math/tex">B^k = 0</script></span></p>
+</li>
+<li>
+<p>求<span class="arithmatex"><span class="MathJax_Preview">(AB)^n 或者(\alpha \beta)^n</span><script type="math/tex">(AB)^n 或者(\alpha \beta)^n</script></span>的题目</p>
+</li>
+<li>
+<p>利用结合律，看看<span class="arithmatex"><span class="MathJax_Preview">BA 或者\beta \alpha</span><script type="math/tex">BA 或者\beta \alpha</script></span>是否方便</p>
+</li>
+<li>
+<p>求可逆矩阵</p>
+</li>
+<li>
+<p>思考这个矩阵对应的线性变换，直观的推导出出逆矩阵</p>
+</li>
+<li>
+<p>利用伴随阵<span class="arithmatex"><span class="MathJax_Preview">A^{-1} = {1\over |A|}A^*</span><script type="math/tex">A^{-1} = {1\over |A|}A^*</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">(A\ E) \rightarrow (E\ A^{-1})</span><script type="math/tex">(A\ E) \rightarrow (E\ A^{-1})</script></span> 仅利用初等行变换</p>
+</li>
+<li>
+<p>分块矩阵（尤其是分块对角阵）
+    $$
+    \left(\begin{array}{cc}A &amp; O\
+    O &amp; B\end{array}\right)^{-1} = 
+    \left(\begin{array}{cc}A^{-1} &amp; O\ O &amp; B^{-1}\end{array}\right).\
+    \left(\begin{array}{cc}A &amp; C\
+    O &amp; B\end{array}\right) \left(\begin{array}{cc}X_1 &amp; X_2\
+    X_3 &amp; X_4\end{array}\right) = E\
+    \Rightarrow \begin{cases}AX_1 + CX_3 = E\ AX_2 + CX_4 = O\ BX_3 = O\ BX_4 = E \end{cases}\
+    \Rightarrow \begin{cases}X_4 =B^{-1}\
+    X_3 = O\
+    X_2 = -A<sup>{-1}CB</sup>{-1}\
+    X_1 = A^{-1}
+    \end{cases}\
+    \Rightarrow\left(\begin{array}{cc}A &amp; C\
+    O &amp; B\end{array}\right)^{-1} = 
+    \left(\begin{array}{cc}A^{-1} &amp; -A<sup>{-1}CB</sup>{-1}\ O &amp; B^{-1}\end{array}\right).\
+    $$</p>
+</li>
+<li>
+<p>求解线性方程组</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">Ax = 0</span><script type="math/tex">Ax = 0</script></span></p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">|A| \ne 0 \iff r(A) = n \iff 列向量组线性无关 \iff x = A^{-1}0 = 0 \iff 方程只有零解</span><script type="math/tex">|A| \ne 0 \iff r(A) = n \iff 列向量组线性无关 \iff x = A^{-1}0 = 0 \iff 方程只有零解</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">|A| = 0 \iff r(A) &lt; n \iff 列向量线性相关 \iff \exist \vec{\alpha} = {(k_1, k_2, \cdots,k_n)}^T,s.t\ A\vec{\alpha} = 0\\ \iff 对于任意k倍\alpha,都是方程组的解\ 方程组有无穷多解，i.e.有非零解</span><script type="math/tex">|A| = 0 \iff r(A) < n \iff 列向量线性相关 \iff \exist \vec{\alpha} = {(k_1, k_2, \cdots,k_n)}^T,s.t\ A\vec{\alpha} = 0\\ \iff 对于任意k倍\alpha,都是方程组的解\ 方程组有无穷多解，i.e.有非零解</script></span> </li>
+<li>注意：<span class="arithmatex"><span class="MathJax_Preview">|A| \ne 0 \iff 列向量线性无关，同时行向量也是线性无关的\iff |A^T| \ne 0</span><script type="math/tex">|A| \ne 0 \iff 列向量线性无关，同时行向量也是线性无关的\iff |A^T| \ne 0</script></span></li>
+</ul>
+</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">Ax = b</span><script type="math/tex">Ax = b</script></span> <ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">|A| \ne 0 \iff r(A) = n \iff x= A^{-1}b \iff 有唯一解</span><script type="math/tex">|A| \ne 0 \iff r(A) = n \iff x= A^{-1}b \iff 有唯一解</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">|A| = 0 \iff r(A) &lt; n \iff 列向量线性相关</span><script type="math/tex">|A| = 0 \iff r(A) < n \iff 列向量线性相关</script></span></li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">线性方程组<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">线性相关<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>如果向量组A:<span class="arithmatex"><span class="MathJax_Preview">\{\alpha_1,\alpha_2,\dots,\alpha_l\}</span><script type="math/tex">\{\alpha_1,\alpha_2,\dots,\alpha_l\}</script></span>能由向量组B:<span class="arithmatex"><span class="MathJax_Preview">\{\beta_1,\beta_2\dots,\beta_s\}</span><script type="math/tex">\{\beta_1,\beta_2\dots,\beta_s\}</script></span>表示，那么<span class="arithmatex"><span class="MathJax_Preview">r(A) \le r(B)</span><script type="math/tex">r(A) \le r(B)</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">l &gt; r(A) \Rightarrow A线性相关\\ l = r \Rightarrow A线性无关</span><script type="math/tex">l > r(A) \Rightarrow A线性相关\\ l = r \Rightarrow A线性无关</script></span></li>
+<li>特别的，若A线性无关，<span class="arithmatex"><span class="MathJax_Preview">l = r(A) \le r(B) \le s</span><script type="math/tex">l = r(A) \le r(B) \le s</script></span></li>
+<li>推论：若<span class="arithmatex"><span class="MathJax_Preview">l &gt; s</span><script type="math/tex">l > s</script></span>，则A必然线性相关，事实上，若<span class="arithmatex"><span class="MathJax_Preview">l &gt; r(B)</span><script type="math/tex">l > r(B)</script></span>，那么A线性相关。</li>
+</ul>
+<h4 id="_8">判断线性相关性<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">向量数&gt;向量维数\Rightarrow  线性相关</span><script type="math/tex">向量数>向量维数\Rightarrow  线性相关</script></span></li>
+<li>如果向量数=向量维数，可以考虑直接算行列式。</li>
+<li>观察法：如果直接看出一个向量可以由别的向量表示，则相关</li>
+<li>作成矩阵，化简，计算秩与列向量数的关系</li>
+<li>若几个向量线性相关，那取它们的一部分维度构成的新向量们也线性相关</li>
+</ul>
+<h4 id="_9">求向量组的一个极大无关组<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>将各列向量作成矩阵，仅通过行初等变换，化成行梯形，则非零行数即为秩（亦即极大无关组向量个数），且每行第一个非零数对应的列所对应的向量构成一个极大无关组。</p>
+<p><mark>注</mark>：找到极大无关组后还要说明它们线性无关！（可以构造分块矩阵的行列式）</p>
+<blockquote>
+<p>行满秩矩阵： <em>若矩阵秩等于行数，称为行满秩</em></p>
+<p><mark>注意</mark>: 行满秩矩阵的列数一定大于等于行数.</p>
+</blockquote>
+<h4 id="_10">秩的不等式<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+1)\quad &amp;r(A+B) \le r(A) + r(B)\\ 
+ 2)\quad &amp;r(AB) \le \min\{r(A),r(B)\} \\
+ 3)\quad &amp;对于方阵A,B,r(AB) \ge r(A) + r(B) - n;\\
+ 4)\quad &amp;若A，B分别是m\times n, n\times s矩阵,且AB=O,则r(B) \le n - r(A)\\
+ 5)\quad &amp;若A为m\times n矩阵，则r(A^TA) = r(A) = r(A^T)
+</div>
+<script type="math/tex; mode=display">
+1)\quad &r(A+B) \le r(A) + r(B)\\ 
+ 2)\quad &r(AB) \le \min\{r(A),r(B)\} \\
+ 3)\quad &对于方阵A,B,r(AB) \ge r(A) + r(B) - n;\\
+ 4)\quad &若A，B分别是m\times n, n\times s矩阵,且AB=O,则r(B) \le n - r(A)\\
+ 5)\quad &若A为m\times n矩阵，则r(A^TA) = r(A) = r(A^T)
+</script>
+</div>
+<ul>
+<li>证明：</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+4)&amp; B的每一个列向量都是Ax = 0的一个解，而Ax= 0的基础解系构成的向量组r = n - r(A)\\
+ &amp;所以r(B) \le n - r(A).\\
+5)&amp; Hint. 证明Ax= 0 与A^TAx = 0是同解方程组，具有相同的基础解系，故秩相等.
+</div>
+<script type="math/tex; mode=display">
+4)& B的每一个列向量都是Ax = 0的一个解，而Ax= 0的基础解系构成的向量组r = n - r(A)\\
+ &所以r(B) \le n - r(A).\\
+5)& Hint. 证明Ax= 0 与A^TAx = 0是同解方程组，具有相同的基础解系，故秩相等.
+</script>
+</div>
+<ul>
+<li>若两个方程组为**同解方程组**，那么它们的系数矩阵的秩相同。</li>
+</ul>
+<h4 id="_11">解线性方程组<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<h5 id="_12">齐次方程<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h5>
+<ul>
+<li>一个方程的自由变量数 = <span class="arithmatex"><span class="MathJax_Preview">n - r(A)</span><script type="math/tex">n - r(A)</script></span>，n为列向量数，也是基础解系中向量数。</li>
+<li>通过对自由变量自由赋值，来确定非自由变量的取值。</li>
+</ul>
+<h5 id="_13">非齐次方程<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h5>
+<ul>
+<li>非齐次方程解的存在性：<span class="arithmatex"><span class="MathJax_Preview">r(A\ b) = r(A)</span><script type="math/tex">r(A\ b) = r(A)</script></span>，即<span class="arithmatex"><span class="MathJax_Preview">\vec{b}</span><script type="math/tex">\vec{b}</script></span>与A线性相关，或者说方程的最下面一条等式左边要有系数。</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">Ax = b 的解为x = \eta + k_1\alpha_1 + k_2\alpha_2 + \dots k_{n-r}\alpha_{n-r}\\ 式中A\eta = b \quad A\alpha_i = \theta\\ \Rightarrow A(\eta + \alpha_i) = b</span><script type="math/tex">Ax = b 的解为x = \eta + k_1\alpha_1 + k_2\alpha_2 + \dots k_{n-r}\alpha_{n-r}\\ 式中A\eta = b \quad A\alpha_i = \theta\\ \Rightarrow A(\eta + \alpha_i) = b</script></span></li>
+<li>对增广矩阵做行变换。</li>
+<li>计算基础解系的方法同解齐次（注意：这里解的是<span class="arithmatex"><span class="MathJax_Preview">Ax =\theta</span><script type="math/tex">Ax =\theta</script></span>！！），还要再对自由变量赋值一次（一般全赋0），解<span class="arithmatex"><span class="MathJax_Preview">Ax= b</span><script type="math/tex">Ax= b</script></span>，求出一个特解<span class="arithmatex"><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span>.</li>
+</ul>
+<h4 id="_14">非齐次方程组解的结构<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<h5 id="_15">无解<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h5>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">r(A) \ne r(A\ b)</span><script type="math/tex">r(A) \ne r(A\ b)</script></span></li>
+<li>两个方程矛盾（其实可以化归到上一类）</li>
+</ul>
+<h5 id="_16">有唯一解<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h5>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">r(A) = r(A\ b) = n</span><script type="math/tex">r(A) = r(A\ b) = n</script></span></li>
+</ul>
+<h5 id="_17">有无穷多解<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h5>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">r(A) = r(A\ b) &lt; n</span><script type="math/tex">r(A) = r(A\ b) < n</script></span></li>
+</ul>
+<h5 id="_18">解答矩阵（非常有用的技巧）<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>注：一定要先化成行简化！</p>
+</blockquote>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428200550659.png" /></p>
+<p><img alt="image-20220428201056100" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428201056100.png" /></p>
+<p><img alt=" " src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428202829132.png" /></p>
+<h2 id="_19">特征值和特征向量<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<h3 id="_20">特征值和特征向量的性质<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>可以是0，但是<span class="arithmatex"><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span>不可以是0.</li>
+</ul>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>为0<span class="arithmatex"><span class="MathJax_Preview">\iff|A| = 0.</span><script type="math/tex">\iff|A| = 0.</script></span>若<span class="arithmatex"><span class="MathJax_Preview">\xi = \theta</span><script type="math/tex">\xi = \theta</script></span>则<span class="arithmatex"><span class="MathJax_Preview">A\xi = \lambda\xi</span><script type="math/tex">A\xi = \lambda\xi</script></span>的<span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>可以是任何值。</p>
+</blockquote>
+<ul>
+<li>
+<p>每个特征向量只属于一个特征值。</p>
+</li>
+<li>
+<p>特征多项式<span class="arithmatex"><span class="MathJax_Preview">f(\lambda) = 0</span><script type="math/tex">f(\lambda) = 0</script></span>在**复数域**内有n重根！！（很可能有虚根，因此特征方程的实数根的重数可能小于n）。</p>
+</li>
+<li>
+<p>每个特征值至少对应一个线性无关的非零的特征向量，这意味着<span class="arithmatex"><span class="MathJax_Preview">(\lambda E- A)x = \theta</span><script type="math/tex">(\lambda E- A)x = \theta</script></span>有非零解。因此<span class="arithmatex"><span class="MathJax_Preview">\lambda E - A</span><script type="math/tex">\lambda E - A</script></span>不可能满秩。</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span>也是<span class="arithmatex"><span class="MathJax_Preview">A^T</span><script type="math/tex">A^T</script></span>的特征值</p>
+</li>
+<li>
+<p>若<span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>可逆，且<span class="arithmatex"><span class="MathJax_Preview">\lambda\ne 0</span><script type="math/tex">\lambda\ne 0</script></span>，<span class="arithmatex"><span class="MathJax_Preview">A\xi = \lambda \xi</span><script type="math/tex">A\xi = \lambda \xi</script></span>，则<span class="arithmatex"><span class="MathJax_Preview">\xi 是 A^{-1}, A^*, f(A)关于特征值\lambda^{-1},\lambda^{-1}|A|,f(\lambda)的一个特征向量.</span><script type="math/tex">\xi 是 A^{-1}, A^*, f(A)关于特征值\lambda^{-1},\lambda^{-1}|A|,f(\lambda)的一个特征向量.</script></span></p>
+</li>
+</ul>
+<blockquote>
+<p><mark>注意</mark>:需要强调特征多项式<span class="arithmatex"><span class="MathJax_Preview">f(A)\sim f(\lambda)</span><script type="math/tex">f(A)\sim f(\lambda)</script></span> 的关系,任意矩阵的多项式与其特征值有同样的关系,往往结合<span class="arithmatex"><span class="MathJax_Preview">|A| = \Pi\lambda_i</span><script type="math/tex">|A| = \Pi\lambda_i</script></span>来操作.</p>
+</blockquote>
+<ul>
+<li>
+<p>属于同一个特征值的不同特征向量的线性组合同样是特征向量。</p>
+</li>
+<li>
+<p>不同特征值的特征向量线性无关。</p>
+</li>
+<li>
+<p><strong><span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>重特征值最多有<span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span>个线性无关的特征向量。</strong></p>
+</li>
+<li>
+<p>若n阶方阵的n个特征值分别为<span class="arithmatex"><span class="MathJax_Preview">\lambda_i, 1\le i\le n</span><script type="math/tex">\lambda_i, 1\le i\le n</script></span>，则<span class="arithmatex"><span class="MathJax_Preview">\prod \lambda_{i}=|A|, \sum \lambda_i = tr(A).</span><script type="math/tex">\prod \lambda_{i}=|A|, \sum \lambda_i = tr(A).</script></span></p>
+</li>
+</ul>
+<h3 id="_21">特征值与秩的关系<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ul>
+<li><img alt="1" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220610211626079.png" /></li>
+</ul>
+<h3 id="_22">矩阵相似<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+对于矩阵A,B,如果存在\bold{可逆}矩阵P,使得B = P^{-1} A P,则称A \sim B .
+</div>
+<script type="math/tex; mode=display">
+对于矩阵A,B,如果存在\bold{可逆}矩阵P,使得B = P^{-1} A P,则称A \sim B .
+</script>
+</div>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">A \sim B \Rightarrow f(A) \sim f(B)</span><script type="math/tex">A \sim B \Rightarrow f(A) \sim f(B)</script></span></p>
+</li>
+<li>
+<p>相似矩阵的特征值都相同。</p>
+</li>
+</ul>
+<p><span class="arithmatex"><span class="MathJax_Preview">A\xi = \lambda \xi, A = P^{-1}BP \\ \Rightarrow P^{-1}BP \xi = \lambda \xi \\ \Rightarrow B(P\xi) = \lambda (P\xi)\ \square.</span><script type="math/tex">A\xi = \lambda \xi, A = P^{-1}BP \\ \Rightarrow P^{-1}BP \xi = \lambda \xi \\ \Rightarrow B(P\xi) = \lambda (P\xi)\ \square.</script></span>
+  $$
+  |\lambda E-A| = |\lambda E - P^{-1}BP| = |P^{-1}(\lambda E- B) P| = |P^{-1}||\lambda E -B||P| = |\lambda E -B|.
+  $$</p>
+<blockquote>
+<p>相似矩阵具有相同的特征多项式。因此有相同的特征值。因此有相同的行列式，有相同的迹。</p>
+</blockquote>
+<p>### 矩阵可对角化的条件</p>
+<p>n阶矩阵A与对角阵<span class="arithmatex"><span class="MathJax_Preview">\Lambda</span><script type="math/tex">\Lambda</script></span>相似的条件是**A有n个线性无关的特征向量**。或**A关于每个特征值对应的线性无关的特征向量的个数等于该特征值的重数。**</p>
+<h3 id="_23">矩阵对角化<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<h4 id="_24">矩阵可对角化的充要条件<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>n阶矩阵有n个无关的特征向量.</p>
+</li>
+<li>
+<p>每个<span class="arithmatex"><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span>重特征值<span class="arithmatex"><span class="MathJax_Preview">\lambda_i</span><script type="math/tex">\lambda_i</script></span>对应的特征矩阵<span class="arithmatex"><span class="MathJax_Preview">\lambda_iE-A</span><script type="math/tex">\lambda_iE-A</script></span>的秩为<span class="arithmatex"><span class="MathJax_Preview">n - k_i</span><script type="math/tex">n - k_i</script></span>.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>条件2**非常重要!! 想要说明有这么多的不相关的特征向量, 要么采用构造法, 找到这么多的特征向量, 并说明无关. **要么(常常)是转化为线性方程组解的问题, 与<span class="arithmatex"><span class="MathJax_Preview">\lambda_i E -A</span><script type="math/tex">\lambda_i E -A</script></span>的秩有关!!</strong></p>
+</blockquote>
+<h3 id="_25">实对称矩阵的对角化<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p>#### 实对称矩阵的性质</p>
+<ul>
+<li>
+<p>特征值都是实数。特征向量也是实向量。</p>
+</li>
+<li>
+<p>属于不同特征值的特征向量是**正交**的</p>
+</li>
+</ul>
+<blockquote>
+<p>这意味着求的对应特征值的特征向量时,只需要对这个特征值对应的几个特征向量正交化即可,不同特征值对应的特征向量已经是正交的了.</p>
+<p><mark>注意</mark>: 由于不同特征值的特征向量是正交的,因此如果3阶实对称矩阵已知两个属于不同特征值的特征向量,那么剩下来的那个特征向量也是必然是与这两个特征向量正交的,于是可以求得第三个特征向量.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>实对称矩阵一定和对角阵相似</strong>。</p>
+<blockquote>
+<ol>
+<li>实矩阵都有n个特征值(含重根),然而有些特征值为复数.而实对称矩阵保证了所有的特征值都是实数.</li>
+<li><strong>实对称阵保证了每个特征值对应的不相关特征向量数都达到最大值</strong>(推论)</li>
+</ol>
+</blockquote>
+</li>
+<li>
+<p>实对称矩阵一定有n个不相关的特征向量.</p>
+</li>
+<li>
+<p>存在**正交阵**<span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>使得<span class="arithmatex"><span class="MathJax_Preview">P^TAP = P^{-1}AP = diag(\lambda_1,\lambda_2,\dots,\lambda_n).</span><script type="math/tex">P^TAP = P^{-1}AP = diag(\lambda_1,\lambda_2,\dots,\lambda_n).</script></span><strong>注意这里的正交阵是不唯一的（基的选取方式不唯一），但是得到的对角阵是唯一的（相似标准型）。</strong></p>
+</li>
+</ul>
+<h4 id="_26">正交矩阵的性质<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<ol>
+<li><span class="arithmatex"><span class="MathJax_Preview">A^T = A^{-1}</span><script type="math/tex">A^T = A^{-1}</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">AA^T = A^TA = E</span><script type="math/tex">AA^T = A^TA = E</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span>的列向量\行向量构成**标准**正交向量组.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">|A|^2= 1</span><script type="math/tex">|A|^2= 1</script></span></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">|\lambda| = 1</span><script type="math/tex">|\lambda| = 1</script></span></li>
+</ol>
+<h4 id="_27">将向量组施密特正交化\标准正交化<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h4>
+<ol>
+<li>施密特正交化<span class="arithmatex"><span class="MathJax_Preview">\xi_i = \alpha_i - \sum_{j=1}^{i-1}{(\alpha_i,\xi_j)\over ||\xi_j||^2}\xi_j</span><script type="math/tex">\xi_i = \alpha_i - \sum_{j=1}^{i-1}{(\alpha_i,\xi_j)\over ||\xi_j||^2}\xi_j</script></span>.</li>
+</ol>
+<blockquote>
+<p><strong>问</strong> 为什么这样操作能保证<span class="arithmatex"><span class="MathJax_Preview">\xi_i</span><script type="math/tex">\xi_i</script></span>与之前得到的$\xi_1, \xi_2, \dots $正交?</p>
+<p><strong>答</strong> (强数学归纳法) <span class="arithmatex"><span class="MathJax_Preview">I.S.\forall j &lt; i, (\xi_i,\xi_j) = (\alpha_i, \xi_j) - {(\alpha_i, \xi_j)\over ||\xi_j||^2}(\xi_j,\xi_j) = 0.</span><script type="math/tex">I.S.\forall j < i, (\xi_i,\xi_j) = (\alpha_i, \xi_j) - {(\alpha_i, \xi_j)\over ||\xi_j||^2}(\xi_j,\xi_j) = 0.</script></span></p>
+</blockquote>
+<ol>
+<li>标准化<span class="arithmatex"><span class="MathJax_Preview">\eta_i = {1\over ||\xi_i||}\xi_i</span><script type="math/tex">\eta_i = {1\over ||\xi_i||}\xi_i</script></span>.(使模长为1)</li>
+</ol>
+<h4 id="p">对角化的方法(相似变换矩阵P的求法)<a class="headerlink" href="#p" title="Permanent link">&para;</a></h4>
+<ol>
+<li>求解<span class="arithmatex"><span class="MathJax_Preview">|A -\lambda I| = 0</span><script type="math/tex">|A -\lambda I| = 0</script></span>得到A的特征值</li>
+<li>对于每一个特征值,求解$(A - \lambda I)x = \theta $解得对应重数的不相关的特征向量</li>
+<li>将所有特征向量按顺序排列得到相似变换矩阵<span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>.对应的特征值按序组成对角阵<span class="arithmatex"><span class="MathJax_Preview">\Lambda</span><script type="math/tex">\Lambda</script></span>.于是有$P^{-1}AP =\Lambda $.</li>
+</ol>
+<p><img alt="image-20220603105152613" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220603105152613.png" /></p>
+<h4 id="_28">正交矩阵的求法<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><mark>注意</mark>: 只有实对称阵才存在正交矩阵<span class="arithmatex"><span class="MathJax_Preview">P^T = P^{-1}</span><script type="math/tex">P^T = P^{-1}</script></span>!!</p>
+</blockquote>
+<ol>
+<li>求解<span class="arithmatex"><span class="MathJax_Preview">|A -\lambda I| = 0</span><script type="math/tex">|A -\lambda I| = 0</script></span>得到A的特征值</li>
+<li>对于每一个特征值,求解$(A - \lambda I)x = \theta $解得对应重数的不相关的特征向量</li>
+<li>由于实对称阵,<strong>任意属于不同特征值的特征向量已经是正交的了</strong>,因此只需要对属于同一个特征值的<span class="arithmatex"><span class="MathJax_Preview">k_{i}</span><script type="math/tex">k_{i}</script></span>个特征向量**标准正交化**即可.</li>
+<li>将所有标准正交化的特征向量按顺序排列得到正交矩阵<span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>.对应的特征值按序组成对角阵<span class="arithmatex"><span class="MathJax_Preview">\Lambda</span><script type="math/tex">\Lambda</script></span>.于是有<span class="arithmatex"><span class="MathJax_Preview">P^TAP = P^{-1}AP = \Lambda</span><script type="math/tex">P^TAP = P^{-1}AP = \Lambda</script></span>.</li>
+</ol>
+<p>## 二次型</p>
+<p>### 合同关系</p>
+<p>二次型<span class="arithmatex"><span class="MathJax_Preview">x^TAx</span><script type="math/tex">x^TAx</script></span>通过非退化的线性变换<span class="arithmatex"><span class="MathJax_Preview">x = Cy</span><script type="math/tex">x = Cy</script></span>，化为<span class="arithmatex"><span class="MathJax_Preview">y_1, y_2, \cdots, y_n</span><script type="math/tex">y_1, y_2, \cdots, y_n</script></span>的二次型<span class="arithmatex"><span class="MathJax_Preview"><span class="arithmatex"><span class="MathJax_Preview">x^TAx = y^T(C^TAC)y = y^TBy</span><script type="math/tex">x^TAx = y^T(C^TAC)y = y^TBy</script></span></span><script type="math/tex"><span class="arithmatex"><span class="MathJax_Preview">x^TAx = y^T(C^TAC)y = y^TBy</span><script type="math/tex">x^TAx = y^T(C^TAC)y = y^TBy</script></span></script></span>，则<span class="arithmatex"><span class="MathJax_Preview">B = C^TAC</span><script type="math/tex">B = C^TAC</script></span>，<span class="arithmatex"><span class="MathJax_Preview">B与A合同.</span><script type="math/tex">B与A合同.</script></span></p>
+<ul>
+<li>任意两个n阶实对称矩阵合同的充分必要条件是有相同的规范型。</li>
+</ul>
+<p>### 将实二次型化为标准型（平方和）的方法</p>
+<ul>
+<li>
+<p>正交变化法（即求变换A的**正交矩阵**P,利用<span class="arithmatex"><span class="MathJax_Preview">P^TAP  =diag(\lambda_i)</span><script type="math/tex">P^TAP  =diag(\lambda_i)</script></span>）</p>
+</li>
+<li>
+<p>配方法</p>
+</li>
+<li>
+<p>合同变换法
+    $$
+    \left(\begin{array}{l}
+    A \
+    I
+    \end{array}\right) \rightarrow\left(\begin{array}{c}
+    C^{T} A C \
+    C
+    \end{array}\right)
+    = \left(\begin{array}{c}
+    \Lambda \
+    C
+    \end{array}\right)
+    $$</p>
+</li>
+</ul>
+<h3 id="_29">惯性定理<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><mark>注意</mark>: 讨论范围是**实二次型**矩阵,即实对称阵!</p>
+</blockquote>
+<ul>
+<li>
+<p>正惯性指数 p，负惯性指数r-p</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">A一定合同于diag(1,1,\dots, 1,-1,-1,\dots, -1, 0, 0,\dots,0)</span><script type="math/tex">A一定合同于diag(1,1,\dots, 1,-1,-1,\dots, -1, 0, 0,\dots,0)</script></span>，其中1的个数等于正惯性指数。</p>
+</li>
+</ul>
+<h4 id="_30">惯性指数的求法<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<ol>
+<li>求特征值.正特征值数等于正惯性指数.负特征值数等于负惯性指数.</li>
+<li>直接合同变换</li>
+</ol>
+<h3 id="_31">正定矩阵<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<p>对于任意非零向量x，关于x的**实二次型**<span class="arithmatex"><span class="MathJax_Preview">x^TAx &gt; 0</span><script type="math/tex">x^TAx > 0</script></span>恒成立</p>
+<blockquote>
+<p><mark>注意</mark>: 在满足这些性质之前,首先要满足的性质是**实对称阵/实二次型**!!</p>
+<p>因此在证明一个矩阵是否为正定矩阵时,先要说明其为实对称阵,然后说明符合一条等价条件.</p>
+</blockquote>
+<ul>
+<li>
+<p>几种等价的表述</p>
+</li>
+<li>
+<p>A为正定矩阵</p>
+</li>
+<li>
+<p>正惯性指数为n, <span class="arithmatex"><span class="MathJax_Preview">A \sim I.</span><script type="math/tex">A \sim I.</script></span></p>
+</li>
+<li>
+<p>存在**可逆**阵<span class="arithmatex"><span class="MathJax_Preview">P</span><script type="math/tex">P</script></span>,<span class="arithmatex"><span class="MathJax_Preview">A = P^TP.</span><script type="math/tex">A = P^TP.</script></span></p>
+<blockquote>
+<p>这条很重要!</p>
+</blockquote>
+</li>
+<li>
+<p>A的n个特征值都大于0</p>
+<blockquote>
+<p>只要说明A的所有特征值都大于0即可.</p>
+<p>典型的题目是: <span class="arithmatex"><span class="MathJax_Preview">(A-E)(A-2E) = O</span><script type="math/tex">(A-E)(A-2E) = O</script></span>.</p>
+</blockquote>
+</li>
+<li>
+<p>A的各阶顺序主子式都大于零(一共n个)。</p>
+</li>
+<li>
+<p>(A的所有主子式都大于0)</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">x^TAx = (Ax)^Tx = (Ax, x)</span><script type="math/tex">x^TAx = (Ax)^Tx = (Ax, x)</script></span></p>
+</li>
+<li>
+<p>正定矩阵的一些性质</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">A正定\iff A有分解A= D^TD(D可逆)</span><script type="math/tex">A正定\iff A有分解A= D^TD(D可逆)</script></span>.</p>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">P^TAP =E\Rightarrow A = (P^T)^{-1}P^{-1}.</span><script type="math/tex">P^TAP =E\Rightarrow A = (P^T)^{-1}P^{-1}.</script></span></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="_32">线性空间<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h2>
+<h3 id="_33">线性空间的判定<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex"><span class="MathJax_Preview">V是一个非空集合,K是一个数域,定义加法和数乘运算，满足以下条件:</span><script type="math/tex">V是一个非空集合,K是一个数域,定义加法和数乘运算，满足以下条件:</script></span></p>
+<ol>
+<li>
+<p>加法和数乘对<span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>封闭：</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">v_1 + v_2 \in V</span><script type="math/tex">v_1 + v_2 \in V</script></span></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">k \cdot v_1 \in V</span><script type="math/tex">k \cdot v_1 \in V</script></span></p>
+</li>
+<li>
+<p>加法满足以下性质：
+   $$
+   (1)&amp; v_1 + v_2 = v_2 + v_1\
+   (2)&amp; v_1 + (v_2 + v_3) = (v_1 + v_2 ) + v_3\
+   (3)&amp; \exist \bold{0}, \bold{0} + v = v\
+   (4)&amp; \forall v_1 \in V, \exist v_2 \in V, v_1 + v_2 = \bold{0}\
+   $$</p>
+</li>
+<li>
+<p>数乘满足以下性质:
+   $$
+   (1)&amp; (a + b)\cdot v = a\cdot v + b\cdot v \
+   (2)&amp; a\cdot (v_1 + v_2) = a\cdot v_1 + a\cdot v_2\
+   (3)&amp; a\cdot (b\cdot v) = (ab)\cdot v\
+   (4)&amp; 1 \cdot v = v\
+   $$</p>
+</li>
+</ol>
+<h3 id="_34">线性空间的性质<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>零元素唯一</p>
+</li>
+<li>
+<p>任一元素的负元是唯一的</p>
+</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  设0,1,-1,\lambda \in K, x, -x, \bold{0}\in V\ 则有\\
+  \begin{align}(1)&amp; 0x = \bold{0} \\
+  (2)&amp; (-1)x = -x\\
+  (3)&amp; \lambda \bold{0} = \bold{0}\\
+  (4)&amp; \lambda x = \bold{0} \to \lambda = 0 \or x = \bold{0}.\\
+  \end{align}
+  </div>
+<script type="math/tex; mode=display">
+  设0,1,-1,\lambda \in K, x, -x, \bold{0}\in V\ 则有\\
+  \begin{align}(1)& 0x = \bold{0} \\
+  (2)& (-1)x = -x\\
+  (3)& \lambda \bold{0} = \bold{0}\\
+  (4)& \lambda x = \bold{0} \to \lambda = 0 \or x = \bold{0}.\\
+  \end{align}
+  </script>
+</div>
+</li>
+<li></li>
+</ul>
+<h3 id="_35">空间的基、维数、坐标<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\dim (V) = n</span><script type="math/tex">\dim (V) = n</script></span>记作维数</p>
+</li>
+<li>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  设\alpha_1,\alpha_2,\cdots,\alpha_n为一组基,则n个向量(\beta_1\ \beta_2\ \cdots\ \beta_n) = (\alpha_1\ \alpha_2\ \cdots\ \alpha_n)D为一组基的充要条件是\\
+  |D| \ne 0.
+  </div>
+<script type="math/tex; mode=display">
+  设\alpha_1,\alpha_2,\cdots,\alpha_n为一组基,则n个向量(\beta_1\ \beta_2\ \cdots\ \beta_n) = (\alpha_1\ \alpha_2\ \cdots\ \alpha_n)D为一组基的充要条件是\\
+  |D| \ne 0.
+  </script>
+</div>
+</li>
+</ul>
+<h3 id="_36">基(底)变换与坐标变换<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+(\beta_1\ \beta_2\ \cdots\ \beta_n) = (\alpha_1\ \alpha_2\ \cdots\ \alpha_n)P,\\
+P = (a_{ij})_{n\times n}.\\
+P称作从基底\Phi:\alpha_i,1\le i\le n到\Psi:\beta_i,1\le i\le n的\bold{过渡矩阵}.\\
+\left(\begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\right) = 
+P\left(\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \end{array}\right)\\
+\left(\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \end{array}\right) = P^{-1}\left(\begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\right).
+</div>
+<script type="math/tex; mode=display">
+(\beta_1\ \beta_2\ \cdots\ \beta_n) = (\alpha_1\ \alpha_2\ \cdots\ \alpha_n)P,\\
+P = (a_{ij})_{n\times n}.\\
+P称作从基底\Phi:\alpha_i,1\le i\le n到\Psi:\beta_i,1\le i\le n的\bold{过渡矩阵}.\\
+\left(\begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\right) = 
+P\left(\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \end{array}\right)\\
+\left(\begin{array}{c} y_1 \\ y_2 \\ \vdots \\ y_n \end{array}\right) = P^{-1}\left(\begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n \end{array}\right).
+</script>
+</div>
+<blockquote>
+<p><strong>注</strong>: 注意到基变换将基底由<span class="arithmatex"><span class="MathJax_Preview">\alpha_i</span><script type="math/tex">\alpha_i</script></span>变为<span class="arithmatex"><span class="MathJax_Preview">\beta_i</span><script type="math/tex">\beta_i</script></span>,乘以了过度矩阵P,但是由原先<span class="arithmatex"><span class="MathJax_Preview">\alpha_i</span><script type="math/tex">\alpha_i</script></span>下的坐标<span class="arithmatex"><span class="MathJax_Preview">(x_i)</span><script type="math/tex">(x_i)</script></span>变换过程却是乘了<span class="arithmatex"><span class="MathJax_Preview">P^{-1}</span><script type="math/tex">P^{-1}</script></span>.这其实很容易理解,举例来说,若基向量由原先的拉伸3倍,那么对应的坐标也就收缩了3倍,相当于拉伸了<span class="arithmatex"><span class="MathJax_Preview">3^{-1}</span><script type="math/tex">3^{-1}</script></span>倍.不难发现这个坐标变换过程中有这样的关系<span class="arithmatex"><span class="MathJax_Preview">\xi = (\alpha_i)\vec{x} = (\beta_i)\vec{y}</span><script type="math/tex">\xi = (\alpha_i)\vec{x} = (\beta_i)\vec{y}</script></span>,而不变量是<span class="arithmatex"><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span>,因此基底变换与坐标变换间存在**互逆**的关系.</p>
+</blockquote>
+<h4 id="_37">判断两组基下是否存在相同坐标的非零向量<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
+<p>问题转化为判断<span class="arithmatex"><span class="MathJax_Preview">\exist \xi \ne \theta, \xi = P\xi</span><script type="math/tex">\exist \xi \ne \theta, \xi = P\xi</script></span> 是否为真 <span class="arithmatex"><span class="MathJax_Preview">\iff (P-E)x = \theta</span><script type="math/tex">\iff (P-E)x = \theta</script></span>是否有非零解。</p>
+<h3 id="_38">线性子空间<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+dim(W_1 + W_2) + dim(W_1 \cap W_2)= dim(W_1) + dim(W_2).
+</div>
+<script type="math/tex; mode=display">
+dim(W_1 + W_2) + dim(W_1 \cap W_2)= dim(W_1) + dim(W_2).
+</script>
+</div>
+<h4 id="_39">直和<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">W_1 +W_2</span><script type="math/tex">W_1 +W_2</script></span>中任意向量都只能惟一的表示为<span class="arithmatex"><span class="MathJax_Preview">W_1</span><script type="math/tex">W_1</script></span>中一个向量<span class="arithmatex"><span class="MathJax_Preview">+W_2</span><script type="math/tex">+W_2</script></span>中一个向量.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">dim(W_1\cap W_2) = 0,i.e. W_1 \cap W_2 = \{\bold{0}\}</span><script type="math/tex">dim(W_1\cap W_2) = 0,i.e. W_1 \cap W_2 = \{\bold{0}\}</script></span>.</li>
+</ul>
+<h3 id="_40">线性变换<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
+<p>定义运算:线性映射<span class="arithmatex"><span class="MathJax_Preview">T:V_1\to V_2, \alpha \to Ta</span><script type="math/tex">T:V_1\to V_2, \alpha \to Ta</script></span></p>
+<ul>
+<li>线性组合的线性变换=线性变换的线性组合</li>
+<li>若两个线性变换对一组基的映射得到的像都相同,则两个线性变换相等.</li>
+<li>线性变换对应着基的变换</li>
+</ul>
+<h4 id="_41">线性变换的矩阵表示<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>线性变换是对线性空间进行变换,如沿某方向拉伸\旋转\切变等,这个变换将所有的<span class="arithmatex"><span class="MathJax_Preview">V</span><script type="math/tex">V</script></span>中的向量<span class="arithmatex"><span class="MathJax_Preview">\alpha</span><script type="math/tex">\alpha</script></span>变为其像<span class="arithmatex"><span class="MathJax_Preview">T\alpha</span><script type="math/tex">T\alpha</script></span>.</p>
+<p>但是,空间中有无数个向量,我们无法对每一个向量都描述其像是什么.于是,我们利用向量空间的线性性质,即任何向量都可以表示为基向量的线性组合,以及线性变换的线性性质,即线性组合的线性变换等于线性变换的线性组合,这样,我们就可以通过描述有限个基向量的变换情况,来给出获得任意向量的像的构造方式: 选取一组基,将向量用基向量线性表示,也就是对应基向量的坐标,这样,线性变换改变基向量,但不改变线性组合方式(坐标),我们仍可以用这组坐标表示出映射的结果.</p>
+<p>同时,注意到既然线性变换将基向量改变,那相当于得到了一组新的基向量,那么这个A就是过渡矩阵, 因为基变换对应坐标变换, 因此, 如果我们想用原先的基向量来表示像, 就需要进行左边变换,即<span class="arithmatex"><span class="MathJax_Preview">y = Ax</span><script type="math/tex">y = Ax</script></span>.</p>
+<p><mark>注意</mark>: 为什么这个地方不是<span class="arithmatex"><span class="MathJax_Preview">y = A^{-1}x</span><script type="math/tex">y = A^{-1}x</script></span>? </p>
+<p>$(T\varepsilon_1, T\varepsilon_2, \dots ,T\varepsilon_n)x = (\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)Px = (\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)y $. 相当于过渡回去了.</p>
+</blockquote>
+<ul>
+<li>线性变换与其对应的矩阵构成**双射**:<span class="arithmatex"><span class="MathJax_Preview">T(\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n) = (\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)A</span><script type="math/tex">T(\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n) = (\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)A</script></span>.</li>
+</ul>
+<h4 id="_42">线性变换在不同基底下的矩阵的关系<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
+<p>若<span class="arithmatex"><span class="MathJax_Preview">(\beta_i) = (\alpha_i)P</span><script type="math/tex">(\beta_i) = (\alpha_i)P</script></span>,则<span class="arithmatex"><span class="MathJax_Preview">B = P^{-1}AP</span><script type="math/tex">B = P^{-1}AP</script></span>.</p>
+<p><strong>证明</strong> (1) <span class="arithmatex"><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span>在两基底下相等: <span class="arithmatex"><span class="MathJax_Preview">\xi = (\beta_i)y = (\alpha_i)P y = (\alpha_i)x \Rightarrow y = P^{-1}x</span><script type="math/tex">\xi = (\beta_i)y = (\alpha_i)P y = (\alpha_i)x \Rightarrow y = P^{-1}x</script></span></p>
+<p>(2)<span class="arithmatex"><span class="MathJax_Preview">T\xi</span><script type="math/tex">T\xi</script></span>在两基底下相等: <span class="arithmatex"><span class="MathJax_Preview">T\xi = (\beta_i)By = (\alpha_i)PBy = (\alpha_i)PBP^{-1}x = (\alpha_i)Ax \Rightarrow A = PBP^{-1}</span><script type="math/tex">T\xi = (\beta_i)By = (\alpha_i)PBy = (\alpha_i)PBP^{-1}x = (\alpha_i)Ax \Rightarrow A = PBP^{-1}</script></span>.</p>
+<p><strong>推论</strong> 两矩阵相似的充要条件是它们是某个线性变换在不同基底下的矩阵.</p>
+<h4 id="_43">线性变换的特征值与特征向量<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex"><span class="MathJax_Preview">T\xi = T(\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)x = (\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)Ax \\ = \lambda \xi = \lambda(\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)x = (\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)\lambda x\\ \Rightarrow Ax = \lambda x</span><script type="math/tex">T\xi = T(\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)x = (\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)Ax \\ = \lambda \xi = \lambda(\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)x = (\varepsilon_1, \varepsilon_2, \dots ,\varepsilon_n)\lambda x\\ \Rightarrow Ax = \lambda x</script></span></p>
+<p><strong>步骤</strong></p>
+<ol>
+<li>求出T下的矩阵A</li>
+<li>求出A的特征值和对应的特征向量</li>
+<li>A的特征值就是T的特征值,A的特征向量就是T的特征向量在基底下的坐标.</li>
+</ol>
+<p><strong>定理</strong></p>
+<p>线性变换在不同基下的特征值和特征多项式(矩阵的特征多项式,因为相似矩阵有相同的特征多项式)与所选基底无关.</p>
+<h1 id="_44">常用技巧<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h1>
+<h2 id="_45">矩阵的秩相关<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h2>
+<h3 id="_46">秩不等式<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+1)\quad &amp;r(A+B) \le r(A) + r(B)\\ 
+ 2)\quad &amp;r(AB) \le \min\{r(A),r(B)\} \\
+ 3)\quad &amp;对于方阵A,B,r(AB) \ge r(A) + r(B) - n;\\
+ 4)\quad &amp;若A，B分别是m\times n, n\times s矩阵,且AB=0,则r(B) \le n - r(A)\\
+ 5)\quad &amp;若A为m\times n矩阵，则r(A^TA) = r(A) = r(A^T)
+</div>
+<script type="math/tex; mode=display">
+1)\quad &r(A+B) \le r(A) + r(B)\\ 
+ 2)\quad &r(AB) \le \min\{r(A),r(B)\} \\
+ 3)\quad &对于方阵A,B,r(AB) \ge r(A) + r(B) - n;\\
+ 4)\quad &若A，B分别是m\times n, n\times s矩阵,且AB=0,则r(B) \le n - r(A)\\
+ 5)\quad &若A为m\times n矩阵，则r(A^TA) = r(A) = r(A^T)
+</script>
+</div>
+<blockquote>
+<p><strong>注</strong> 比较常用的有(1),<strong>(2)</strong>,(3)</p>
+<p>(2) <span class="arithmatex"><span class="MathJax_Preview">r(A) = r(\alpha\beta^T) \le \min\{r(\alpha),r(\beta^T) \} = 1</span><script type="math/tex">r(A) = r(\alpha\beta^T) \le \min\{r(\alpha),r(\beta^T) \} = 1</script></span>.</p>
+</blockquote>
+<h3 id="_47">秩的等式<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{align}
+(1)&amp; 若A,B为n阶矩阵,r(A) = n,则r(AB) = r(B)\\
+\end{align}
+</div>
+<script type="math/tex; mode=display">
+\begin{align}
+(1)& 若A,B为n阶矩阵,r(A) = n,则r(AB) = r(B)\\
+\end{align}
+</script>
+</div>
+<h1 id="_48">好题荟萃<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h1>
+<h2 id="_49">书本习题<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h2>
+<h3 id="1">习题1<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<h4 id="52">5（2）<a class="headerlink" href="#52" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\left|\begin{array}{llll}
+x &amp; a &amp; b &amp; c \\
+a &amp; x &amp; c &amp; b \\
+b &amp; c &amp; x &amp; a \\
+c &amp; b &amp; a &amp; x
+\end{array}\right|
+</div>
+<script type="math/tex; mode=display">
+\left|\begin{array}{llll}
+x & a & b & c \\
+a & x & c & b \\
+b & c & x & a \\
+c & b & a & x
+\end{array}\right|
+</script>
+</div>
+<blockquote>
+<p>很明显的分块阵 要尽量利用分块阵行列式的结论。</p>
+</blockquote>
+<ul>
+<li>设A是<span class="arithmatex"><span class="MathJax_Preview">m\times n</span><script type="math/tex">m\times n</script></span>的矩阵(<span class="arithmatex"><span class="MathJax_Preview">m &lt; n</span><script type="math/tex">m < n</script></span>)，且<span class="arithmatex"><span class="MathJax_Preview">r(A) = m</span><script type="math/tex">r(A) = m</script></span>，证明存在<span class="arithmatex"><span class="MathJax_Preview">n\times m</span><script type="math/tex">n\times m</script></span>阶矩阵B，使得<span class="arithmatex"><span class="MathJax_Preview">AB = I_m</span><script type="math/tex">AB = I_m</script></span></li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+Hint.利用(1)标准型:A = P\left(\begin{array}{cc}
+I_{r} &amp; 0 \\
+0 &amp; 0
+\end{array}\right)Q \\这个过程不改变秩.\\
+(2)分块阵的切分证明.
+</div>
+<script type="math/tex; mode=display">
+Hint.利用(1)标准型:A = P\left(\begin{array}{cc}
+I_{r} & 0 \\
+0 & 0
+\end{array}\right)Q \\这个过程不改变秩.\\
+(2)分块阵的切分证明.
+</script>
+</div>
+<ul>
+<li>对矩阵、行列式化简时，</li>
+<li>避免造成引入更多的参数<span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span>导致讨论变得复杂</li>
+<li>尽量避免分数的出现（尽量让“第一行”变成1或者-1）</li>
+</ul>
+<h3 id="2">习题2<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="37">37<a class="headerlink" href="#37" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex"><span class="MathJax_Preview">证明若A,B可逆,A+B也可逆,\\则A^{-1} + B^{-1}也可逆，并求逆阵</span><script type="math/tex">证明若A,B可逆,A+B也可逆,\\则A^{-1} + B^{-1}也可逆，并求逆阵</script></span></p>
+<p><img alt="image-20220428103408983" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428103408983.png" /></p>
+<ul>
+<li>可逆阵A乘一个矩阵B，<span class="arithmatex"><span class="MathJax_Preview">r(AB) = r(B)</span><script type="math/tex">r(AB) = r(B)</script></span></li>
+</ul>
+<h4 id="56">56<a class="headerlink" href="#56" title="Permanent link">&para;</a></h4>
+<p>求两个含参向量组何时能够等价</p>
+<p><mark>推广：证明两个矩阵等价的方法</mark></p>
+<h4 id="60">60<a class="headerlink" href="#60" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>注：把两个向量组并起来也是比较有用的手段</p>
+</blockquote>
+<p><img alt="image-20220428105345261" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428105345261.png" /></p>
+<h3 id="4">习题4<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h4 id="4_1">4<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220428113724967" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428113724967.png" /></p>
+<h4 id="6">6<a class="headerlink" href="#6" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220428114500525" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428114500525.png" /></p>
+<h4 id="11">11<a class="headerlink" href="#11" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>根据特征值和特征向量求原方程</p>
+<p>写出P 硬算.</p>
+</blockquote>
+<h4 id="12">12<a class="headerlink" href="#12" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220428115736048" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428115736048.png" /></p>
+<h4 id="16">16<a class="headerlink" href="#16" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220610200942777" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220610200942777.png" /></p>
+<h4 id="17">17<a class="headerlink" href="#17" title="Permanent link">&para;</a></h4>
+<p>已知n阶矩阵满足<span class="arithmatex"><span class="MathJax_Preview">M^2 - 3M + 2E = O</span><script type="math/tex">M^2 - 3M + 2E = O</script></span>,试证M可对角化.</p>
+<blockquote>
+<p><strong>法一</strong> <span class="arithmatex"><span class="MathJax_Preview">\lambda^2 - 3\lambda + 2 = 0 \Rightarrow \lambda = 1或2</span><script type="math/tex">\lambda^2 - 3\lambda + 2 = 0 \Rightarrow \lambda = 1或2</script></span>,因此所有特征值均大于0,因此A为正定对称阵.而正定阵*是*实对称阵,实对称阵一定可对角化.</p>
+<p><strong>法二</strong> </p>
+<blockquote>
+<p>回顾矩阵可对角化的充要条件</p>
+<ol>
+<li>n阶矩阵有n个无关的特征向量.</li>
+<li>每个<span class="arithmatex"><span class="MathJax_Preview">k_i</span><script type="math/tex">k_i</script></span>重特征值<span class="arithmatex"><span class="MathJax_Preview">\lambda_i</span><script type="math/tex">\lambda_i</script></span>对应的特征矩阵<span class="arithmatex"><span class="MathJax_Preview">\lambda_iE-A</span><script type="math/tex">\lambda_iE-A</script></span>的秩为<span class="arithmatex"><span class="MathJax_Preview">n - k_i</span><script type="math/tex">n - k_i</script></span>.</li>
+</ol>
+</blockquote>
+<p>利用2. 设<span class="arithmatex"><span class="MathJax_Preview">\lambda = 1</span><script type="math/tex">\lambda = 1</script></span>(a重根), <span class="arithmatex"><span class="MathJax_Preview">\lambda = 2</span><script type="math/tex">\lambda = 2</script></span>(b重根)(a+b = n), 令<span class="arithmatex"><span class="MathJax_Preview">A = E-M, B = 2E - M</span><script type="math/tex">A = E-M, B = 2E - M</script></span>.
+$$
+(1)&amp;r(O) = r(AB) \ge r(A) + r(B) - n \Rightarrow r(A) + r(B) \le n\
+(2)&amp;r(A) \ge n- a, r(B)\ge n-b\Rightarrow r(A) + r(B)\ge n\
+&amp;\Rightarrow r(A) + r(B) = n \Rightarrow r(A) = n-a, r(B) = n-b.\square
+$$</p>
+</blockquote>
+<h4 id="18">18<a class="headerlink" href="#18" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220428115922533" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428115922533.png" /></p>
+<h4 id="28">28<a class="headerlink" href="#28" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20220428115950421" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220428115950421.png" /></p>
+<h3 id="5">习题5<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>实对称阵这部分内容,感觉比较常见的操作有: 结合特征值, "开根号拆分", 结合秩与无关解的个数</p>
+</blockquote>
+<h4 id="7">7<a class="headerlink" href="#7" title="Permanent link">&para;</a></h4>
+<p>设<span class="arithmatex"><span class="MathJax_Preview">A\in R^{m\times n}</span><script type="math/tex">A\in R^{m\times n}</script></span>为列满秩矩阵, 证明<span class="arithmatex"><span class="MathJax_Preview">B = A^TA</span><script type="math/tex">B = A^TA</script></span>为对称正定矩阵.</p>
+<blockquote>
+<p><strong>注</strong> 列满秩矩阵是指矩阵的秩等于列数n,<mark>这意味着<span class="arithmatex"><span class="MathJax_Preview">m \ge n</span><script type="math/tex">m \ge n</script></span></mark>.
+$$
+A列满秩\Rightarrow \forall x\ne \theta, Ax \ne \theta, x^TBx = x<sup>TA</sup>TAx = (Ax)^T(Ax)  = (Ax, Ax) &gt; 0.\square
+$$</p>
+</blockquote>
+<h4 id="9">9<a class="headerlink" href="#9" title="Permanent link">&para;</a></h4>
+<p>设<span class="arithmatex"><span class="MathJax_Preview">A\in R^{m\times m}, B\in R^{n\times n}</span><script type="math/tex">A\in R^{m\times m}, B\in R^{n\times n}</script></span>均为对称矩阵, 证明存在$\xi \in R^{m+n}, \xi \ne \theta $, <span class="arithmatex"><span class="MathJax_Preview">\xi^T\left({\begin{array}{cc} A &amp;   0 \\ 0 &amp; -B\end{array}}\right)\xi  = 0.</span><script type="math/tex">\xi^T\left({\begin{array}{cc} A &   0 \\ 0 & -B\end{array}}\right)\xi  = 0.</script></span></p>
+<blockquote>
+<p>将<span class="arithmatex"><span class="MathJax_Preview">\xi <span class="arithmatex"><span class="MathJax_Preview">分块</span><script type="math/tex">分块</script></span>(\xi_1, \xi_2)(\xi_1, \xi_2)</span><script type="math/tex">\xi <span class="arithmatex"><span class="MathJax_Preview">分块</span><script type="math/tex">分块</script></span>(\xi_1, \xi_2)(\xi_1, \xi_2)</script></span>,乘进去,得到<span class="arithmatex"><span class="MathJax_Preview">\xi_1^TA\xi_1 - \xi_2^TB\xi_2 = 0</span><script type="math/tex">\xi_1^TA\xi_1 - \xi_2^TB\xi_2 = 0</script></span></p>
+<p>下面的问题在于: 怎么找到满足要求的<span class="arithmatex"><span class="MathJax_Preview">\xi_{1,2}</span><script type="math/tex">\xi_{1,2}</script></span>? </p>
+<p><strong>一个比较常见的做法</strong></p>
+<p>令<span class="arithmatex"><span class="MathJax_Preview">\xi_1 = (\sqrt{a_{11}}, 0, 0, \dots)^T, \xi_2 = (\sqrt{b_{11}}, 0, 0, \dots)^T</span><script type="math/tex">\xi_1 = (\sqrt{a_{11}}, 0, 0, \dots)^T, \xi_2 = (\sqrt{b_{11}}, 0, 0, \dots)^T</script></span>(利用到了1阶顺序主子式大于0)</p>
+</blockquote>
+<h4 id="18_1">18<a class="headerlink" href="#18_1" title="Permanent link">&para;</a></h4>
+<p>证明<span class="arithmatex"><span class="MathJax_Preview">A是正定矩阵\iff A有分解A = B^2, B为正定阵.</span><script type="math/tex">A是正定矩阵\iff A有分解A = B^2, B为正定阵.</script></span></p>
+<blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+A = P^T\Lambda P = P^T\Lambda'\Lambda'P = P^T\Lambda'PP^T\Lambda'P = B^2.
+</div>
+<script type="math/tex; mode=display">
+A = P^T\Lambda P = P^T\Lambda'\Lambda'P = P^T\Lambda'PP^T\Lambda'P = B^2.
+</script>
+</div>
+</blockquote>
+<h4 id="19">19<a class="headerlink" href="#19" title="Permanent link">&para;</a></h4>
+<p>设A为n阶正定阵,B为n阶对称阵,证明存在合同变换矩阵P,使得<span class="arithmatex"><span class="MathJax_Preview">P^TAP</span><script type="math/tex">P^TAP</script></span>与<span class="arithmatex"><span class="MathJax_Preview">P^TBP</span><script type="math/tex">P^TBP</script></span>均为对角矩阵.</p>
+<blockquote>
+<p><mark>这题很重要</mark>!!</p>
+<p>关键在于**建立A与B的联系**
+$$
+因为A正定,所以存在可逆R,A = R^TR\
+而((R<sup>{-1})</sup>TBR<sup>{-1})</sup>T仍然是一个对称阵.
+而对于一个对称阵,一定存在合同变换矩阵(正交阵)Q^{-1},\
+使得(Q<sup>{-1})</sup>T((R<sup>{-1})</sup>TBR<sup>{-1})Q</sup>{-1}  = \Lambda,\
+因为Q为正交阵, Q^TQ = E,\
+所以A = R<sup>TQ</sup>TQR,\
+((QR)<sup>{-1})</sup>TA(QR)^{-1} = E\
+((QR)<sup>{-1})</sup>TB(QR)^{-1} = \Lambda.
+$$</p>
+</blockquote>
+<h4 id="20">20<a class="headerlink" href="#20" title="Permanent link">&para;</a></h4>
+<p>证明若A正定,则<span class="arithmatex"><span class="MathJax_Preview">|A+E|&gt; 1</span><script type="math/tex">|A+E|> 1</script></span></p>
+<blockquote>
+<p>正定阵常常利用特征值来解题</p>
+<p><strong>法一</strong>(比较好说的做法) 
+$$
+令B = A+E,记A的特征值为\lambda_i &gt; 0,则B的特征值为\lambda_i+1 &gt; 1.\
+\therefore  |A+E|=|B| = \Pi (\lambda_i+1) &gt; 1.\square
+$$
+<strong>法二</strong>(比较暴力的做法)
+$$
+|A+E| = |P^T\Lambda p + E| = |P^T||\Lambda+E||P| = |\Lambda+E| = \Pi (\lambda_i+1) &gt;1.
+$$</p>
+</blockquote>
+<h2 id="_50">往年真题<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h2>
+<h3 id="2014-2015-1">2014-2015-1<a class="headerlink" href="#2014-2015-1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>若 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 阶可逆矩阵, <span class="arithmatex"><span class="MathJax_Preview">u, v</span><script type="math/tex">u, v</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 维列向量, 若矩阵 <span class="arithmatex"><span class="MathJax_Preview">A+u v^{T}</span><script type="math/tex">A+u v^{T}</script></span> 有形式为 <span class="arithmatex"><span class="MathJax_Preview">A^{-1}+t\left(A^{-1} u v^{T} A^{-1}\right)</span><script type="math/tex">A^{-1}+t\left(A^{-1} u v^{T} A^{-1}\right)</script></span> 的逆矩阵, 其 中t为实数, 则 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 为何值?
+   解: <span class="arithmatex"><span class="MathJax_Preview">\left(A+u v^{T}\right)\left(A^{-1}+t\left(A^{-1} u v^{T} A^{-1}\right)\right)=E+u v^{T} A^{-1}+t u v^{T} A^{-1}+t\left(u v^{T} A^{-1} u v^{T} A^{-1}\right)=E</span><script type="math/tex">\left(A+u v^{T}\right)\left(A^{-1}+t\left(A^{-1} u v^{T} A^{-1}\right)\right)=E+u v^{T} A^{-1}+t u v^{T} A^{-1}+t\left(u v^{T} A^{-1} u v^{T} A^{-1}\right)=E</script></span>, 故 <span class="arithmatex"><span class="MathJax_Preview">u v^{T} A^{-1}+t u v^{T} A^{-1}+t u v^{T} A^{-1} u v^{T} A^{-1}=O</span><script type="math/tex">u v^{T} A^{-1}+t u v^{T} A^{-1}+t u v^{T} A^{-1} u v^{T} A^{-1}=O</script></span>, 两边右乘 <span class="arithmatex"><span class="MathJax_Preview">A^{\prime}</span><script type="math/tex">A^{\prime}</script></span> 得 <span class="arithmatex"><span class="MathJax_Preview">u v^{T}+t u v^{T}+t u v^{T} A^{-1} u v^{T}=u\left(1+t+t v^{T} A^{-1} u\right) v^{T}=O</span><script type="math/tex">u v^{T}+t u v^{T}+t u v^{T} A^{-1} u v^{T}=u\left(1+t+t v^{T} A^{-1} u\right) v^{T}=O</script></span>,
+   <span class="arithmatex"><span class="MathJax_Preview">\therefore u, v</span><script type="math/tex">\therefore u, v</script></span> 不全为零时, 有 <span class="arithmatex"><span class="MathJax_Preview">t=-1 /\left(1+v^{T} A^{-1} u\right) ; u=\theta</span><script type="math/tex">t=-1 /\left(1+v^{T} A^{-1} u\right) ; u=\theta</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">v=\theta</span><script type="math/tex">v=\theta</script></span> 时, 有 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 为任意实数。</li>
+</ol>
+<p>二.(15分) 解线性方程组
+$$
+\left{\begin{array}{l}
+m x_{1}+n x_{2}+n x_{3}=n \
+n x_{1}+m x_{2}+n x_{3}=n \
+n x_{1}+n x_{2}+m x_{3}=n
+\end{array}\right.
+$$
+其中参数 <span class="arithmatex"><span class="MathJax_Preview">m, n</span><script type="math/tex">m, n</script></span> 不全为 0 。
+解：方程组的增广矩阵 <span class="arithmatex"><span class="MathJax_Preview">B=\left(\begin{array}{ccc|c}m &amp; n &amp; n &amp; n \\ n &amp; m &amp; n &amp; n \\ n &amp; n &amp; m &amp; n\end{array}\right) \stackrel{r}{\rightarrow}\left(\begin{array}{ccc|c}m+2 n &amp; m+2 n &amp; m+2 n &amp; 3 n \\ n &amp; m &amp; n &amp; n \\ n &amp; n &amp; m &amp; n\end{array}\right)</span><script type="math/tex">B=\left(\begin{array}{ccc|c}m & n & n & n \\ n & m & n & n \\ n & n & m & n\end{array}\right) \stackrel{r}{\rightarrow}\left(\begin{array}{ccc|c}m+2 n & m+2 n & m+2 n & 3 n \\ n & m & n & n \\ n & n & m & n\end{array}\right)</script></span>. 当 <span class="arithmatex"><span class="MathJax_Preview">m+2 n \neq 0</span><script type="math/tex">m+2 n \neq 0</script></span> 时, <span class="arithmatex"><span class="MathJax_Preview">B \rightarrow\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 1 &amp; 3 n /(m+2 n) \\ 0 &amp; m-n &amp; 0 &amp; (m-n) n /(m+2 n) \\ 0 &amp; 0 &amp; m-n &amp; (m-n) n /(m+2 n)\end{array}\right)</span><script type="math/tex">B \rightarrow\left(\begin{array}{ccc|c}1 & 1 & 1 & 3 n /(m+2 n) \\ 0 & m-n & 0 & (m-n) n /(m+2 n) \\ 0 & 0 & m-n & (m-n) n /(m+2 n)\end{array}\right)</script></span>,
+故当 <span class="arithmatex"><span class="MathJax_Preview">m+2 n \neq 0</span><script type="math/tex">m+2 n \neq 0</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">m \neq n</span><script type="math/tex">m \neq n</script></span> 时, <span class="arithmatex"><span class="MathJax_Preview">B \rightarrow\left(\begin{array}{lll|l}1 &amp; 0 &amp; 0 &amp; n /(m+2 n) \\ 0 &amp; 1 &amp; 0 &amp; n /(m+2 n) \\ 0 &amp; 0 &amp; 1 &amp; n /(m+2 n)\end{array}\right)</span><script type="math/tex">B \rightarrow\left(\begin{array}{lll|l}1 & 0 & 0 & n /(m+2 n) \\ 0 & 1 & 0 & n /(m+2 n) \\ 0 & 0 & 1 & n /(m+2 n)\end{array}\right)</script></span>,得唯一解 <span class="arithmatex"><span class="MathJax_Preview">\left(\begin{array}{c}n /(m+2 n) \\ n /(m+2 n) \\ n /(m+2 n)\end{array}\right)</span><script type="math/tex">\left(\begin{array}{c}n /(m+2 n) \\ n /(m+2 n) \\ n /(m+2 n)\end{array}\right)</script></span>. 当 <span class="arithmatex"><span class="MathJax_Preview">m+2 n \neq 0</span><script type="math/tex">m+2 n \neq 0</script></span> 且 <span class="arithmatex"><span class="MathJax_Preview">m=n</span><script type="math/tex">m=n</script></span> 时, <span class="arithmatex"><span class="MathJax_Preview">B \rightarrow\left(\begin{array}{lll|l}1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right)</span><script type="math/tex">B \rightarrow\left(\begin{array}{lll|l}1 & 1 & 1 & 1 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0\end{array}\right)</script></span>,得通解为 <span class="arithmatex"><span class="MathJax_Preview">\left(\begin{array}{c}1 \\ 0 \\ 0\end{array}\right)+k_{1}\left(\begin{array}{c}-1 \\ 1 \\ 0\end{array}\right)+k_{2}\left(\begin{array}{c}-1 \\ 0 \\ 1\end{array}\right)</span><script type="math/tex">\left(\begin{array}{c}1 \\ 0 \\ 0\end{array}\right)+k_{1}\left(\begin{array}{c}-1 \\ 1 \\ 0\end{array}\right)+k_{2}\left(\begin{array}{c}-1 \\ 0 \\ 1\end{array}\right)</script></span>. 当 <span class="arithmatex"><span class="MathJax_Preview">m+2 n=0</span><script type="math/tex">m+2 n=0</script></span> 时, <span class="arithmatex"><span class="MathJax_Preview">B \rightarrow\left(\begin{array}{ccc|c}n &amp; m &amp; n &amp; n \\ n &amp; n &amp; m &amp; n \\ 0 &amp; 0 &amp; 0 &amp; 3 n\end{array}\right)</span><script type="math/tex">B \rightarrow\left(\begin{array}{ccc|c}n & m & n & n \\ n & n & m & n \\ 0 & 0 & 0 & 3 n\end{array}\right)</script></span>, 若 <span class="arithmatex"><span class="MathJax_Preview">n=0</span><script type="math/tex">n=0</script></span>, 则 <span class="arithmatex"><span class="MathJax_Preview">m=0</span><script type="math/tex">m=0</script></span>, 与 <span class="arithmatex"><span class="MathJax_Preview">m, n</span><script type="math/tex">m, n</script></span> 不全为 0 矛盾, 故 <span class="arithmatex"><span class="MathJax_Preview">n \neq 0</span><script type="math/tex">n \neq 0</script></span>, 矩阵 最后一行得矛盾方程, 故无解。</p>
+<p>五.(10分) 设 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 阶矩阵 <span class="arithmatex"><span class="MathJax_Preview">C=\left(e_{i_{1}}, e_{i_{2}}, \cdots, e_{i_{n}}\right)</span><script type="math/tex">C=\left(e_{i_{1}}, e_{i_{2}}, \cdots, e_{i_{n}}\right)</script></span>, 其中 <span class="arithmatex"><span class="MathJax_Preview">e_{j}=(0,0, \cdots, 1,0, \cdots, 0)^{T}(</span><script type="math/tex">e_{j}=(0,0, \cdots, 1,0, \cdots, 0)^{T}(</script></span> 第 <span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span> 个分量为 1 , 其余为 0<span class="arithmatex"><span class="MathJax_Preview">), j=</span><script type="math/tex">), j=</script></span> <span class="arithmatex"><span class="MathJax_Preview">1,2, \cdots, n</span><script type="math/tex">1,2, \cdots, n</script></span>, 而 <span class="arithmatex"><span class="MathJax_Preview">\left(i_{1}, i_{2}, \cdots, i_{n}\right)</span><script type="math/tex">\left(i_{1}, i_{2}, \cdots, i_{n}\right)</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">(1,2, \cdots, n)</span><script type="math/tex">(1,2, \cdots, n)</script></span> 的一个排列, 证明: (1) <span class="arithmatex"><span class="MathJax_Preview">C^{-1}=C^{T}</span><script type="math/tex">C^{-1}=C^{T}</script></span>,
+(2) <span class="arithmatex"><span class="MathJax_Preview">C^{-1} \operatorname{diag}\left(d_{1}, d_{2}, \cdots, d_{n}\right) C=\operatorname{diag}\left(d_{i_{1}}, d_{i_{2}}, \cdots, d_{i_{n}}\right)</span><script type="math/tex">C^{-1} \operatorname{diag}\left(d_{1}, d_{2}, \cdots, d_{n}\right) C=\operatorname{diag}\left(d_{i_{1}}, d_{i_{2}}, \cdots, d_{i_{n}}\right)</script></span>.
+证:
+<span class="arithmatex"><span class="MathJax_Preview">\operatorname{diag}\left(d_{1}, d_{2}, \cdots,\left(\begin{array}{c}e_{i_{1}}^{T} \\ e_{i_{2}}^{T} \\ \vdots \\ e_{i_{n}}^{T}\end{array}\right)\left(e_{i_{1}}, e_{i_{2}}, \cdots, e_{i_{n}}\right)=\left(a_{k j}\right)_{n \times n}=\left(e_{i_{k}}^{T} e_{i_{2}}, \cdots, e_{i_{j}}\right)_{n \times n}=E\right.</span><script type="math/tex">\operatorname{diag}\left(d_{1}, d_{2}, \cdots,\left(\begin{array}{c}e_{i_{1}}^{T} \\ e_{i_{2}}^{T} \\ \vdots \\ e_{i_{n}}^{T}\end{array}\right)\left(e_{i_{1}}, e_{i_{2}}, \cdots, e_{i_{n}}\right)=\left(a_{k j}\right)_{n \times n}=\left(e_{i_{k}}^{T} e_{i_{2}}, \cdots, e_{i_{j}}\right)_{n \times n}=E\right.</script></span>, 故 <span class="arithmatex"><span class="MathJax_Preview">C^{-1}=\left(d_{i_{1}} e_{i_{1}}, d_{i_{2}} e_{i_{2}}, \cdots, d_{i_{n}} e_{i_{n}}\right)</span><script type="math/tex">C^{-1}=\left(d_{i_{1}} e_{i_{1}}, d_{i_{2}} e_{i_{2}}, \cdots, d_{i_{n}} e_{i_{n}}\right)</script></span>,
+(2) <span class="arithmatex"><span class="MathJax_Preview">\operatorname{diag}\left(d_{1}, d_{2}, \cdots, d_{n}\right)\left(e_{i_{1}}, e_{i_{2}}, \cdots, e_{i_{n}}\right)=\left(d_{i_{1}} e_{i_{1}}, d_{i_{2}} e_{i_{2}}, \cdots, d_{i_{n}} e_{i_{n}}\right)</span><script type="math/tex">\operatorname{diag}\left(d_{1}, d_{2}, \cdots, d_{n}\right)\left(e_{i_{1}}, e_{i_{2}}, \cdots, e_{i_{n}}\right)=\left(d_{i_{1}} e_{i_{1}}, d_{i_{2}} e_{i_{2}}, \cdots, d_{i_{n}} e_{i_{n}}\right)</script></span>, 故 <span class="arithmatex"><span class="MathJax_Preview">C^{-1} \operatorname{diag}\left(d_{1}, d_{2}, \cdots, d_{n}\right) C=C^{T}\left(d_{i_{1}} e_{i_{1}}, d_{i_{2}} e_{i_{2}}, \cdots, d_{i_{n}} e_{i_{n}}\right)=\operatorname{diag}\left(d_{i_{1}}, d_{i_{2}}, \cdots, d_{i_{n}}\right)</span><script type="math/tex">C^{-1} \operatorname{diag}\left(d_{1}, d_{2}, \cdots, d_{n}\right) C=C^{T}\left(d_{i_{1}} e_{i_{1}}, d_{i_{2}} e_{i_{2}}, \cdots, d_{i_{n}} e_{i_{n}}\right)=\operatorname{diag}\left(d_{i_{1}}, d_{i_{2}}, \cdots, d_{i_{n}}\right)</script></span>.</p>
+<h3 id="2014-2015-2">2014-2015-2<a class="headerlink" href="#2014-2015-2" title="Permanent link">&para;</a></h3>
+<p>六. (15分) 设 <span class="arithmatex"><span class="MathJax_Preview">A=\left(\begin{array}{ccc}1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; 1 \\ 0 &amp; -4 &amp; -2\end{array}\right) \quad, \quad \beta_{1}=\left(\begin{array}{c}-1 \\ 1 \\ -2\end{array}\right)</span><script type="math/tex">A=\left(\begin{array}{ccc}1 & -1 & -1 \\ -1 & 1 & 1 \\ 0 & -4 & -2\end{array}\right) \quad, \quad \beta_{1}=\left(\begin{array}{c}-1 \\ 1 \\ -2\end{array}\right)</script></span>,
+(1) 求满足 <span class="arithmatex"><span class="MathJax_Preview">A \beta_{2}=\beta_{1}, A^{2} \beta_{3}=\beta_{1}</span><script type="math/tex">A \beta_{2}=\beta_{1}, A^{2} \beta_{3}=\beta_{1}</script></span> 的所有向量 <span class="arithmatex"><span class="MathJax_Preview">\beta_{2}, \beta_{3}</span><script type="math/tex">\beta_{2}, \beta_{3}</script></span>;
+(2) 对(1)中任意向量 <span class="arithmatex"><span class="MathJax_Preview">\beta_{1}, \beta_{2}, \beta_{3}</span><script type="math/tex">\beta_{1}, \beta_{2}, \beta_{3}</script></span>, 证明 <span class="arithmatex"><span class="MathJax_Preview">\beta_{1}, \beta_{2}, \beta_{3}</span><script type="math/tex">\beta_{1}, \beta_{2}, \beta_{3}</script></span> 线性无关。
+解: (1) <span class="arithmatex"><span class="MathJax_Preview">\left(A, \beta_{1}\right)=\left(\begin{array}{ccc|c}1 &amp; -1 &amp; -1 &amp; -1 \\ -1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; -4 &amp; -2 &amp; -2\end{array}\right) \rightarrow\left(\begin{array}{ccc|c}1 &amp; 0 &amp; -\frac{1}{2} &amp; -\frac{1}{2} \\ 0 &amp; 1 &amp; \frac{1}{2} &amp; \frac{1}{2} \\ 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right), \therefore \beta_{2}=\left(\begin{array}{c}-\frac{1}{2} \\ \frac{1}{2} \\ 0\end{array}\right)+k_{1}\left(\begin{array}{c}\frac{1}{2} \\ -\frac{1}{2} \\ 1\end{array}\right)</span><script type="math/tex">\left(A, \beta_{1}\right)=\left(\begin{array}{ccc|c}1 & -1 & -1 & -1 \\ -1 & 1 & 1 & 1 \\ 0 & -4 & -2 & -2\end{array}\right) \rightarrow\left(\begin{array}{ccc|c}1 & 0 & -\frac{1}{2} & -\frac{1}{2} \\ 0 & 1 & \frac{1}{2} & \frac{1}{2} \\ 0 & 0 & 0 & 0\end{array}\right), \therefore \beta_{2}=\left(\begin{array}{c}-\frac{1}{2} \\ \frac{1}{2} \\ 0\end{array}\right)+k_{1}\left(\begin{array}{c}\frac{1}{2} \\ -\frac{1}{2} \\ 1\end{array}\right)</script></span>, <span class="arithmatex"><span class="MathJax_Preview">\left(A^{2}, \beta_{1}\right)=\left(\begin{array}{ccc|c}2 &amp; 2 &amp; 0 &amp; -1 \\ -2 &amp; -2 &amp; 0 &amp; 1 \\ 4 &amp; 4 &amp; 0 &amp; -2\end{array}\right) \rightarrow\left(\begin{array}{ccc|c}1 &amp; 1 &amp; 0 &amp; -\frac{1}{2} \\ 0 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right), \therefore \beta_{2}=\left(\begin{array}{c}-\frac{1}{2} \\ 0 \\ 0\end{array}\right)+k_{2}\left(\begin{array}{c}-1 \\ 1 \\ 0\end{array}\right)+k_{3}\left(\begin{array}{l}0 \\ 0 \\ 1\end{array}\right)</span><script type="math/tex">\left(A^{2}, \beta_{1}\right)=\left(\begin{array}{ccc|c}2 & 2 & 0 & -1 \\ -2 & -2 & 0 & 1 \\ 4 & 4 & 0 & -2\end{array}\right) \rightarrow\left(\begin{array}{ccc|c}1 & 1 & 0 & -\frac{1}{2} \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0\end{array}\right), \therefore \beta_{2}=\left(\begin{array}{c}-\frac{1}{2} \\ 0 \\ 0\end{array}\right)+k_{2}\left(\begin{array}{c}-1 \\ 1 \\ 0\end{array}\right)+k_{3}\left(\begin{array}{l}0 \\ 0 \\ 1\end{array}\right)</script></span>.
+(2) 易知 <span class="arithmatex"><span class="MathJax_Preview">A \beta_{1}=\theta</span><script type="math/tex">A \beta_{1}=\theta</script></span>, 设 <span class="arithmatex"><span class="MathJax_Preview">t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}=\theta</span><script type="math/tex">t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}=\theta</script></span>, 则 <span class="arithmatex"><span class="MathJax_Preview">\left\{\begin{array}{l}t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}=\theta, \\ A\left(t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}\right)=\theta, \\ A^{2}\left(t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}\right)=\theta,\end{array}\right.</span><script type="math/tex">\left\{\begin{array}{l}t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}=\theta, \\ A\left(t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}\right)=\theta, \\ A^{2}\left(t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}\right)=\theta,\end{array}\right.</script></span> 由 <span class="arithmatex"><span class="MathJax_Preview">\left\{\begin{array}{l}A \beta_{1}=\theta, \\ A \beta_{2}=\beta_{1}, \\ A^{2} \beta_{3}=\beta_{1},\end{array}\right.</span><script type="math/tex">\left\{\begin{array}{l}A \beta_{1}=\theta, \\ A \beta_{2}=\beta_{1}, \\ A^{2} \beta_{3}=\beta_{1},\end{array}\right.</script></span> 可得 <span class="arithmatex"><span class="MathJax_Preview">\left\{\begin{array}{l}t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}=\theta, \\ t_{2} \beta_{1}+t_{3} A \beta_{3}=\theta, \\ t_{3} \beta_{1}=\theta .\end{array}\right.</span><script type="math/tex">\left\{\begin{array}{l}t_{1} \beta_{1}+t_{2} \beta_{2}+t_{3} \beta_{3}=\theta, \\ t_{2} \beta_{1}+t_{3} A \beta_{3}=\theta, \\ t_{3} \beta_{1}=\theta .\end{array}\right.</script></span> 解得 <span class="arithmatex"><span class="MathJax_Preview">t_{1}=t_{2}=t_{3}=0</span><script type="math/tex">t_{1}=t_{2}=t_{3}=0</script></span>, 故 <span class="arithmatex"><span class="MathJax_Preview">\beta_{1}, \beta_{2}, \beta_{3}</span><script type="math/tex">\beta_{1}, \beta_{2}, \beta_{3}</script></span> 线性无关.</p>
+<blockquote>
+<p>注：第二问的证明方法不一般。要善于利用题目条件。</p>
+</blockquote>
+<p><img alt="image-20220507172119628" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220507172119628.png" /></p>
+<h3 id="2018-2019-1">2018-2019-1<a class="headerlink" href="#2018-2019-1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>设矩阵 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的秩 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{r}(A)=2</span><script type="math/tex">\mathrm{r}(A)=2</script></span>, 求 <span class="arithmatex"><span class="MathJax_Preview">x, y</span><script type="math/tex">x, y</script></span> 的值, 其中 <span class="arithmatex"><span class="MathJax_Preview">A=\left(\begin{array}{ccccc}1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\ 3 &amp; 2 &amp; 1 &amp; -3 &amp; x \\ 0 &amp; 1 &amp; 2 &amp; 6 &amp; 3 \\ 5 &amp; 4 &amp; 3 &amp; -1 &amp; y\end{array}\right)</span><script type="math/tex">A=\left(\begin{array}{ccccc}1 & 1 & 1 & 1 & 1 \\ 3 & 2 & 1 & -3 & x \\ 0 & 1 & 2 & 6 & 3 \\ 5 & 4 & 3 & -1 & y\end{array}\right)</script></span>.
+   解: <span class="arithmatex"><span class="MathJax_Preview">A \rightarrow\left(\begin{array}{ccccc}1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 2 &amp; 6 &amp; 3 \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; x \\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; y-2\end{array}\right)</span><script type="math/tex">A \rightarrow\left(\begin{array}{ccccc}1 & 1 & 1 & 1 & 1 \\ 0 & 1 & 2 & 6 & 3 \\ 0 & 0 & 0 & 0 & x \\ 0 & 0 & 0 & 0 & y-2\end{array}\right)</script></span>, 且 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{r}(A)=2</span><script type="math/tex">\mathrm{r}(A)=2</script></span>, 故有 <span class="arithmatex"><span class="MathJax_Preview">x=0, y=2</span><script type="math/tex">x=0, y=2</script></span>.
+   解法二：显然矩阵 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 中有 2 阶子式不为零, 例如左上角的一个二阶子式: <span class="arithmatex"><span class="MathJax_Preview">D_{2}=\left|\begin{array}{ll}1 &amp; 1 \\ 3 &amp; 2\end{array}\right|=-1 \neq 0</span><script type="math/tex">D_{2}=\left|\begin{array}{ll}1 & 1 \\ 3 & 2\end{array}\right|=-1 \neq 0</script></span>. 为使 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{r}(A)=2</span><script type="math/tex">\mathrm{r}(A)=2</script></span>, 必须使 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的所有三阶子式都等于零, 特别是应使下列含 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 的三阶子式 <span class="arithmatex"><span class="MathJax_Preview">\left|\begin{array}{ccc}1 &amp; 1 &amp; 1 \\ 1 &amp; -3 &amp; x \\ 2 &amp; 6 &amp; 3\end{array}\right|=-4 x=0,\left|\begin{array}{ccc}1 &amp; 1 &amp; 1 \\ 2 &amp; 6 &amp; 3 \\ 3 &amp; -1 &amp; y\end{array}\right|=4 y-8=0</span><script type="math/tex">\left|\begin{array}{ccc}1 & 1 & 1 \\ 1 & -3 & x \\ 2 & 6 & 3\end{array}\right|=-4 x=0,\left|\begin{array}{ccc}1 & 1 & 1 \\ 2 & 6 & 3 \\ 3 & -1 & y\end{array}\right|=4 y-8=0</script></span>, 即 <span class="arithmatex"><span class="MathJax_Preview">x=0, y=2</span><script type="math/tex">x=0, y=2</script></span>.</li>
+</ol>
+<blockquote>
+<p><strong>另解</strong> A的秩为2,说明列向量组中最多只有两个无关向量, 取第1,2列向量,发现无关,说明最后一列的列向量可以由1,2线性表示,解一个二元一次方程组,有唯一解.</p>
+<p><strong>总结</strong> 利用秩条件进行转化的可能方向</p>
+<ol>
+<li>暴力转化, 直接化成行梯形</li>
+<li>矩阵的秩=列秩=行秩,转化为列(行)向量的无关性</li>
+<li>秩的定义: 最大的非零子式(说明:<span class="arithmatex"><span class="MathJax_Preview">a. \exist r(A)阶的非零子式 \quad b. \forall r(A)+1阶子式都为0</span><script type="math/tex">a. \exist r(A)阶的非零子式 \quad b. \forall r(A)+1阶子式都为0</script></span>)</li>
+</ol>
+</blockquote>
+<p>七. (本题12分) 设 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 阶矩阵 <span class="arithmatex"><span class="MathJax_Preview">A=\left(\begin{array}{cccc}a_{1} b_{1} &amp; a_{1} b_{2} &amp; \cdots &amp; a_{1} b_{n} \\ a_{2} b_{1} &amp; a_{2} b_{2} &amp; \cdots &amp; a_{2} b_{n} \\ \vdots &amp; \vdots &amp; &amp; \vdots \\ a_{n} b_{1} &amp; a_{n} b_{2} &amp; \cdots &amp; a_{n} b_{n}\end{array}\right)</span><script type="math/tex">A=\left(\begin{array}{cccc}a_{1} b_{1} & a_{1} b_{2} & \cdots & a_{1} b_{n} \\ a_{2} b_{1} & a_{2} b_{2} & \cdots & a_{2} b_{n} \\ \vdots & \vdots & & \vdots \\ a_{n} b_{1} & a_{n} b_{2} & \cdots & a_{n} b_{n}\end{array}\right)</script></span>, 已知矩阵的迹 <span class="arithmatex"><span class="MathJax_Preview">\operatorname{tr}(A)=a \neq 0</span><script type="math/tex">\operatorname{tr}(A)=a \neq 0</script></span>, 试问: 矩阵 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 是否能相似于对角矩阵?</p>
+<blockquote>
+<p>证：设 <span class="arithmatex"><span class="MathJax_Preview">\alpha=\left(a_{1}, a_{2}, \cdots, a_{n}\right)^{\mathrm{T}}, \beta=\left(b_{1}, b_{2}, \cdots, b_{n}\right)^{\mathrm{T}}</span><script type="math/tex">\alpha=\left(a_{1}, a_{2}, \cdots, a_{n}\right)^{\mathrm{T}}, \beta=\left(b_{1}, b_{2}, \cdots, b_{n}\right)^{\mathrm{T}}</script></span>,
+则 <span class="arithmatex"><span class="MathJax_Preview">A=\alpha \beta^{\mathrm{T}}, A^{2}=\left(\alpha \beta^{\mathrm{T}}\right)\left(\alpha \beta^{\mathrm{T}}\right)=\alpha\left(\beta^{\mathrm{T}} \alpha\right) \beta^{\mathrm{T}}=\left(\sum_{i=1}^{n} a_{i} b_{i}\right) \cdot A=a A</span><script type="math/tex">A=\alpha \beta^{\mathrm{T}}, A^{2}=\left(\alpha \beta^{\mathrm{T}}\right)\left(\alpha \beta^{\mathrm{T}}\right)=\alpha\left(\beta^{\mathrm{T}} \alpha\right) \beta^{\mathrm{T}}=\left(\sum_{i=1}^{n} a_{i} b_{i}\right) \cdot A=a A</script></span>.
+设 <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的特征值, <span class="arithmatex"><span class="MathJax_Preview">\xi</span><script type="math/tex">\xi</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的属于特征值 <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> 的特征向量, 则 <span class="arithmatex"><span class="MathJax_Preview">A \xi=\lambda \xi, A^{2} \xi=a A \xi=a \lambda \xi</span><script type="math/tex">A \xi=\lambda \xi, A^{2} \xi=a A \xi=a \lambda \xi</script></span>,
+又 <span class="arithmatex"><span class="MathJax_Preview">A^{2} \xi=A \cdot A \xi=A \lambda \xi=\lambda A \xi=\lambda^{2} \xi</span><script type="math/tex">A^{2} \xi=A \cdot A \xi=A \lambda \xi=\lambda A \xi=\lambda^{2} \xi</script></span>, 所以, <span class="arithmatex"><span class="MathJax_Preview">a \lambda \xi=\lambda^{2} \xi</span><script type="math/tex">a \lambda \xi=\lambda^{2} \xi</script></span>, 即 <span class="arithmatex"><span class="MathJax_Preview">\left(\lambda^{2}-a \lambda\right) \xi=0</span><script type="math/tex">\left(\lambda^{2}-a \lambda\right) \xi=0</script></span>.
+因为 <span class="arithmatex"><span class="MathJax_Preview">\xi \neq 0</span><script type="math/tex">\xi \neq 0</script></span>, 故 <span class="arithmatex"><span class="MathJax_Preview">\lambda^{2}-a \lambda=0, \lambda=0</span><script type="math/tex">\lambda^{2}-a \lambda=0, \lambda=0</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">\lambda=a</span><script type="math/tex">\lambda=a</script></span>.
+<mark>又 <span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^{n} \lambda_{i}=\operatorname{tr}(A)=a \neq 0</span><script type="math/tex">\sum_{i=1}^{n} \lambda_{i}=\operatorname{tr}(A)=a \neq 0</script></span>, 所以 <span class="arithmatex"><span class="MathJax_Preview">\lambda=a</span><script type="math/tex">\lambda=a</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的单特征值, <span class="arithmatex"><span class="MathJax_Preview">\lambda_{2}=\lambda_{3}=\cdots=\lambda_{n}=0</span><script type="math/tex">\lambda_{2}=\lambda_{3}=\cdots=\lambda_{n}=0</script></span> 是 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 重特征值.</mark>
+对于特征值 <span class="arithmatex"><span class="MathJax_Preview">\lambda_{2}=\lambda_{3}=\cdots=\lambda_{n}=0</span><script type="math/tex">\lambda_{2}=\lambda_{3}=\cdots=\lambda_{n}=0</script></span>, 齐次线性方程组 <span class="arithmatex"><span class="MathJax_Preview">(0 E-A) X=0</span><script type="math/tex">(0 E-A) X=0</script></span> 的系数矩阵的秩为: <mark><span class="arithmatex"><span class="MathJax_Preview">\mathrm{r}(0 E-A)=\mathrm{r}(-A)=\mathrm{r}(A)=\mathrm{r}\left(\alpha \beta^{\mathrm{T}}\right) \leq \min \left\{r(\alpha), r\left(\beta^{\mathrm{T}}\right)\right\}=1 .</span><script type="math/tex">\mathrm{r}(0 E-A)=\mathrm{r}(-A)=\mathrm{r}(A)=\mathrm{r}\left(\alpha \beta^{\mathrm{T}}\right) \leq \min \left\{r(\alpha), r\left(\beta^{\mathrm{T}}\right)\right\}=1 .</script></span></mark>
+又 <span class="arithmatex"><span class="MathJax_Preview">\operatorname{tr}(A)=\sum_{i=1}^{n} a_{i} b_{i}=a \neq 0</span><script type="math/tex">\operatorname{tr}(A)=\sum_{i=1}^{n} a_{i} b_{i}=a \neq 0</script></span>, 故 <span class="arithmatex"><span class="MathJax_Preview">a_{i}, b_{i}(i=1,2, \cdots, n)</span><script type="math/tex">a_{i}, b_{i}(i=1,2, \cdots, n)</script></span> 不全为零,
+<mark>故 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{r}(A) \geq 1</span><script type="math/tex">\mathrm{r}(A) \geq 1</script></span>, 因此 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{r}(0 E-A)=1</span><script type="math/tex">\mathrm{r}(0 E-A)=1</script></span>.</mark>
+因此矩阵 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 的属于 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span> 重特征值 0 的线性无关的特征向量的个数为 <span class="arithmatex"><span class="MathJax_Preview">n-1</span><script type="math/tex">n-1</script></span>, 故 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 有 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个线性无关 的特征向量, 所以 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 相似于对角矩阵.</p>
+<blockquote>
+<p>这题对秩的考察以及对对角化的条件的考察还是很充分的.</p>
+</blockquote>
+</blockquote>
+<h3 id="2021-2022-1">2021-2022-1<a class="headerlink" href="#2021-2022-1" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20220611203927630" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220611203927630.png" /></p>
+<p><img alt="image-20220611204611161" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220611204611161.png" /></p>
+<blockquote>
+<p>非常综合的一道题.</p>
+</blockquote>
+<p><img alt="image-20220611205939858" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220611205939858.png" /></p>
+<blockquote>
+<p>比较难</p>
+<p><strong>另解</strong>
+$$
+利用到\lambda^m|\lambda E_n - AB| = \lambda^n|\lambda E_m - BA|\
+$$
+<img alt="image-20220611210145618" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220611210145618.png" /></p>
+</blockquote>
+<p><img alt="image-20220611213815903" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/05/image-20220611213815903.png" /></p>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 课堂笔记" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              课堂笔记
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-footer__link md-footer__link--next" aria-label="下一页: 力扣刷题笔记" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              力扣刷题笔记
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

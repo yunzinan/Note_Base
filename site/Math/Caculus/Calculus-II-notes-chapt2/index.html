@@ -1,0 +1,1744 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
+    
+    
+      
+        <title>Calculus-II-notes-chapt2 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Calculus-II-notes-chapt2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home Page
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Maths
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Maths" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Maths
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          微积分II
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="微积分II" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          微积分II
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt1/" class="md-nav__link">
+        chap 1
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          chap 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        chap 2
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6 重积分
+  </a>
+  
+    <nav class="md-nav" aria-label="6 重积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    6.1 二重积分的概念和性质
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 二重积分的概念和性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    二重积分的概念与性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二重积分的可积条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    6.2  二重积分的计算
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2  二重积分的计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621" class="md-nav__link">
+    6.2.1 累次积分法
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2.1 累次积分法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dxyvarphi_1xle-yle-varphi_2xale-xle-bdxyvarphi_1xle-yle-varphi_2xale-xle-b" class="md-nav__link">
+    积分区域形如D=\{(x,y)|\varphi_1(x)\le y\le \varphi_2(x),a\le x\le b\}D=\{(x,y)|\varphi_1(x)\le y\le \varphi_2(x),a\le x\le b\}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dleftx-y-mid-psi_1y-leqslant-x-leqslant-psi_2y-c-leqslant-y-leqslant-drightdleftx-y-mid-psi_1y-leqslant-x-leqslant-psi_2y-c-leqslant-y-leqslant-dright" class="md-nav__link">
+    积分区间形如D=\left\{(x, y) \mid \psi_{1}(y) \leqslant x \leqslant \psi_{2}(y), c \leqslant y \leqslant d\right\}D=\left\{(x, y) \mid \psi_{1}(y) \leqslant x \leqslant \psi_{2}(y), c \leqslant y \leqslant d\right\}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622" class="md-nav__link">
+    6.2.2 换元积分法
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2.2 换元积分法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    极坐标变换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    6.3 三重积分
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 三重积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#632" class="md-nav__link">
+    6.3.2 累次积分法
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.2 累次积分法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    先一后二
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    先二后一
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    经验与技巧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633" class="md-nav__link">
+    6.3.3 换元积分法
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.3 换元积分法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    柱坐标变换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    球坐标变换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    广义球坐标变换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    6.4 重积分的应用
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 重积分的应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641" class="md-nav__link">
+    6.4.1  重积分在几何上的应用
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4.1  重积分在几何上的应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    立体的体积
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    广义重积分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt3/" class="md-nav__link">
+        chap 3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt4/" class="md-nav__link">
+        chap 4
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt5/" class="md-nav__link">
+        chap 5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-notes-chapt6/" class="md-nav__link">
+        chap 6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-midterm-review/" class="md-nav__link">
+        midterm review
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calculus-II-final-review/" class="md-nav__link">
+        final review
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          离散数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="离散数学" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          离散数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        代数系统
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        群与环
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        格与布尔代数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        支配与着色
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        欧拉图与哈密顿图
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        树
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        图的基本概念
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        课堂笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        线性代数
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Computer Science
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Computer Science" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Computer Science
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        力扣刷题笔记
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Skill Map
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Skill Map" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Skill Map
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        Jupyter Notebook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        爬虫
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Lecture Note
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Lecture Note" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Lecture Note
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        马原
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        普通物理I
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Informal Essay
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Informal Essay" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Informal Essay
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        可积一定有原函数吗?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../InformalEssay/22SummerReview/" class="md-nav__link">
+        22SummerReview
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    6 重积分
+  </a>
+  
+    <nav class="md-nav" aria-label="6 重积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    6.1 二重积分的概念和性质
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 二重积分的概念和性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    二重积分的概念与性质
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二重积分的可积条件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    性质
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    6.2  二重积分的计算
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2  二重积分的计算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621" class="md-nav__link">
+    6.2.1 累次积分法
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2.1 累次积分法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dxyvarphi_1xle-yle-varphi_2xale-xle-bdxyvarphi_1xle-yle-varphi_2xale-xle-b" class="md-nav__link">
+    积分区域形如D=\{(x,y)|\varphi_1(x)\le y\le \varphi_2(x),a\le x\le b\}D=\{(x,y)|\varphi_1(x)\le y\le \varphi_2(x),a\le x\le b\}
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dleftx-y-mid-psi_1y-leqslant-x-leqslant-psi_2y-c-leqslant-y-leqslant-drightdleftx-y-mid-psi_1y-leqslant-x-leqslant-psi_2y-c-leqslant-y-leqslant-dright" class="md-nav__link">
+    积分区间形如D=\left\{(x, y) \mid \psi_{1}(y) \leqslant x \leqslant \psi_{2}(y), c \leqslant y \leqslant d\right\}D=\left\{(x, y) \mid \psi_{1}(y) \leqslant x \leqslant \psi_{2}(y), c \leqslant y \leqslant d\right\}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622" class="md-nav__link">
+    6.2.2 换元积分法
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2.2 换元积分法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    极坐标变换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    6.3 三重积分
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 三重积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#632" class="md-nav__link">
+    6.3.2 累次积分法
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.2 累次积分法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    先一后二
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    先二后一
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    经验与技巧
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633" class="md-nav__link">
+    6.3.3 换元积分法
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3.3 换元积分法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    柱坐标变换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    球坐标变换
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    广义球坐标变换
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64" class="md-nav__link">
+    6.4 重积分的应用
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 重积分的应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641" class="md-nav__link">
+    6.4.1  重积分在几何上的应用
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4.1  重积分在几何上的应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    立体的体积
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    广义重积分
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+  <h1>chap 2</h1>
+
+<h2 id="6">6 重积分<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1 二重积分的概念和性质<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<h4 id="_1">二重积分的概念与性质<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+divide\ D\ into\ D_i\ deliberately. set \lambda = \max{\{D_i的直径\}} .
+任取D_i内一点(\xi_i, \eta_i)的值代表整个小区域的近似值,\\ 计算黎曼和\ \sum_{i = 1}^{n}f(\xi_i, \eta_i)\Delta\sigma_i.\\
+let\ \lambda \rightarrow 0, V = \lim_{\lambda\rightarrow0}\sum_{i = 1}^{n}f(\xi_i, \eta_i)\Delta\sigma_i\stackrel{\mathrm{def}}{=}\displaystyle \iint_{D} f(x,y)d\sigma
+</div>
+<script type="math/tex; mode=display">
+divide\ D\ into\ D_i\ deliberately. set \lambda = \max{\{D_i的直径\}} .
+任取D_i内一点(\xi_i, \eta_i)的值代表整个小区域的近似值,\\ 计算黎曼和\ \sum_{i = 1}^{n}f(\xi_i, \eta_i)\Delta\sigma_i.\\
+let\ \lambda \rightarrow 0, V = \lim_{\lambda\rightarrow0}\sum_{i = 1}^{n}f(\xi_i, \eta_i)\Delta\sigma_i\stackrel{\mathrm{def}}{=}\displaystyle \iint_{D} f(x,y)d\sigma
+</script>
+</div>
+<h4 id="_2">二重积分的可积条件<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>连续</li>
+<li>上有界 间断点分布在D内有限条光滑曲线上</li>
+</ul>
+<h4 id="_3">性质<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>常数可以提出来</li>
+<li>积分区域的可加性</li>
+<li>保向性</li>
+<li><mark>估值性质</mark></li>
+<li><span class="arithmatex"><span class="MathJax_Preview">m \leq {1\over \sigma(D)}\displaystyle \iint f(x,y)d\sigma \leq M</span><script type="math/tex">m \leq {1\over \sigma(D)}\displaystyle \iint f(x,y)d\sigma \leq M</script></span></li>
+<li>绝对值性质</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">|\displaystyle \iint f(x,y)d\sigma| \le \iint |f(x,y|d\sigma</span><script type="math/tex">|\displaystyle \iint f(x,y)d\sigma| \le \iint |f(x,y|d\sigma</script></span></p>
+</li>
+<li>
+<p>对称性质（利用被积函数奇偶性）</p>
+</li>
+</ul>
+<p>定理  (中值定理 1) 设 <span class="arithmatex"><span class="MathJax_Preview">D \subset \mathbb{R}^{2}</span><script type="math/tex">D \subset \mathbb{R}^{2}</script></span> 为有界闭区域, 函数 <span class="arithmatex"><span class="MathJax_Preview">f(x, y), g(x, y)</span><script type="math/tex">f(x, y), g(x, y)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 上连续, 且对任意的 <span class="arithmatex"><span class="MathJax_Preview">(x, y) \in D, g(x, y) \geqslant 0(</span><script type="math/tex">(x, y) \in D, g(x, y) \geqslant 0(</script></span> 或 <span class="arithmatex"><span class="MathJax_Preview">\leqslant 0)</span><script type="math/tex">\leqslant 0)</script></span>, 则存在 <span class="arithmatex"><span class="MathJax_Preview">(\xi, \eta) \in D</span><script type="math/tex">(\xi, \eta) \in D</script></span>, 使得
+$$
+\iint_{D} f(x, y) g(x, y) \mathrm{d} \sigma=f(\xi, \eta) \iint_{D} g(x, y) \mathrm{d} \sigma
+$$
+特别的, 取 <span class="arithmatex"><span class="MathJax_Preview">g(x, y) \equiv 1</span><script type="math/tex">g(x, y) \equiv 1</script></span>, 有
+定理 (中值定理 2) 设 <span class="arithmatex"><span class="MathJax_Preview">D \subset \mathbb{R}^{2}</span><script type="math/tex">D \subset \mathbb{R}^{2}</script></span> 为有界闭区域, 函数 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 上连续, 则存在 <span class="arithmatex"><span class="MathJax_Preview">(\xi, \eta) \in D</span><script type="math/tex">(\xi, \eta) \in D</script></span>, 使得
+$$
+\iint_{D} f(x, y) \mathrm{d} \sigma=f(\xi, \eta) \cdot \sigma(D)
+$$</p>
+<h3 id="62">6.2  二重积分的计算<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<h4 id="621">6.2.1 累次积分法<a class="headerlink" href="#621" title="Permanent link">&para;</a></h4>
+<p>根据积分区域的形式，选择累次积分的次序，既要关注积分区域的简便划分，又要注意积分过程是否简便。</p>
+<h5 id="dxyvarphi_1xle-yle-varphi_2xale-xle-bdxyvarphi_1xle-yle-varphi_2xale-xle-b">积分区域形如<span class="arithmatex"><span class="MathJax_Preview">D=\{(x,y)|\varphi_1(x)\le y\le \varphi_2(x),a\le x\le b\}</span><script type="math/tex">D=\{(x,y)|\varphi_1(x)\le y\le \varphi_2(x),a\le x\le b\}</script></span><a class="headerlink" href="#dxyvarphi_1xle-yle-varphi_2xale-xle-bdxyvarphi_1xle-yle-varphi_2xale-xle-b" title="Permanent link">&para;</a></h5>
+<ul>
+<li>注：这也就告诉我们：固定一个x,有明确的y的变化的上下限，所以可以先对y积分，然后得到关于x的一重积分</li>
+</ul>
+<p>二重积分的计算公式
+$$
+\iint_{D} f(x, y) \mathrm{d} x \mathrm{~d} y=\int_{a}<sup>{b}\left(\int_{\varphi_{1}(x)}</sup>{\varphi_{2}(x)} f(x, y) \mathrm{d} y\right) \mathrm{d} x=\int_{a}^{b} \mathrm{~d} x \int_{\varphi_{1}(x)}^{\varphi_{2}(x)} f(x, y) \mathrm{d} y .
+$$
+<strong>此公式表明二重积分可化为先对 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, 后对 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的两次定积分.</strong> 上式右端称为先对 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span>, 后对 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> 的累次 积分 (二次积分).</p>
+<h5 id="dleftx-y-mid-psi_1y-leqslant-x-leqslant-psi_2y-c-leqslant-y-leqslant-drightdleftx-y-mid-psi_1y-leqslant-x-leqslant-psi_2y-c-leqslant-y-leqslant-dright">积分区间形如<span class="arithmatex"><span class="MathJax_Preview">D=\left\{(x, y) \mid \psi_{1}(y) \leqslant x \leqslant \psi_{2}(y), c \leqslant y \leqslant d\right\}</span><script type="math/tex">D=\left\{(x, y) \mid \psi_{1}(y) \leqslant x \leqslant \psi_{2}(y), c \leqslant y \leqslant d\right\}</script></span><a class="headerlink" href="#dleftx-y-mid-psi_1y-leqslant-x-leqslant-psi_2y-c-leqslant-y-leqslant-drightdleftx-y-mid-psi_1y-leqslant-x-leqslant-psi_2y-c-leqslant-y-leqslant-dright" title="Permanent link">&para;</a></h5>
+<p>二重积分的另一计算公式
+$$
+\iint_{D} f(x, y) \mathrm{d} x \mathrm{~d} y=\int_{c}<sup>{d}\left(\int_{\psi_{1}(y)}</sup>{\psi_{2}(y)} f(x, y) \mathrm{d} x\right) \mathrm{d} y=\int_{c}^{d} \mathrm{~d} y \int_{\psi_{1}(y)}^{\psi_{2}(y)} f(x, y) \mathrm{d} x .
+$$
+<strong>此公式表明二重积分可化为先对 <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, 后对 <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span> 的累次积分.</strong></p>
+<ul>
+<li>最后指出, 虽然在推导上述两个公式时, 我们假设被积函数 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 非负, 但对于一般的 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span>, 公式 (6.2.1)、(6.2.2) 仍成立. 另外, 对于不满足公式条件的积分区域 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>, 我们可将 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 分割为若干子闭区域, 使得在每个子闭区域上满足公式的条件, 将二重积分化为累次积分, 然后应用二重积分对积分区域的可加性, 把它们相加即可.</li>
+</ul>
+<h4 id="622">6.2.2 换元积分法<a class="headerlink" href="#622" title="Permanent link">&para;</a></h4>
+<ul>
+<li>定理 (二重积分的换元积分公式) 设 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 为平面有界闭区域, 函数 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 上 连续, 函数组 <span class="arithmatex"><span class="MathJax_Preview">x=x(u, v), y=y(u, v)</span><script type="math/tex">x=x(u, v), y=y(u, v)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">u v</span><script type="math/tex">u v</script></span> 平面的有界闭区域 <span class="arithmatex"><span class="MathJax_Preview">D^{\prime}</span><script type="math/tex">D^{\prime}</script></span> 上连续可微, 使得 <span class="arithmatex"><span class="MathJax_Preview">D^{\prime}</span><script type="math/tex">D^{\prime}</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span>的点一一对应, 并且雅可比行列式</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+J(u, v)=\frac{D(x, y)}{D(u, v)} \neq 0, \quad(u, v) \in D^{\prime},
+</div>
+<script type="math/tex; mode=display">
+J(u, v)=\frac{D(x, y)}{D(u, v)} \neq 0, \quad(u, v) \in D^{\prime},
+</script>
+</div>
+<blockquote>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">Pf.M_{1}, M_{2}, M_{3}, M_{4}</span><script type="math/tex">Pf.M_{1}, M_{2}, M_{3}, M_{4}</script></span> 的坐标分别为</p>
+</blockquote>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{aligned}
+&amp;M_{1}\left(x\left(u_{i}, v_{i}\right), y\left(u_{i}, v_{i}\right)\right) \\
+&amp;M_{2}\left(x\left(u_{i}+\Delta u_{i}, v_{i}\right), y\left(u_{i}+\Delta u_{i}, v_{i}\right)\right) \\
+&amp;M_{3}\left(x\left(u_{i}+\Delta u_{i}, v_{i}+\Delta v_{i}\right), y\left(u_{i}+\Delta u_{i}, v_{i}+\Delta v_{i}\right)\right) \\
+&amp;M_{4}\left(x\left(u_{i}, v_{i}+\Delta v_{i}\right), y\left(u_{i}, v_{i}+\Delta v_{i}\right)\right)
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+&M_{1}\left(x\left(u_{i}, v_{i}\right), y\left(u_{i}, v_{i}\right)\right) \\
+&M_{2}\left(x\left(u_{i}+\Delta u_{i}, v_{i}\right), y\left(u_{i}+\Delta u_{i}, v_{i}\right)\right) \\
+&M_{3}\left(x\left(u_{i}+\Delta u_{i}, v_{i}+\Delta v_{i}\right), y\left(u_{i}+\Delta u_{i}, v_{i}+\Delta v_{i}\right)\right) \\
+&M_{4}\left(x\left(u_{i}, v_{i}+\Delta v_{i}\right), y\left(u_{i}, v_{i}+\Delta v_{i}\right)\right)
+\end{aligned}
+</script>
+</div>
+<blockquote>
+<blockquote>
+<p>​   由于 <span class="arithmatex"><span class="MathJax_Preview">x(u, v), y(u, v)</span><script type="math/tex">x(u, v), y(u, v)</script></span> 连续可微, 当 <span class="arithmatex"><span class="MathJax_Preview">\Delta u_{i}, \Delta v_{i}</span><script type="math/tex">\Delta u_{i}, \Delta v_{i}</script></span> 很小时, 若不计高阶无穷小, 则有</p>
+</blockquote>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{aligned}
+\overrightarrow{M_{1} M_{2}} &amp;=\left(x\left(u_{i}+\Delta u_{i}, v_{i}\right)-x\left(u_{i}, v_{i}\right), y\left(u_{i}+\Delta u_{i}, v_{i}\right)-y\left(u_{i}, v_{i}\right)\right) \\
+&amp;=\left(x_{u}^{\prime}\left(u_{i}+\theta_{1} \Delta u_{i}, v_{i}\right), y_{u}^{\prime}\left(u_{i}+\theta_{2} \Delta u_{i}, v_{i}\right)\right) \Delta u_{i} \\
+&amp; \approx\left(x_{u}^{\prime}\left(u_{i}, v_{i}\right), y_{u}^{\prime}\left(u_{i}, v_{i}\right)\right) \Delta u_{i} \quad\left(0&lt;\theta_{1}, \theta_{2}&lt;1\right),
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\overrightarrow{M_{1} M_{2}} &=\left(x\left(u_{i}+\Delta u_{i}, v_{i}\right)-x\left(u_{i}, v_{i}\right), y\left(u_{i}+\Delta u_{i}, v_{i}\right)-y\left(u_{i}, v_{i}\right)\right) \\
+&=\left(x_{u}^{\prime}\left(u_{i}+\theta_{1} \Delta u_{i}, v_{i}\right), y_{u}^{\prime}\left(u_{i}+\theta_{2} \Delta u_{i}, v_{i}\right)\right) \Delta u_{i} \\
+& \approx\left(x_{u}^{\prime}\left(u_{i}, v_{i}\right), y_{u}^{\prime}\left(u_{i}, v_{i}\right)\right) \Delta u_{i} \quad\left(0<\theta_{1}, \theta_{2}<1\right),
+\end{aligned}
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{aligned}
+\overrightarrow{M_{4} M_{3}} &amp;=\left(x\left(u_{i}+\Delta u_{i}, v_{i}+\Delta v_{i}\right)-x\left(u_{i}, v_{i}+\Delta v_{i}\right), y\left(u_{i}+\Delta u_{i}, v_{i}+\Delta v_{i}\right)-y\left(u_{i}, v_{i}+\Delta v_{i}\right)\right) \\
+&amp;=\left(x_{u}^{\prime}\left(u_{i}+\theta_{3} \Delta u_{i}, v_{i}+\Delta v_{i}\right), y_{u}^{\prime}\left(u_{i}+\theta_{4} \Delta u_{i}, v_{i}+\Delta v_{i}\right)\right) \Delta u_{i} \\
+&amp; \approx\left(x_{u}^{\prime}\left(u_{i}, v_{i}\right), y_{u}^{\prime}\left(u_{i}, v_{i}\right)\right) \Delta u_{i} \quad\left(0&lt;\theta_{3}, \theta_{4}&lt;1\right)
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\overrightarrow{M_{4} M_{3}} &=\left(x\left(u_{i}+\Delta u_{i}, v_{i}+\Delta v_{i}\right)-x\left(u_{i}, v_{i}+\Delta v_{i}\right), y\left(u_{i}+\Delta u_{i}, v_{i}+\Delta v_{i}\right)-y\left(u_{i}, v_{i}+\Delta v_{i}\right)\right) \\
+&=\left(x_{u}^{\prime}\left(u_{i}+\theta_{3} \Delta u_{i}, v_{i}+\Delta v_{i}\right), y_{u}^{\prime}\left(u_{i}+\theta_{4} \Delta u_{i}, v_{i}+\Delta v_{i}\right)\right) \Delta u_{i} \\
+& \approx\left(x_{u}^{\prime}\left(u_{i}, v_{i}\right), y_{u}^{\prime}\left(u_{i}, v_{i}\right)\right) \Delta u_{i} \quad\left(0<\theta_{3}, \theta_{4}<1\right)
+\end{aligned}
+</script>
+</div>
+<blockquote>
+<blockquote>
+<p>所以 (为了方便利用向量的运算, 我们把 2 维坐标 <span class="arithmatex"><span class="MathJax_Preview">(x, y)</span><script type="math/tex">(x, y)</script></span> 写成 3 维坐标 <span class="arithmatex"><span class="MathJax_Preview">(x, y, 0)</span><script type="math/tex">(x, y, 0)</script></span> )</p>
+</blockquote>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\overrightarrow{M_{1} M_{2}} \approx \overrightarrow{M_{4} M_{3}} \approx\left(x_{u}^{\prime}\left(u_{i}, v_{i}\right), y_{u}^{\prime}\left(u_{i}, v_{i}\right), 0\right) \Delta u_{i}
+</div>
+<script type="math/tex; mode=display">
+\overrightarrow{M_{1} M_{2}} \approx \overrightarrow{M_{4} M_{3}} \approx\left(x_{u}^{\prime}\left(u_{i}, v_{i}\right), y_{u}^{\prime}\left(u_{i}, v_{i}\right), 0\right) \Delta u_{i}
+</script>
+</div>
+<blockquote>
+<blockquote>
+<p>同理可得</p>
+</blockquote>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\overrightarrow{M_{1} M_{4}} \approx \overrightarrow{M_{2} M_{3}} \approx\left(x_{v}^{\prime}\left(u_{i}, v_{i}\right), y_{v}^{\prime}\left(u_{i}, v_{i}\right), 0\right) \Delta v_{i},
+</div>
+<script type="math/tex; mode=display">
+\overrightarrow{M_{1} M_{4}} \approx \overrightarrow{M_{2} M_{3}} \approx\left(x_{v}^{\prime}\left(u_{i}, v_{i}\right), y_{v}^{\prime}\left(u_{i}, v_{i}\right), 0\right) \Delta v_{i},
+</script>
+</div>
+<blockquote>
+<blockquote>
+<p>因而曲边四边形 <span class="arithmatex"><span class="MathJax_Preview">M_{1} M_{2} M_{3} M_{4}</span><script type="math/tex">M_{1} M_{2} M_{3} M_{4}</script></span> 可近似地看作平行四边形, 它的面积为</p>
+</blockquote>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\Delta \sigma \approx\left|\overrightarrow{M_{1} M_{2}} \times \overrightarrow{M_{1} M_{4}}\right|=\left|\frac{D(x, y)}{D(u, v)}\right|_{\left(u_{i}, v_{i}\right)} \Delta u_{i} \Delta v_{i}=\left|J\left(u_{i}, v_{i}\right)\right| \Delta u_{i} \Delta v_{i},
+</div>
+<script type="math/tex; mode=display">
+\Delta \sigma \approx\left|\overrightarrow{M_{1} M_{2}} \times \overrightarrow{M_{1} M_{4}}\right|=\left|\frac{D(x, y)}{D(u, v)}\right|_{\left(u_{i}, v_{i}\right)} \Delta u_{i} \Delta v_{i}=\left|J\left(u_{i}, v_{i}\right)\right| \Delta u_{i} \Delta v_{i},
+</script>
+</div>
+<blockquote>
+<blockquote>
+<p>所以 <span class="arithmatex"><span class="MathJax_Preview">\Delta \sigma</span><script type="math/tex">\Delta \sigma</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">\Delta \sigma^{\prime}</span><script type="math/tex">\Delta \sigma^{\prime}</script></span> 之比为 <span class="arithmatex"><span class="MathJax_Preview">\left|J\left(u_{i}, v_{i}\right)\right|</span><script type="math/tex">\left|J\left(u_{i}, v_{i}\right)\right|</script></span>. 由于 <span class="arithmatex"><span class="MathJax_Preview">J(u, v)</span><script type="math/tex">J(u, v)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">D^{\prime}</span><script type="math/tex">D^{\prime}</script></span> 上连续且不等于 0 , 所以 <span class="arithmatex"><span class="MathJax_Preview">\lambda \rightarrow 0 \Longleftrightarrow</span><script type="math/tex">\lambda \rightarrow 0 \Longleftrightarrow</script></span> <span class="arithmatex"><span class="MathJax_Preview">\lambda^{\prime} \rightarrow 0</span><script type="math/tex">\lambda^{\prime} \rightarrow 0</script></span>. 由二重积分的定义得</p>
+</blockquote>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\begin{aligned}
+\iint_{D} f(x, y) \mathrm{d} \sigma &amp;=\lim _{\lambda \rightarrow 0} \sum_{i=1}^{n} f\left(x_{i}, y_{i}\right) \Delta \sigma_{i} \\
+&amp;=\lim _{\lambda^{\prime} \rightarrow 0} \sum_{i=1}^{n} f\left(x\left(u_{i}, v_{i}\right), y\left(u_{i}, v_{i}\right)\right)\left|J\left(u_{i}, v_{i}\right)\right| \Delta u_{i} \Delta v_{i} \\
+&amp;=\iint_{D^{\prime}} f(x(u, v), y(u, v))|J(u, v)| \mathrm{d} u \mathrm{~d} v
+\end{aligned}
+</div>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\iint_{D} f(x, y) \mathrm{d} \sigma &=\lim _{\lambda \rightarrow 0} \sum_{i=1}^{n} f\left(x_{i}, y_{i}\right) \Delta \sigma_{i} \\
+&=\lim _{\lambda^{\prime} \rightarrow 0} \sum_{i=1}^{n} f\left(x\left(u_{i}, v_{i}\right), y\left(u_{i}, v_{i}\right)\right)\left|J\left(u_{i}, v_{i}\right)\right| \Delta u_{i} \Delta v_{i} \\
+&=\iint_{D^{\prime}} f(x(u, v), y(u, v))|J(u, v)| \mathrm{d} u \mathrm{~d} v
+\end{aligned}
+</script>
+</div>
+<p>​   则有换元积分公式:
+$$
+\iint_{D} f(x, y) \mathrm{d} \sigma=\iint_{D^{\prime}} f(x(u, v), y(u, v))|J(u, v)| \mathrm{d} u \mathrm{~d} v
+$$</p>
+<ul>
+<li>其中 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} \sigma=|J(u, v)| \mathrm{d} u \mathrm{~d} v</span><script type="math/tex">\mathrm{d} \sigma=|J(u, v)| \mathrm{d} u \mathrm{~d} v</script></span> 是曲线坐标下的面积微元.</li>
+</ul>
+<h5 id="_4">极坐标变换<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<blockquote>
+<blockquote>
+<p>在二重积分中, 极坐标换元是最常用的换元变换. 我们知道, 直角坐标与极坐标的换元 变换有公式</p>
+</blockquote>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+x=\rho \cos \theta, \quad y=\rho \sin \theta
+</div>
+<script type="math/tex; mode=display">
+x=\rho \cos \theta, \quad y=\rho \sin \theta
+</script>
+</div>
+<blockquote>
+<blockquote>
+<p>此时</p>
+</blockquote>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+J(\rho, \theta)=\frac{D(x, y)}{D(\rho, \theta)}=\left|\begin{array}{cc}
+  \cos \theta &amp; -\rho \sin \theta \\
+  \sin \theta &amp; \rho \cos \theta
+  \end{array}\right|=\rho
+</div>
+<script type="math/tex; mode=display">
+J(\rho, \theta)=\frac{D(x, y)}{D(\rho, \theta)}=\left|\begin{array}{cc}
+  \cos \theta & -\rho \sin \theta \\
+  \sin \theta & \rho \cos \theta
+  \end{array}\right|=\rho
+</script>
+</div>
+<blockquote>
+<blockquote>
+<p>据定理 6.2.3 可得:</p>
+</blockquote>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+  \iint_{D} f(x, y) \mathrm{d} \sigma=\iint_{D^{\prime}} f(\rho \cos \theta, \rho \sin \theta) \rho \mathrm{d} \rho \mathrm{d} \theta
+</div>
+<script type="math/tex; mode=display">
+  \iint_{D} f(x, y) \mathrm{d} \sigma=\iint_{D^{\prime}} f(\rho \cos \theta, \rho \sin \theta) \rho \mathrm{d} \rho \mathrm{d} \theta
+</script>
+</div>
+<blockquote>
+<blockquote>
+<p>其中 <span class="arithmatex"><span class="MathJax_Preview">D^{\prime}</span><script type="math/tex">D^{\prime}</script></span> 是在极坐标变换下原积分区域 <span class="arithmatex"><span class="MathJax_Preview">D</span><script type="math/tex">D</script></span> 所对应的区域, <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} \sigma=\rho \mathrm{d} \rho \mathrm{d} \theta</span><script type="math/tex">\mathrm{d} \sigma=\rho \mathrm{d} \rho \mathrm{d} \theta</script></span> 是极坐标下的面积 微元.</p>
+</blockquote>
+</blockquote>
+<h3 id="63">6.3 三重积分<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<h4 id="632">6.3.2 累次积分法<a class="headerlink" href="#632" title="Permanent link">&para;</a></h4>
+<h5 id="_5">先一后二<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h5>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+对于积分区域为\Omega = \{(x,y,z)|z_1(x,y)\leq z(x,y) \leq z_2(x,y), (x,y)\in D\}\\
+\iiint f(x,y,z)dxdydz = \iint d\sigma \int_{z_1(x,y)}^{z_2(x,y)} f(x,y,z)dz\\
+进一步，对于二重积分，可以运用之前的知识，根据情况改写为\\
+= \int_a^b dx\int _{y_1(x)}^{y_2{(x)}}dy \int_{z_1(x,y)}^{z_2(x,y)} f(x,y,z)dz\\
+</div>
+<script type="math/tex; mode=display">
+对于积分区域为\Omega = \{(x,y,z)|z_1(x,y)\leq z(x,y) \leq z_2(x,y), (x,y)\in D\}\\
+\iiint f(x,y,z)dxdydz = \iint d\sigma \int_{z_1(x,y)}^{z_2(x,y)} f(x,y,z)dz\\
+进一步，对于二重积分，可以运用之前的知识，根据情况改写为\\
+= \int_a^b dx\int _{y_1(x)}^{y_2{(x)}}dy \int_{z_1(x,y)}^{z_2(x,y)} f(x,y,z)dz\\
+</script>
+</div>
+<h5 id="_6">先二后一<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h5>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+我们可以用一个垂直于z轴的平面截积分区域，得到足够多的“薄片”\\
+每一层可以二重积分，积分区域为D(z)\\
+\iiint f(x,y,z)dxdydz = \int_a^b dz \iint f(x,y,z)d\sigma\\
+</div>
+<script type="math/tex; mode=display">
+我们可以用一个垂直于z轴的平面截积分区域，得到足够多的“薄片”\\
+每一层可以二重积分，积分区域为D(z)\\
+\iiint f(x,y,z)dxdydz = \int_a^b dz \iint f(x,y,z)d\sigma\\
+</script>
+</div>
+<h5 id="_7">经验与技巧<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<ul>
+<li>同一道题，不同的积分顺序对计算过程的影响很大。优先对无关的变量进行积分</li>
+<li>还原积分要画图确定积分区域</li>
+<li>还原积分的目的：</li>
+<li>简化被积函数</li>
+<li>简化积分区域</li>
+<li>更多时候，是一种二者的权衡（Trade off）</li>
+</ul>
+<h4 id="633">6.3.3 换元积分法<a class="headerlink" href="#633" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex"><span class="MathJax_Preview">Thm.</span><script type="math/tex">Thm.</script></span> (三重积分的换元积分公式) 设 <span class="arithmatex"><span class="MathJax_Preview">\Omega \subset \mathbb{R}^{3}</span><script type="math/tex">\Omega \subset \mathbb{R}^{3}</script></span> 为有界闭区域, 函数 <span class="arithmatex"><span class="MathJax_Preview">f(x, y, z)</span><script type="math/tex">f(x, y, z)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span> 上连续, 函数组 <span class="arithmatex"><span class="MathJax_Preview">x=x(u, v, w), y=y(u, v, w), z=z(u, v, w)</span><script type="math/tex">x=x(u, v, w), y=y(u, v, w), z=z(u, v, w)</script></span> 在有界闭区域 <span class="arithmatex"><span class="MathJax_Preview">\Omega^{\prime}</span><script type="math/tex">\Omega^{\prime}</script></span> 上连续可微, 使得 <span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span> 与 <span class="arithmatex"><span class="MathJax_Preview">\Omega^{\prime}</span><script type="math/tex">\Omega^{\prime}</script></span> 的点一一对应, 并且雅可比行列式
+$$
+J(u, v, w)=\frac{D(x, y, z)}{D(u, v, w)}=\left|\begin{array}{lll}
+\frac{\partial x}{\partial u} &amp; \frac{\partial x}{\partial v} &amp; \frac{\partial x}{\partial w} \
+\frac{\partial y}{\partial u} &amp; \frac{\partial y}{\partial v} &amp; \frac{\partial y}{\partial w} \
+\frac{\partial z}{\partial u} &amp; \frac{\partial z}{\partial v} &amp; \frac{\partial z}{\partial w}
+\end{array}\right| \neq 0, \quad(u, v, w) \in \Omega^{\prime}
+$$
+则有三重积分换元积分公式:
+$$
+\iint_{\Omega} \int_{\Omega} f(x, y, z) \mathrm{d} V=\iint_{\Omega^{\prime}} \int_{J} f(x(u, v, w), y(u, v, w), z(u, v, w))|J(u, v, w)| \mathrm{d} u \mathrm{~d} v \mathrm{~d} w .
+$$
+其中 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} V=|J(u, v, w)| \mathrm{d} u \mathrm{~d} v \mathrm{~d} w</span><script type="math/tex">\mathrm{d} V=|J(u, v, w)| \mathrm{d} u \mathrm{~d} v \mathrm{~d} w</script></span> 是曲线坐标下的体积微元.</p>
+<h5 id="_8">柱坐标变换<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<p>采用柱坐标计算三重积分时, 雅可比行列式
+$$
+J(\rho, \theta, z)=\frac{D(x, y, z)}{D(\rho, \theta, z)}=\left|\begin{array}{ccc}
+\cos \theta &amp; -\rho \sin \theta &amp; 0 \
+\sin \theta &amp; \rho \cos \theta &amp; 0 \
+0 &amp; 0 &amp; 1
+\end{array}\right|=\rho,
+$$
+据定理 6.3.1 可得
+$$
+\iiint_{\Omega} f(x, y, z) \mathrm{d} x \mathrm{~d} y \mathrm{~d} z=\iiint_{\Omega^{\prime}} f(\rho \cos \theta, \rho \sin \theta, z) \rho \mathrm{d} \rho \mathrm{d} \theta \mathrm{d} z,
+$$
+其中 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} V=\rho \mathrm{d} \rho \mathrm{d} \theta \mathrm{d} z</span><script type="math/tex">\mathrm{d} V=\rho \mathrm{d} \rho \mathrm{d} \theta \mathrm{d} z</script></span> 是柱坐标下的体积微元.</p>
+<h5 id="_9">球坐标变换<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<p>点 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 的直角坐标 <span class="arithmatex"><span class="MathJax_Preview">(x, y, z)</span><script type="math/tex">(x, y, z)</script></span> 与其球坐标 <span class="arithmatex"><span class="MathJax_Preview">(r, \varphi, \theta)</span><script type="math/tex">(r, \varphi, \theta)</script></span> 之间有关系式
+$$
+x=r \sin \varphi \cos \theta, \quad y=r \sin \varphi \sin \theta, \quad z=r \cos \varphi,
+$$
+此式称为球坐标变换.</p>
+<p>-采用球坐标计算三重积分时, 雅可比行列式
+$$
+J(r, \varphi, \theta)=\frac{D(x, y, z)}{D(r, \varphi, \theta)}=\left|\begin{array}{ccc}
+\sin \varphi \cos \theta &amp; r \cos \varphi \cos \theta &amp; -r \sin \varphi \sin \theta \
+\sin \varphi \sin \theta &amp; r \cos \varphi \sin \theta &amp; r \sin \varphi \cos \theta \
+\cos \varphi &amp; -r \sin \varphi &amp; 0
+\end{array}\right|=r^{2} \sin \varphi,
+$$
+据定理 6.3.1 可得
+$$
+\iiint_{\Omega} f(x, y, z) \mathrm{d} x \mathrm{~d} y \mathrm{~d} z=\iint_{\Omega^{\prime}} f(r \sin \varphi \cos \theta, r \sin \varphi \sin \theta, r \cos \varphi) r^{2} \sin \varphi \mathrm{d} r \mathrm{~d} \varphi \mathrm{d} \theta,
+$$
+其中 <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} V=r^{2} \sin \varphi \mathrm{d} r \mathrm{~d} \varphi \mathrm{d} \theta</span><script type="math/tex">\mathrm{d} V=r^{2} \sin \varphi \mathrm{d} r \mathrm{~d} \varphi \mathrm{d} \theta</script></span> 是球坐标下的体积微元.
+一般情况下, 如果积分区域中含有球面、雉面或过 <span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span> 轴的半平面, 采用球坐标会比较简 单. 将三重积分化为球坐标下的三重积分后, 还要将它化为球坐标下的累次积分, 这时, 一般 情况下最先对 <span class="arithmatex"><span class="MathJax_Preview">r</span><script type="math/tex">r</script></span> 积分, 然后对 <span class="arithmatex"><span class="MathJax_Preview">\varphi</span><script type="math/tex">\varphi</script></span> 积分, 最后对 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> 积分. </p>
+<h5 id="_10">广义球坐标变换<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h5>
+<p>例 6.3.9 计算三重积分 <span class="arithmatex"><span class="MathJax_Preview">\iiint_{\Omega} x^{2} \mathrm{~d} x \mathrm{~d} y \mathrm{~d} z</span><script type="math/tex">\iiint_{\Omega} x^{2} \mathrm{~d} x \mathrm{~d} y \mathrm{~d} z</script></span>, 其中 <span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span> 是椭球体 <span class="arithmatex"><span class="MathJax_Preview">\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}} \leqslant 1</span><script type="math/tex">\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}} \leqslant 1</script></span>. 解 采用广义球坐标变换, 令
+$$
+x=a r \sin \varphi \cos \theta, \quad y=b r \sin \varphi \sin \theta, \quad z=c r \cos \varphi,
+$$
+雅可比行列式
+$$
+J(r, \varphi, \theta)=\left|\begin{array}{ccc}
+a \sin \varphi \cos \theta &amp; a r \cos \varphi \cos \theta &amp; -a r \sin \varphi \sin \theta \
+b \sin \varphi \sin \theta &amp; b r \cos \varphi \sin \theta &amp; b r \sin \varphi \cos \theta \
+c \cos \varphi &amp; -c r \sin \varphi &amp; 0
+\end{array}\right|=a b c r^{2} \sin \varphi
+$$
+在球坐标下将 <span class="arithmatex"><span class="MathJax_Preview">\Omega</span><script type="math/tex">\Omega</script></span> 变为 <span class="arithmatex"><span class="MathJax_Preview">\Omega^{\prime}</span><script type="math/tex">\Omega^{\prime}</script></span>, 其中
+$$
+\Omega^{\prime}: \quad 0 \leqslant r \leqslant 1, \quad 0 \leqslant \varphi \leqslant \pi, \quad 0 \leqslant \theta \leqslant 2 \pi,
+$$</p>
+<h3 id="64">6.4 重积分的应用<a class="headerlink" href="#64" title="Permanent link">&para;</a></h3>
+<h4 id="641">6.4.1  重积分在几何上的应用<a class="headerlink" href="#641" title="Permanent link">&para;</a></h4>
+<h5 id="_11">立体的体积<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h5>
+<h3 id="_12">广义重积分<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../Calculus-II-notes-chapt1/" class="md-footer__link md-footer__link--prev" aria-label="上一页: chap 1" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              chap 1
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Calculus-II-notes-chapt3/" class="md-footer__link md-footer__link--next" aria-label="下一页: chap 3" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              chap 3
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
