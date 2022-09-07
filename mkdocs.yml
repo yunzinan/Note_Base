@@ -75,12 +75,19 @@ nav: # 导航
       - 线性代数: Math/LinearAlgebra/Linear-algebra-notes.md
 - 计算机科学:
       - 力扣刷题笔记: ComputerScience/力扣刷题笔记.md
+      - 高级程序设计: ComputerScience/高级程序设计读书笔记.md
+- 化学: 
+  - 大学化学: Chemistry/大学化学笔记.md
+  - 有机化学: Chemistry/有机化学笔记.md
+  - 仪器分析: Chemistry/仪器分析笔记.md
 - 技能树:
       - Jupyter Notebook: SkillMap/Jupyter-notebook快速入门.md
       - 爬虫: SkillMap/WebCrawlingNotes.md
 - 课堂笔记: 
     - 马原: LectureNotes/马原复习提纲.md
     - 普通物理I: LectureNotes/普通物理I复习笔记.md
+    - 中国近代史纲要: LectureNotes/中国近代史纲要笔记.md
 - 随笔:
       - 可积一定有原函数吗?: InformalEssay/一个小问题-可积一定有原函数吗.md
       - 22SummerReview: InformalEssay/22SummerReview.md
+      - 对个人笔记系统的思考: InformalEssay/对个人笔记系统的思考.md
