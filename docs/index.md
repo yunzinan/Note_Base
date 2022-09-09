@@ -6,18 +6,18 @@ top: 1
 comments: true
 ---
 
-# Welcome to my new knowledge base!
+# 欢迎来到Yunzinan的知识库!
 
-### Currently posting 
+## What's this?
 
-- notes
-  - maths
-  - algorithm
-- ideas & thoughts
-- fun-sharing
-  - anything fun !
+- the Database of my personal notes & essays, shared freely on https://note.yunzinan.top
+
+- a [project](https://github.com/yunzinan/Note_Base) based on `mkdocs`, deployed on github pages.
+
+## Other Links & Contact
+
+- [Blog](https://blog.yunzinan.top)
+
+- [Email](211850009@smail.nju.edu.cn)
 
 
-### Contact
-
-​		E-mail: shen_ouyang@smail.nju.edu.cn

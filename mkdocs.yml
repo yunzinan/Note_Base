@@ -2,6 +2,10 @@ site_name: Yunzinan的知识库
 site_description: 存放和分享笔者的一些笔记和随笔
 site_author: Yunzinan
 
+repo_name: 'Note_Base'
+repo_url: 'https://github.com/yunzinan/Note_Base'
+
+
 theme:
   name: material
   language: 'zh'
@@ -16,32 +20,33 @@ theme:
     text: 'Jetbrains Mono'
     code: 'Jetbrains Mono'
   language: 'zh'
+  highlightjs: true
 
 markdown_extensions:
-  - admonition
-  - codehilite:
+  - admonition  # 提示块
+  - footnotes  # 脚注
+  - meta  # 定义元数据，通过文章上下文控制，如disqus
+  - pymdownx.caret  # 下划线上标
+  - pymdownx.tilde  # 删除线下标
+  - pymdownx.critic  # 增加删除修改高亮注释，可修饰行内或段落
+  - pymdownx.details  # 提示块可折叠
+  - pymdownx.inlinehilite  # 行内代码高亮
+  - pymdownx.mark  # 文本高亮
+  - pymdownx.smartsymbols  # 符号转换
+  - pymdownx.superfences  # 代码嵌套在列表里
+  - codehilite:    # 代码高亮，显示行号
       guess_lang: false
-      linenums: false
-  - toc:
+      linenums: true
+  - toc:  # 锚点
       permalink: true
-  - footnotes
-  - meta
-  - def_list
-  - pymdownx.arithmatex
-  - pymdownx.betterem:
+  - pymdownx.arithmatex  # 数学公式
+  - pymdownx.betterem:  # 对加粗和斜体更好的检测
       smart_enable: all
-  - pymdownx.caret
-  - pymdownx.critic
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_png
-  - pymdownx.inlinehilite
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tasklist
-  - pymdownx.tilde
+  - pymdownx.emoji:  # 表情
+     emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.magiclink  # 自动识别超链接
+  - pymdownx.tasklist:  # 复选框checklist
+      custom_checkbox: true
 
 extra:
   search:
@@ -76,18 +81,28 @@ nav: # 导航
 - 计算机科学:
       - 力扣刷题笔记: ComputerScience/力扣刷题笔记.md
       - 高级程序设计: ComputerScience/高级程序设计读书笔记.md
+      - 数据结构: ComputerScience/数据结构.md
+      - 数字逻辑与计算机组成: ComputerScience/数电计组.md
 - 化学: 
   - 大学化学: Chemistry/大学化学笔记.md
   - 有机化学: Chemistry/有机化学笔记.md
   - 仪器分析: Chemistry/仪器分析笔记.md
+  - 仪器分析作业: Chemistry/仪器分析作业.md
 - 技能树:
       - Jupyter Notebook: SkillMap/Jupyter-notebook快速入门.md
-      - 爬虫: SkillMap/WebCrawlingNotes.md
+      - 爬虫入门: SkillMap/WebCrawlingNotes.md
 - 课堂笔记: 
     - 马原: LectureNotes/马原复习提纲.md
     - 普通物理I: LectureNotes/普通物理I复习笔记.md
     - 中国近代史纲要: LectureNotes/中国近代史纲要笔记.md
+    - 高级程序设计: LectureNotes/高级程序设计.md
 - 随笔:
       - 可积一定有原函数吗?: InformalEssay/一个小问题-可积一定有原函数吗.md
       - 22SummerReview: InformalEssay/22SummerReview.md
       - 对个人笔记系统的思考: InformalEssay/对个人笔记系统的思考.md
+      - 都是语法惹的祸[待完成]: InformalEssay/一些LaTeX语法的问题.md
+- OJ:
+  - 警钟长鸣: CheatSheet/OJ/警钟长鸣-题单.md
+  - 每日一题题单: CheatSheet/OJ/everydayAC.md
+- CheatSheet:
+  - mkdocs扩展语法: CheatSheet/mkdocs扩展语法.md

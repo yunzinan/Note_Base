@@ -140,7 +140,7 @@ $$
 ### 7.3.2 平面上第二类曲线积分与路径无关的条件
 
 $$
-{\part Q\over \part x} - {\part P \over \part y }  = 0 \iff \exist u(x,y), du = Pdx + Qdy 
+{\partial Q\over \partial x} - {\partial P \over \partial y }  = 0 \iff \exist u(x,y), du = Pdx + Qdy 
 $$
 
 
@@ -221,7 +221,7 @@ $$
 
 $$
 则有 \\
-\iint _S Pdydz + Qdzdx + Rdxdy = \iiint_V ({\part P\over \part x} + {\part Q \over \part y } + {\part R\over  \part z})dxdydz
+\iint _S Pdydz + Qdzdx + Rdxdy = \iiint_V ({\partial P\over \partial x} + {\partial Q \over \partial y } + {\partial R\over  \partial z})dxdydz
 $$
 
 建立了第二类曲面积分与三重积分的联系
@@ -338,7 +338,7 @@ $$
 
 格林公式
 $$
-\int_c Pdx + Qdy =\iint ({\part Q\over \part x} - {\part P\over \part y})dxdy
+\int_c Pdx + Qdy =\iint ({\partial Q\over \partial x} - {\partial P\over \partial y})dxdy
 $$
 
 > 第二类曲线积分$\iff$二重积分
@@ -350,7 +350,7 @@ $$
 
 高斯公式
 $$
-\iint _S Pdydz + Qdzdx + Rdxdy = \iiint_V ({\part P\over \part x} + {\part Q \over \part y } + {\part R\over  \part z})dxdydz
+\iint _S Pdydz + Qdzdx + Rdxdy = \iiint_V ({\partial P\over \partial x} + {\partial Q \over \partial y } + {\partial R\over  \partial z})dxdydz
 $$
 
 > gauss公式是将green公式的思想推广到三维.

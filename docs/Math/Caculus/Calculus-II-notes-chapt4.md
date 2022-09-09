@@ -363,10 +363,12 @@ $$
 #### 收敛半径
 
 $$
+\begin{aligned}
 \lim_{n\to \infin} |{a_{n+1}x^{n+1}\over a_nx^n}| = \lim |{a_{n+1}\over a_n}||x|,由比值判别法,\\
 \begin{align}&(1)\lim|{a_{n+1}\over a_n}||x| < 1 \iff |x| < \lim |{a_n\over a_{n+1}}| = R \Rightarrow 收敛\\&(2) \lim|{a_{n+1}\over a_n}||x| > 1 \iff |x| > \lim |{a_n\over a_{n+1}}| = R \Rightarrow 发散\\ \end{align}\\
 因此我们很自然的定义\lim|{a_{n+1}\over a_{n}}| = l.\\
 R = \begin{cases}{1\over l}, & 0< l < +\infin,\\+\infin, & l = 0,\\ 0, &l = +\infin. \end{cases}
+\end{aligned}
 $$
 
 $$

@@ -56,7 +56,7 @@ abbrlink: '0'
 
 > 反对称阵：$A^T = -A$
 
-矩阵不满足消去律！即使$AB = AC \and A \ne O$！，除非A可逆！
+矩阵不满足消去律！即使$AB = AC \wedge A \neq O$！，除非A可逆！
 
 - 对于含参较为复杂的矩阵方程，化为行梯形后，不方便再化为行简化，那么就可以直接退化为方程组，解方程组。
 
@@ -143,19 +143,23 @@ abbrlink: '0'
 #### 秩的不等式
 
 $$
+\begin{aligned}
 1)\quad &r(A+B) \le r(A) + r(B)\\ 
  2)\quad &r(AB) \le \min\{r(A),r(B)\} \\
  3)\quad &对于方阵A,B,r(AB) \ge r(A) + r(B) - n;\\
  4)\quad &若A，B分别是m\times n, n\times s矩阵,且AB=O,则r(B) \le n - r(A)\\
  5)\quad &若A为m\times n矩阵，则r(A^TA) = r(A) = r(A^T)
+\end{aligned}
 $$
 
 - 证明：
 
 $$
+\begin{aligned}
 4)& B的每一个列向量都是Ax = 0的一个解，而Ax= 0的基础解系构成的向量组r = n - r(A)\\
  &所以r(B) \le n - r(A).\\
 5)& Hint. 证明Ax= 0 与A^TAx = 0是同解方程组，具有相同的基础解系，故秩相等.
+\end{aligned}
 $$
 
 - 若两个方程组为**同解方程组**，那么它们的系数矩阵的秩相同。
@@ -412,18 +416,22 @@ $V是一个非空集合,K是一个数域,定义加法和数乘运算，满足以
 
 2. 加法满足以下性质：
    $$
+   \begin{aligned}
    (1)& v_1 + v_2 = v_2 + v_1\\
    (2)& v_1 + (v_2 + v_3) = (v_1 + v_2 ) + v_3\\
-   (3)& \exist \bold{0}, \bold{0} + v = v\\
-   (4)& \forall v_1 \in V, \exist v_2 \in V, v_1 + v_2 = \bold{0}\\
+   (3)& \exists \bold{0}, \bold{0} + v = v\\
+   (4)& \forall v_1 \in V, \exists v_2 \in V, v_1 + v_2 = \bold{0}\\
+   \end{aligned}
    $$
 
 3. 数乘满足以下性质:
    $$
+   \begin{aligned}
    (1)& (a + b)\cdot v = a\cdot v + b\cdot v \\
    (2)& a\cdot (v_1 + v_2) = a\cdot v_1 + a\cdot v_2\\
    (3)& a\cdot (b\cdot v) = (ab)\cdot v\\
    (4)& 1 \cdot v = v\\
+   \end{aligned}
    $$
 
 ### 线性空间的性质
@@ -434,11 +442,12 @@ $V是一个非空集合,K是一个数域,定义加法和数乘运算，满足以
 
 - $$
   设0,1,-1,\lambda \in K, x, -x, \bold{0}\in V\ 则有\\
-  \begin{align}(1)& 0x = \bold{0} \\
+  \begin{aligned}
+  (1)& 0x = \bold{0} \\
   (2)& (-1)x = -x\\
   (3)& \lambda \bold{0} = \bold{0}\\
-  (4)& \lambda x = \bold{0} \to \lambda = 0 \or x = \bold{0}.\\
-  \end{align}
+  (4)& \lambda x = \bold{0} \to \lambda = 0 \vee x = \bold{0}.\\
+  \end{aligned}
   $$
 
 - 

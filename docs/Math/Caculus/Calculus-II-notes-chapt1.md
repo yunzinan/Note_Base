@@ -35,18 +35,18 @@ summary:
 - 外点：G的外面的一个点走一个足够小的距离，仍然在外面
   - 外部：外点的集合
 - 边界点$\partial G$：走一个任意大小的距离，都有邻域中的部分点为内点，另一部分为外点
-- 聚点：对于任意大小的**去心邻域**中，总有点属于G
+- 聚点：对于任意大小的 **去心邻域** 中，总有点属于G
   - **问题**：数列中的聚点为子数列的极限 ？
   - **问题**：聚点是什么？
 - 开集：G中所有的点都是G的内点，即G的内部 == G
   - 开集一定不包含边界点。
 - 闭集：全集对开集的补集就是闭集。即，闭集外的点，走任意小的距离，仍然在闭集外。
   - 闭集一定包含边界点。
-- 归纳：$$R^n = E^o \cup \partial E \cup (E^c)^o \\ 开集: E = E^o \\ 闭集： E = E^o \cup \partial E  \and E^c = (E^c)^o$$
+- 归纳：$$R^n = E^o \cup \partial E \cup (E^c)^o \\ 开集: E = E^o \\ 闭集： E = E^o \cup \partial E  \wedge E^c = (E^c)^o$$
 - 连通集：G内任意两点都可以被一条曲线连接，且该曲线上的点都属于G。
 - 开区域：开集+连通集
   - 空集是开区域
-- **闭区域**：**非空**开区域+边界
+- **闭区域**：**非空** 开区域+边界
   - **问题**：为什么定义为：闭集+连通集？
 - 区域：开区域、闭区域
 - 空集和全空间既是开集，又是闭集
@@ -62,7 +62,7 @@ summary:
 
 ##### 二重极限
 
--   $P_0(x_0, y_0)$为D的**聚点**，$\epsilon-\delta$语言
+-   $P_0(x_0, y_0)$为D的 **聚点** ，$\epsilon-\delta$语言
 -   $0 < \sqrt{(x - x_0)^2 + (y- y_0) ^ 2} < \delta$
 -   $ |f(x, y) - A| < \epsilon$
 
@@ -173,7 +173,7 @@ $$Thm.1.\ let\ P(x_0,y_0)\in \R^2, G = N_\delta(P_0),if\\ 	1)函数F在G上连�
 
 - 三元函数
 
-$$Thm.2.\ for\ F(x, y, z) = 0, \exist!z = f(x,y),s.t. \\Pf. \ let g(x,y) = F(x, y, f(x,y)) = 0.\\\because g(x,y)为常值函数,g'_x(x,y) = g_y'(x,y)恒为零\\ \therefore g_x' = {\part F\over \part x} + {\part F \over \part z}\cdot {\part f\over \part x} = 0 \\ \Rightarrow {\part f\over \part x } = -{F_1'\over F_3'}$$
+$$Thm.2.\ for\ F(x, y, z) = 0, \exist!z = f(x,y),s.t. \\Pf. \ let g(x,y) = F(x, y, f(x,y)) = 0.\\\because g(x,y)为常值函数,g'_x(x,y) = g_y'(x,y)恒为零\\ \therefore g_x' = {\partial F\over \partial x} + {\partial F \over \partial z}\cdot {\partial f\over \partial x} = 0 \\ \Rightarrow {\partial f\over \partial x } = -{F_1'\over F_3'}$$
 
 ##### 由方程组确定的隐函数
 
@@ -197,7 +197,7 @@ $$1)\ F(x,y,u,v) = 0\\2)\ H(x,y,u,v) = 0 \\let \ f(x,y) = F(x,y,u(x,y),v(x,y)) =
 
 - 个人感觉切平面和微分的关系很大
 - 情形一：参数化-一元参数t
-  - $对于F(x,y,z) = 0,考虑过该点的任一条曲线\\ x = \varphi(t), y = \psi(t), z = \omega(t),\\ then,F(\varphi(t),\psi(t),\omega(t)) = 0\\\Rightarrow {dF\over dt} = F_1'\cdot \varphi' + F_2'\cdot \psi'+F_3'\cdot \omega' = 0 \\ \iff (F_1', F_2', F_3') \cdot (\varphi',\psi',\omega') = 0\\ then\ we\ find\ (F_1', F_2', F_3') \cdot \vec{v} = \vec{0}\\\because \forall t,即曲线任取,\\ \therefore \vec{v}可以沿该曲面上的任意方向，都与(F_1', F_2', F_3')垂直,\\ \therefore\nabla F =  (F_1', F_2', F_3') = \vec{n}. $
+  - $$对于F(x,y,z) = 0,考虑过该点的任一条曲线\\ x = \varphi(t), y = \psi(t), z = \omega(t),\\ then,F(\varphi(t),\psi(t),\omega(t)) = 0\\\Rightarrow {dF\over dt} = F_1'\cdot \varphi' + F_2'\cdot \psi'+F_3'\cdot \omega' = 0 \\ \iff (F_1', F_2', F_3') \cdot (\varphi',\psi',\omega') = 0\\ then\ we\ find\ (F_1', F_2', F_3') \cdot \vec{v} = \vec{0}\\\because \forall t,即曲线任取,\\ \therefore \vec{v}可以沿该曲面上的任意方向，都与(F_1', F_2', F_3')垂直,\\ \therefore\nabla F =  (F_1', F_2', F_3') = \vec{n}. $$
 - 情形二：参数化-二元参数u, v
   - $$F(x(u,v),y(u,v),z(u,v)) = 0\\ 对u,v求偏导\\ {\begin{cases} F_1'\cdot x_1' + F_2'\cdot y_1' + F_3'\cdot z_1'= 0\\ F_1'\cdot x_2' + F_2'\cdot y_2' + F_3'\cdot z_2'= 0\end{cases}}\\ so\ (F_1',F_2',F_3')\cdot (x_1',y_1',z_1') = 0\\ (F_1',F_2',F_3')\cdot (x_2',y_2',z_2') = 0\\ so\ \vec{n}\ can\ be\ (x_1',y_1',z_1')\times (x_2',y_2',z_2')$$
 
@@ -211,7 +211,7 @@ $$1)\ F(x,y,u,v) = 0\\2)\ H(x,y,u,v) = 0 \\let \ f(x,y) = F(x,y,u(x,y),v(x,y)) =
 
 ##### 求极值点
 
-- $$Thm.\ G = N_\delta(P_0),f在G内二阶连续可微(二阶偏导连续),且f'_x = f_y' = 0,\\ let\ A = f_{xx}'', B = f_{xy}'', C = f_{yy}''\\ 1)B^2-AC < 0, A>0\Rightarrow f(P)取得极小值\\  2)B^2-AC < 0 ,A < 0\Rightarrow 取得极大值\\ 3) B^2-AC > 0\Rightarrow f(P)不是极值\\ 4)B^2-AC = 0\ or B^2-AC < 0\and A = 0 \Rightarrow 无法判断，需单独讨论\\ Pf(略)$$
+- $$Thm.\ G = N_\delta(P_0),f在G内二阶连续可微(二阶偏导连续),且f'_x = f_y' = 0,\\ let\ A = f_{xx}'', B = f_{xy}'', C = f_{yy}''\\ 1)B^2-AC < 0, A>0\Rightarrow f(P)取得极小值\\  2)B^2-AC < 0 ,A < 0\Rightarrow 取得极大值\\ 3) B^2-AC > 0\Rightarrow f(P)不是极值\\ 4)B^2-AC = 0\ or B^2-AC < 0 \and A = 0 \Rightarrow 无法判断，需单独讨论\\ Pf(略)$$
 
 - 定理的应用：
 
@@ -234,7 +234,7 @@ $$1)\ F(x,y,u,v) = 0\\2)\ H(x,y,u,v) = 0 \\let \ f(x,y) = F(x,y,u(x,y),v(x,y)) =
 函数$f(x,y)$，对于有界闭区域D，
 
 - 求出所有D内的驻点对应的函数值
-- 求出在$\part D$上的最大值、最小值
+- 求出在$\partial D$上的最大值、最小值
 
 #### 5.7.3 条件极值
 
@@ -256,7 +256,7 @@ $Thm.\ 设f(x,y,z)连续可微,函数\varphi(x,y,z)连续可微,且\varphi_z'\ne
 
 - 式中$F为拉格朗日函数，\lambda为拉格朗日乘数$
 
-- 推广：如果有多个约束方程，那么建立拉格朗日方程形如$F(x,y,z,\lambda,\mu),\ \nabla F = \vec{0} $
+- 推广：如果有多个约束方程，那么建立拉格朗日方程形如$F(x,y,z,\lambda,\mu), \nabla F = \vec{0}$
 
 - ##### 条件极值与方向向量（二元函数求条件极值）
 
@@ -264,10 +264,10 @@ $Thm.\ 设f(x,y,z)连续可微,函数\varphi(x,y,z)连续可微,且\varphi_z'\ne
     的取值情况。我们称$P_0$ = (a, b) 为条件极值点，如果∀P ∈ C, f(P) ≥ f($P_0$)
     或者∀P ∈ C, f(P) ≤ f($P_0$)。其中P = (x, y) ∈ C 的涵义等价于g(x, y) = 0。
     假设我们站在极值点$P_0$，考虑行径方向$l$（一共有两个方向：前进，后
-    退）。若${\part f\over  \part l}(P_0)>0$, 则预示着我们往$l$方向前进（更准确地说，我们需要
+    退）。若${\partial f\over  \partial l}(P_0)>0$, 则预示着我们往$l$方向前进（更准确地说，我们需要
     一边走一边调整方向，以保持我们始终在C 上），可以看到$f$取值增加，
-    往$l$的反方向前进，我们会看到$f$的取值减小，因此$P_0$不会是极值点；若${\part f\over  \part l}(P_0)<0$, 则预示着我们往$l$ 方向前进，可以看到$f$取值减小，往反方向
-    前线，则f 取值增加，因此$P_0$ 不会是极值点。于是，我们只有剩下的一种可能:${\part f\over  \part l}(P_0)=0.\ i.e.\nabla f \bot l$
+    往$l$的反方向前进，我们会看到$f$的取值减小，因此$P_0$不会是极值点；若${\partial f\over  \partial l}(P_0)<0$, 则预示着我们往$l$ 方向前进，可以看到$f$取值减小，往反方向
+    前线，则f 取值增加，因此$P_0$ 不会是极值点。于是，我们只有剩下的一种可能:${\partial f\over  \partial l}(P_0)=0.\ i.e.\nabla f \bot l$
 
   - 因为行径方向和$C:g(x,y) = 0$在$P_0$点切向量同向或反向，因此也有$\nabla g\bot l$
 
@@ -275,7 +275,7 @@ $Thm.\ 设f(x,y,z)连续可微,函数\varphi(x,y,z)连续可微,且\varphi_z'\ne
 
 ##### 定义
 
- $$f在P=(a,b)沿l方向的方向导数为\\ {\part f\over \part l}(P) =\displaystyle \lim_{t \to 0^+}{f(P+tl)-f(P)\over t}$$
+ $$f在P=(a,b)沿l方向的方向导数为\\ {\partial f\over \partial l}(P) =\displaystyle \lim_{t \to 0^+}{f(P+tl)-f(P)\over t}$$
 
 ##### 等高线
 
@@ -283,9 +283,9 @@ $Thm.\ 设f(x,y,z)连续可微,函数\varphi(x,y,z)连续可微,且\varphi_z'\ne
 
 ##### 方向向量与梯度的关系
 
-- $Thm. let\ |l| = 1,then\\ {\part f\over \part l}(P) = \nabla f\cdot \vec{l}= |\nabla f(P)|\cos\theta$
+- $Thm. let\ |l| = 1,then\\ {\partial f\over \partial l}(P) = \nabla f\cdot \vec{l}= |\nabla f(P)|\cos\theta$
 
-- 假设$\nabla f(P)\neq 0 $。易知，若$l$与$\nabla f$ 同方向，则方向导数取到最大
+- 假设$\nabla f(P)\neq 0$。易知，若$l$与$\nabla f$ 同方向，则方向导数取到最大
   值；若反方向，则取到最小值。
 
 - 假设我们站在点P, 并且沿$l$方向移动。如果该方向的方向导数> 0, 我们预期看到$f$的取值会变大；若< 0, 取值会变小；若= 0, 取值不会变（更准确地说，我们需要一边移动一边随时调整方向，保证方向导数一值为0 才可以）。
