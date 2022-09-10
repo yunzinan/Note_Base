@@ -17,7 +17,7 @@
     
     
       
-        <title>都是语法惹的祸[待完成] - Yunzinan的知识库</title>
+        <title>都是语法惹的祸 - Yunzinan的知识库</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-latex" class="md-skip">
+        <a href="#-" class="md-skip">
           跳转至
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              都是语法惹的祸[待完成]
+              都是语法惹的祸
             
           </span>
         </div>
@@ -1136,12 +1136,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          都是语法惹的祸[待完成]
+          都是语法惹的祸
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        都是语法惹的祸[待完成]
+        都是语法惹的祸
       </a>
       
         
@@ -1161,7 +1161,41 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    一些不美观的写法
+    一些可能导致渲染失败的写法
+  </a>
+  
+    <nav class="md-nav" aria-label="一些可能导致渲染失败的写法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-markdown" class="md-nav__link">
+    1. 个别软件对markdown的拓展语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-latex" class="md-nav__link">
+    2. LaTeX数学公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    一些不美观的写法1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    附录: 一些可能会用到, 但总是要查的符号
   </a>
   
 </li>
@@ -1319,7 +1353,41 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    一些不美观的写法
+    一些可能导致渲染失败的写法
+  </a>
+  
+    <nav class="md-nav" aria-label="一些可能导致渲染失败的写法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-markdown" class="md-nav__link">
+    1. 个别软件对markdown的拓展语法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-latex" class="md-nav__link">
+    2. LaTeX数学公式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    一些不美观的写法1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    附录: 一些可能会用到, 但总是要查的符号
   </a>
   
 </li>
@@ -1342,28 +1410,190 @@
 
 
 
-<h1 id="-latex">都是语法惹的祸---LaTeX语法纠正<a class="headerlink" href="#-latex" title="Permanent link">&para;</a></h1>
-<div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>align<span class="nb">}</span> //<span class="k">\begin</span><span class="nb">{</span>aligned<span class="nb">}</span> 
-
-<span class="k">\end</span><span class="nb">{</span>align<span class="nb">}</span><span class="k">\end</span><span class="nb">{</span>aligned<span class="nb">}</span>
+<h1 id="-">都是语法惹的祸---写博客时的一些坑<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
+<details class="tip">
+<summary>motivation</summary>
+<p>之前一直使用Typora进行写作, 可能是因为Typora兼容性太好, 以及具备一些拓展语法的缘故, 一些不合规范的写法也能渲染出预期效果, 但是一旦换到其他平台(vscode, blog)上就立马出现问题, 因而不得不重新纠正, 于是索性做一次整理, 把一些常见的容易出错的写法列出来.</p>
+</details>
+<hr />
+<h2 id="_1">一些可能导致渲染失败的写法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="1-markdown">1. 个别软件对markdown的拓展语法<a class="headerlink" href="#1-markdown" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">文字高亮显示</p>
+<p>文字高亮属于拓展语法, 因此并不是在所有的情况下都适配和兼容, 例如:</p>
+<ul>
+<li>
+<p><code>==abc==</code> 是Typora的高亮语法</p>
+</li>
+<li>
+<p><img alt="" src="https://cyent.github.io/markdown-with-mkdocs-material/img/hl_critic.png" /> mkdocs(主要是pymdownx模块)的高亮语法(mkdocs也支持<code>==abc==</code>, 但是要求必须前后都有空格)</p>
+</li>
+</ul>
+<p>然而, 这样的写法在vscode等未做适配的环境下都无法正常显示.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">替代方案</p>
+<p>为了获得更好的兼容性, 我决定直接使用HTML语法来进行文字高亮, 这样可以使得在绝大多数的网页中显示正常.(不过vscode还是不支持)</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style </span><span class="o">=</span> <span class="s">&quot;background: yellow;&quot;</span><span class="p">&gt;</span>abc<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">\and</span> // <span class="k">\wedge</span>
-<span class="k">\or</span> // <span class="k">\vee</span>
-</code></pre></div>
-<h2 id="_1">一些不美观的写法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+效果: <span style = "background: yellow;">abc</span></p>
+<p>或者, 对于文字的强调, 多使用 <strong>abc</strong>(文字加粗) /<code>abc</code>(代码块)来表示.</p>
+</div>
+<h3 id="2-latex">2. LaTeX数学公式<a class="headerlink" href="#2-latex" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>由于之前写的时候不注意(不知道), 当我把写好的文章放上去时, 结果显示成这个样子:</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220910112856.png" />
+或者这样:</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220910113014.png" /></p>
+<p>总之一把辛酸泪啊...所以说一定要看官方说明文档</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">可能会导致无法渲染的语法</p>
+<p>1.<span class="arithmatex"><span class="MathJax_Preview">\wedge, \vee</span><script type="math/tex">\wedge, \vee</script></span></p>
+<div class="admonition fail">
+<p class="admonition-title">Fail</p>
+<p><code>$\and$</code></p>
+<p><code>$\or$</code></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p><code>$\wedge$</code></p>
+<p><code>$\vee$</code></p>
+</div>
+<p>2.<span class="arithmatex"><span class="MathJax_Preview">\exists</span><script type="math/tex">\exists</script></span></p>
+<div class="admonition fail">
+<p class="admonition-title">Fail</p>
+<p><code>$\exist$</code></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p><code>$\exists$</code></p>
+</div>
+<p>3.<span class="arithmatex"><span class="MathJax_Preview">\infty</span><script type="math/tex">\infty</script></span></p>
+<div class="admonition fail">
+<p class="admonition-title">Fail</p>
+<p><code>$\infin$</code></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p><code>$\infty$</code></p>
+</div>
+<p>4.加粗, 效果: <span class="arithmatex"><span class="MathJax_Preview">\mathbf{abc}</span><script type="math/tex">\mathbf{abc}</script></span></p>
+<div class="admonition fail">
+<p class="admonition-title">Fail</p>
+<p><code>$\bold{abc}$</code></p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p><code>$\mathbf{abc}$</code></p>
+</div>
+<p>5.集合符号</p>
+<div class="admonition fail">
+<p class="admonition-title">Fail</p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\R</span><script type="math/tex">\R</script></span>: <code>$\R$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\N^*</span><script type="math/tex">\N^*</script></span>: <code>$\N^*$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\Z^+</span><script type="math/tex">\Z^+</script></span>: <code>$\Z^+$</code></p>
+</li>
+</ul>
+</div>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview">\displaystyle\int</span><script type="math/tex">\displaystyle\int</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">\dfrac{1}{2}</span><script type="math/tex">\dfrac{1}{2}</script></span></li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{R}</span><script type="math/tex">\mathbf{R}</script></span>: <code>$\mathbf{R}$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{N}^*</span><script type="math/tex">\mathbf{N}^*</script></span>: <code>$\mathbf{N}^*$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\mathbf{Z}^+</span><script type="math/tex">\mathbf{Z}^+</script></span>: <code>$\mathbf{Z}^+$</code></p>
+</li>
 </ul>
 </div>
-<div class="admonition failure">
-<p class="admonition-title">Failure</p>
+</div>
+<h2 id="1">一些不美观的写法<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup><a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">行内公示显示</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <ul>
-<li><span class="arithmatex"><span class="MathJax_Preview">\int</span><script type="math/tex">\int</script></span></li>
-<li><span class="arithmatex"><span class="MathJax_Preview">\frac{1}{2}</span><script type="math/tex">\frac{1}{2}</script></span></li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\int</span><script type="math/tex">\int</script></span>: <code>$\int$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\frac{1}{2}</span><script type="math/tex">\frac{1}{2}</script></span>: <code>$\frac{1}{2}$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\sum</span><script type="math/tex">\sum</script></span>: <code>$\sum$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\prod</span><script type="math/tex">\prod</script></span>: <code>$\prod$</code></p>
+</li>
 </ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\displaystyle\int</span><script type="math/tex">\displaystyle\int</script></span>: <code>$\displaystyle\int$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\dfrac{1}{2}</span><script type="math/tex">\dfrac{1}{2}</script></span>: <code>$\dfrac{1}{2}$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\displaystyle\sum</span><script type="math/tex">\displaystyle\sum</script></span>: <code>$\displaystyle\sum$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\displaystyle\prod</span><script type="math/tex">\displaystyle\prod</script></span>: <code>$\displaystyle\prod$</code></p>
+</li>
+</ul>
+<blockquote>
+<p>尽管加上<code>$\displaystyle$</code>可以使一些符号看起来更好看, 但是更加推荐把这些公式写到行间公式里去.</p>
+</blockquote>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">不规范的符号</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\emptyset</span><script type="math/tex">\emptyset</script></span>: <code>$\emptyset$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">a \% b</span><script type="math/tex">a \% b</script></span>: <code>$a \% b$</code> or <span class="arithmatex"><span class="MathJax_Preview">a\ mod\ b</span><script type="math/tex">a\ mod\ b</script></span>: <code>$a\ mod\ b$</code></p>
+</li>
+</ul>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\varnothing</span><script type="math/tex">\varnothing</script></span>: <code>$\varnothing$</code></p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">a \bmod b</span><script type="math/tex">a \bmod b</script></span>: <code>$a \bmod b$</code></p>
+</li>
+</ul>
+</div>
+</div>
+<h2 id="_2">附录: 一些可能会用到, 但总是要查的符号<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">\leftrightharpoons</span><script type="math/tex">\leftrightharpoons</script></span>: <code>$\leftrightharpoons$</code></li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>参考<a href="https://oi-wiki.org/intro/format/">OI-Wiki|格式手册</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
 
 
