@@ -890,6 +890,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chemistry/%E6%9C%89%E6%9C%BA%E5%8C%96%E5%AD%A6%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        有机化学学习指南笔记
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1235,6 +1249,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x02-dsojoj-w2t1" class="md-nav__link">
+    0x02 DSOJ(数据结构OJ) W2T1 小蓝鲸学数组
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1338,6 +1359,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x02-dsojoj-w2t1" class="md-nav__link">
+    0x02 DSOJ(数据结构OJ) W2T1 小蓝鲸学数组
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1377,6 +1405,7 @@
 <li><a href="#-">警钟长鸣-题单</a><ul>
 <li><a href="#0x00-2022t3">0x00 2022年转专业机试T3</a></li>
 <li><a href="#0x01-dsojoj-w1t3">0x01 DSOJ(数据结构OJ) W1T3 小蓝鲸排队</a></li>
+<li><a href="#0x02-dsojoj-w2t1">0x02 DSOJ(数据结构OJ) W2T1 小蓝鲸学数组</a></li>
 </ul>
 </li>
 </ul>
@@ -1457,6 +1486,35 @@
 </ul>
 </div>
 </div>
+<h3 id="0x02-dsojoj-w2t1">0x02 DSOJ(数据结构OJ) W2T1 <a href="http://netlab.nju.edu.cn:5080/contest/34/problem/91">小蓝鲸学数组</a><a class="headerlink" href="#0x02-dsojoj-w2t1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220919195704.png" /></p>
+<ul>
+<li>
+<p>题目分析</p>
+</li>
+<li>
+<p>连续数组-&gt;自由度为2:起点&amp;终点-&gt;最坏的时间复杂度:<span class="arithmatex"><span class="MathJax_Preview">O(N^2)</span><script type="math/tex">O(N^2)</script></span>(遍历所有的起点和终点可能即可)</p>
+</li>
+<li>
+<p>难点在于如何实现<span class="arithmatex"><span class="MathJax_Preview">O(N)</span><script type="math/tex">O(N)</script></span>算法. 看一眼数据范围, 发现有好消息: 数组的值很小(<span class="arithmatex"><span class="MathJax_Preview">-10^3\le val\le 10^3</span><script type="math/tex">-10^3\le val\le 10^3</script></span>), 而连续子数组的总和<span class="arithmatex"><span class="MathJax_Preview">2\times 10^7\le sum\le 2 \times 10^7</span><script type="math/tex">2\times 10^7\le sum\le 2 \times 10^7</script></span>, 这个值其实不算大! 这就启发我们, 要充分利用空间, 以空间换时间.</p>
+</li>
+</ul>
+<details class="tip">
+<summary>笔者思路</summary>
+<p>前缀和+cnt数组. 不难发现这个连续子数组有两个变量:起点和终点, 看起来是两端都在浮动. 如果能想到<mark class="critic">前缀和</mark>,就能解决这个问题.</p>
+<p>记输入的要求子数组和为<code>targetVal</code>, 从左向右迭代的指针为<code>curIdx</code>,对应的前缀和为<code>curSum</code>,记<code>curIdx</code>前另有一段终点为<code>prevIdx</code>的连续子数组(注意 <code>prevIdx != curIdx</code> 否则两段数组相减就没有剩余的连续子数组了), 其对应的前缀和为<code>prevSum</code>.</p>
+<p>将连续子数组的和转化为两段起点为0, 终点为<code>curIdx</code>与<code>prevIdx</code>的连续子数组之差. 这样的数组只要知道终点, 就能知道对应的值. </p>
+<p>看起来, 我们并不知道<code>prevIdx</code>,但是, 我们知道期望的<code>prevIdx</code>对应的子数组和应该为<code>curSum - targetVal</code>, 因此, 我们并不需要知道具体的前一段子数组在哪里, 只需要知道有几个符合这样的子数组即可. 因此使用cnt数组来记录之前的子数组数目.</p>
+<p>从左向右迭代一次<code>curIdx</code>, 每次<code>ans += cnt[curSum - targetVal]</code>即可.</p>
+<p>Ps: 由于此题前缀和可能为负, 而数组下标不能, 因此需要添加一个偏置常数.</p>
+</details>
+<details class="success">
+<summary>O(N)</summary>
+<p><img alt="0x02 SrcCode" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220919195544.png" /></p>
+</details>
 
 
 
