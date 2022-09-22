@@ -1432,8 +1432,49 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    恒定电压电解
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    电重量分析
+  </a>
+  
+    <nav class="md-nav" aria-label="电重量分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    用于检测
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    用于分离
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    库伦分析法
+  </a>
   
 </li>
         
@@ -2397,8 +2438,49 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    恒定电压电解
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    电重量分析
+  </a>
+  
+    <nav class="md-nav" aria-label="电重量分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    用于检测
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    用于分离
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    库伦分析法
+  </a>
   
 </li>
         
@@ -2525,8 +2607,15 @@
 </li>
 <li><a href="#_48">电解方式</a><ul>
 <li><a href="#_49">恒定电流电解</a></li>
+<li><a href="#_50">恒定电压电解</a></li>
 </ul>
 </li>
+<li><a href="#_51">电重量分析</a><ul>
+<li><a href="#_52">用于检测</a></li>
+<li><a href="#_53">用于分离</a></li>
+</ul>
+</li>
+<li><a href="#_54">库伦分析法</a></li>
 </ul>
 </li>
 </ul>
@@ -3302,6 +3391,72 @@ E = b \pm \frac{0.0592}{z_A} \lg[a_A + K^{pot}_{A, B}a_B^{Z_A/Z_B} + \cdots]
 <p>一般来说, <code>金属</code>在铂电极上析出的过电位比较小, 可以忽略; 气体的过电位较大.</p>
 <h4 id="_48">电解方式<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
 <h5 id="_49">恒定电流电解<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h5>
+<p>电压不断增大以维持电流稳定</p>
+<h5 id="_50">恒定电压电解<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h5>
+<p>电流不断减小(浓度下降)</p>
+<div class="admonition tip">
+<p class="admonition-title">电解分离法: 阴极电位的选择</p>
+<p>依据金属离子析出的电极电位不同, 通过控制电位, 实现分离.</p>
+<div class="admonition faq">
+<p class="admonition-title">要使金属<span class="arithmatex"><span class="MathJax_Preview">M_1, M_2</span><script type="math/tex">M_1, M_2</script></span>完全分离, 电位差需要多大?</p>
+<p><code>完全分离</code>: 金属离子浓度将至原浓度的<span class="arithmatex"><span class="MathJax_Preview">0.01\%</span><script type="math/tex">0.01\%</script></span>或<span class="arithmatex"><span class="MathJax_Preview">10^{-6}mol \cdot L^{-1}</span><script type="math/tex">10^{-6}mol \cdot L^{-1}</script></span>时</p>
+</div>
+<p>如果要求结束时浓度为原先的<span class="arithmatex"><span class="MathJax_Preview">0.01%</span><script type="math/tex">0.01%</script></span>, 电极电位下降4个极差.</p>
+<p>因此需要电位差<span class="arithmatex"><span class="MathJax_Preview">\phi_{M_1} - \phi_{M_2} \ge \frac{0.0592}{z}\times 4</span><script type="math/tex">\phi_{M_1} - \phi_{M_2} \ge \frac{0.0592}{z}\times 4</script></span></p>
+</div>
+<h4 id="_51">电重量分析<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
+<p>电解试液后, 直接称量电极是上析出的被测物质, 从而对其含量进行分析的方法[称质量]</p>
+<h5 id="_52">用于检测<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h5>
+<p>方法选择: </p>
+<ul>
+<li>
+<p>恒电位电解: 电化学选择性好, 速度慢</p>
+<blockquote>
+<p>适合组分较多时</p>
+</blockquote>
+</li>
+<li>
+<p>恒电流电解: 速度快, 但随着电解进行, 电极电位会发生变化, 可能会导致第二种金属离子在电极上析出产生干扰.</p>
+<blockquote>
+<p>需要除杂.</p>
+<p><code>阳/阴极去极剂</code>: 通过自身的电化学氧化/还原反应, 维持阳极或阴极电位不变. 不在电极上析出沉淀(不影响称重)</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="_53">用于分离<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h5>
+<p>恒电流电解 <strong>只能析出电位高于氢的金属</strong>, 当金属完全析出后, 将会继续析出氢气</p>
+<p>对于电极电势低于H<sup>+</sup>的金属离子, 可在金属熔融盐中电解得到单质.</p>
+<h4 id="_54">库伦分析法<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
+<p>通过测量被测物消耗的电量来对被测物含量进行分析的方法.[读取耗电量, 通过法拉第定律求消耗量]</p>
+<p>方法选择: </p>
+<ul>
+<li>恒电流库伦分析法: 常用来产生电生"滴定剂", 利用耗电量来确定物质浓度, 也叫<code>库伦滴定法</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">库仑滴定 vs. 电位滴定法</p>
+<p>电位滴定仍以化学试剂进行滴定, 用ISE取代终点指示剂和目视检测.</p>
+<p>库伦滴定是以电极代替化学滴定试剂进行滴定的方法.</p>
+</div>
+<p>进行库伦分析的前提: 电流效应<span class="arithmatex"><span class="MathJax_Preview">100\%</span><script type="math/tex">100\%</script></span> 即电量全部消耗在待测物上.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">电流效率 = \dfrac{i_样}{i_样 + i_溶 + i_杂}</span><script type="math/tex">电流效率 = \dfrac{i_样}{i_样 + i_溶 + i_杂}</script></span></p>
+<p>影响因素:</p>
+<ul>
+<li>
+<p>溶剂的电极反应</p>
+</li>
+<li>
+<p>溶液中杂杂质的反应</p>
+</li>
+<li>
+<p>水中溶解氧</p>
+</li>
+<li>
+<p>电解产物再反应</p>
+</li>
+<li>
+<p>充电电容</p>
+</li>
+</ul>
 
 
 

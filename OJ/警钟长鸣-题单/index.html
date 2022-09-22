@@ -1256,6 +1256,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x03-lgoj-p1160" class="md-nav__link">
+    0x03 LGOJ P1160 队列安排
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x04-dsoj-w3t3" class="md-nav__link">
+    0x04 DSOJ W3T3 小蓝鲸乘法
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1366,6 +1380,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x03-lgoj-p1160" class="md-nav__link">
+    0x03 LGOJ P1160 队列安排
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x04-dsoj-w3t3" class="md-nav__link">
+    0x04 DSOJ W3T3 小蓝鲸乘法
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1406,6 +1434,8 @@
 <li><a href="#0x00-2022t3">0x00 2022年转专业机试T3</a></li>
 <li><a href="#0x01-dsojoj-w1t3">0x01 DSOJ(数据结构OJ) W1T3 小蓝鲸排队</a></li>
 <li><a href="#0x02-dsojoj-w2t1">0x02 DSOJ(数据结构OJ) W2T1 小蓝鲸学数组</a></li>
+<li><a href="#0x03-lgoj-p1160">0x03 LGOJ P1160 队列安排</a></li>
+<li><a href="#0x04-dsoj-w3t3">0x04 DSOJ W3T3 小蓝鲸乘法</a></li>
 </ul>
 </li>
 </ul>
@@ -1514,6 +1544,67 @@
 <details class="success">
 <summary>O(N)</summary>
 <p><img alt="0x02 SrcCode" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220919195544.png" /></p>
+</details>
+<h3 id="0x03-lgoj-p1160">0x03 LGOJ P1160 <a href="https://www.luogu.com.cn/problem/P1160">队列安排</a><a class="headerlink" href="#0x03-lgoj-p1160" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息
+<img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220921183508.png" /></li>
+</ul>
+<p>数据范围</p>
+<p>对于20%的数据，有 <span class="arithmatex"><span class="MathJax_Preview">1\leq N\leq 10</span><script type="math/tex">1\leq N\leq 10</script></span></p>
+<p>对于40%的数据，有 <span class="arithmatex"><span class="MathJax_Preview">1\leq N\leq 1000</span><script type="math/tex">1\leq N\leq 1000</script></span></p>
+<p>对于100%的数据，有 <span class="arithmatex"><span class="MathJax_Preview">1\leq N,M\leq100000</span><script type="math/tex">1\leq N,M\leq100000</script></span>。</p>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>简单的数据结构题, 就是构造一个双向链表, 但是问题在于数据范围较大, 而链表的访问效率是很低的, 而这题要求随机读取, 因此需要一些别的技巧: 把插入的每个门牌号记下来.</p>
+<p>一般, 内存限制128MB的话int型数组可以开到<span class="arithmatex"><span class="MathJax_Preview">10^7</span><script type="math/tex">10^7</script></span>级别, 因此这题已经够用. </p>
+<details class="success">
+<summary>AC</summary>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220921184728.png" /></p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">review</p>
+<p>介于本题需要查找的值是连续的, 且就是同学的序号, 因此更好的解决办法是用数组模拟双向链表</p>
+<details class="success">
+<summary>[TODO]</summary>
+</details>
+</div>
+<h3 id="0x04-dsoj-w3t3">0x04 DSOJ W3T3 <a href="http://netlab.nju.edu.cn:5080/contest/36/problem/96">小蓝鲸乘法</a><a class="headerlink" href="#0x04-dsoj-w3t3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220922234652.png" /></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220922234900.png" /></p>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>高精度乘法的裸题. 但是有一些细节需要强调:</p>
+<ul>
+<li>
+<p>边界情况: <span class="arithmatex"><span class="MathJax_Preview">A \times B</span><script type="math/tex">A \times B</script></span>, 而A/B == 0.</p>
+</li>
+<li>
+<p>前缀0: 例如<span class="arithmatex"><span class="MathJax_Preview">01\times 22 = 22</span><script type="math/tex">01\times 22 = 22</script></span>, 需要去除两个乘数的前缀0</p>
+</li>
+<li>
+<p>开辟空间需要及时释放, 否则MLE.</p>
+</li>
+</ul>
+<div class="admonition bug">
+<p class="admonition-title">关于内存释放的问题</p>
+<p><div class="highlight"><pre><span></span><code><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">plus</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="w"> </span><span class="n">newAns</span><span class="p">);</span><span class="w"></span>
+<span class="k">this</span><span class="o">-&gt;</span><span class="n">deleteNode</span><span class="p">(</span><span class="n">newAns</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+这两行代码看起来完成了释放, 但是并没有释放完全, 因为<code>this-&gt;plus(ans, newAns)</code>返回的是新的地址, 然而原先的ans指向的内存并未释放!!! </p>
+<div class="admonition note">
+<p class="admonition-title">教训</p>
+<p>多注意<code>new</code>和<code>free</code>的匹配. 尤其是MLE的时候. </p>
+</div>
+</div>
+<details class="success">
+<summary>AC</summary>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220922234931.png" /></p>
 </details>
 
 

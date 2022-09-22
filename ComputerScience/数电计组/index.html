@@ -1132,6 +1132,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    逻辑函数的标准表示
+  </a>
+  
+    <nav class="md-nav" aria-label="逻辑函数的标准表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    卡诺图化简
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1939,6 +1959,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    逻辑函数的标准表示
+  </a>
+  
+    <nav class="md-nav" aria-label="逻辑函数的标准表示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    卡诺图化简
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2020,6 +2060,10 @@
 </li>
 <li><a href="#_22">第二讲 布尔代数</a><ul>
 <li><a href="#_23">对偶定律</a></li>
+</ul>
+</li>
+<li><a href="#_24">逻辑函数的标准表示</a><ul>
+<li><a href="#_25">卡诺图化简</a></li>
 </ul>
 </li>
 </ul>
@@ -2507,6 +2551,55 @@ EN低: 关闭</p>
 <hr />
 <h4 id="_23">对偶定律<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
 <p>两个逻辑表达式相等, 则它们的对偶式也相等.</p>
+<div class="admonition note">
+<p class="admonition-title">广义德摩根定理</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\overline{F(X_1,X_2,\cdots, X_n, \cdot, *)} = F(\overline{X_1}, \overline{X_2}, \cdots, \overline{X_n}, *, \cdot)
+</div>
+<script type="math/tex; mode=display">
+\overline{F(X_1,X_2,\cdots, X_n, \cdot, *)} = F(\overline{X_1}, \overline{X_2}, \cdots, \overline{X_n}, *, \cdot)
+</script>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">香农定理</p>
+<p>广义结合律的逆用</p>
+</div>
+<h3 id="_24">逻辑函数的标准表示<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p><code>标准乘积项</code>: 最小项</p>
+<p>编号: 只有当输入为<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>时, 输出为1, 记为<span class="arithmatex"><span class="MathJax_Preview">m_i</span><script type="math/tex">m_i</script></span>.</p>
+<p>标准和/最小项列表: 使得函数输出为1的最小项之和.</p>
+<p><code>标准求和项</code>: 最大项</p>
+<p>编号: 只有当输入为<span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span>时, 输出为0, 记为<span class="arithmatex"><span class="MathJax_Preview">M_i</span><script type="math/tex">M_i</script></span>.</p>
+<p>标准积/最大项列表: 使得函数输出为0的最大项之积.</p>
+<blockquote>
+<p>两者互补.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">f(A, B, C ) = \sum m(0, 1, 2) = \prod M(3, 4, 5, 6, 7)</span><script type="math/tex">f(A, B, C ) = \sum m(0, 1, 2) = \prod M(3, 4, 5, 6, 7)</script></span></p>
+</blockquote>
+<h4 id="_25">卡诺图化简<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>每一行列的编号对应逻辑变量的输入组合</p>
+</li>
+<li>
+<p>编号按照 <mark>格雷码</mark> 的顺序排列, 即相邻编号只有一位不同.</p>
+</li>
+<li>
+<p>根据格雷码的规则, 空间位置上相邻的小方格具有 <mark>逻辑相邻性</mark>.</p>
+</li>
+<li>
+<p>行列可互换</p>
+</li>
+<li>
+<p>在对应最小项在真值表中的输出值为1的方格上置1, 称之为"1单元".</p>
+</li>
+<li>
+<p>找1相邻(<mark>必须是<span class="arithmatex"><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span>个 才能画(卡诺)圈</mark>)-&gt;说明存在变量无论取0还是1都为真-&gt;变量无意义, 可消去.</p>
+</li>
+</ul>
+<p><code>蕴含项</code></p>
+<p><code>质蕴含项(prime implicant)</code> : 不能被逻辑函数的其他蕴含项所覆盖的蕴含项.</p>
 
 
 
