@@ -1151,6 +1151,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lec-4-" class="md-nav__link">
+    Lec 4 继承-派生类
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1432,6 +1439,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#lec-4-" class="md-nav__link">
+    Lec 4 继承-派生类
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1464,6 +1478,7 @@
 <li><a href="#_5">拷贝构造函数</a></li>
 </ul>
 </li>
+<li><a href="#lec-4-">Lec 4 继承-派生类</a></li>
 </ul>
 </li>
 </ul>
@@ -1568,6 +1583,85 @@
 <p class="admonition-title">结构化</p>
 <p>典型的结构化语言: C 不带<code>goto</code>的顺序 分支 循环 流程控制</p>
 <p>典型的非结构化语言: 汇编 <code>goto</code>范式</p>
+</div>
+<h2 id="lec-4-">Lec 4 继承-派生类<a class="headerlink" href="#lec-4-" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">继承的一些要求</p>
+<p>定义派生类时一定要见到基类的定义</p>
+<p>默认情况下, 基类的友元关系不会继承</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">继承与封装的矛盾</p>
+<p>由于派生类不能直接访问基类的<code>private</code>成员, 因此引入<code>protected</code>关键字来解决派生类访问父类的一些成员, 同时也保证了数据的封装性(外部仍然不能访问).</p>
+<p>一般情况下, 把不太可能发生变动的, 有可能被派生类使用的, <strong>不宜对实例用户公开</strong> 的成员声明为<code>protected</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">注意区分在外部访问还是在内部访问</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220928144602.png" /></p>
+<p><code>void f()</code>是外部通过一个B类的实例进行访问; </p>
+<p><code>class C:public B</code>是在C类的内部(定义)进行访问.</p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">派生类成员标识符的作用域</p>
+<p>对于基类而言, 派生类成员标识符的作用域是 <mark>嵌套在</mark> 基类作用域中的.</p>
+<p>如果派生类中定义了与基类同名的成员, 则基类的成员名在派生类的作用域内不直接可见(被隐藏)</p>
+<div class="highlight"><pre><span></span><code><span class="c1">//class B : public A</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">h</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">f</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="n">A</span><span class="o">::</span><span class="n">f</span><span class="p">();</span><span class="w"> </span><span class="c1">//通过显式的制定作用域来区分</span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">override vs. overload</p>
+<p>override 覆盖 对函数的重写</p>
+<p>overload 重载</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>注意: 在A的派生类B中override函数f()不能算作是<code>函数名重载</code>!: 作用域不同!!</p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">继承方式</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220928144352.png" /></p>
+<p>派生类的属性: </p>
+<ul>
+<li>
+<p><code>不可直接访问</code>: 在派生类的内部(定义时)也不能访问基类的该成员</p>
+</li>
+<li>
+<p><code>private</code>: 在派生类的内部(定义时)可以访问, 但是外部(实例化时)不可访问, 该派生类的派生类不能在内部直接访问</p>
+</li>
+<li>
+<p><code>protected</code>: 在派生类的内部(定义时)可以访问, 但是外部(实例化时)不可访问, 该派生类的派生类内部可以直接访问</p>
+</li>
+<li>
+<p><code>public</code>: 在派生类的内部可以访问, 外部也可以访问, 派生类也可以访问.</p>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">子类型</p>
+<p>在C++中, 把类看做类型, 把以public方式继承的派生类看做是基类的子类型</p>
+<p>其实就相当于该派生类就是基类的扩展, 具有基类的所有功能, 因此可以有以下操作:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">A</span><span class="w"></span>
+
+<span class="n">B</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="n">A</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">构造函数和析构函数的顺序</p>
+<p>如果一个类D既有基类B, 又有成员对象类M, 则</p>
+<p>创建D类对象时, B-&gt;M-&gt;D </p>
+<p>析构时相反.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">赋值和拷贝构造</p>
+<p>默认情况下, 对基类的赋值操作和拷贝构造采用默认拷贝构造;</p>
+<p>除非显式指出.</p>
 </div>
 
 
