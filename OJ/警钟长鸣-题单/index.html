@@ -1270,6 +1270,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x05" class="md-nav__link">
+    0x05 栈输出的合法序列
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1394,6 +1401,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x05" class="md-nav__link">
+    0x05 栈输出的合法序列
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1436,6 +1450,7 @@
 <li><a href="#0x02-dsojoj-w2t1">0x02 DSOJ(数据结构OJ) W2T1 小蓝鲸学数组</a></li>
 <li><a href="#0x03-lgoj-p1160">0x03 LGOJ P1160 队列安排</a></li>
 <li><a href="#0x04-dsoj-w3t3">0x04 DSOJ W3T3 小蓝鲸乘法</a></li>
+<li><a href="#0x05">0x05 栈输出的合法序列</a></li>
 </ul>
 </li>
 </ul>
@@ -1606,6 +1621,52 @@
 <summary>AC</summary>
 <p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220922234931.png" /></p>
 </details>
+<h3 id="0x05">0x05 栈输出的合法序列<a class="headerlink" href="#0x05" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p>题目源头是数据结构课上的一个小问题: 给定栈的输入序列, 求所有栈的合法输出序列.</p>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>意思就是说, 虽然给定了入栈序列, 但是由于入栈/出栈的操作是交织进行的, 对于同个栈的状态, 可以有入栈/出栈两种合法的操作, 因此就对应了两条不同的输出路径.</p>
+<p>简单画图发现, 所有的情形对应了一棵二叉树, 寻找所有合法序列事实上就是对二叉树进行遍历的过程. 因此可以简单写一个DFS进行递归.</p>
+<p>具体来说, 先定义, 什么是一个状态: 当前的栈内信息<code>stk</code>+还有哪些元素未入栈(即指向已经入栈的元素的指针<code>curIdx</code>), 因此, 状态的转移:</p>
+<ul>
+<li>
+<p>对于入栈操作(前提是不能栈上溢): <code>stk.push, curIdx++;</code></p>
+</li>
+<li>
+<p>对于出栈操作(前提是不能栈下溢): <code>stk.pop</code>, 同时记录出栈元素</p>
+</li>
+</ul>
+<p>递归的终点就是当确定所有的元素全部入栈时.</p>
+<details class="success">
+<summary>AC代码如下</summary>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220927213654.png" /></p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">进一步思考</p>
+<p>题目虽然写出来了, 但是对栈的思考其实未必到位. 不难问出以下几个深入的问题:</p>
+<ul>
+<li>
+<p>对于入栈序列<span class="arithmatex"><span class="MathJax_Preview">1,2,\cdots, n</span><script type="math/tex">1,2,\cdots, n</script></span>, 出栈序列的种数<span class="arithmatex"><span class="MathJax_Preview">cnt</span><script type="math/tex">cnt</script></span>关于<span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span>的关系式是什么?</p>
+</li>
+<li>
+<p>如何判断一个序列是否是合法的出栈序列?</p>
+</li>
+</ul>
+</div>
+<p>0x06 [0x05]的延伸 <a href="https://www.luogu.com.cn/problem/P1750">出栈序列</a></p>
+<ul>
+<li>题目信息</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220927214847.png" /></p>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>[TODO]</p>
+<p>初步分析: 直接模拟的话显然超时.</p>
 
 
 

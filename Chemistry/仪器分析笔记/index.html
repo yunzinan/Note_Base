@@ -1496,10 +1496,44 @@
     直流极谱法
   </a>
   
+    <nav class="md-nav" aria-label="直流极谱法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    尤考维奇方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    影响扩散电流的因素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    干扰电流及其消除
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    极谱波方程
+  </a>
   
 </li>
         
@@ -2522,10 +2556,44 @@
     直流极谱法
   </a>
   
+    <nav class="md-nav" aria-label="直流极谱法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    尤考维奇方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    影响扩散电流的因素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    干扰电流及其消除
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    极谱波方程
+  </a>
   
 </li>
         
@@ -2659,9 +2727,15 @@
 </ul>
 </li>
 <li><a href="#_55">伏安法和极谱分析法</a><ul>
-<li><a href="#_56">直流极谱法</a></li>
+<li><a href="#_56">直流极谱法</a><ul>
+<li><a href="#_57">尤考维奇方程</a></li>
+<li><a href="#_58">影响扩散电流的因素</a></li>
+<li><a href="#_59">干扰电流及其消除</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#_60">极谱波方程</a></li>
 </ul>
 </li>
 </ul>
@@ -2927,13 +3001,18 @@ s = \sqrt{\frac{1}{N-1}\sum_{i=1}^N((X_i - \bar{X})^2)}
 <div class="admonition note">
 <p class="admonition-title">双电层</p>
 <p>外加电压时, 电极携带更多或更少的电子并吸引溶液中相反电荷的离子, 从而在界面中形成<code>双电层</code>.(不加电压时也存在)</p>
-<p>双电层不超过几各水合离子层厚度(<code>分散层</code>), 因此电场强度很大</p>
+<p>双电层不超过几个水合离子层厚度(<code>分散层</code>), 因此电场强度很大</p>
 <p>电化学反应只在<code>界面</code>上发生</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">分散层 vs. 扩散层</p>
 <ul>
-<li>分散层: </li>
+<li>
+<p>分散层: 双电层视作一个电容器</p>
+</li>
+<li>
+<p>扩散层: 本体和表面的浓度梯度.</p>
+</li>
 </ul>
 </div>
 <div class="admonition note">
@@ -3614,6 +3693,85 @@ E = b \pm \frac{0.0592}{z_A} \lg[a_A + K^{pot}_{A, B}a_B^{Z_A/Z_B} + \cdots]
 <p>扩散电流值的一半对应的电位. 此时氧化物比还原物的浓度为0, 此时电位即标准电极电位. 因此<span class="arithmatex"><span class="MathJax_Preview">\varphi_{1/2}</span><script type="math/tex">\varphi_{1/2}</script></span>为定值, 和被测物浓度无关.</p>
 </div>
 <p>极谱分析法是一种好的定量分析方法, 但用于定性分析并不可靠, 形成络合物会影响<span class="arithmatex"><span class="MathJax_Preview">\varphi_{1/2}</span><script type="math/tex">\varphi_{1/2}</script></span>, 此外, 很多金属<span class="arithmatex"><span class="MathJax_Preview">\varphi_{1/2}</span><script type="math/tex">\varphi_{1/2}</script></span>接近导致混合物中难以测量.</p>
+<div class="admonition note">
+<p class="admonition-title">利用极限扩散电流定量的依据</p>
+<p><mark>无对流和电迁移条件下</mark> , 达到极限扩散电流时, 电流与物质的扩散速度成正比, 扩散速度与扩散层中浓度梯度成正比.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">  
+i \propto \frac{[Pb^{2+}]^{b} - [Pb^{2+}]^s}{\delta} = K[Pb^{2+}]
+</div>
+<script type="math/tex; mode=display">  
+i \propto \frac{[Pb^{2+}]^{b} - [Pb^{2+}]^s}{\delta} = K[Pb^{2+}]
+</script>
+</div>
+<p>结论: 扩散电流与离子浓度成正比.</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220928103040.png" /></p>
+</div>
+<h5 id="_57">尤考维奇方程<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220928104049.png" /></p>
+<h5 id="_58">影响扩散电流的因素<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h5>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+i_d = 607zD^{1/2}m^{2/3}t^{1/6}c = K_s c
+</div>
+<script type="math/tex; mode=display">
+i_d = 607zD^{1/2}m^{2/3}t^{1/6}c = K_s c
+</script>
+</div>
+<ul>
+<li>
+<p>毛细管常数: 607zD^{&frac12;}</p>
+</li>
+<li>
+<p>扩散电流常数: <span class="arithmatex"><span class="MathJax_Preview">m^{2/3}t^{1/6}</span><script type="math/tex">m^{2/3}t^{1/6}</script></span></p>
+</li>
+<li>
+<p>温度: 影响除<span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>外的每一项</p>
+</li>
+</ul>
+<blockquote>
+<p>提高可重复性, 前提是常数一致.</p>
+</blockquote>
+<h5 id="_59">干扰电流及其消除<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h5>
+<ul>
+<li>对流电流和迁移电流</li>
+</ul>
+<p>测量时通常加入大量<code>支持电解质</code>, 以消除迁移电流和降低溶液电压降(IR降).</p>
+<ul>
+<li>氧气还原</li>
+</ul>
+<p>产生两次还原反应</p>
+<p>除氧方法: 1.加亚硫酸钠(碱性或中性溶液); 抗坏血酸(弱酸性); 碳酸钠或Fe粉(强酸性)</p>
+<p>2.通入惰性气体, <span class="arithmatex"><span class="MathJax_Preview">N_2, Ar, H_2</span><script type="math/tex">N_2, Ar, H_2</script></span></p>
+<ul>
+<li>极大(现象)</li>
+</ul>
+<p>随着外加电压变化, 极谱波的前部出底线电流极大值, 称为极谱极大.</p>
+<p>产生原因: 汞滴表面电荷分布或物质密度不均匀-&gt;表面张力不均匀-&gt;汞滴切向运动-&gt;相当于更新出新的反应界面</p>
+<p>消除方法: 加少量的表面活性物质/动物胶(使得表面粘稠程度, 降低切向运动程度)==&gt;"极大抑制剂"</p>
+<ul>
+<li>
+<p>残余电流</p>
+<ul>
+<li>
+<p>杂质的电解: 纯化试剂/预电解</p>
+</li>
+<li>
+<p>充电电流: 充电电流来源于滴汞电极与溶液界面上双电层的充电过程. ==&gt;消除办法: 在汞滴末期记录电解电流</p>
+</li>
+</ul>
+</li>
+<li>
+<p>叠波: 两种组分的半波电流过于接近==&gt;改变一种组分的形式</p>
+</li>
+</ul>
+<p>前波: 两种组分的极限电流<span class="arithmatex"><span class="MathJax_Preview">i_B, i_A, i_B \gg i_A</span><script type="math/tex">i_B, i_A, i_B \gg i_A</script></span>, 导致后者的极限电流被前者掩盖==&gt;掩蔽前者的电流.</p>
+<p>氢波: 酸性溶液中, <span class="arithmatex"><span class="MathJax_Preview">H^+</span><script type="math/tex">H^+</script></span>在-1.2~-1.4V在滴汞电极上产生还原波==&gt;在中性或者碱性溶液中测定.</p>
+<h3 id="_60">极谱波方程<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h3>
+<p>描述极谱电流与滴汞电极电位间关系的数学表达式称为极谱波方程.</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/BBEE687210F80910FA9A46DF7904EB64.png" /></p>
+<p>可逆还原过程极谱波方程</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220928115500.png" /></p>
 
 
 
