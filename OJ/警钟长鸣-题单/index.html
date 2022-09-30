@@ -1277,6 +1277,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x06-dsoj-w3t2-3" class="md-nav__link">
+    0x06 DSOJ W3T2 小蓝鲸排队3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x07-dsoj-w3t3" class="md-nav__link">
+    0x07 DSOJ W3T3 小蓝鲸找矩形
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1408,6 +1422,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x06-dsoj-w3t2-3" class="md-nav__link">
+    0x06 DSOJ W3T2 小蓝鲸排队3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x07-dsoj-w3t3" class="md-nav__link">
+    0x07 DSOJ W3T3 小蓝鲸找矩形
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1451,6 +1479,8 @@
 <li><a href="#0x03-lgoj-p1160">0x03 LGOJ P1160 队列安排</a></li>
 <li><a href="#0x04-dsoj-w3t3">0x04 DSOJ W3T3 小蓝鲸乘法</a></li>
 <li><a href="#0x05">0x05 栈输出的合法序列</a></li>
+<li><a href="#0x06-dsoj-w3t2-3">0x06 DSOJ W3T2 小蓝鲸排队3</a></li>
+<li><a href="#0x07-dsoj-w3t3">0x07 DSOJ W3T3 小蓝鲸找矩形</a></li>
 </ul>
 </li>
 </ul>
@@ -1656,6 +1686,30 @@
 <p>如何判断一个序列是否是合法的出栈序列?</p>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">一些思考</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(n) = \sum _{i = 0}^{n-1}f(i)\cdot f(n-1-i)
+</div>
+<script type="math/tex; mode=display">
+f(n) = \sum _{i = 0}^{n-1}f(i)\cdot f(n-1-i)
+</script>
+</div>
+<p>因此, 算法的复杂度为O(<span class="arithmatex"><span class="MathJax_Preview">1 + 2 + 3 + \cdots + n</span><script type="math/tex">1 + 2 + 3 + \cdots + n</script></span>) = O(n<sup>2</sup>).</p>
+<blockquote>
+<p>引申: 卡特兰数</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220929143409.png" /></p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(n) = C_{2n}^n - C_{2n}^{n-1}
+</div>
+<script type="math/tex; mode=display">
+f(n) = C_{2n}^n - C_{2n}^{n-1}
+</script>
+</div>
+</blockquote>
+</div>
 </div>
 <p>0x06 [0x05]的延伸 <a href="https://www.luogu.com.cn/problem/P1750">出栈序列</a></p>
 <ul>
@@ -1667,6 +1721,28 @@
 </ul>
 <p>[TODO]</p>
 <p>初步分析: 直接模拟的话显然超时.</p>
+<h3 id="0x06-dsoj-w3t2-3">0x06 DSOJ W3T2 小蓝鲸排队3<a class="headerlink" href="#0x06-dsoj-w3t2-3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930100436.png" /></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930100627.png" /></p>
+<ul>
+<li>题目分析</li>
+</ul>
+<details class="success">
+<summary>dfs爆搜</summary>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930100821.png" /></p>
+</details>
+<h3 id="0x07-dsoj-w3t3">0x07 DSOJ W3T3 小蓝鲸找矩形<a class="headerlink" href="#0x07-dsoj-w3t3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>题目信息</p>
+</li>
+<li>
+<p>题目分析</p>
+</li>
+</ul>
 
 
 
