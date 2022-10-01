@@ -1291,6 +1291,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x08-apojoj-w3" class="md-nav__link">
+    0x08 APOJ(高程OJ) W3 又是指针的坑
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1436,6 +1443,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x08-apojoj-w3" class="md-nav__link">
+    0x08 APOJ(高程OJ) W3 又是指针的坑
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1481,6 +1495,7 @@
 <li><a href="#0x05">0x05 栈输出的合法序列</a></li>
 <li><a href="#0x06-dsoj-w3t2-3">0x06 DSOJ W3T2 小蓝鲸排队3</a></li>
 <li><a href="#0x07-dsoj-w3t3">0x07 DSOJ W3T3 小蓝鲸找矩形</a></li>
+<li><a href="#0x08-apojoj-w3">0x08 APOJ(高程OJ) W3 又是指针的坑</a></li>
 </ul>
 </li>
 </ul>
@@ -1730,19 +1745,98 @@ f(n) = C_{2n}^n - C_{2n}^{n-1}
 <ul>
 <li>题目分析</li>
 </ul>
+<p>思考: 为什么会导致对应的可能序列有多种?</p>
+<p>显然, 原因在于同一个字母可能存在多个"小蓝鲸", 举例来说<span class="arithmatex"><span class="MathJax_Preview">C \cdots C C \cdots</span><script type="math/tex">C \cdots C C \cdots</script></span>, 这3个C就有<span class="arithmatex"><span class="MathJax_Preview">A_3^3 = 3!</span><script type="math/tex">A_3^3 = 3!</script></span>种排列方式, 但是, 进一步思考: 这<span class="arithmatex"><span class="MathJax_Preview">3!</span><script type="math/tex">3!</script></span>种序列都是合法的吗? 这就需要结合题目的 <strong>双队列要求</strong> 进行合法性判定, 显然, 容易举出不合法的例子(如样例).</p>
+<p>这样看来, 似乎该题的要点之一就是 <mark>如何判定给定的一个序列是否是合法的序列</mark> . </p>
+<p>由于题目规则, 每一个"小蓝鲸"选择队列是任意的, 同时两个队列每次通过的一个"小蓝鲸"也是任意的. 这就导致 <strong>存在多种排队方法, 最终得到相同的序列</strong>. 然而, 题目只需要我们输出所有的合法的序列, 因此我们不用管 <strong>一个结果序列是具体通过什么排队方式得到的</strong> , 只需要构造一种排队方式使得这个结果是合法的即可. 这是通过结果反推(构造)过程来判定结果合法性的方法.</p>
+<p>下面, 来思考这个合法性判定函数怎么写.</p>
+<p>首先, 需要观察到, 对于结果的合法性, 我们只需要关注小蓝鲸的序号, 而小蓝鲸的分组(ABCD...)是不影响结果合法性的判定的.因为在排队的过程中, 不会因为属于不同的字母, 对排队的规则产生任何分歧. 我们只是要求序号小的先入队列. </p>
+<p>既然通过结果反推, 我们逆向思考, 从结果序列入手, 通过依次给结果序列中的每一个序号分配通道, 把小蓝鲸"塞回队列", 然后需要满足小蓝鲸从队列中退出, 最后得到原始的<code>[1 2 3 ...]</code>序列.</p>
+<p>然后, 通过样例来举例说明.</p>
+<div class="admonition note">
+<p class="admonition-title">构造过程</p>
+<p>首先, 不失一般性, <code>2</code>进入队列1;</p>
+<p>由于<code>2</code>先出队, 因此<code>1</code>只能进入队列2, 否则, 就会导致<code>1</code>先于<code>2</code>出队, 这就意味着<code>2</code>先于<code>1</code>入队.</p>
+<p>对于<code>3</code>, 这时候就发现, <mark>3可以任意进入队列1或者队列2</mark> , 对结果没有任何影响, 这一点先记住, 我们假设3进入队列1</p>
+<p>对于<code>6</code>, 同<code>3</code>, 不失一般性, 我们假设<code>6</code>进入队列1;</p>
+<p>这时候, 我们发现, <code>4</code>不能安排到队列1中了, 因为这样的话相当于<code>6</code>比<code>4</code>先入队, 因此只能将<code>4</code>安排到队列2;</p>
+<p>同理, 5-&gt;队列2;</p>
+<p>对于7, 同<code>3</code>, 不失一般性, 安排到1;</p>
+<p>完成<code>还原构造</code>, 得到如下图所示的队列情况, 不难说明可以还原回入队时的[1 2 3 4 ...], 因此合法.</p>
+<hr />
+<p>下面来看一个不合法的例子:</p>
+<p>[2 1 3 6 7 5 4]</p>
+<p>如上方法, 安排到<code>4</code>的时候发现: 无论如何安排, 两个队列的最后一个元素均大于4, 因此<code>4</code>无法入队.
+因为两个队的最后一个元素都比<code>4</code>大, 如果<code>4</code>入队, 就说明<code>4</code>晚于这些元素进入队列, 这显然是不对的.</p>
+<p>至此, 我们可以归纳不合法的判据:</p>
+<ul>
+<li>
+<p>两个队列满足单调增的性质, 即, 每次入队的元素需要大于当前的队尾的元素. 这反映在题目中就是序号小的先入队.</p>
+</li>
+<li>
+<p>因此, 对于一个结果序列, 如果无论如何构造, 都存在一个元素无法入队时, 就说明这个结果是不成立的.</p>
+</li>
+<li>
+<p>那么, 怎么证明 <strong>无论如何也不能呢?</strong> 这里就要用到之前发现的一个性质: 当入队的元素均大于两个队列的队尾元素时, 可以进入任意队列. 不难发现, 这里存在最优解的情况, 即, 每次都选择当前队尾元素较大的队列入队, 这样更有可能满足两个队列的递增性质, 因此如果这样的策略也不满足, 则说明其余构造也不能满足.</p>
+</li>
+</ul>
+</div>
+<p>至此, 我们解决了如何判定合法性的问题. 下一个要点是, 怎么生成所有的待判定的序列呢?</p>
+<p>不难想到, 不就是全排列么, 不过这部分的代码还是很考验码力的, 因为是一个复合的全排列, 实现起来不简单.</p>
+<p>大体的思路就是全排列的思路: dfs + 回溯.</p>
+<div class="admonition note">
+<p class="admonition-title">构造序列方法</p>
+<p>首先, 明确排列分配过程: 对于同类字母的结果序列, 分配原始序列中的idx. 因此首先做一下数据处理, 这部分略.</p>
+<p>然后, 就是往结果序列(一开始是空的)中填入idx的过程了. 写一个<code>foo(int charIdx, int curCnt)</code>函数, <code>charIdx</code>表示当前处理的字母, <code>curCnt</code>表示正在尝试填入的是结果序列中第<code>curCnt</code>个该字母对应的位置.</p>
+<p>从A-Z遍历, 每个字母又是从第1个知道全部填完, 回溯法就需要有记忆数组<code>int isUsed</code>. 每次选择一个未被使用的原始idx, 递归填写下一个, 返回的时候还原该idx的使用状态.</p>
+<p>递归的重点就是Z字母的最后一个位置被填完. 这样就得到了一个完整的结果序列, 带入之前写的判定函数即可. </p>
+</div>
 <details class="success">
 <summary>dfs爆搜</summary>
 <p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930100821.png" /></p>
 </details>
-<h3 id="0x07-dsoj-w3t3">0x07 DSOJ W3T3 小蓝鲸找矩形<a class="headerlink" href="#0x07-dsoj-w3t3" title="Permanent link">&para;</a></h3>
+<h3 id="0x07-dsoj-w3t3">0x07 DSOJ W3T3 <a href="https://leetcode.cn/problems/largest-rectangle-in-histogram/">小蓝鲸找矩形</a><a class="headerlink" href="#0x07-dsoj-w3t3" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>题目信息</p>
+<p>题目信息
+<img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930232347.png" /></p>
 </li>
 <li>
 <p>题目分析</p>
 </li>
 </ul>
+<p>所有的可能矩形有三个自由度: 左端位置 右端位置 矩形高度
+单调栈的想法是: 从左到右遍历每一个柱子, 以其高度为矩形高度, 然后尽可能向左和向右延展(直到左/右出现柱子高度比当前这个高度低) 那么以该柱子为矩形高度的最大矩形就=(rightIdx - leftIdx + 1) * height[curIdx]</p>
+<p>所以目标就是以O(N)的复杂度来找到每一个柱子左边有几个大于等于它的, 右边有几个大于等于它的.</p>
+<div class="admonition faq">
+<p class="admonition-title">为什么想到单调栈?</p>
+<p>比起怎么利用单调栈完成这道题, 更难的是: 怎么自然的想到使用单调栈? </p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930232500.png" /></p>
+</div>
+<details class="success">
+<summary>单调栈 O(N)</summary>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930233007.png" /></p>
+</details>
+<h3 id="0x08-apojoj-w3">0x08 APOJ(高程OJ) W3 又是指针的坑<a class="headerlink" href="#0x08-apojoj-w3" title="Permanent link">&para;</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">题目理解很重要</p>
+<p>对于设计类型的题目, 很大的难点在于 <mark>完全正确理解题目意思</mark> , 否则很可能基于一些习惯进行设计, 结果带来的错误就几乎不可能改出来了, 因为你根本就不会想到存在这样的问题.</p>
+<p>例如, 本题中通过传递指针来进行<code>careerTalk</code>变量的传递. 潜意识里告诉我, 如果直接使用传入的指针, 而不是创建一个类并进行拷贝的话, 可能会出现很大的问题(然而本题中其实并不会, 还是没有想清楚), 例如指针指向的地址被释放这样的问题. 因此就 <strong>下意识的</strong> 选择了创建并拷贝来存入vector. 这下就带来严重的问题: 题目说明公司可以随时修改careerTalk的状态, <mark>这其实恰恰用到了指针的这个特性</mark> . 遂芭比Q...</p>
+<p>然后样例里也并未示例这种情况, 加上之前的样例已经对careerTalk的状态做修改, 那个样例由于没有入vector, 因而没有暴露错误. 因此de了一个多小时, 都没有能把这个bug找到.</p>
+<p>为什么题目没有想清楚就开始做呢? 以后遇到指针, 还是要想一下.(虽然算法类的题目并不会存在这个问题, 这万恶的高程...)</p>
+<div class="admonition note">
+<p class="admonition-title">debug的教训</p>
+<p>又是一次一个多小时debug无果的经历, 这一个小时里, 我反复地看文档, 检查每一个函数的实现, 但是没有想到这样的函数组合使用导致错误.</p>
+<ul>
+<li>
+<p>debug不能只是看和模拟结果, 还是需要设计样例, 用程序来验算一致性.</p>
+</li>
+<li>
+<p>不仅要检查函数的实现的逻辑错误, 还要思考函数A的调用会产生什么样的结果</p>
+</li>
+</ul>
+</div>
+</div>
 
 
 
