@@ -1669,6 +1669,33 @@
 <p>默认情况下, 对基类的赋值操作和拷贝构造采用默认拷贝构造;</p>
 <p>除非显式指出.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">对虚函数的几点说明</p>
+<ul>
+<li>
+<p>静态成员函数不能是虚函数.</p>
+</li>
+<li>
+<p>构造函数不能是虚函数, 但是析构函数(往往)可以是虚函数.</p>
+</li>
+<li>
+<p>只要在基类中说明了虚函数, 在派生类中同型构的函数成员都是虚函数(不必写virtual)</p>
+</li>
+<li>
+<p>只有通过指针或引用访问对象类的虚函数时才进行动态绑定.</p>
+</li>
+<li>
+<p>基类的构造函数和析构函数中对虚函数的调用不进行动态绑定</p>
+<blockquote>
+<p>因为基类在构造阶段并不清楚派生类的情况. 同样, 当析构阶段, 派生类已经析构, 不能在调用其函数.</p>
+</blockquote>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>注意override的含义:"覆盖"</p>
+</div>
+</div>
 
 
 
