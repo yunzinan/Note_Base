@@ -1304,6 +1304,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x09-dsoj-w4t2" class="md-nav__link">
+    0x09 DSOJ W4T2 小蓝鲸比大小
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x0a-dsoj-w4t3-leetcode239" class="md-nav__link">
+    0x0a DSOJ W4T3 小蓝鲸找最大值(原题LeetCode)239. 滑动窗口最大值
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1456,6 +1470,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x09-dsoj-w4t2" class="md-nav__link">
+    0x09 DSOJ W4T2 小蓝鲸比大小
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x0a-dsoj-w4t3-leetcode239" class="md-nav__link">
+    0x0a DSOJ W4T3 小蓝鲸找最大值(原题LeetCode)239. 滑动窗口最大值
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1502,6 +1530,8 @@
 <li><a href="#0x06-dsoj-w3t2-3">0x06 DSOJ W3T2 小蓝鲸排队3</a></li>
 <li><a href="#0x07-dsoj-w3t3">0x07 DSOJ W3T3 小蓝鲸找矩形</a></li>
 <li><a href="#0x08-apojoj-w3">0x08 APOJ(高程OJ) W3 又是指针的坑</a></li>
+<li><a href="#0x09-dsoj-w4t2">0x09 DSOJ W4T2 小蓝鲸比大小</a></li>
+<li><a href="#0x0a-dsoj-w4t3-leetcode239">0x0a DSOJ W4T3 小蓝鲸找最大值(原题LeetCode)239. 滑动窗口最大值</a></li>
 </ul>
 </li>
 </ul>
@@ -1844,6 +1874,55 @@ f(n) = C_{2n}^n - C_{2n}^{n-1}
 </ul>
 </div>
 </div>
+<h3 id="0x09-dsoj-w4t2">0x09 DSOJ W4T2 <a href="http://netlab.nju.edu.cn:5080/contest/38/problem/104">小蓝鲸比大小</a><a class="headerlink" href="#0x09-dsoj-w4t2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221006210944.png" /></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221006211016.png" /></p>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>如果把单调栈的模型带入, 会发现很好的契合目标: 维护一个单调减(不严格)的单调栈, 每当元素出栈时, 必然是因为入栈元素 <strong>首次</strong> 大于该元素, 因此这个入栈元素就是该元素的答案.</p>
+<p>首先找到整个序列里的最大元素(可能有多个, 因此需要扫描两次), 把这些元素的结果置<code>-1</code>, 同时标记<code>isUsed</code>状态.</p>
+<p>然后依次让所有元素进栈, 当栈空时, 直接进栈; 当入栈元素值大于栈顶元素时, 栈顶元素的结果就是当前的入栈元素值, 不断重复判定直至栈顶元素值大于等于入栈元素或栈空, 入栈.</p>
+<p>显然, 由于存在最大元素入栈, 因此一定可以使得不是最大的元素出栈; 对于最大元素, 虽然不出栈, 但是由于我们已经找到其结果, 因此不影响过程, 只会静静的躺在栈底.</p>
+<p>复杂度及证明:</p>
+<p>显然, 对于预备工作, 复杂度是O(N)的.</p>
+<p>对于入栈的过程, 因为每一个元素最多只需要扫描n次就能找到其答案, 因此对于最坏的情况, 即处于序列的最后一个, 而其答案在其前面一个, 也只需要经过n次的扫描就能找到答案, 而在这之前, 一共有n次元素入栈, 因此最多只需要有2n量级的元素入栈, 而出栈操作的次数是不超过入栈次数的. 因此总复杂度为O(N).</p>
+<details class="success">
+<summary>单调栈</summary>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221006211745.png" /></p>
+</details>
+<h3 id="0x0a-dsoj-w4t3-leetcode239">0x0a DSOJ W4T3 <a href="https://leetcode.cn/problems/sliding-window-maximum/">小蓝鲸找最大值(原题LeetCode)239. 滑动窗口最大值</a><a class="headerlink" href="#0x0a-dsoj-w4t3-leetcode239" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221006215509.png" /></p>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>维护一个"双端队列", 这个数据结构具有栈的特性, 即允许入队和从队尾出队, 同时又可以从队首出队.</p>
+<p>注意到一个特性, 就是在一个"滑动窗口"中, 如果后进入的元素值大于之前的所有元素, 那么之前的元素就没有存在的意义了, 因为先进滑动窗口的元素一定是先离开的, 因此若这个元素仍然存在与滑动窗口内, 则一定不会是这个滑动窗口的最大值. 这一点具备 <mark>单调栈</mark> 的特性. </p>
+<div class="admonition tip">
+<p class="admonition-title">对单调栈的一些思考</p>
+<p>为什么单调栈能优化? 因为对于一个序列, 一定是若干段严格单调增和若干段不严格单调减构成, 有时候我们发现严格单调增(或者其他情况)的部分没有意义, 因此就抛弃这部分序列.</p>
+<p>同时, 单调栈可以快速的找到第一个大于(或其他)当前元素的元素. 这也是一个很好的性质.</p>
+</div>
+<p>但是, 由于滑动窗口具有宽度限制, 达到宽度后队首元素需要出队, 因此我们需要对单调栈这个数据结构进行扩展: 当滑动窗口移动到下一个位置时, 若上一个窗口的第一个元素仍在队列中, 则需要将该元素出队, 注意到, 这个出队操作不会对后续的队列的单调性有影响, 因此每一次移动滑动窗口, 先判断需不需要将队首元素出队, 然后从队尾出队直至新元素入队时仍能满足单调性(不严格, 允许相等).每次操作结束后, 队首元素记为该滑动窗口的最大值.</p>
+<p>显然, 这个算法是O(N)的. 下面, 讨论一些算法细节的正确性. </p>
+<p>在 <strong>判断队首元素是否需要出队</strong> 时, 只需要比较当前队首元素是否与前一个滑动窗口的第一个元素是否值相等, 若相等就出队. 显然, 这是一个必要条件, 但是否充分呢? 即, 有没有可能, 出队的并不是上一个滑动窗口的第一个元素呢? 答案是不可能, 因为如果这个元素没有出队, 那么必然在队首, 因为这是这个队列里最早进入的元素, 而出队是满足FIFO的, 如果没有出队, 则必然在队首; 而如果这个元素已经出队, 那么必然是有比它更大的元素在它后面入队, 那么这样的话, 队首元素就必然不是它了(因为要满足单调性, 因此队首元素一定比它大才能使它出队).</p>
+<div class="admonition note">
+<p class="admonition-title">单调队列</p>
+<p>笔者之前一直以为单调队列是单调的单向队列, 但其实是可以双端<code>push</code>/<code>pop</code>的双端队列, 同时满足单调性.</p>
+<p>入队的时候是看是否又新又好, 出队的时候是看是否太老了.</p>
+</div>
+<details class="success">
+<summary>单调队列</summary>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221006215626.png" /></p>
+<p>附一张提交力扣的截图:</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221006215826.png" /></p>
+</details>
 
 
 
