@@ -1332,6 +1332,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x0b-lgoj" class="md-nav__link">
+    0x0b LGOJ 表达式的转换
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1512,6 +1519,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x0b-lgoj" class="md-nav__link">
+    0x0b LGOJ 表达式的转换
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1556,6 +1570,7 @@
 <li><a href="#0x08-apojoj-w3">0x08 APOJ(高程OJ) W3 又是指针的坑</a></li>
 <li><a href="#0x09-dsoj-w4t2">0x09 DSOJ W4T2 小蓝鲸比大小</a></li>
 <li><a href="#0x0a-dsoj-w4t3-leetcode239">0x0a DSOJ W4T3 小蓝鲸找最大值(原题LeetCode)239. 滑动窗口最大值</a></li>
+<li><a href="#0x0b-lgoj">0x0b LGOJ 表达式的转换</a></li>
 </ul>
 </li>
 </ul>
@@ -1947,13 +1962,45 @@ f(n) = C_{2n}^n - C_{2n}^{n-1}
 <p>附一张提交力扣的截图:</p>
 <p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221006215826.png" /></p>
 </details>
+<h3 id="0x0b-lgoj">0x0b LGOJ <a href="https://www.luogu.com.cn/problem/P1175">表达式的转换</a><a class="headerlink" href="#0x0b-lgoj" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p>见<a href="https://www.luogu.com.cn/problem/P1175">链接</a></p>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>此题可以拆分成两个子问题: 1.中缀表达式-&gt;后缀表达式 2.对后缀表达式逐步计算, 显示过程</p>
+<p>显然, 前者是比较难实现的, 后者就从左到右依次处理即可.</p>
+<p>首先, 需要定义运算符优先级:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">check</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">switch</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="p">:</span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;-&#39;</span><span class="p">:</span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;*&#39;</span><span class="p">:</span><span class="k">return</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;/&#39;</span><span class="p">:</span><span class="k">return</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;^&#39;</span><span class="p">:</span><span class="k">return</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;(&#39;</span><span class="p">:</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;)&#39;</span><span class="p">:</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="k">default</span><span class="o">:</span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="c1">//程序不会执行这句，保险起见要加上</span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221011224848.png" /></p>
+<p>一直弹出op栈栈顶到dat里，直到栈顶为左括号，再弹出左括号。这些也可以通过模拟得出答案。</p>
+<details class="success">
+<summary>AC, 但是不是我写的<img alt="😢" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f622.svg" title=":cry:" /></summary>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221011224325.png" /></p>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 10, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2022</span>
       
     
   </small>
