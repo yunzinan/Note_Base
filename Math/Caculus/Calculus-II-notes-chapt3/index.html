@@ -1835,11 +1835,11 @@
 <h4 id="711">7.1.1 第一类曲线积分的概念与性质<a class="headerlink" href="#711" title="Permanent link">&para;</a></h4>
 <p>定义 7.1.1 (第一类曲线积分) 设 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 为 <span class="arithmatex"><span class="MathJax_Preview">x O y</span><script type="math/tex">x O y</script></span> 平面上的一条光滑曲线段, 函数 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上有定义, 在 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上任意揷入一点列 <span class="arithmatex"><span class="MathJax_Preview">M_{0}, M_{1}, \cdots, M_{n}</span><script type="math/tex">M_{0}, M_{1}, \cdots, M_{n}</script></span>, 将 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 分为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 小段, 第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 段的长度记 为 <span class="arithmatex"><span class="MathJax_Preview">\Delta s_{i}(i=1,2, \cdots, n)</span><script type="math/tex">\Delta s_{i}(i=1,2, \cdots, n)</script></span>. 在第 <span class="arithmatex"><span class="MathJax_Preview">i</span><script type="math/tex">i</script></span> 段上任取一点 <span class="arithmatex"><span class="MathJax_Preview">\left(\xi_{i}, \eta_{i}\right)</span><script type="math/tex">\left(\xi_{i}, \eta_{i}\right)</script></span>. 令 <span class="arithmatex"><span class="MathJax_Preview">\lambda=\max _{1 \leqslant i \leqslant n}\left\{\Delta s_{i}\right\}</span><script type="math/tex">\lambda=\max _{1 \leqslant i \leqslant n}\left\{\Delta s_{i}\right\}</script></span>, 如果对于曲线的任 意分割及点 <span class="arithmatex"><span class="MathJax_Preview">\left(\xi_{i}, \eta_{i}\right)</span><script type="math/tex">\left(\xi_{i}, \eta_{i}\right)</script></span> 的任意取法, 下面的极限
 $$
-\lim <em>{\lambda \rightarrow 0} \sum</em>{i=1}^{n} f\left(\xi_{i}, \eta_{i}\right) \Delta s_{i}
+\lim <em i="1">{\lambda \rightarrow 0} \sum</em>^{n} f\left(\xi_{i}, \eta_{i}\right) \Delta s_{i}
 $$
 都存在且唯一, 则称此极限值为函数 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 在曲线段 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 上的第一类曲线积分, 也称为对弧 长的曲线积分, 记为 <span class="arithmatex"><span class="MathJax_Preview">\int_{C} f(x, y) \mathrm{d} s</span><script type="math/tex">\int_{C} f(x, y) \mathrm{d} s</script></span>, 即
 $$
-\int_{C} f(x, y) \mathrm{d} s=\lim <em>{\lambda \rightarrow 0} \sum</em>{i=1}^{n} f\left(\xi_{i}, \eta_{i}\right) \Delta s_{i} .
+\int_{C} f(x, y) \mathrm{d} s=\lim <em i="1">{\lambda \rightarrow 0} \sum</em>^{n} f\left(\xi_{i}, \eta_{i}\right) \Delta s_{i} .
 $$
 其中 <span class="arithmatex"><span class="MathJax_Preview">f(x, y)</span><script type="math/tex">f(x, y)</script></span> 称为被积函数, <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 称为积分曲线, <span class="arithmatex"><span class="MathJax_Preview">\mathrm{d} s</span><script type="math/tex">\mathrm{d} s</script></span> 称为弧微分.</p>
 <h4 id="712">7.1.2 第一类曲线积分的计算<a class="headerlink" href="#712" title="Permanent link">&para;</a></h4>
@@ -1853,7 +1853,7 @@ y=\psi(t),
 $$
 其中 <span class="arithmatex"><span class="MathJax_Preview">\varphi(t), \psi(t)</span><script type="math/tex">\varphi(t), \psi(t)</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">[a, b]</span><script type="math/tex">[a, b]</script></span> 上具有连续的一阶导数, 且 <span class="arithmatex"><span class="MathJax_Preview">\left[\varphi^{\prime}(t)\right]^{2}+\left[\psi^{\prime}(t)\right]^{2} \neq 0</span><script type="math/tex">\left[\varphi^{\prime}(t)\right]^{2}+\left[\psi^{\prime}(t)\right]^{2} \neq 0</script></span>, 则第一类曲线积分 <span class="arithmatex"><span class="MathJax_Preview">\int_{C} f(x, y) \mathrm{d} s</span><script type="math/tex">\int_{C} f(x, y) \mathrm{d} s</script></span> 存在, 且
 $$
-\int_{C} f(x, y) \mathrm{d} s=\int_{a}^{b} f(\varphi(t), \psi(t)) \sqrt{\left[\varphi<sup>{\prime}(t)\right]</sup>{2}+\left[\psi<sup>{\prime}(t)\right]</sup>{2}} \mathrm{~d} t
+\int_{C} f(x, y) \mathrm{d} s=\int_{a}^{b} f(\varphi(t), \psi(t)) \sqrt{\left[\varphi<sup 2="2">{\prime}(t)\right]</sup>+\left[\psi<sup 2="2">{\prime}(t)\right]</sup>} \mathrm{~d} t
 $$</p>
 <h3 id="72">7.2 第二类曲线积分<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
 <h4 id="721">7.2.1 第二类曲线积分的概念与性质<a class="headerlink" href="#721" title="Permanent link">&para;</a></h4>
@@ -1863,7 +1863,7 @@ A=M_{0}\left(x_{0}, y_{0}\right), M_{1}\left(x_{1}, y_{1}\right), \cdots, M_{n-1
 $$
 将 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 分为 <span class="arithmatex"><span class="MathJax_Preview">n</span><script type="math/tex">n</script></span> 个有向小弧段 <span class="arithmatex"><span class="MathJax_Preview">\widehat{M_{i-1} M_{i}}(i=1,2, \cdots, n), \widehat{M_{i-1} M_{i}}</span><script type="math/tex">\widehat{M_{i-1} M_{i}}(i=1,2, \cdots, n), \widehat{M_{i-1} M_{i}}</script></span> 的弧长记为 <span class="arithmatex"><span class="MathJax_Preview">\Delta s_{i}(i=1,2, \cdots, n)</span><script type="math/tex">\Delta s_{i}(i=1,2, \cdots, n)</script></span>. 设 <span class="arithmatex"><span class="MathJax_Preview">\lambda=\max _{1 \leqslant i \leqslant n}\left\{\Delta s_{i}\right\}, \Delta x_{i}=x_{i}-x_{i-1}, \Delta y_{i}=y_{i}-y_{i-1}</span><script type="math/tex">\lambda=\max _{1 \leqslant i \leqslant n}\left\{\Delta s_{i}\right\}, \Delta x_{i}=x_{i}-x_{i-1}, \Delta y_{i}=y_{i}-y_{i-1}</script></span>. 在 <span class="arithmatex"><span class="MathJax_Preview">\widehat{M_{i-1} M_{i}}</span><script type="math/tex">\widehat{M_{i-1} M_{i}}</script></span> 上任取一点 <span class="arithmatex"><span class="MathJax_Preview">\left(\xi_{i}, \eta_{i}\right)</span><script type="math/tex">\left(\xi_{i}, \eta_{i}\right)</script></span>. 如果 极限
 $$
-\lim <em>{\lambda \rightarrow 0} \sum</em>{i=1}^{n} \boldsymbol{F}\left(\xi_{i}, \eta_{i}\right) \cdot \overrightarrow{M_{i-1} M_{i}}=\lim <em>{\lambda \rightarrow 0} \sum</em>{i=1}^{n}\left[P\left(\xi_{i}, \eta_{i}\right) \Delta x_{i}+Q\left(\xi_{i}, \eta_{i}\right) \Delta y_{i}\right]
+\lim <em i="1">{\lambda \rightarrow 0} \sum</em>^{n} \boldsymbol{F}\left(\xi_{i}, \eta_{i}\right) \cdot \overrightarrow{M_{i-1} M_{i}}=\lim <em i="1">{\lambda \rightarrow 0} \sum</em>^{n}\left[P\left(\xi_{i}, \eta_{i}\right) \Delta x_{i}+Q\left(\xi_{i}, \eta_{i}\right) \Delta y_{i}\right]
 $$
 存在唯一 (不依赖于对曲线的分割及 <span class="arithmatex"><span class="MathJax_Preview">\widehat{M}_{i-1} M_{i}</span><script type="math/tex">\widehat{M}_{i-1} M_{i}</script></span> 上点 <span class="arithmatex"><span class="MathJax_Preview">\left(\xi_{i}, \eta_{i}\right)</span><script type="math/tex">\left(\xi_{i}, \eta_{i}\right)</script></span> 的选取), 则称此极限为向量函数 <span class="arithmatex"><span class="MathJax_Preview">\boldsymbol{F}(x, y)</span><script type="math/tex">\boldsymbol{F}(x, y)</script></span> 沿曲线 <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> 从 <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> 点到 <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span> 点的第二类曲线积分. 记为
 $$
@@ -1967,8 +1967,8 @@ $$
 r_1'= (x_1', y_1', z_1') \quad r_2' = (x_2',y_2',z_2')\
 d\vec{S} = r_1' \times r_2' = \left|\begin{array}{ccc}
 i &amp; j &amp; k \
-x_{1}^{\prime} &amp; y_{1}^{\prime} &amp; z '<em>1 \
-x</em>{2}^{\prime} &amp; y_{2}^{\prime} &amp; z_{2}^{\prime}
+x_{1}^{\prime} &amp; y_{1}^{\prime} &amp; z '<em 2="2">1 \
+x</em>^{\prime} &amp; y_{2}^{\prime} &amp; z_{2}^{\prime}
 \end{array}\right| = (y_1'z_2'-y_2'z_1', x_2'z_1'- x_1'z_2', x_1'y_2'-x_2'y_1')\ = (|\begin{array} {ccc} y_1' &amp; y_2'\ z_1' &amp; z_2' \end{array}|,|\begin{array}{ccc}z_1' &amp; z_2' \ x_1' &amp; x_2'  \end{array}|,|\begin{array}{ccc}x_1' &amp; x_2' \ y_1' &amp; y_2'  \end{array}|) =  (A, B, C)\
 dS = |d\vec{S}| = \sqrt{A<sup>2+B</sup>2+C^2}dudv\
 E = r_1'\cdot r_1' \quad F = r_1' \cdot r_2' \quad G = r_2'\cdot r_2'\
@@ -2240,7 +2240,7 @@ $$</p>
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 14, 2022</span>
       
     
   </small>
