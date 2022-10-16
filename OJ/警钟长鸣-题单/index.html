@@ -1339,6 +1339,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x0c-dsoj-w5t4-" class="md-nav__link">
+    0x0c DSOJ W5T4 小蓝鲸找矩阵-类似力扣:最大子矩阵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x0d-leetcode" class="md-nav__link">
+    0x0d leetcode 统计定界子数组
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1526,6 +1540,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x0c-dsoj-w5t4-" class="md-nav__link">
+    0x0c DSOJ W5T4 小蓝鲸找矩阵-类似力扣:最大子矩阵
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x0d-leetcode" class="md-nav__link">
+    0x0d leetcode 统计定界子数组
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1571,6 +1599,8 @@
 <li><a href="#0x09-dsoj-w4t2">0x09 DSOJ W4T2 小蓝鲸比大小</a></li>
 <li><a href="#0x0a-dsoj-w4t3-leetcode239">0x0a DSOJ W4T3 小蓝鲸找最大值(原题LeetCode)239. 滑动窗口最大值</a></li>
 <li><a href="#0x0b-lgoj">0x0b LGOJ 表达式的转换</a></li>
+<li><a href="#0x0c-dsoj-w5t4-">0x0c DSOJ W5T4 小蓝鲸找矩阵-类似力扣:最大子矩阵</a></li>
+<li><a href="#0x0d-leetcode">0x0d leetcode 统计定界子数组</a></li>
 </ul>
 </li>
 </ul>
@@ -1994,13 +2024,30 @@ f(n) = C_{2n}^n - C_{2n}^{n-1}
 <summary>AC, 但是不是我写的<img alt="😢" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f622.svg" title=":cry:" /></summary>
 <p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221011224325.png" /></p>
 </details>
+<h3 id="0x0c-dsoj-w5t4-">0x0c DSOJ W5T4 <a href="https://leetcode.cn/problems/max-submatrix-lcci/">小蓝鲸找矩阵-类似力扣:最大子矩阵</a><a class="headerlink" href="#0x0c-dsoj-w5t4-" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221016113456.png" /></p>
+<p><img src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221016113516.png" style="zoom:33%;" /></p>
+<ul>
+<li>题目分析</li>
+</ul>
+<h3 id="0x0d-leetcode">0x0d leetcode <a href="https://leetcode.cn/contest/weekly-contest-315/problems/count-subarrays-with-fixed-bounds/">统计定界子数组</a><a class="headerlink" href="#0x0d-leetcode" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>从数据规模分析, 应该是O(n)或者O(nlogn)级别的, 而暴力的话, 复杂度至少有O(n<sup>2</sup>).</p>
+<p>笔者的思路, 由于子数组要求连续, 因此首先对原数组进行划分, 遇到<code>&gt;maxk</code>或 <code>&lt;minK</code>时进行分割, 从而得到若干个<span class="arithmatex"><span class="MathJax_Preview">minK \le a_i\le maxK</span><script type="math/tex">minK \le a_i\le maxK</script></span>的数组.</p>
+<p>若一个子数组中只含有1个minK, 1个maxK时, 此时这个数组内符合题意的个数为这两个数的位置与边界之差的乘积.</p>
+<p>但是如果一个子数组里有多个minK或maxK呢? 看起来是一个容斥原理的问题, 笔者在这里就卡关了.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 16, 2022</span>
       
     
   </small>

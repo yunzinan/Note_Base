@@ -1686,6 +1686,33 @@
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">关于继承的覆盖问题</p>
+<p>问题情境: </p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221016230723.png" /></p>
+<p>在基类中已经有方法<code>Robot::move(char direction)</code>, 如果在其派生类中写如上图的方法, 那么, 对于派生类对象的实例<code>r</code>的<code>r-&gt;move('D')</code>会成功吗?</p>
+<p>结论是, 在默认的情况下, r并没有<code>int move(char direction)</code>这一方法, 也就是说, <strong>派生类实例无法调用基类的同名函数, 即使函数的构型(参数, 返回值)不同</strong>.</p>
+<p>联系继承类的作用域概念, 这样的场景可以类比以下代码:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">foo</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">foo</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+显然, 在for的作用域内, 原本的<code>foo</code>变量被覆盖了.因此在内部是没法访问外部的<code>foo</code>的. 避免的方法就是尽量不要起同名的变量.</p>
+<p>但是对于函数, 多了参数列表和返回两种属性, 注意到<code>Robot::move(char direction)</code>与<code>SuperRobot::1::move(char direction, int pace)</code>并不相同, 结合<mark class="critic">函数重载</mark>的知识, 这为什么不属于函数重载呢?</p>
+<p>答案是: 作用域不同. 函数重载时要求两个函数具有相同的作用于的, 而派生类的函数是基类的扩展, 两个函数的作用域并不相同.</p>
+<p>解决这样的同名的矛盾的方法, 比较常见的是显式指出函数的作用域, 例如`rob1-&gt;Robot::move('D')这样的写法.</p>
+<p>但是, 如果想不加名空间限制就直接调用<code>rob1-&gt;move(char direction)</code>这样的写法呢? 这就要求在<code>class SuperRobot1</code>的public的声明中添加一句<code>using Robot::move</code>, 这样, 在SuperRobot的实例中, 就可以同时调用<code>rob1-&gt;move(char direction)</code>和<code>rob1-&gt;move(char direction, int pace)</code>两种方法.</p>
+<p>最后, 具体的PPT参考: </p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221016233109.png" /></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221016233128.png" /></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221016233149.png" /></p>
+<blockquote>
+<p>在去年的Advanced Programming的OJ中, 就出现过这样的刁钻样例, 要求外部不加名空间限制符直接调用, 因此这时候就体现出了<code>using</code>的重要性了.</p>
+</blockquote>
+</div>
 <div class="admonition note">
 <p class="admonition-title">override vs. overload</p>
 <p>override 覆盖 对函数的重写</p>
@@ -1783,7 +1810,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 14, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 16, 2022</span>
       
     
   </small>
