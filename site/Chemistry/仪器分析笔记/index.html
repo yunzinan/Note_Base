@@ -12,7 +12,7 @@
         <meta name="author" content="Yunzinan">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../img/favicon.png">
       <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.2">
     
     
@@ -124,10 +124,16 @@
       </label>
       <nav class="md-search__options" aria-label="查找">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -296,7 +302,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../CheatSheet/OJ/%E8%AD%A6%E9%92%9F%E9%95%BF%E9%B8%A3-%E9%A2%98%E5%8D%95/" class="md-tabs__link">
+      <a href="../../OJ/%E8%AD%A6%E9%92%9F%E9%95%BF%E9%B8%A3-%E9%A2%98%E5%8D%95/" class="md-tabs__link">
         OJ
       </a>
     </li>
@@ -792,6 +798,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ComputerScience/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        数据结构复习笔记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ComputerScience/%E6%95%B0%E7%94%B5%E8%AE%A1%E7%BB%84/" class="md-nav__link">
         数字逻辑与计算机组成
       </a>
@@ -1188,8 +1208,666 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    常用参比电极
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    电极-溶液界面的传质过程
+  </a>
+  
+    <nav class="md-nav" aria-label="电极-溶液界面的传质过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    三种传质类型对电化学信号的影响
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cottrell" class="md-nav__link">
+    Cottrell方程: 极限扩散电流
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    法拉第定律
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    电位分析
+  </a>
+  
+    <nav class="md-nav" aria-label="电位分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    电位分析法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    离子选择性电极
+  </a>
+  
+    <nav class="md-nav" aria-label="离子选择性电极">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    玻璃电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    晶体膜电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    流动载体电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    气敏电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    生物电极
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ise" class="md-nav__link">
+    离子选择电极(ISE)的特性参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k_abpotk_abpot" class="md-nav__link">
+    电位选择系数K_{A,B}^{pot}K_{A,B}^{pot}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    分析方法
+  </a>
+  
+    <nav class="md-nav" aria-label="分析方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    电位法
+  </a>
+  
+    <nav class="md-nav" aria-label="电位法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    标准曲线法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    标准加入法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    直读法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gran" class="md-nav__link">
+    gran作图法: 主要处理标准加入和电位滴定数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    电重量分析与和库伦分析法
+  </a>
+  
+    <nav class="md-nav" aria-label="电重量分析与和库伦分析法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    回顾: 电位分析法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    电解原理
+  </a>
+  
+    <nav class="md-nav" aria-label="电解原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    过电位产生的原因: 电极极化作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    过/超电位的特点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    电解方式
+  </a>
+  
+    <nav class="md-nav" aria-label="电解方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    恒定电流电解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    恒定电压电解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    电重量分析
+  </a>
+  
+    <nav class="md-nav" aria-label="电重量分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    用于检测
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    用于分离
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    库伦分析法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    伏安法和极谱分析法
+  </a>
+  
+    <nav class="md-nav" aria-label="伏安法和极谱分析法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    直流极谱法
+  </a>
+  
+    <nav class="md-nav" aria-label="直流极谱法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    尤考维奇方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    影响扩散电流的因素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    干扰电流及其消除
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    极谱波方程
+  </a>
+  
+    <nav class="md-nav" aria-label="极谱波方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    不可逆极谱波
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    极谱波高的确定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    三电极系统
+  </a>
+  
+    <nav class="md-nav" aria-label="三电极系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    单扫电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    脉冲极谱法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    示差脉冲电极极谱波
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    溶出伏安法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    循环伏安法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lec3" class="md-nav__link">
+    Lec3 色谱与电泳
+  </a>
+  
+    <nav class="md-nav" aria-label="Lec3 色谱与电泳">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chromatography" class="md-nav__link">
+    色谱法chromatography
+  </a>
+  
+    <nav class="md-nav" aria-label="色谱法chromatography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    绪论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    色谱的仪器化和色谱曲线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    色谱法的术语
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    色谱分析基本原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    塔板理论和速率理论
+  </a>
+  
+    <nav class="md-nav" aria-label="塔板理论和速率理论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plate-theory" class="md-nav__link">
+    塔板理论 plate theory: 柱分离效能指标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    速率理论: 动力学理论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    分离度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-chromatography" class="md-nav__link">
+    气相色谱法 Gas Chromatography
+  </a>
+  
+    <nav class="md-nav" aria-label="气相色谱法 Gas Chromatography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    载气系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    进样系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    色谱柱系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    温控系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    检测系统
+  </a>
+  
+    <nav class="md-nav" aria-label="检测系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    检测器性能指标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcd" class="md-nav__link">
+    热导检测器TCD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fid" class="md-nav__link">
+    氢火焰离子化检测器FID
+  </a>
+  
+    <nav class="md-nav" aria-label="氢火焰离子化检测器FID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecd" class="md-nav__link">
+    电子捕获检测器ECD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fpd" class="md-nav__link">
+    火焰光度检测器FPD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    其他检测器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    填充柱气相色谱
+  </a>
+  
+    <nav class="md-nav" aria-label="填充柱气相色谱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    手性选择剂
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    气-固色谱中的固体吸附剂
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_85" class="md-nav__link">
+    开管柱气相色谱法
+  </a>
+  
+    <nav class="md-nav" aria-label="开管柱气相色谱法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_86" class="md-nav__link">
+    分类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_87" class="md-nav__link">
+    定量分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_88" class="md-nav__link">
+    定量矫正因子
+  </a>
   
 </li>
         
@@ -1220,6 +1898,20 @@
     <li class="md-nav__item">
       <a href="../%E4%BB%AA%E5%99%A8%E5%88%86%E6%9E%90%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
         仪器分析作业
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9C%89%E6%9C%BA%E5%8C%96%E5%AD%A6%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        有机化学学习指南笔记
       </a>
     </li>
   
@@ -1282,6 +1974,20 @@
     <li class="md-nav__item">
       <a href="../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
         爬虫入门
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SkillMap/gdb_note/" class="md-nav__link">
+        gdb入门
       </a>
     </li>
   
@@ -1508,22 +2214,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../CheatSheet/OJ/%E8%AD%A6%E9%92%9F%E9%95%BF%E9%B8%A3-%E9%A2%98%E5%8D%95/" class="md-nav__link">
+      <a href="../../OJ/%E8%AD%A6%E9%92%9F%E9%95%BF%E9%B8%A3-%E9%A2%98%E5%8D%95/" class="md-nav__link">
         警钟长鸣
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CheatSheet/OJ/everydayAC/" class="md-nav__link">
-        每日一题题单
       </a>
     </li>
   
@@ -1572,6 +2264,34 @@
     <li class="md-nav__item">
       <a href="../../CheatSheet/mkdocs%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95/" class="md-nav__link">
         mkdocs扩展语法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CheatSheet/regex-cookbook/" class="md-nav__link">
+        regex教程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CheatSheet/markdown-emoji/" class="md-nav__link">
+        emoji-cheat-sheet
       </a>
     </li>
   
@@ -1895,8 +2615,666 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    常用参比电极
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    电极-溶液界面的传质过程
+  </a>
+  
+    <nav class="md-nav" aria-label="电极-溶液界面的传质过程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    三种传质类型对电化学信号的影响
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cottrell" class="md-nav__link">
+    Cottrell方程: 极限扩散电流
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    法拉第定律
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    电位分析
+  </a>
+  
+    <nav class="md-nav" aria-label="电位分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    电位分析法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    离子选择性电极
+  </a>
+  
+    <nav class="md-nav" aria-label="离子选择性电极">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    玻璃电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    晶体膜电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    流动载体电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    气敏电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    生物电极
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ise" class="md-nav__link">
+    离子选择电极(ISE)的特性参数
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k_abpotk_abpot" class="md-nav__link">
+    电位选择系数K_{A,B}^{pot}K_{A,B}^{pot}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    分析方法
+  </a>
+  
+    <nav class="md-nav" aria-label="分析方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    电位法
+  </a>
+  
+    <nav class="md-nav" aria-label="电位法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    标准曲线法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    标准加入法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    直读法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gran" class="md-nav__link">
+    gran作图法: 主要处理标准加入和电位滴定数据
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    电重量分析与和库伦分析法
+  </a>
+  
+    <nav class="md-nav" aria-label="电重量分析与和库伦分析法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    回顾: 电位分析法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    电解原理
+  </a>
+  
+    <nav class="md-nav" aria-label="电解原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    过电位产生的原因: 电极极化作用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    过/超电位的特点
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    电解方式
+  </a>
+  
+    <nav class="md-nav" aria-label="电解方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    恒定电流电解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_50" class="md-nav__link">
+    恒定电压电解
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_51" class="md-nav__link">
+    电重量分析
+  </a>
+  
+    <nav class="md-nav" aria-label="电重量分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_52" class="md-nav__link">
+    用于检测
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_53" class="md-nav__link">
+    用于分离
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_54" class="md-nav__link">
+    库伦分析法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_55" class="md-nav__link">
+    伏安法和极谱分析法
+  </a>
+  
+    <nav class="md-nav" aria-label="伏安法和极谱分析法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_56" class="md-nav__link">
+    直流极谱法
+  </a>
+  
+    <nav class="md-nav" aria-label="直流极谱法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_57" class="md-nav__link">
+    尤考维奇方程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_58" class="md-nav__link">
+    影响扩散电流的因素
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_59" class="md-nav__link">
+    干扰电流及其消除
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_60" class="md-nav__link">
+    极谱波方程
+  </a>
+  
+    <nav class="md-nav" aria-label="极谱波方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_61" class="md-nav__link">
+    不可逆极谱波
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_62" class="md-nav__link">
+    极谱波高的确定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_63" class="md-nav__link">
+    三电极系统
+  </a>
+  
+    <nav class="md-nav" aria-label="三电极系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_64" class="md-nav__link">
+    单扫电极
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_65" class="md-nav__link">
+    脉冲极谱法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_66" class="md-nav__link">
+    示差脉冲电极极谱波
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_67" class="md-nav__link">
+    溶出伏安法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_68" class="md-nav__link">
+    循环伏安法
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lec3" class="md-nav__link">
+    Lec3 色谱与电泳
+  </a>
+  
+    <nav class="md-nav" aria-label="Lec3 色谱与电泳">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chromatography" class="md-nav__link">
+    色谱法chromatography
+  </a>
+  
+    <nav class="md-nav" aria-label="色谱法chromatography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    绪论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    色谱的仪器化和色谱曲线
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    色谱法的术语
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_72" class="md-nav__link">
+    色谱分析基本原理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_73" class="md-nav__link">
+    塔板理论和速率理论
+  </a>
+  
+    <nav class="md-nav" aria-label="塔板理论和速率理论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plate-theory" class="md-nav__link">
+    塔板理论 plate theory: 柱分离效能指标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_74" class="md-nav__link">
+    速率理论: 动力学理论
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_75" class="md-nav__link">
+    分离度
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gas-chromatography" class="md-nav__link">
+    气相色谱法 Gas Chromatography
+  </a>
+  
+    <nav class="md-nav" aria-label="气相色谱法 Gas Chromatography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_76" class="md-nav__link">
+    载气系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_77" class="md-nav__link">
+    进样系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_78" class="md-nav__link">
+    色谱柱系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_79" class="md-nav__link">
+    温控系统
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_80" class="md-nav__link">
+    检测系统
+  </a>
+  
+    <nav class="md-nav" aria-label="检测系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_81" class="md-nav__link">
+    检测器性能指标
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcd" class="md-nav__link">
+    热导检测器TCD
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fid" class="md-nav__link">
+    氢火焰离子化检测器FID
+  </a>
+  
+    <nav class="md-nav" aria-label="氢火焰离子化检测器FID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecd" class="md-nav__link">
+    电子捕获检测器ECD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fpd" class="md-nav__link">
+    火焰光度检测器FPD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_82" class="md-nav__link">
+    其他检测器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_83" class="md-nav__link">
+    填充柱气相色谱
+  </a>
+  
+    <nav class="md-nav" aria-label="填充柱气相色谱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_84" class="md-nav__link">
+    手性选择剂
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    气-固色谱中的固体吸附剂
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_85" class="md-nav__link">
+    开管柱气相色谱法
+  </a>
+  
+    <nav class="md-nav" aria-label="开管柱气相色谱法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_86" class="md-nav__link">
+    分类
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_87" class="md-nav__link">
+    定量分析
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_88" class="md-nav__link">
+    定量矫正因子
+  </a>
   
 </li>
         
@@ -1922,10 +3300,6 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/yunzinan/Note_Base/edit/master/docs/Chemistry/仪器分析笔记.md" title="编辑此页" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
-
 
 
 <h1 id="_1">仪器分析笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
@@ -1979,8 +3353,126 @@
 <li><a href="#_24">膜电极</a></li>
 <li><a href="#_25">微电极</a></li>
 <li><a href="#_26">化学修饰电极</a></li>
+<li><a href="#_27">常用参比电极</a></li>
 </ul>
 </li>
+<li><a href="#-">电极-溶液界面的传质过程</a><ul>
+<li><a href="#_28">三种传质类型对电化学信号的影响</a></li>
+<li><a href="#cottrell">Cottrell方程: 极限扩散电流</a></li>
+</ul>
+</li>
+<li><a href="#_29">法拉第定律</a></li>
+</ul>
+</li>
+<li><a href="#_30">电位分析</a><ul>
+<li><a href="#_31">电位分析法</a></li>
+<li><a href="#_32">离子选择性电极</a><ul>
+<li><a href="#_33">玻璃电极</a></li>
+<li><a href="#_34">晶体膜电极</a></li>
+<li><a href="#_35">流动载体电极</a></li>
+<li><a href="#_36">气敏电极</a></li>
+<li><a href="#_37">生物电极</a></li>
+</ul>
+</li>
+<li><a href="#ise">离子选择电极(ISE)的特性参数</a></li>
+<li><a href="#k_abpotk_abpot">电位选择系数K_{A,B}^{pot}K_{A,B}^{pot}</a></li>
+</ul>
+</li>
+<li><a href="#_38">分析方法</a><ul>
+<li><a href="#_39">电位法</a><ul>
+<li><a href="#_40">标准曲线法</a></li>
+<li><a href="#_41">标准加入法</a></li>
+<li><a href="#_42">直读法</a></li>
+<li><a href="#gran">gran作图法: 主要处理标准加入和电位滴定数据</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_43">电重量分析与和库伦分析法</a><ul>
+<li><a href="#_44">回顾: 电位分析法</a></li>
+<li><a href="#_45">电解原理</a><ul>
+<li><a href="#_46">过电位产生的原因: 电极极化作用</a></li>
+<li><a href="#_47">过/超电位的特点</a></li>
+</ul>
+</li>
+<li><a href="#_48">电解方式</a><ul>
+<li><a href="#_49">恒定电流电解</a></li>
+<li><a href="#_50">恒定电压电解</a></li>
+</ul>
+</li>
+<li><a href="#_51">电重量分析</a><ul>
+<li><a href="#_52">用于检测</a></li>
+<li><a href="#_53">用于分离</a></li>
+</ul>
+</li>
+<li><a href="#_54">库伦分析法</a></li>
+</ul>
+</li>
+<li><a href="#_55">伏安法和极谱分析法</a><ul>
+<li><a href="#_56">直流极谱法</a><ul>
+<li><a href="#_57">尤考维奇方程</a></li>
+<li><a href="#_58">影响扩散电流的因素</a></li>
+<li><a href="#_59">干扰电流及其消除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_60">极谱波方程</a><ul>
+<li><a href="#_61">不可逆极谱波</a></li>
+<li><a href="#_62">极谱波高的确定</a></li>
+<li><a href="#_63">三电极系统</a><ul>
+<li><a href="#_64">单扫电极</a></li>
+<li><a href="#_65">脉冲极谱法</a></li>
+<li><a href="#_66">示差脉冲电极极谱波</a></li>
+<li><a href="#_67">溶出伏安法</a></li>
+<li><a href="#_68">循环伏安法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#lec3">Lec3 色谱与电泳</a><ul>
+<li><a href="#chromatography">色谱法chromatography</a><ul>
+<li><a href="#_69">绪论</a></li>
+<li><a href="#_70">色谱的仪器化和色谱曲线</a></li>
+<li><a href="#_71">色谱法的术语</a></li>
+<li><a href="#_72">色谱分析基本原理</a></li>
+<li><a href="#_73">塔板理论和速率理论</a><ul>
+<li><a href="#plate-theory">塔板理论 plate theory: 柱分离效能指标</a></li>
+<li><a href="#_74">速率理论: 动力学理论</a></li>
+<li><a href="#_75">分离度</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#gas-chromatography">气相色谱法 Gas Chromatography</a><ul>
+<li><a href="#_76">载气系统</a></li>
+<li><a href="#_77">进样系统</a></li>
+<li><a href="#_78">色谱柱系统</a></li>
+<li><a href="#_79">温控系统</a></li>
+<li><a href="#_80">检测系统</a><ul>
+<li><a href="#_81">检测器性能指标</a></li>
+<li><a href="#tcd">热导检测器TCD</a></li>
+</ul>
+</li>
+<li><a href="#fid">氢火焰离子化检测器FID</a><ul>
+<li><a href="#ecd">电子捕获检测器ECD</a></li>
+<li><a href="#fpd">火焰光度检测器FPD</a></li>
+<li><a href="#_82">其他检测器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_83">填充柱气相色谱</a><ul>
+<li><a href="#_84">手性选择剂</a></li>
+<li><a href="#-_1">气-固色谱中的固体吸附剂</a></li>
+</ul>
+</li>
+<li><a href="#_85">开管柱气相色谱法</a><ul>
+<li><a href="#_86">分类</a></li>
+<li><a href="#_87">定量分析</a></li>
+<li><a href="#_88">定量矫正因子</a></li>
 </ul>
 </li>
 </ul>
@@ -2146,7 +3638,7 @@ s = \sqrt{\frac{1}{N-1}\sum_{i=1}^N((X_i - \bar{X})^2)}
 <p class="admonition-title">灵敏度与检出限的区别与联系</p>
 <ul>
 <li>灵敏度考察方法对含量变化的敏感程度(斜率)</li>
-<li>检测线考察检测最低限度(最低点)</li>
+<li>检测限考察检测最低限度(最低点)</li>
 <li>通常只有方法越灵敏, 检出限才能越低.</li>
 </ul>
 </div>
@@ -2188,7 +3680,7 @@ s = \sqrt{\frac{1}{N-1}\sum_{i=1}^N((X_i - \bar{X})^2)}
 <p>电解水-&gt;NaOH</p>
 </li>
 <li>
-<p>法拉第点解定律</p>
+<p>法拉第电解定律</p>
 </li>
 </ul>
 </li>
@@ -2248,13 +3740,18 @@ s = \sqrt{\frac{1}{N-1}\sum_{i=1}^N((X_i - \bar{X})^2)}
 <div class="admonition note">
 <p class="admonition-title">双电层</p>
 <p>外加电压时, 电极携带更多或更少的电子并吸引溶液中相反电荷的离子, 从而在界面中形成<code>双电层</code>.(不加电压时也存在)</p>
-<p>双电层不超过几各水合离子层厚度(<code>分散层</code>), 因此电场强度很大</p>
+<p>双电层不超过几个水合离子层厚度(<code>分散层</code>), 因此电场强度很大</p>
 <p>电化学反应只在<code>界面</code>上发生</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">分散层 vs. 扩散层</p>
 <ul>
-<li>分散层: </li>
+<li>
+<p>分散层: 双电层视作一个电容器</p>
+</li>
+<li>
+<p>扩散层: 本体和表面的浓度梯度.</p>
+</li>
 </ul>
 </div>
 <div class="admonition note">
@@ -2310,7 +3807,7 @@ s = \sqrt{\frac{1}{N-1}\sum_{i=1}^N((X_i - \bar{X})^2)}
 </ul>
 </li>
 </ul>
-<h4 id="_18">能斯特方程<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<h4 id="_18"><mark>能斯特方程</mark><a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">
 \begin{aligned}
@@ -2327,6 +3824,9 @@ E &= E^0 -(Rt/zF\ln K\\
 \end{aligned}
 </script>
 </div>
+<blockquote>
+<p>注: 电极电位表示方程, 重要方程</p>
+</blockquote>
 <p>电极电位与温度/ 氧化还原态物质的<code>活度</code>有关</p>
 <blockquote>
 <p>活度: 校准浓度</p>
@@ -2375,11 +3875,11 @@ AgCl + e \rightleftharpoons Ag + Cl^-
 <p>电极电位是一种势能, 其绝对值无法求得, 常测量其相对值.</p>
 <ul>
 <li>
-<p><code>标准氢电极</code>: 镀铂黑, 活度为1的氢离子, 1标准大气压氢气</p>
+<p><code>标准氢电极</code>: 镀铂黑, 活度为1的氢离子, 1标准大气压氢气, 在任何温度下标准氢电极的电位都 <strong>规定</strong> 为0V.</p>
 <p>平衡态: <span class="arithmatex"><span class="MathJax_Preview">2H^+(aq) + 2e^- \rightleftharpoons H_2(g)</span><script type="math/tex">2H^+(aq) + 2e^- \rightleftharpoons H_2(g)</script></span></p>
 </li>
 <li>
-<p>测定方法: 标准氢电极与给定电极组成原电池(氧化, 还原态活度为1).</p>
+<p>测定方法: 标准氢电极(SHE)与给定电极组成原电池(氧化, 还原态活度为1).</p>
 </li>
 <li>
 <p>标准电极电位以还原形式表示, <span class="arithmatex"><span class="MathJax_Preview">\phi^0</span><script type="math/tex">\phi^0</script></span>越正, 氧化性越强, 越负, 还原性越强.</p>
@@ -2418,6 +3918,1342 @@ AgCl + e \rightleftharpoons Ag + Cl^-
 <p class="admonition-title">电极种类按用途区分</p>
 <p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/96C0E673D10B200869F090613D844228.png" /></p>
 </div>
+<h5 id="_27">常用参比电极<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>氢电极</p>
+</li>
+<li>
+<p>饱和甘汞电极(SCE): 电极电位稳定, 氯化钾浓度不会因为水的挥发而增大.</p>
+</li>
+<li>
+<p>银/氯化银电极</p>
+</li>
+</ul>
+<h4 id="-">电极-溶液界面的传质过程<a class="headerlink" href="#-" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>电极只能直接作用于和电极表面接触的溶液薄层, 而不能直接和本体溶液相作用.
+因此要理解电极反应给出的信号的变化, 还必须要考虑物质想表面传递的过程.</p>
+</blockquote>
+<ul>
+<li>
+<p>传质过程类型: </p>
+</li>
+<li>
+<p>对流: 随溶质运动(温差 搅拌)</p>
+</li>
+<li>
+<p>电迁移(电泳): 电场</p>
+</li>
+<li>
+<p>扩散: 因浓度梯度</p>
+</li>
+</ul>
+<h5 id="_28">三种传质类型对电化学信号的影响<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h5>
+<h5 id="cottrell">Cottrell方程: 极限扩散电流<a class="headerlink" href="#cottrell" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>前提条件: 电极反应速度极快, 产生的电流完全因传质(扩散)导致[决速步]</p>
+</blockquote>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+i_d = \frac{zFAD_0c_0}{\sqrt{\pi D_0t}}
+</div>
+<script type="math/tex; mode=display">
+i_d = \frac{zFAD_0c_0}{\sqrt{\pi D_0t}}
+</script>
+</div>
+<h4 id="_29">法拉第定律<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<p>在电极上发生电化学反应产生的电流称为法拉第电流</p>
+<p>仅因物理作用-&gt;非法拉第电流</p>
+<blockquote>
+<p>需要排除非法拉第电流的干扰</p>
+</blockquote>
+<div class="admonition summary">
+<p class="admonition-title">本章要点</p>
+<ul>
+<li>
+<p>重要概念: 电极电位 条件电位 电动势 工作电极 指示电极 参比电极</p>
+</li>
+<li>
+<p>重要公式: 电极表面的氧化还原过程 溶液中的传质过程</p>
+</li>
+<li>
+<p>重要公式: 能斯特方程 法拉第定律</p>
+</li>
+</ul>
+</div>
+<blockquote>
+<p>电子版交老师邮箱</p>
+</blockquote>
+<h3 id="_30">电位分析<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<h4 id="_31">电位分析法<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<ul>
+<li>基本原理</li>
+</ul>
+<p>在通过电极的电流为0的条件下测定电池的电动势或电极电位, 从而利用电极电位与浓度见的关系测定物质浓度的一种分析方法</p>
+<ul>
+<li>基本公式</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+\phi = C \pm \frac{0.0592}{z_A}\lg a_A
+</div>
+<script type="math/tex; mode=display">
+\phi = C \pm \frac{0.0592}{z_A}\lg a_A
+</script>
+</div>
+<blockquote>
+<p>离子选择性电极的能斯特表达式</p>
+<p>阳离子为正, 阴离子为负</p>
+<p>对比: 氧化物在上为正, 还原物在上为负</p>
+</blockquote>
+<ul>
+<li>
+<p>指示电极</p>
+</li>
+<li>
+<p>参比电极</p>
+</li>
+<li>
+<p>分类: </p>
+<ul>
+<li>
+<p>直接电位法(pH计)</p>
+</li>
+<li>
+<p>电位滴定法: 利用电极电位的突变代替化学滴定法中指示剂颜色变化来确定终点的滴定分析法.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="_32">离子选择性电极<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<h5 id="_33">玻璃电极<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h5>
+<p>Ion Selective Electrode, ISE, 是一种膜电极.</p>
+<p>敏感膜是指能分开两种电解质溶液并能对某类物质有选择性响应的薄膜, 能形成膜电位.</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/01CB01CB30A75E7309019EFBD18EACB9.png" /></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/46BE5F823CEE38FD2453D1554B5A4881.png" /></p>
+<div class="admonition summary">
+<p class="admonition-title">膜电位总结</p>
+<ul>
+<li>
+<p>对H<sup>+</sup>的高选择性: 膜电位的产生不是电子的得失. 其他离子不能进入晶格产生交换. 当溶液中的na<sup>+</sup>浓度远高于H<sup>+</sup>浓度(&gt;10<sup>10</sup>倍), 两者才产生接近的电位</p>
+</li>
+<li>
+<p>酸差: 测定溶液酸度太大(pH &lt; 1)时, <span class="arithmatex"><span class="MathJax_Preview">H_3^+</span><script type="math/tex">H_3^+</script></span>为主, 到达电极表面的H<sup>+</sup>减少, 使得测得的pH值偏高</p>
+</li>
+<li>
+<p>碱差: 或钠差. pH&gt;12 产生误差, 主要是Na<sup>+</sup>参与相界面上的交换所致. 使测得值偏低.</p>
+</li>
+<li>
+<p>改变玻璃膜的组成, 可制成对其他阳离子响应的玻璃膜电极.</p>
+</li>
+<li>
+<p>优点: 不受溶液中氧化剂,还原剂,颜色及沉淀的影响-&gt;不易中毒.</p>
+</li>
+<li>
+<p>缺点: 电极内阻很高, 易碎, 难微小化, 不能在HF中使用.</p>
+</li>
+</ul>
+</div>
+<h5 id="_34">晶体膜电极<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h5>
+<p>分类: </p>
+<ul>
+<li>
+<p>含内参比电极 内参比溶液</p>
+</li>
+<li>
+<p>不含~ 直接连导线-&gt;要求电极具有强导电性</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">pH玻璃电极中膜电势形成机制</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220920231425.png" /></p>
+</div>
+<h5 id="_35">流动载体电极<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h5>
+<h5 id="_36">气敏电极<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h5>
+<h5 id="_37">生物电极<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h5>
+<h4 id="ise">离子选择电极(ISE)的特性参数<a class="headerlink" href="#ise" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>极差</code> 斜率(<span class="arithmatex"><span class="MathJax_Preview">0.0592/z</span><script type="math/tex">0.0592/z</script></span>)</p>
+</li>
+<li>
+<p><code>检测下限</code>: 校准曲线的直线部分与水平延长线的交点对应的活度.</p>
+</li>
+<li>
+<p><code>检出限</code>: 高于噪音水平3倍的信号才能称作信号. 所对应的浓度或绝对量即为检出限</p>
+</li>
+</ul>
+<h4 id="k_abpotk_abpot">电位选择系数<span class="arithmatex"><span class="MathJax_Preview">K_{A,B}^{pot}</span><script type="math/tex">K_{A,B}^{pot}</script></span><a class="headerlink" href="#k_abpotk_abpot" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>离子选择性电极进行检测时总会受到共存离子的干扰, 即共存离子的存在也会对膜电位有所贡献. 为了表示这种干扰的大小, 引入电位选择系数的概念.</p>
+</blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">K_{A,B}^{pot}</span><script type="math/tex">K_{A,B}^{pot}</script></span> 表示A离子选择性电极抗B离子干扰的能力.</p>
+<p>物理意义: 单位活度的干扰离子<span class="arithmatex"><span class="MathJax_Preview">B^{Z_{B^+}}</span><script type="math/tex">B^{Z_{B^+}}</script></span>在ISE上产生的电位相当于多少<span class="arithmatex"><span class="MathJax_Preview">A^{Z_{A^+}}</span><script type="math/tex">A^{Z_{A^+}}</script></span>产生的电位. </p>
+<p>显然, K值越小, 表示B离子越不能干扰A离子的检测.</p>
+<blockquote>
+<p>1个B需要几个A来对付, A越少, 说明B越弱.</p>
+</blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">K_{A,B}^{pot}</span><script type="math/tex">K_{A,B}^{pot}</script></span> </p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">\ll 1</span><script type="math/tex">\ll 1</script></span>时, 电极受B离子的影响很少, 对A离子的选择性很高.</p>
+</li>
+<li>
+<p>$ = 1$时, 无选择性. </p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">&gt; 1</span><script type="math/tex">> 1</script></span>时, 对B的选择性好于A.</p>
+</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+E = b \pm \frac{0.0592}{z_A} \lg[a_A + K^{pot}_{A, B}a_B^{Z_A/Z_B} + \cdots]
+</div>
+<script type="math/tex; mode=display">
+E = b \pm \frac{0.0592}{z_A} \lg[a_A + K^{pot}_{A, B}a_B^{Z_A/Z_B} + \cdots]
+</script>
+</div>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+误差\% = \frac{K_{A,B}^{pot}a_B^{Z_A/Z_B}}{a_A} \times 100
+</div>
+<script type="math/tex; mode=display">
+误差\% = \frac{K_{A,B}^{pot}a_B^{Z_A/Z_B}}{a_A} \times 100
+</script>
+</div>
+<h3 id="_38">分析方法<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<h4 id="_39">电位法<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
+<h5 id="_40">标准曲线法<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h5>
+<div class="admonition note">
+<p class="admonition-title">TISAB</p>
+<p>Total Ionic Strength Adjustment Buffer 总离子强度调节剂</p>
+<p>特点: 浓(不受离子试样强度变化影响) 缓冲能力强(不易受试样pH变化影响)</p>
+<p>作用: </p>
+<ul>
+<li>
+<p>维持样本和标准溶液恒定的离子强度;</p>
+</li>
+<li>
+<p>保持试液在离子选择电极适合的pH范围内, 避免H<sup>+</sup>或OH<sup>-</sup>干扰.</p>
+</li>
+<li>
+<p>使被测离子释放称为可检测的游离离子.</p>
+</li>
+</ul>
+</div>
+<h5 id="_41">标准加入法<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h5>
+<p>应用条件: </p>
+<ul>
+<li>
+<p>复杂样品, 相似底液很难配制</p>
+</li>
+<li>
+<p>加入的标准样品应该体积小, 浓度高, 不低是不过多改变底液的组成</p>
+</li>
+</ul>
+<h5 id="_42">直读法<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h5>
+<p>仪器先用标准溶液校准, 测量被测溶液后直接给出其pH, 本质仍然是校准曲线法.(仪器自己做简单的校准曲线)</p>
+<h5 id="gran">gran作图法: 主要处理标准加入和电位滴定数据<a class="headerlink" href="#gran" title="Permanent link">&para;</a></h5>
+<p><span class="arithmatex"><span class="MathJax_Preview">\phi = k + S\lg c</span><script type="math/tex">\phi = k + S\lg c</script></span></p>
+<p>以<span class="arithmatex"><span class="MathJax_Preview">10^{\phi / S}</span><script type="math/tex">10^{\phi / S}</script></span>对浓度c作图, 原来的对数关系就变成了线性关系.</p>
+<div class="admonition note">
+<p class="admonition-title">电位测量精度对测量浓度误差的影响: 误差</p>
+<p>离子选择电极的电位与浓度的关系为:</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\phi = k + \frac{RT}{zF}\ln\gamma c</span><script type="math/tex">\phi = k + \frac{RT}{zF}\ln\gamma c</script></span></p>
+<p>微分上式得:</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">d\phi = \frac{RT}{zF}\cdot \frac{dc}{c}</span><script type="math/tex">d\phi = \frac{RT}{zF}\cdot \frac{dc}{c}</script></span></p>
+<p>即:
+<span class="arithmatex"><span class="MathJax_Preview">\frac{\Delta c}{c} = \frac{zF}{RT}\Delta \phi = 0.04\Delta \phi (V)</span><script type="math/tex">\frac{\Delta c}{c} = \frac{zF}{RT}\Delta \phi = 0.04\Delta \phi (V)</script></span></p>
+<p>则浓度的相对误差<span class="arithmatex"><span class="MathJax_Preview">\% = \frac{\Delta}{c}\times 100\% = 4z\Delta \phi \%</span><script type="math/tex">\% = \frac{\Delta}{c}\times 100\% = 4z\Delta \phi \%</script></span> </p>
+</div>
+<div class="admonition summary">
+<p class="admonition-title">本章要点</p>
+<ul>
+<li>
+<p>ISE的能斯特方程</p>
+</li>
+<li>
+<p>pH电极传感<span class="arithmatex"><span class="MathJax_Preview">a_{H^+}</span><script type="math/tex">a_{H^+}</script></span>的原理, 膜电位形成的原因</p>
+</li>
+<li>
+<p>pH计直读法原理</p>
+</li>
+<li>
+<p>酸差碱差及其原因(结合pH电极膜电位原理)</p>
+</li>
+<li>
+<p>电位选择系数的概念</p>
+</li>
+<li>
+<p>Gran作图的基本概念(X/Y轴)</p>
+</li>
+</ul>
+</div>
+<h3 id="_43">电重量分析与和库伦分析法<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>区别于<code>电位分析</code>, 属于<code>电流分析</code></p>
+</blockquote>
+<h4 id="_44">回顾: 电位分析法<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
+<p>膜电势方程</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\phi_{ISE} = k +  \frac{0.0592}{z_i}\lg a_{i, 外}</span><script type="math/tex">\phi_{ISE} = k +  \frac{0.0592}{z_i}\lg a_{i, 外}</script></span>(阳离子)</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\phi_{ISE} = k - \frac{0.0592}{z_i}\lg a_{i, 外}</span><script type="math/tex">\phi_{ISE} = k - \frac{0.0592}{z_i}\lg a_{i, 外}</script></span>(阴离子)</p>
+<blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">z_i</span><script type="math/tex">z_i</script></span>为离子所带电荷, 由于内侧参比电极往往活度确定, 因此只考虑外侧的离子活度.</p>
+</blockquote>
+<ul>
+<li>
+<p>优势: 检测范围宽</p>
+</li>
+<li>
+<p>劣势: 常量分析准确度不高, 灵敏度差; 不是每种离子都有方便适用的离子选择性电极.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">电解分析方法</p>
+<ul>
+<li>
+<p>按计量的方式: 库伦分析, 电重量分析</p>
+</li>
+<li>
+<p>电解过程: 控制电位电解(恒电位电解), 控制电流电解(恒电流分析)</p>
+</li>
+</ul>
+</div>
+<h4 id="_45">电解原理<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
+<p>理论分解电压: 使某电解质溶液能够连续发生电解所必须的最小外加电压 <span class="arithmatex"><span class="MathJax_Preview">E_{分解} = \phi_+ - \phi_-</span><script type="math/tex">E_{分解} = \phi_+ - \phi_-</script></span></p>
+<blockquote>
+<p>实际需要的电压往往大于理论分解电压</p>
+<p>产生差别的原因: 极化引起的过电位(超电位), 电解回路的下降</p>
+</blockquote>
+<h5 id="_46">过电位产生的原因: 电极极化作用<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h5>
+<p><code>极化</code>: 电流通过电极时, 电极电位偏离可逆电极电位的现象</p>
+<ul>
+<li>
+<p>浓差极化: 电极表面待测物浓度小于本体溶液</p>
+</li>
+<li>
+<p>电化学极化: 电极反应迟缓引起(不考虑)</p>
+</li>
+</ul>
+<p>实际分解电压为: <span class="arithmatex"><span class="MathJax_Preview">V_{分解} = [(\phi_+ \eta_+) - (\phi_- + \eta_-)]  ir\\ = 理论分解电压 + 超电压 + 电压降</span><script type="math/tex">V_{分解} = [(\phi_+ \eta_+) - (\phi_- + \eta_-)]  ir\\ = 理论分解电压 + 超电压 + 电压降</script></span></p>
+<div class="admonition faq">
+<p class="admonition-title">为什么ISE不引入电极极化?</p>
+<p>ISE要求几乎没有电流通过-&gt;不形成浓差或者电化学极化现象.</p>
+</div>
+<h5 id="_47">过/超电位的特点<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h5>
+<div class="admonition note">
+<p class="admonition-title">过电位/超电位<span class="arithmatex"><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span></p>
+<p>过电位（英语：overpotential）是电极的电位差值。又叫超电势。为一个电极反应偏离平衡时的电极电位与这个电极反应的平衡电位的差值，无电流通过（平衡状态下）和有电流通过之电位差值。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">电压降ir</p>
+<p>由于电池/电解池内阻导致额外需要的电压.</p>
+</div>
+<p>一般来说, <code>金属</code>在铂电极上析出的过电位比较小, 可以忽略; 气体的过电位较大.</p>
+<h4 id="_48">电解方式<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
+<h5 id="_49">恒定电流电解<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h5>
+<p>电压不断增大以维持电流稳定</p>
+<h5 id="_50">恒定电压电解<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h5>
+<p>电流不断减小(浓度下降)</p>
+<div class="admonition tip">
+<p class="admonition-title">电解分离法: 阴极电位的选择</p>
+<p>依据金属离子析出的电极电位不同, 通过控制电位, 实现分离.</p>
+<div class="admonition faq">
+<p class="admonition-title">要使金属<span class="arithmatex"><span class="MathJax_Preview">M_1, M_2</span><script type="math/tex">M_1, M_2</script></span>完全分离, 电位差需要多大?</p>
+<p><code>完全分离</code>: 金属离子浓度将至原浓度的<span class="arithmatex"><span class="MathJax_Preview">0.01\%</span><script type="math/tex">0.01\%</script></span>或<span class="arithmatex"><span class="MathJax_Preview">10^{-6}mol \cdot L^{-1}</span><script type="math/tex">10^{-6}mol \cdot L^{-1}</script></span>时</p>
+</div>
+<p>如果要求结束时浓度为原先的<span class="arithmatex"><span class="MathJax_Preview">0.01%</span><script type="math/tex">0.01%</script></span>, 电极电位下降4个极差.</p>
+<p>因此需要电位差<span class="arithmatex"><span class="MathJax_Preview">\phi_{M_1} - \phi_{M_2} \ge \frac{0.0592}{z}\times 4</span><script type="math/tex">\phi_{M_1} - \phi_{M_2} \ge \frac{0.0592}{z}\times 4</script></span></p>
+</div>
+<h4 id="_51">电重量分析<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
+<p>电解试液后, 直接称量电极是上析出的被测物质, 从而对其含量进行分析的方法[称质量]</p>
+<h5 id="_52">用于检测<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h5>
+<p>方法选择: </p>
+<ul>
+<li>
+<p>恒电位电解: 电化学选择性好, 速度慢</p>
+<blockquote>
+<p>适合组分较多时</p>
+</blockquote>
+</li>
+<li>
+<p>恒电流电解: 速度快, 但随着电解进行, 电极电位会发生变化, 可能会导致第二种金属离子在电极上析出产生干扰.</p>
+<blockquote>
+<p>需要除杂.</p>
+<p><mark><code>阳/阴极去极剂</code>: 通过自身的电化学氧化/还原反应, 维持阳极或阴极电位不变. 不在电极上析出沉淀(不影响称重)</mark></p>
+</blockquote>
+</li>
+</ul>
+<h5 id="_53">用于分离<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h5>
+<p>恒电流电解 <strong>只能析出电位高于氢的金属</strong>, 当金属完全析出后, 将会继续析出氢气</p>
+<p>对于电极电势低于H<sup>+</sup>的金属离子, 可在金属熔融盐中电解得到单质.</p>
+<h4 id="_54">库伦分析法<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
+<p>通过测量被测物消耗的电量来对被测物含量进行分析的方法.[读取耗电量, 通过法拉第定律求消耗量]</p>
+<p>方法选择: </p>
+<ul>
+<li>恒电流库伦分析法: 常用来产生电生"滴定剂", 利用耗电量来确定物质浓度, 也叫<code>库伦滴定法</code></li>
+</ul>
+<p>终点指示方法:</p>
+<ul>
+<li>
+<p>化学指示剂法</p>
+</li>
+<li>
+<p>电位法</p>
+</li>
+<li>
+<p>永停终点法</p>
+<blockquote>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220923101535.png" /></p>
+</blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">库仑滴定 vs. 电位滴定法</p>
+<p>电位滴定仍以化学试剂进行滴定, 用ISE取代终点指示剂和目视检测.</p>
+<p>库伦滴定是以电极代替化学滴定试剂进行滴定的方法.</p>
+</div>
+<p>进行库伦分析的前提: 电流效应<span class="arithmatex"><span class="MathJax_Preview">100\%</span><script type="math/tex">100\%</script></span> 即电量全部消耗在待测物上.</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">电流效率 = \dfrac{i_样}{i_样 + i_溶 + i_杂}</span><script type="math/tex">电流效率 = \dfrac{i_样}{i_样 + i_溶 + i_杂}</script></span></p>
+<p>影响因素:</p>
+<ul>
+<li>
+<p>溶剂的电极反应</p>
+</li>
+<li>
+<p>溶液中杂杂质的反应</p>
+</li>
+<li>
+<p>水中溶解氧</p>
+</li>
+<li>
+<p>电解产物再反应</p>
+</li>
+<li>
+<p>充电电容</p>
+</li>
+</ul>
+<div class="admonition summary">
+<p class="admonition-title">本章要点</p>
+<ul>
+<li>
+<p>分解电压、超电位、极化作用、去极剂等概念</p>
+</li>
+<li>
+<p>控制电位与控制电流电解特点、理解两种电解中电流或电极电位变化的过程</p>
+</li>
+<li>
+<p>实际分解电压计算</p>
+</li>
+<li>
+<p>两金属完全分离的条件与计算</p>
+</li>
+<li>
+<p>库仑法使用的条件：电流效率100%</p>
+</li>
+<li>
+<p>基于法拉第定律的电重量、库仑法计算</p>
+</li>
+</ul>
+</div>
+<div class="admonition faq">
+<p class="admonition-title">电极化 vs. 过电位</p>
+</div>
+<h3 id="_55">伏安法和极谱分析法<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">回顾</p>
+<ul>
+<li>
+<p>电位分析法: 稳态 无电流通过; 困难: 可选择范围窄, 每次测一种离子</p>
+</li>
+<li>
+<p>库伦和电重量分析法: 电解分析 有电流通过电极 存在过电位; 困难: 总量分析, 慢; 只能先电解还原电位高的金属再分析还原电位低的金属; 对不同电介质环境中的还原反应往往难以把握</p>
+</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">大参比小电极的目的</p>
+<ul>
+<li>
+<p>滴汞电极面积小, 总电流不会很大.</p>
+</li>
+<li>
+<p>参比电极大, 当有电流通过时, 参比电极上电流密度小, 其电极电位保持不变, 外加电压的改变都作用于滴汞电极.</p>
+</li>
+</ul>
+</div>
+<p>伏安法和极谱分析法都是利用电解过程中得到的工作电极上的电位和电流关系曲线进行分析的方法. </p>
+<ul>
+<li>
+<p>伏安法: 才有用固体电极或表面不更新的液体电极, 其面积固定. </p>
+</li>
+<li>
+<p>极谱法: 采用表面周期性更新的滴汞电极.</p>
+</li>
+</ul>
+<h4 id="_56">直流极谱法<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h4>
+<p>采用滴汞电极为工作电极, 缓慢改变电极电位, 同时测量电流绘制i-V曲线.</p>
+<ul>
+<li>锯齿状极谱波的形成</li>
+</ul>
+<p>滴汞电极生长过程中, 电极面积增大, 扩散层厚度增大;</p>
+<p>电流初期增长较大, 随后变缓;</p>
+<p>汞滴落下时, 电极面积急速下降, 电流急速下降, 形成锯齿波.</p>
+<ul>
+<li>
+<p>残余电流</p>
+<ul>
+<li>
+<p>来源</p>
+<ul>
+<li>
+<p>溶液中微量的杂质金属离子还原</p>
+</li>
+<li>
+<p>滴汞电极的充放电</p>
+</li>
+<li>
+<p>微量氧气的还原</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>电流的迅速升高: 去极剂(镉)稳定电位</p>
+</li>
+<li>
+<p>极限扩散区: 滴汞表面镉浓度因为快速消耗趋近于0, 电极表面形成稳定的扩散层, 反应受浓度扩散控制, 此时电流值最大, 称为<code>极限电流</code>.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">半波电位<span class="arithmatex"><span class="MathJax_Preview">\varphi_{1/2}</span><script type="math/tex">\varphi_{1/2}</script></span></p>
+<p>扩散电流值的一半对应的电位. 此时氧化物比还原物的浓度为0, 此时电位即标准电极电位. 因此<span class="arithmatex"><span class="MathJax_Preview">\varphi_{1/2}</span><script type="math/tex">\varphi_{1/2}</script></span>为定值, 和被测物浓度无关.</p>
+</div>
+<p>极谱分析法是一种好的定量分析方法, 但用于定性分析并不可靠, 形成络合物会影响<span class="arithmatex"><span class="MathJax_Preview">\varphi_{1/2}</span><script type="math/tex">\varphi_{1/2}</script></span>, 此外, 很多金属<span class="arithmatex"><span class="MathJax_Preview">\varphi_{1/2}</span><script type="math/tex">\varphi_{1/2}</script></span>接近导致混合物中难以测量.</p>
+<div class="admonition note">
+<p class="admonition-title">利用极限扩散电流定量的依据</p>
+<p><mark>无对流和电迁移条件下</mark> , 达到极限扩散电流时, 电流与物质的扩散速度成正比, 扩散速度与扩散层中浓度梯度成正比.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">  
+i \propto \frac{[Pb^{2+}]^{b} - [Pb^{2+}]^s}{\delta} = K[Pb^{2+}]
+</div>
+<script type="math/tex; mode=display">  
+i \propto \frac{[Pb^{2+}]^{b} - [Pb^{2+}]^s}{\delta} = K[Pb^{2+}]
+</script>
+</div>
+<p>结论: 扩散电流与离子浓度成正比.</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220928103040.png" /></p>
+</div>
+<h5 id="_57">尤考维奇方程<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220928104049.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">contrell方程 vs. 尤考维奇方程</p>
+<p>尤考维奇方程引入了电极面积的变化.</p>
+</div>
+<h5 id="_58">影响扩散电流的因素<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h5>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+i_d = 607zD^{1/2}m^{2/3}t^{1/6}c = K_s c
+</div>
+<script type="math/tex; mode=display">
+i_d = 607zD^{1/2}m^{2/3}t^{1/6}c = K_s c
+</script>
+</div>
+<ul>
+<li>
+<p>毛细管常数: 607zD^{&frac12;}</p>
+</li>
+<li>
+<p>扩散电流常数: <span class="arithmatex"><span class="MathJax_Preview">m^{2/3}t^{1/6}</span><script type="math/tex">m^{2/3}t^{1/6}</script></span></p>
+</li>
+<li>
+<p>温度: 影响除<span class="arithmatex"><span class="MathJax_Preview">z</span><script type="math/tex">z</script></span>外的每一项</p>
+</li>
+</ul>
+<blockquote>
+<p>提高可重复性, 前提是常数一致.</p>
+</blockquote>
+<h5 id="_59">干扰电流及其消除<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h5>
+<ul>
+<li>对流电流和迁移电流</li>
+</ul>
+<p>测量时通常加入大量<code>支持电解质</code>, 以消除迁移电流和降低溶液电压降(IR降).</p>
+<ul>
+<li>氧气还原</li>
+</ul>
+<p>产生两次还原反应</p>
+<p>除氧方法: 1.加亚硫酸钠(碱性或中性溶液); 抗坏血酸(弱酸性); 碳酸钠或Fe粉(强酸性)</p>
+<p>2.通入惰性气体, <span class="arithmatex"><span class="MathJax_Preview">N_2, Ar, H_2</span><script type="math/tex">N_2, Ar, H_2</script></span></p>
+<ul>
+<li>极大(现象)</li>
+</ul>
+<p>随着外加电压变化, 极谱波的前部出底线电流极大值, 称为极谱极大.</p>
+<p>产生原因: 汞滴表面电荷分布或物质密度不均匀-&gt;表面张力不均匀-&gt;汞滴切向运动-&gt;相当于更新出新的反应界面</p>
+<p>消除方法: 加少量的表面活性物质/动物胶(使得表面粘稠程度, 降低切向运动程度)==&gt;"极大抑制剂"</p>
+<ul>
+<li>
+<p>残余电流</p>
+<ul>
+<li>
+<p>杂质的电解: 纯化试剂/预电解</p>
+</li>
+<li>
+<p>充电电流: 充电电流来源于滴汞电极与溶液界面上双电层的充电过程. ==&gt;消除办法: 在汞滴末期记录电解电流</p>
+</li>
+</ul>
+</li>
+<li>
+<p>叠波: 两种组分的半波电流过于接近==&gt;改变一种组分的形式</p>
+<blockquote>
+<p>区分界限: 200mV</p>
+</blockquote>
+</li>
+</ul>
+<p>前波: 两种组分的极限电流<span class="arithmatex"><span class="MathJax_Preview">i_B, i_A, i_B \gg i_A</span><script type="math/tex">i_B, i_A, i_B \gg i_A</script></span>, 导致后者的极限电流被前者掩盖==&gt;掩蔽前者的电流.</p>
+<p>氢波: 酸性溶液中, <span class="arithmatex"><span class="MathJax_Preview">H^+</span><script type="math/tex">H^+</script></span>在-1.2~-1.4V在滴汞电极上产生还原波==&gt;在中性或者碱性溶液中测定.</p>
+<h3 id="_60">极谱波方程<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h3>
+<p>描述极谱电流与滴汞电极电位间关系的数学表达式称为极谱波方程.</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/BBEE687210F80910FA9A46DF7904EB64.png" /></p>
+<p>可逆还原过程极谱波方程</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220928115500.png" /></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930102702.png" /></p>
+<h4 id="_61">不可逆极谱波<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h4>
+<p>物质在电极上的反应速度比较慢, 不能立刻满足能斯特方程, 即: 不能立刻在电极表面形成该电位下应有的物质氧化还原态活度比.</p>
+<ul>
+<li>
+<p>特点: 波形倾斜小于可逆极谱波, 电位更高时, 电极反应速度仍然可以加快, 变为扩散控制的电极过程.</p>
+</li>
+<li>
+<p>用途: 通过加快电极扫描速度, 使得极谱波变成不可逆波, 从而测量物质反应产生的电流速度.</p>
+</li>
+</ul>
+<h4 id="_62">极谱波高的确定<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h4>
+<div class="admonition summary">
+<p class="admonition-title">经典直流极谱的缺点</p>
+<ul>
+<li>
+<p>速度慢</p>
+</li>
+<li>
+<p>方法灵敏度较低: 检测下限<span class="arithmatex"><span class="MathJax_Preview">10^{-4} \sim 10^{-5}\mathrm{mol/L}</span><script type="math/tex">10^{-4} \sim 10^{-5}\mathrm{mol/L}</script></span>, 这主要是受干扰电流的影响.</p>
+</li>
+<li>
+<p>分辨率差: 台阶状波形不易区分重叠波</p>
+</li>
+<li>
+<p>ir降大</p>
+</li>
+</ul>
+</div>
+<h4 id="_63">三电极系统<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
+<p>利用<code>运算放大器</code>使通过参比的电流都从<code>对电极</code>流过, 利用普通参比电极和对电极代替经典极谱中的大面积甘汞电极, 对电极也叫辅助电极.</p>
+<ul>
+<li>
+<p>特点:</p>
+<ul>
+<li>
+<p>参比电极体积小</p>
+</li>
+<li>
+<p>几乎不流过</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="_64">单扫电极<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h5>
+<h5 id="_65">脉冲极谱法<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>目的: 降低充电电流.</p>
+</li>
+<li>
+<p>汞末期施加矩形脉冲, 加脉冲20ms后测量电流</p>
+<blockquote>
+<p>汞末期电极面积比较稳定, 可以使用contrell方程.</p>
+<p>在20ms后测量电流, 此时充电电流几乎为0, 测量的只剩电解电流.</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="_66">示差脉冲电极极谱波<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h5>
+<div class="admonition note">
+<p class="admonition-title">脉冲极谱与示差脉冲极谱波异同</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930114603.png" /></p>
+</div>
+<h5 id="_67">溶出伏安法<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h5>
+<p>先将金属离子还原成金属</p>
+<p>然后再氧化, 通过库伦分析法测量电量.</p>
+<h5 id="_68">循环伏安法<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h5>
+<p>先扫一遍还原极谱, 再扫一遍氧化极谱.</p>
+<p>作用: </p>
+<ul>
+<li>电极过程可逆性判断.</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930115905.png" /></p>
+<div class="admonition summary">
+<p class="admonition-title">几种电位扫描和极谱曲线的比较</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20220930120021.png" /></p>
+</div>
+<h2 id="lec3">Lec3 色谱与电泳<a class="headerlink" href="#lec3" title="Permanent link">&para;</a></h2>
+<h3 id="chromatography">色谱法chromatography<a class="headerlink" href="#chromatography" title="Permanent link">&para;</a></h3>
+<h4 id="_69">绪论<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>色谱法</code>: 一种分离分析方法. 利用各物质在两相中具有不同的<code>分配系数</code>, 当两相作相对运动时, 这些物质在两相中进行多次反复的分配来达到分离目的.</p>
+</li>
+<li>
+<p><code>固定相</code>: 色谱中固定不动的相, 可以是固体, 液体.</p>
+</li>
+<li>
+<p><code>流动相</code></p>
+</li>
+</ul>
+<p>色谱法(碳酸钙+石油醚)&rarr;分配色谱&rarr;气相色谱与塔板理论&rarr;液相色谱仪&rarr;使用高压泵的高效液相色谱.</p>
+<div class="admonition note">
+<p class="admonition-title">色谱法分类</p>
+<ul>
+<li>
+<p>按流动相状态:</p>
+<ul>
+<li>
+<p>气相色谱: 流动相为气体.</p>
+</li>
+<li>
+<p>液相色谱</p>
+</li>
+<li>
+<p>超临界流体色谱法</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition faq">
+<p class="admonition-title">流动相为气相/液相分别适合分析哪些物质?</p>
+<ul>
+<li>液相: 可分析液体/ <mark>可以溶解在液体中</mark> 的离子.</li>
+</ul>
+</div>
+<ul>
+<li>
+<p>按固定相状态:</p>
+<ul>
+<li>
+<p>气相色谱, 包含: 气-固色谱, 气-液色谱</p>
+</li>
+<li>
+<p>液相色谱, 包含: 液-固色谱, 液-液色谱</p>
+</li>
+</ul>
+</li>
+<li>
+<p>按分配原理:</p>
+<ul>
+<li>
+<p>吸附色谱: 吸附与解吸附能力</p>
+</li>
+<li>
+<p>分配色谱: 溶解度大小</p>
+</li>
+</ul>
+</li>
+<li>
+<p>按固定相的形式分类:</p>
+<ul>
+<li>
+<p>固定相在柱内, 称为<code>柱色谱</code>: 填充柱色谱, 开管柱色谱</p>
+</li>
+<li>
+<p>固定相呈平板状, 称为<code>平板色谱</code>: 纸色谱, 薄层色谱</p>
+</li>
+</ul>
+</li>
+<li>
+<p>按固定材料:</p>
+<ul>
+<li>
+<p>离子交换色谱: 固定相为离子交换剂(分离离子)</p>
+</li>
+<li>
+<p>尺寸排阻色谱: 固定相为多孔高聚合物.</p>
+</li>
+<li>
+<p>化学键合色谱: 固定液与多孔载体通过化学键组合成固定相.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h4 id="_70">色谱的仪器化和色谱曲线<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>常规柱/平板色谱: 肉眼观察的限制: 只能看见可见光, 分辨率低, 检出限低.</p>
+</blockquote>
+<p>常见的仪器定量分析方法:</p>
+<ul>
+<li>紫外检测</li>
+<li>原子吸收检测</li>
+<li>电导检测</li>
+<li>热导检测</li>
+<li>质谱检测</li>
+</ul>
+<p><code>色谱流出曲线</code>: 信号强度与记录时间的关系图. 只有仪器化后, 才能进行准确的分析.</p>
+<h4 id="_71">色谱法的术语<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>基线: 无样品流过检测器时的信号-时间曲线</p>
+</li>
+<li>
+<p>死时间: 非滞留组分(如气相色谱中的空气)从进样到色谱峰顶所对应的时间<span class="arithmatex"><span class="MathJax_Preview">t_0</span><script type="math/tex">t_0</script></span></p>
+<blockquote>
+<p>死时间可以推出流动相的流动速度.</p>
+</blockquote>
+</li>
+<li>
+<p>保留时间: 某组分从进样到色谱峰顶所需的时间<span class="arithmatex"><span class="MathJax_Preview">t_R</span><script type="math/tex">t_R</script></span></p>
+</li>
+<li>
+<p>调整保留时间: 扣除死时间后的保留时间<span class="arithmatex"><span class="MathJax_Preview">t_R' = t_R - t_0</span><script type="math/tex">t_R' = t_R - t_0</script></span>, 代表纯粹的分配时间.</p>
+</li>
+<li>
+<p>峰高: 峰顶到基线垂直距离<span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span></p>
+</li>
+<li>
+<p>半峰宽: 色谱峰一半处的峰宽<span class="arithmatex"><span class="MathJax_Preview">W_{1/2}</span><script type="math/tex">W_{1/2}</script></span></p>
+</li>
+<li>
+<p>峰底宽: 色谱流出曲线两侧拐点所做的切线与基线交点间的距离<span class="arithmatex"><span class="MathJax_Preview">W_b</span><script type="math/tex">W_b</script></span></p>
+</li>
+<li>
+<p>峰面积</p>
+</li>
+<li>
+<p>标准偏差<span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>: 正态分布曲线两侧拐点间距离的一半, 是峰底宽的<span class="arithmatex"><span class="MathJax_Preview">\dfrac{1}{4}</span><script type="math/tex">\dfrac{1}{4}</script></span></p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">标准偏差<span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span></p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+f(x, \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}}e^{-  \frac{(x - \mu)^2}{2\sigma^2}}\\
+\sigma\text{与半峰宽的关系:}W_{1/2} = 2\sigma \sqrt{2\ln 2}\\
+\sigma\text{与峰底宽的关系:}W_b = 4\sigma
+</div>
+<script type="math/tex; mode=display">
+f(x, \mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}}e^{-  \frac{(x - \mu)^2}{2\sigma^2}}\\
+\sigma\text{与半峰宽的关系:}W_{1/2} = 2\sigma \sqrt{2\ln 2}\\
+\sigma\text{与峰底宽的关系:}W_b = 4\sigma
+</script>
+</div>
+<p>研究<span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>的意义: 标准偏差和置信度</p>
+<p>一般要求: 将置信区间控制在95%以上</p>
+</div>
+<p>由色谱流出曲线可以实现以下目的:</p>
+<ul>
+<li>
+<p>色谱峰的数目-&gt;判断试样中所含组分的最小个数.</p>
+</li>
+<li>
+<p>根据色谱峰的保留值进行定性分析</p>
+</li>
+<li>
+<p>依据峰高和峰面积进行定量分析</p>
+</li>
+<li>
+<p>评价分离效能</p>
+</li>
+</ul>
+<h4 id="_72">色谱分析基本原理<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h4>
+<div class="admonition note">
+<p class="admonition-title">分配过程</p>
+<ul>
+<li>分配系数<span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>: 假设考虑分离柱的一小段, 组分在固定相和流动相间分配达到平衡时组分在两相间的浓度之比为一常数, 称为分配系数:</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+K = \frac{C_s}{C_m}\\
+\ln K = - \frac{\Delta_r G_m}{RT_c}
+</div>
+<script type="math/tex; mode=display">
+K = \frac{C_s}{C_m}\\
+\ln K = - \frac{\Delta_r G_m}{RT_c}
+</script>
+</div>
+<p>m: mobile phase 流动相</p>
+<p>s: stationary phase 固定相</p>
+<p><span class="arithmatex"><span class="MathJax_Preview">\Delta_r G_m</span><script type="math/tex">\Delta_r G_m</script></span>通常为负值, 因此提高温度-&gt;K增大.</p>
+<div class="admonition info">
+<p class="admonition-title">讨论</p>
+<ul>
+<li>
+<p>K是组分与固定相/流动相结合能差异的参数</p>
+</li>
+<li>
+<p>一定温度下, 组分的K越大-&gt;出峰越慢</p>
+</li>
+<li>
+<p>两种组分K值之比越大, 则分离效果越好</p>
+</li>
+<li>
+<p>同一个组分在不同的固定相上的分配系数K不同</p>
+</li>
+<li>
+<p>选择适宜的固定相/流动相可以改善分离效果</p>
+</li>
+<li>
+<p>某组分K = 0时, 即不被固定相保留, 最先流出</p>
+</li>
+</ul>
+</div>
+<p>分配比: 分配达到平衡时组分在两相中的总量之比, 可以是重量/体积/或物质的量之比, 又称容量因子.</p>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+k' = \frac{W_s}{W_m}\\
+K = \frac{C_s}{C_m} = \frac{W_s/V_s}{W_m/V_m} = k'\frac{V_m}{V_s} = k'\beta\\
+</div>
+<script type="math/tex; mode=display">
+k' = \frac{W_s}{W_m}\\
+K = \frac{C_s}{C_m} = \frac{W_s/V_s}{W_m/V_m} = k'\frac{V_m}{V_s} = k'\beta\\
+</script>
+</div>
+<p><span class="arithmatex"><span class="MathJax_Preview">\beta</span><script type="math/tex">\beta</script></span>为色谱柱的流动相-固定相体积比值.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">保留值</p>
+<p>记<span class="arithmatex"><span class="MathJax_Preview">F_c</span><script type="math/tex">F_c</script></span>为流动相体积流速,则<span class="arithmatex"><span class="MathJax_Preview">V'_R = V_R - V_m = (t_R - t_0) \cdot F_c</span><script type="math/tex">V'_R = V_R - V_m = (t_R - t_0) \cdot F_c</script></span>称为<code>调整保留体积</code>, 体现组分在柱内的绝对滞留情况.  其中, 记<span class="arithmatex"><span class="MathJax_Preview">V_m = t_0 \cdot F_c</span><script type="math/tex">V_m = t_0 \cdot F_c</script></span>为死体积.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">线速度</p>
+<p>组分的线速度: <span class="arithmatex"><span class="MathJax_Preview">r = \dfrac{L}{t_R}</span><script type="math/tex">r = \dfrac{L}{t_R}</script></span></p>
+<p>流动相的线速度: <span class="arithmatex"><span class="MathJax_Preview">u = \dfrac{L}{t_0}</span><script type="math/tex">u = \dfrac{L}{t_0}</script></span></p>
+<p>r与u的关系: <span class="arithmatex"><span class="MathJax_Preview">r = uf_m, f_m</span><script type="math/tex">r = uf_m, f_m</script></span>为组分在流动相中的总量占其色谱柱中总量的百分比.</p>
+<blockquote>
+<p>举例: 若<span class="arithmatex"><span class="MathJax_Preview">k' = 1</span><script type="math/tex">k' = 1</script></span>, 则<span class="arithmatex"><span class="MathJax_Preview">f_m = \dfrac{1}{1+1} = 0.5, r = 0.5u</span><script type="math/tex">f_m = \dfrac{1}{1+1} = 0.5, r = 0.5u</script></span></p>
+</blockquote>
+<p><span class="arithmatex"><span class="MathJax_Preview">f_m = \dfrac{1}{1+k'}</span><script type="math/tex">f_m = \dfrac{1}{1+k'}</script></span></p>
+<p><span class="arithmatex"><span class="MathJax_Preview">k' = \dfrac{t'_R}{t_0}</span><script type="math/tex">k' = \dfrac{t'_R}{t_0}</script></span></p>
+<p>物理含义: 在认为组纷纷在固定相/流动相之间的分配能即刻完成的情况下, 分配比可以直接通过流出曲线上的死时间和保留时间得到.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">基本保留方程</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221007101606.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">相对保留值</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221007101649.png" /></p>
+</div>
+<div class="admonition important">
+<p class="admonition-title"><span class="arithmatex"><span class="MathJax_Preview">V_m, V_s, V_R, V_{R'}</span><script type="math/tex">V_m, V_s, V_R, V_{R'}</script></span></p>
+<ul>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">V_m = t_0 \cdot F_c</span><script type="math/tex">V_m = t_0 \cdot F_c</script></span>为死体积, <span class="arithmatex"><span class="MathJax_Preview">F_c</span><script type="math/tex">F_c</script></span>为流动相体积流速.</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">V_s</span><script type="math/tex">V_s</script></span>为固定相体积, 一般题目给出或者通过<span class="arithmatex"><span class="MathJax_Preview">\beta = \dfrac{V_m}{V_s}</span><script type="math/tex">\beta = \dfrac{V_m}{V_s}</script></span>得到</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">V_R = t_R \cdot F_c = (1+k')t_0\cdot F_c</span><script type="math/tex">V_R = t_R \cdot F_c = (1+k')t_0\cdot F_c</script></span>为保留体积</p>
+</li>
+<li>
+<p><span class="arithmatex"><span class="MathJax_Preview">V_{R'} = t_R' \cdot F_c = (t_R - t_0)\cdot F_c</span><script type="math/tex">V_{R'} = t_R' \cdot F_c = (t_R - t_0)\cdot F_c</script></span>为调整保留体积</p>
+</li>
+</ul>
+</div>
+<h4 id="_73">塔板理论和速率理论<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h4>
+<h5 id="plate-theory">塔板理论 plate theory: 柱分离效能指标<a class="headerlink" href="#plate-theory" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>微观来看，为什么一个个组分被分开并且呈正态分布？</p>
+<p>将色谱分离过程比拟作蒸馏过程，将连续的色谱分离过程类比为多个非连续的塔板上的多次的平衡过程的重复；在每一个塔板上，被分离组分达到一次分配平衡。</p>
+</blockquote>
+<div class="admonition info">
+<p class="admonition-title">假定</p>
+<ul>
+<li>
+<p>塔板间不连续(固定相划分为一个个微分单元)</p>
+</li>
+<li>
+<p>塔板间无分子扩散(不考虑纵向扩散)</p>
+</li>
+<li>
+<p>组分在塔板两相间 <strong>瞬时</strong> 达到分配平衡(动力学迅速, 达到一次分配平衡所需的最小柱长为理论塔板高度)</p>
+</li>
+<li>
+<p>组分在每一塔板上的分配系数相同.</p>
+</li>
+<li>
+<p>流动相以一个个塔板体积加入(划分为一个个微分单元)</p>
+</li>
+</ul>
+</div>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221007115010.png" /></p>
+<h5 id="_74">速率理论: 动力学理论<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h5>
+<p>考虑4种影响: 涡流, 纵向分子扩散, 流动相传质, 固定相传质</p>
+<div class="admonition note">
+<p class="admonition-title">1. 涡流<span class="arithmatex"><span class="MathJax_Preview">\sigma_e^2</span><script type="math/tex">\sigma_e^2</script></span>, e = eddy</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221007105923.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">2. 纵向扩散<span class="arithmatex"><span class="MathJax_Preview">\sigma_l^2</span><script type="math/tex">\sigma_l^2</script></span>, l = axial</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221007112006.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">3. 流动相传质阻力<span class="arithmatex"><span class="MathJax_Preview">\sigma_m^2</span><script type="math/tex">\sigma_m^2</script></span></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221007112214.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">4. 固定相传质阻力</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/09/20221007112530.png" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">流速理论方程---Van Deemter Equation</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221007113115.png" /></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221007113205.png" /></p>
+</div>
+<h5 id="_75">分离度<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h5>
+<p>分离度：是用来表示两峰实际分离程度的参数。
+用Rs表示（Resolution of separation）</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221007114720.png" /></p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221007115113.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">讨论</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/20221007115414.png" /></p>
+</div>
+<h3 id="gas-chromatography">气相色谱法 Gas Chromatography<a class="headerlink" href="#gas-chromatography" title="Permanent link">&para;</a></h3>
+<p>组成:</p>
+<ul>
+<li>
+<p>载气系统(carrier gas system)</p>
+</li>
+<li>
+<p>进样系统(sample injection system)</p>
+</li>
+<li>
+<p>色谱柱系统(column system)</p>
+</li>
+<li>
+<p>检测系统(detection system)</p>
+</li>
+<li>
+<p>数据系统(data system)</p>
+</li>
+</ul>
+<h4 id="_76">载气系统<a class="headerlink" href="#_76" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">氢气, 氦气</label><label for="__tabbed_1_2">氮气</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>分子量小, 热导系数大, 粘度小</p>
+</li>
+<li>
+<p>常用于热导检测器</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>
+<p>扩散系数小, 柱效比较高</p>
+</li>
+<li>
+<p>除热导检测器外的其他几种检测器, 多采用氮气作为载气.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li>
+<p>要求: 纯度在99.99%以上, 净化</p>
+</li>
+<li>
+<p>载气选择: 主要取决于检测器, 色谱柱及分析要求.</p>
+</li>
+</ul>
+<h4 id="_77">进样系统<a class="headerlink" href="#_77" title="Permanent link">&para;</a></h4>
+<p>目标是使样品进入分离柱前 <mark>瞬间气化</mark> .</p>
+<p><code>分流口</code>: 由于气化引起的体积急剧膨胀, 样品量过大, 可能造成损坏, 因此需要分流口排气, 平衡柱压, 缺点是 <strong>使得进样量难以准确控制</strong> (一般只有1-5%进入分离柱).</p>
+<h4 id="_78">色谱柱系统<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h4>
+<p>主要包含<code>填充柱</code>和<code>开管柱</code>.</p>
+<ul>
+<li>
+<p>填充柱: </p>
+<ul>
+<li>内径2~4mm, 长度1~10m, 柱形多为螺旋形, 为减少<code>跑道效应</code>(非直线跑道存在内侧路径长度更短), 其螺旋直径与柱内径之比要大一些(15:1 ~ 25:1)</li>
+</ul>
+</li>
+<li>
+<p>开管柱:</p>
+<ul>
+<li>
+<p>柱内不转填料, 空心柱-&gt;阻力小</p>
+</li>
+<li>
+<p>内径0.1-0.2mm, 长度可达百米.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="_79">温控系统<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h4>
+<p>用于设定, 控制, 测量气化室, 柱室, 检测室三处的温度.</p>
+<p>气化室温度应使试样瞬间气化而又不分解</p>
+<p>柱室: 恒温/程序升温</p>
+<div class="admonition note">
+<p class="admonition-title">程序升温</p>
+<p>举例: 当部分组分的沸点低且密集, 部分组分的沸点高且分散时, 如果使用恒温, 会使得沸点低的部分过于幂集, 沸点高的部分过于稀疏, 通过降低前期温度, 提升后期温度, 使得分离的时机分散均匀.</p>
+</div>
+<h4 id="_80">检测系统<a class="headerlink" href="#_80" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">浓度型检测器</label><label for="__tabbed_2_2">质量型检测器</label><label for="__tabbed_2_3">通用性检测器: universal</label><label for="__tabbed_2_4">专属检测器: specific</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>载气中通过的检测器组分浓度瞬间的变化.-&gt;热导检测器, 电子捕获检测器</p>
+</div>
+<div class="tabbed-block">
+<p>测量信号值与单位时间内进入检测器组分的质量成正比.-&gt;火焰离子化检测器, 火焰光度检测器.</p>
+</div>
+<div class="tabbed-block">
+<p>对所有的物质有相应, 热导检测器器</p>
+</div>
+<div class="tabbed-block">
+<p>电子捕获检测器</p>
+</div>
+</div>
+</div>
+<h5 id="_81">检测器性能指标<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>灵敏度<span class="arithmatex"><span class="MathJax_Preview">S = \dfrac{\Delta R}{\Delta m}</span><script type="math/tex">S = \dfrac{\Delta R}{\Delta m}</script></span></p>
+</li>
+<li>
+<p>检测限<span class="arithmatex"><span class="MathJax_Preview">D = \dfrac{2R_N}{S}</span><script type="math/tex">D = \dfrac{2R_N}{S}</script></span>: 定义为两倍噪音时对应的被测物质量, 不经过色谱柱, 直接进入检测器</p>
+</li>
+<li>
+<p>最小检测量<span class="arithmatex"><span class="MathJax_Preview">m_{min} = 1.065W_{1/2}D</span><script type="math/tex">m_{min} = 1.065W_{1/2}D</script></span>: 组分经过色谱柱的量</p>
+</li>
+</ul>
+<h5 id="tcd">热导检测器TCD<a class="headerlink" href="#tcd" title="Permanent link">&para;</a></h5>
+<ul>
+<li>测定原理: 利用组分与载气之间的热导率之差.</li>
+</ul>
+<h4 id="fid">氢火焰离子化检测器FID<a class="headerlink" href="#fid" title="Permanent link">&para;</a></h4>
+<div class="admonition note">
+<p class="admonition-title">等离子体</p>
+<p>第四态: 物质所含部分电子在能量的作用下脱离原子核的吸引, 呈现出自由电子和带电离子分离而又共存的一种状态.</p>
+<ul>
+<li>
+<p>估计宇宙中99%以上的物质以等离子体状态存在</p>
+</li>
+<li>
+<p>常见的等离子体: 太阳, 火焰, 闪电, 极光, 霓虹灯</p>
+</li>
+</ul>
+</div>
+<p>有机物在氢氧焰中燃烧产生正负离子和电子(等离子体), 在电场作用下电子被手机极捕获, 正离子被发射极捕获.</p>
+<h5 id="ecd">电子捕获检测器ECD<a class="headerlink" href="#ecd" title="Permanent link">&para;</a></h5>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+N_2\rightarrow N_2^+ + e\\
+AB + e\rightarrow AB^-\\
+AB^- + N_2^+\rightarrow AB + N_2\\
+</div>
+<script type="math/tex; mode=display">
+N_2\rightarrow N_2^+ + e\\
+AB + e\rightarrow AB^-\\
+AB^- + N_2^+\rightarrow AB + N_2\\
+</script>
+</div>
+<ul>
+<li>
+<p>高选择性检测器, 只对电负性高的物质有响应.</p>
+</li>
+<li>
+<p>较多应用于农副产品, 食品及环境中农药残留量的鉴定.</p>
+</li>
+</ul>
+<h5 id="fpd">火焰光度检测器FPD<a class="headerlink" href="#fpd" title="Permanent link">&para;</a></h5>
+<p>对S, P有高响应值的选择性检测器</p>
+<p>S,P在燃烧过程中发射出394nm, 526nm的特征光, 从而进行特征性检测.</p>
+<h5 id="_82">其他检测器<a class="headerlink" href="#_82" title="Permanent link">&para;</a></h5>
+<ul>
+<li>
+<p>热离子检测器</p>
+</li>
+<li>
+<p>联用仪器: 气相色谱与质谱相连.</p>
+</li>
+</ul>
+<h3 id="_83">填充柱气相色谱<a class="headerlink" href="#_83" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">载体</p>
+<p>固定液的支持骨架, 固定液可以在其表面形成一层薄而均匀的液膜.</p>
+<p>特点:</p>
+<ul>
+<li>
+<p>多孔, 比表面积大</p>
+</li>
+<li>
+<p>化学惰性, 表面没有活性, 但有较好的浸润性.</p>
+</li>
+<li>
+<p>热稳定性好</p>
+</li>
+<li>
+<p>无催化作用</p>
+</li>
+<li>
+<p>有一定的机械强度</p>
+</li>
+<li>
+<p>颗粒大小均匀, 适度. 一般采用60~80目, 80~100目</p>
+</li>
+</ul>
+<p>大致分为: 硅藻土类和非硅藻土类.</p>
+<div class="admonition tip">
+<p class="admonition-title">硅藻土</p>
+<p>硅藻化石通过机械加工(如煅烧), 得到两种不同的材料:</p>
+<ul>
+<li>
+<p>红色硅藻土: 孔径小(~2<span class="arithmatex"><span class="MathJax_Preview">\mu m</span><script type="math/tex">\mu m</script></span>), 表孔密集, 比表面积大, 机械强度好. 常与非极性固定液配伍, 适宜分离非极性或弱极性组分的试样, 缺点是表面存有活性吸附中心点, 有一定的催化活性.</p>
+</li>
+<li>
+<p>白色硅藻土: 煅烧前原料中加入碳酸钠, 颗粒疏松, 孔径较大, 比表面积较小, 机械强度较差, 但吸附性显著减小(不容易形成催化活性位点), 常与极性固定液配伍, 分离极性试样.</p>
+</li>
+</ul>
+</div>
+</div>
+<p>固定液要求:</p>
+<ul>
+<li>
+<p>热稳定性好</p>
+</li>
+<li>
+<p>化学稳定性好</p>
+</li>
+<li>
+<p>固定液的粘度和凝固点要低</p>
+</li>
+<li>
+<p>各组分在固定液中均有一定的溶解度</p>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">组分与固定液分子间的作用力</p>
+<ul>
+<li>
+<p>定向力(静电力): 由极性分子的永久偶极间的互相吸引产生(强)</p>
+</li>
+<li>
+<p>诱导力: 极性分子和非极性分子之间的相互作用力(较弱)</p>
+</li>
+<li>
+<p>色散力: 非极性分子由分子形变产生一定的极性, 因为非极性分子之间也可能存在吸引力(较强)</p>
+</li>
+<li>
+<p>氢键力: 含有电负性较强的原子与氢原子之间的作用力.</p>
+</li>
+</ul>
+<blockquote>
+<p>体现出一定的"相似相溶"性质.</p>
+</blockquote>
+</div>
+<p>固定液特征常数:</p>
+<ul>
+<li>Kovats保留指数<span class="arithmatex"><span class="MathJax_Preview">I_x</span><script type="math/tex">I_x</script></span>: 人为定义碳数为n的正构烷烃(一条碳链), 保留指数为100n, 用保留时间紧邻待测组分的两个正构烷烃来标定组分的相对保留值. 通过保留时间来计算比例.</li>
+</ul>
+<div class="arithmatex">
+<div class="MathJax_Preview">
+I_x = 100n + 100\frac{Z(\lg t_{R_{x}'} - \lg t_{R_{n}'})}{\lg t_{R_{n+z}'} - \lg t_{R_{n}'}}
+</div>
+<script type="math/tex; mode=display">
+I_x = 100n + 100\frac{Z(\lg t_{R_{x}'} - \lg t_{R_{n}'})}{\lg t_{R_{n+z}'} - \lg t_{R_{n}'}}
+</script>
+</div>
+<ul>
+<li>麦氏常数</li>
+</ul>
+<p>利用苯, 丁醇, 2-戊酮, 硝基丙烷, 吡啶等物种代表不同类型作用力的物质在被测固定液与角鲨烷柱上保留指数的差值, 分别以<span class="arithmatex"><span class="MathJax_Preview">x', y', z', u', s'</span><script type="math/tex">x', y', z', u', s'</script></span>表示.</p>
+<p>计算上述五个指标, 计算平均值, 可以作为参考值.</p>
+<div class="admonition faq">
+<p class="admonition-title">为什么以角鲨烷为参考?</p>
+<p>角鲨烷为典型的非极性固定液, 多数固定液和角鲨烷比较, 能够得到正值.</p>
+</div>
+<p>固定液的选择: 相似性原则</p>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/8DC1E23BF81BD1AF860E91818B5E37E0.png" /></p>
+<p>决定流出顺序的力:</p>
+<ul>
+<li>
+<p>组分的相对挥发度的大小(沸点)</p>
+</li>
+<li>
+<p>组分分子与固定液分子之间的作用力的大小.</p>
+</li>
+</ul>
+<h4 id="_84">手性选择剂<a class="headerlink" href="#_84" title="Permanent link">&para;</a></h4>
+<p>常见拆分方法: 直接结晶法, 酶拆分法, 化学拆分, 色谱分离(主要)</p>
+<h4 id="-_1">气-固色谱中的固体吸附剂<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>种类</p>
+</li>
+<li>
+<p>活性炭</p>
+</li>
+<li>
+<p>活性氧化铝</p>
+</li>
+<li>
+<p>硅胶</p>
+</li>
+<li>
+<p>分子筛</p>
+</li>
+<li>
+<p>高分子多孔微球</p>
+</li>
+</ol>
+<h3 id="_85">开管柱气相色谱法<a class="headerlink" href="#_85" title="Permanent link">&para;</a></h3>
+<h4 id="_86">分类<a class="headerlink" href="#_86" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/10/9404A866D52101DE51E9E7F39CD88F98.png" /></p>
+<h4 id="_87">定量分析<a class="headerlink" href="#_87" title="Permanent link">&para;</a></h4>
+<p>峰面积的测量:</p>
+<ul>
+<li>用三角形面积进行估计: <span class="arithmatex"><span class="MathJax_Preview">A= 1.065W\cdot h</span><script type="math/tex">A= 1.065W\cdot h</script></span></li>
+</ul>
+<h4 id="_88">定量矫正因子<a class="headerlink" href="#_88" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>绝对矫正因子<span class="arithmatex"><span class="MathJax_Preview">f_i = m_i / A</span><script type="math/tex">f_i = m_i / A</script></span></p>
+</li>
+<li>
+<p>相对矫正因子<span class="arithmatex"><span class="MathJax_Preview">f_i' = \dfrac{f_i}{f_s} = {m_i\over m_s}\cdot {A_s\over A_i}</span><script type="math/tex">f_i' = \dfrac{f_i}{f_s} = {m_i\over m_s}\cdot {A_s\over A_i}</script></span></p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">常用的几种定量方法</p>
+<p><strong>内标法</strong> : 只需内标物及预测组分出峰, 操作条件变化而引起的误差小.</p>
+<p>缺点: 内标物选择困难.</p>
+<p><strong>归一化法</strong> : </p>
+<p><span class="arithmatex"><span class="MathJax_Preview">c_i = \dfrac{m_i}{\sum m_i}\times 100 = \dfrac{f_i'\cdot A_i}{\sum (f_i'\cdot A_i)}\times 100 \approx  \dfrac{A_i}{\sum A_i}\times 100</span><script type="math/tex">c_i = \dfrac{m_i}{\sum m_i}\times 100 = \dfrac{f_i'\cdot A_i}{\sum (f_i'\cdot A_i)}\times 100 \approx  \dfrac{A_i}{\sum A_i}\times 100</script></span></p>
+<blockquote>
+<p>矫正因此相等时, 可以直接用峰面积, 不用加标准物.</p>
+</blockquote>
+<p>要求所有组分均出峰.</p>
+<p><strong>校准曲线法</strong> : 不是很准确, 少用. 液相色谱中可以使用.</p>
+</div>
+<div class="admonition faq">
+<p class="admonition-title">为什么气相色谱只用来做定性/定量分析, 而不做分离?</p>
+<p>因为大量的气体通过分离口流出, 分离效率低.</p>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 17, 2022</span>
+      
+    
+  </small>
+</div>
 
 
 
@@ -2427,6 +5263,11 @@ AgCl + e \rightleftharpoons Ag + Cl^-
             
           </div>
         </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
         
       </main>
       
@@ -2472,6 +5313,10 @@ AgCl + e \rightleftharpoons Ag + Cl^-
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 by yunzinan
+    </div>
+  
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
@@ -2489,7 +5334,7 @@ AgCl + e \rightleftharpoons Ag + Cl^-
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.share", "navigation.top"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>

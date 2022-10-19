@@ -4,13 +4,18 @@ site_author: Yunzinan
 
 repo_name: 'Note_Base'
 repo_url: 'https://github.com/yunzinan/Note_Base'
-
+edit_uri: ""
 
 theme:
   name: material
   language: 'zh'
+  favicon: img/favicon.png
+  # logo: img/doge.png
   features:
   - navigation.tabs
+  - search.suggest
+  - search.share
+  - navigation.top
   palette:
     primary: 'Blue'
     accent: 'Lime'
@@ -21,6 +26,21 @@ theme:
     code: 'Jetbrains Mono'
   language: 'zh'
   highlightjs: true
+  # palette:
+
+  #   # Palette toggle for light mode
+  #   - media: "(prefers-color-scheme: light)"
+  #     scheme: default
+  #     toggle:
+  #       icon: material/brightness-7
+  #       name: Switch to dark mode
+
+  #   # Palette toggle for dark mode
+  #   - media: "(prefers-color-scheme: dark)"
+  #     scheme: slate
+  #     toggle:
+  #       icon: material/brightness-4
+  #       name: Switch to light mode
 
 markdown_extensions:
   - admonition  # 提示块
@@ -33,7 +53,11 @@ markdown_extensions:
   - pymdownx.inlinehilite  # 行内代码高亮
   - pymdownx.mark  # 文本高亮
   - pymdownx.smartsymbols  # 符号转换
-  - pymdownx.superfences  # 代码嵌套在列表里
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true 
   - codehilite:    # 代码高亮，显示行号
       guess_lang: false
       linenums: true
@@ -47,14 +71,26 @@ markdown_extensions:
   - pymdownx.magiclink  # 自动识别超链接
   - pymdownx.tasklist:  # 复选框checklist
       custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
 
-extra:
-  search:
-    language: 'jp'
+plugins:
+  - search:
+      lang: 
+        - en
+        - ja
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+      enable_creation_date: false
+
 
 extra_javascript:
     - 'js/extra.js'
     - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
+
+
+copyright: Copyright &copy; 2022 by yunzinan
 
 nav: # 导航
 - 主页: index.md
@@ -82,15 +118,18 @@ nav: # 导航
       - 力扣刷题笔记: ComputerScience/力扣刷题笔记.md
       - 高级程序设计: ComputerScience/高级程序设计读书笔记.md
       - 数据结构: ComputerScience/数据结构.md
+      - 数据结构复习笔记: ComputerScience/数据结构复习笔记.md
       - 数字逻辑与计算机组成: ComputerScience/数电计组.md
 - 化学: 
   - 大学化学: Chemistry/大学化学笔记.md
   - 有机化学: Chemistry/有机化学笔记.md
   - 仪器分析: Chemistry/仪器分析笔记.md
   - 仪器分析作业: Chemistry/仪器分析作业.md
+  - 有机化学学习指南笔记: Chemistry/有机化学学习指南笔记.md
 - 技能树:
       - Jupyter Notebook: SkillMap/Jupyter-notebook快速入门.md
       - 爬虫入门: SkillMap/WebCrawlingNotes.md
+      - gdb入门: SkillMap/gdb_note.md
 - 课堂笔记: 
     - 马原: LectureNotes/马原复习提纲.md
     - 普通物理I: LectureNotes/普通物理I复习笔记.md
@@ -102,7 +141,9 @@ nav: # 导航
       - 对个人笔记系统的思考: InformalEssay/对个人笔记系统的思考.md
       - 都是语法惹的祸: InformalEssay/一些LaTeX语法的问题.md
 - OJ:
-  - 警钟长鸣: CheatSheet/OJ/警钟长鸣-题单.md
-  - 每日一题题单: CheatSheet/OJ/everydayAC.md
+  - 警钟长鸣: OJ/警钟长鸣-题单.md
+  # - 每日一题题单: OJ/everydayAC.md
 - CheatSheet:
   - mkdocs扩展语法: CheatSheet/mkdocs扩展语法.md
+  - regex教程: CheatSheet/regex-cookbook.md
+  - emoji-cheat-sheet: CheatSheet/markdown-emoji.md
