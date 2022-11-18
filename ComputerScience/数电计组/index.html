@@ -1772,6 +1772,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#8-cpu" class="md-nav__link">
+    第8章 CPU
+  </a>
+  
+    <nav class="md-nav" aria-label="第8章 CPU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    数据通路的基本结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    数据通路与时序控制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    计算机系统性能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    非总线式CPU
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2135,6 +2176,20 @@
     <li class="md-nav__item">
       <a href="../../InformalEssay/%E4%B8%80%E4%BA%9BLaTeX%E8%AF%AD%E6%B3%95%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
         都是语法惹的祸
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/%E7%88%AC%E8%99%AB%E8%BF%9B%E9%98%B6-ip%E4%BB%A3%E7%90%86/" class="md-nav__link">
+        ip代理爬虫
       </a>
     </li>
   
@@ -3222,6 +3277,47 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#8-cpu" class="md-nav__link">
+    第8章 CPU
+  </a>
+  
+    <nav class="md-nav" aria-label="第8章 CPU">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_69" class="md-nav__link">
+    数据通路的基本结构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_70" class="md-nav__link">
+    数据通路与时序控制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_71" class="md-nav__link">
+    计算机系统性能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    非总线式CPU
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3409,6 +3505,13 @@
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#8-cpu">第8章 CPU</a><ul>
+<li><a href="#_69">数据通路的基本结构</a></li>
+<li><a href="#_70">数据通路与时序控制</a></li>
+<li><a href="#_71">计算机系统性能</a></li>
+<li><a href="#cpu">非总线式CPU</a></li>
 </ul>
 </li>
 </ul>
@@ -4377,13 +4480,51 @@ EN低: 关闭</p>
 <blockquote>
 <p>原理: (R - D + D) &lt;&lt; 1 - D = (R-D) &lt;&lt; R + D</p>
 </blockquote>
+<h2 id="8-cpu">第8章 CPU<a class="headerlink" href="#8-cpu" title="Permanent link">&para;</a></h2>
+<h3 id="_69">数据通路的基本结构<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h3>
+<p>由 <strong>操作元件</strong> 和 <strong>储存元件</strong> 通过总线或分线的方式.</p>
+<p><code>状态元件</code>: 分为寄存器(组)和理想存储元件.</p>
+<h3 id="_70">数据通路与时序控制<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h3>
+<p><code>同步系统(Synchronous system)</code>: 指令执行过程每一步都有控制信号控制, 由时序信号确定信号何时发出, 作用时间多长.</p>
+<p><code>指令周期</code>: CPU取并执行一条指令的时间, 不同指令的指令周期不一定相等.</p>
+<h3 id="_71">计算机系统性能<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Time to do the task</p>
+</li>
+<li>
+<p>Tasks per sec</p>
+</li>
+</ul>
+<p><code>CPI</code>: Cycles per Instruction</p>
+<h3 id="cpu">非总线式CPU<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">设计处理器的步骤</p>
+<ol>
+<li>
+<p>分析每条指令的功能, 并用RTL表示</p>
+</li>
+<li>
+<p>根据指令的功能给出所需的元件</p>
+</li>
+<li>
+<p>确定每个原价你所需控制信号的取值</p>
+</li>
+<li>
+<p>汇总所有指令所涉及到的控制信号, 生成功能表</p>
+</li>
+<li>
+<p>得到逻辑表达式, 构建 <strong>控制器</strong> 电路</p>
+</li>
+</ol>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 11, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 18, 2022</span>
       
     
   </small>
