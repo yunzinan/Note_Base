@@ -1416,6 +1416,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x15-dsoj-w12t2" class="md-nav__link">
+    0x15 DSOJ W12T2 小蓝鲸找数字
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x16-dsoj-w12t3" class="md-nav__link">
+    0x16 DSOJ W12T3 [奇怪的二叉树]
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1680,6 +1694,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x15-dsoj-w12t2" class="md-nav__link">
+    0x15 DSOJ W12T2 小蓝鲸找数字
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x16-dsoj-w12t3" class="md-nav__link">
+    0x16 DSOJ W12T3 [奇怪的二叉树]
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1734,6 +1762,8 @@
 <li><a href="#0x12-dsoj-w8t3">0x12 DSOJ W8T3 小蓝鲸装监控</a></li>
 <li><a href="#0x13-dsoj">0x13 DSOJ 小蓝鲸分组</a></li>
 <li><a href="#0x14-apoj">0x14 APOJ 又是指针的问题</a></li>
+<li><a href="#0x15-dsoj-w12t2">0x15 DSOJ W12T2 小蓝鲸找数字</a></li>
+<li><a href="#0x16-dsoj-w12t3">0x16 DSOJ W12T3 [奇怪的二叉树]</a></li>
 </ul>
 </li>
 </ul>
@@ -2447,13 +2477,47 @@ f(n) = C_{2n}^n - C_{2n}^{n-1}
 </div>
 </div>
 </div>
+<h3 id="0x15-dsoj-w12t2">0x15 DSOJ W12T2 <a href="http://netlab.nju.edu.cn:5080/contest/45/problem/128">小蓝鲸找数字</a><a class="headerlink" href="#0x15-dsoj-w12t2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/11/20221130204953.png" /></p>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>笨笨的笔者花了一个多小时也没有能够做出O(N)的方法, (当然也被*只用常数的额外空间*坑了), 最后只能用O(NlogN)的方法卡过.</p>
+<div class="admonition note">
+<p class="admonition-title">an essential note</p>
+<p>需要注意到, 这道题的答案一定是在<span class="arithmatex"><span class="MathJax_Preview">[1,n]</span><script type="math/tex">[1,n]</script></span>内的.</p>
+</div>
+<p>在注意到这一点后, 下面的操作仍然需要一些技巧. 主要是受到*常数的额外空间*所限.</p>
+<p><strong>方法一</strong> 交换法:</p>
+<p>给对所有的元素尝试"归位", 也就是将数字i放到第i个位置上, 只能通过交换两个元素的方法来完成这件事情, 但是需要注意, 交换后, 原先在第i位上的元素同样需要"归位". 在尝试将所有的元素归位后, 第一个没有归位的元素对应缺失元素就是答案.</p>
+<p>此外, 由于题目输入的元素可能不符合要求, 这些数字我们并不关心, 可以都改为一个大于n的数输入.</p>
+<p>时间复杂度分析: 由于每个元素至多被归位一次, 因此是O(N)的.</p>
+<p><strong>方法二</strong> 构建小顶堆:</p>
+<p>注意到<mark class="critic">通过一次性将数组转化堆(heapify)</mark>操作的复杂度是O(N), 因此直接将原数组heapify, 然后不断pop()?</p>
+<h3 id="0x16-dsoj-w12t3">0x16 DSOJ W12T3 [奇怪的二叉树]<a class="headerlink" href="#0x16-dsoj-w12t3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目信息</li>
+</ul>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/11/20221130211112.png" /></p>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>利用到二叉搜索树的一个性质: 如果将二叉树的中序遍历转化为一个数组, 每次插入的新元素的位置一定是在第一个大于它的元素和最后一个小于它的元素之间的, 而作为二叉树, 每次插入的元素一定是在某个节点的左孩子或者右孩子, 同时作为一个叶子节点, 因此从序列的角度来看, 一定是在父亲节点的左边或者右边一个. 因此在序列中插入后, 当前节点的父亲节点只能是与其相邻的两个节点(注意, 如果是在两端的话, 只有一个)之一, 那么简单使用排除法(父亲节点的子节点不能已经有孩子了), 就很容易找到答案了</p>
+<p>复杂度分析: 通过二分法插入, 总的时间复杂度为<span class="arithmatex"><span class="MathJax_Preview">O(\sum_{i=1}^nlog i) = O(n\log n)</span><script type="math/tex">O(\sum_{i=1}^nlog i) = O(n\log n)</script></span>.</p>
+<details class="important">
+<summary>上式的证明</summary>
+<p><img alt="" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2022/11/20221130212913.png" /></p>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 30, 2022</span>
       
     
   </small>
