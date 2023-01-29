@@ -1535,6 +1535,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x1a-330t4" class="md-nav__link">
+    0x1a 力扣第330场周赛T4 统计上升四元组
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1862,6 +1869,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x1a-330t4" class="md-nav__link">
+    0x1a 力扣第330场周赛T4 统计上升四元组
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1925,6 +1939,7 @@
 <li><a href="#0x17-322t4">0x17 力扣第322周周赛T4 将节点分成尽可能多的组</a></li>
 <li><a href="#0x18-328t4">0x18 力扣第328周周赛T4 最大价值和最小价值和的差值</a></li>
 <li><a href="#0x19-328t2-1">0x19 力扣第328周周赛T2 子矩阵元素加1</a></li>
+<li><a href="#0x1a-330t4">0x1a 力扣第330场周赛T4 统计上升四元组</a></li>
 </ul>
 </li>
 </ul>
@@ -3094,6 +3109,10 @@ LeetCode第328场周赛T4 最大价值和最小价值和的差值</p>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
 </details>
+<div class="admonition bug">
+<p class="admonition-title">戳啦, 被Hack了😥</p>
+<p>经网友指正, 这个算法的复杂度分析的有问题, 在对于星状图这样的情况下, 时间复杂度会达到<span class="arithmatex"><span class="MathJax_Preview">O(N^2)</span><script type="math/tex">O(N^2)</script></span>. 可能正解还是需要用到什么"换根dp"吧.</p>
+</div>
 <h3 id="0x19-328t2-1">0x19 力扣第328周周赛T2 <a href="https://leetcode.cn/problems/increment-submatrices-by-one/">子矩阵元素加1</a><a class="headerlink" href="#0x19-328t2-1" title="Permanent link">&para;</a></h3>
 <div class="admonition important">
 <p class="admonition-title">强烈推荐</p>
@@ -3128,13 +3147,91 @@ LeetCode第328场周赛T4 最大价值和最小价值和的差值</p>
 <span class="n">著作权归作者所有</span><span class="err">。</span><span class="n">商业转载请联系作者获得授权</span><span class="err">，</span><span class="n">非商业转载请注明出处</span><span class="err">。</span><span class="w"></span>
 </code></pre></div>
 </div>
+<h3 id="0x1a-330t4">0x1a 力扣第330场周赛T4 <a href="https://leetcode.cn/problems/count-increasing-quadruplets/">统计上升四元组</a><a class="headerlink" href="#0x1a-330t4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>先来看<span class="arithmatex"><span class="MathJax_Preview">O(n^3)</span><script type="math/tex">O(n^3)</script></span>的做法.</p>
+<p>笔者首先是做了一个预处理: 求出每个元素<span class="arithmatex"><span class="MathJax_Preview">idx</span><script type="math/tex">idx</script></span>左右两边<span class="arithmatex"><span class="MathJax_Preview">pos</span><script type="math/tex">pos</script></span>位置开始到该元素为止,大于<span class="arithmatex"><span class="MathJax_Preview">nums[idx]</span><script type="math/tex">nums[idx]</script></span>的数的个数. 用<code>int cnt[idx][pos]</code>来存储. 显然, 这可以在<span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>的时间内完全求解.</p>
+<p>首先, 枚举i, k, 这样就是要寻找<span class="arithmatex"><span class="MathJax_Preview">(i, k)</span><script type="math/tex">(i, k)</script></span>对应的<span class="arithmatex"><span class="MathJax_Preview">(j, l)</span><script type="math/tex">(j, l)</script></span>对数. 其中,</p>
+<ul>
+<li><span class="arithmatex"><span class="MathJax_Preview">i &lt; j &lt; k \wedge nums[i] &lt; nums[k] &lt; nums[j]</span><script type="math/tex">i < j < k \wedge nums[i] < nums[k] < nums[j]</script></span> , 相当于求"i,k之间大于nums[k]的元素个数", 这个值等于<code>cnt[k][0] - cnt[k][i]</code>.</li>
+<li><span class="arithmatex"><span class="MathJax_Preview">l &gt; k \wedge nums[j] &lt; nums[l]</span><script type="math/tex">l > k \wedge nums[j] < nums[l]</script></span>, 这个值等于<code>cnt[j][n-1] - cnt[j][k]</code>.</li>
+</ul>
+<p>看起来, 经过预处理后, 就能以O(1)的时间来得到<span class="arithmatex"><span class="MathJax_Preview">(j, l)</span><script type="math/tex">(j, l)</script></span>, 但是笔者具体实现以后, 才发现: <span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>是关于<span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>的函数, 因此需要确定<span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>, 才能确定<span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>. 这就意味着需要再遍历一遍<span class="arithmatex"><span class="MathJax_Preview">j</span><script type="math/tex">j</script></span>, 然后逐次累加<span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>的种数. 这样下来, 复杂度达到<span class="arithmatex"><span class="MathJax_Preview">O(n^3)</span><script type="math/tex">O(n^3)</script></span>, 结果确实是TLE.</p>
+<p>看来, 似乎是预处理得还不够, 还有没有能够进一步预处理的呢?</p>
+<p>刚才因为不断地迭代j并累加<code>cnt[j][n-1] - cnt[j][k]</code>导致复杂度升高, 能不能把这个过程拿到枚举i, k的循环之外, 先进行运算呢? </p>
+<p>既然在确定了<span class="arithmatex"><span class="MathJax_Preview">j, k</span><script type="math/tex">j, k</script></span>以后, 可以通过O(1)时间得到<span class="arithmatex"><span class="MathJax_Preview">l</span><script type="math/tex">l</script></span>的个数, 因为<span class="arithmatex"><span class="MathJax_Preview">\displaystyle \sum_{j, l}(j, l) = \sum_j \sum_l (j, l)</span><script type="math/tex">\displaystyle \sum_{j, l}(j, l) = \sum_j \sum_l (j, l)</script></span>, 那么就可以通过枚举j, k, 并累加得到任意<span class="arithmatex"><span class="MathJax_Preview">i, k</span><script type="math/tex">i, k</script></span>对应的<span class="arithmatex"><span class="MathJax_Preview">(j,l)</span><script type="math/tex">(j,l)</script></span>对数. 这个预处理的复杂度同样是<span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>. 代码中, 用<code>int c[j][k]</code>来表示在[j, k-1]区间内所有能取到的j对应的l的数量之和, 也就是<span class="arithmatex"><span class="MathJax_Preview">i = j-1, k=k</span><script type="math/tex">i = j-1, k=k</script></span>情况下的<span class="arithmatex"><span class="MathJax_Preview">(j ,l)</span><script type="math/tex">(j ,l)</script></span>对的数目.</p>
+<p>总的来说, 经过两次<span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>的预处理后, 只需要以<span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>枚举<span class="arithmatex"><span class="MathJax_Preview">(i, k)</span><script type="math/tex">(i, k)</script></span>, 就能以O(1)的时间复杂度得到对应的<span class="arithmatex"><span class="MathJax_Preview">(j ,l)</span><script type="math/tex">(j ,l)</script></span>对的数目.因此总的时间复杂度也顺利降至<span class="arithmatex"><span class="MathJax_Preview">O(n^2).</span><script type="math/tex">O(n^2).</script></span></p>
+<p>最后, 也是比较坑的地方, 由于C++限制, 如果将两个数组开在类里面会爆栈, 所以必须作为全局变量来存储.</p>
+<div class="admonition warning">
+<p class="admonition-title">教训</p>
+<p>第一次遇到因为数组开大导致爆栈RE的, 傻傻的我找了半天也没找到RE的原因, 遗憾没能AC.</p>
+</div>
+<details class="success">
+<summary>AC</summary>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="mi">4005</span><span class="p">][</span><span class="mi">4005</span><span class="p">];</span><span class="w"> </span><span class="c1">//cnt[idx][pos]从pos开始到idx为止大于nums[idx]的个数</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">4005</span><span class="p">][</span><span class="mi">4005</span><span class="p">];</span><span class="w"></span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="n">nums</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">get_cnt</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cnt</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">idx</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//向左边</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">l</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">l</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="w">      </span><span class="n">l</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="c1">//向右边</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">r</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">r</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">r</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">r</span><span class="mi">-1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">r</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">idx</span><span class="p">][</span><span class="n">r</span><span class="mi">-1</span><span class="p">];</span><span class="w"></span>
+<span class="w">      </span><span class="n">r</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="c1">//枚举j, 统计[j, k-1]间所有的(j, l)对的数目.</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">c</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">k</span><span class="p">])</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">cnt</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">n</span><span class="mi">-1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">cnt</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">k</span><span class="p">]);</span><span class="w"> </span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="w">      </span><span class="n">j</span><span class="o">--</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">countQuadruplets</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">nums</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nums</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">get_cnt</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">func</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">ret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="k">if</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+<span class="w">          </span><span class="n">ret</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">ret</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+</code></pre></div>
+</details>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 15, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2023</span>
       
     
   </small>
