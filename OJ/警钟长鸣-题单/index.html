@@ -1563,6 +1563,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x20-336t3" class="md-nav__link">
+    0x20 力扣第336场周赛T3 统计美丽子数组
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x21-acw-t96" class="md-nav__link">
+    0x21 ACW T96 奇怪的汉诺塔
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1918,6 +1932,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#0x20-336t3" class="md-nav__link">
+    0x20 力扣第336场周赛T3 统计美丽子数组
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#0x21-acw-t96" class="md-nav__link">
+    0x21 ACW T96 奇怪的汉诺塔
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1983,6 +2011,8 @@
 <li><a href="#0x1d-dsoj-w14t2">0x1d DSOJ W14T2 小蓝鲸游园计划</a></li>
 <li><a href="#0x1e-dsoj-w15t3">0x1e DSOJ W15T3 小蓝鲸返乡</a></li>
 <li><a href="#0x1f-4">0x1f 数据结构大作业 4题</a></li>
+<li><a href="#0x20-336t3">0x20 力扣第336场周赛T3 统计美丽子数组</a></li>
+<li><a href="#0x21-acw-t96">0x21 ACW T96 奇怪的汉诺塔</a></li>
 </ul>
 </li>
 </ul>
@@ -3619,13 +3649,46 @@ f(idx, k) = \min {\begin{cases}f(idx - 1, k),\quad idx > 0 \\ \max\{f(idx - 2, k
 </details>
 <h3 id="0x1f-4">0x1f 数据结构大作业 4题<a class="headerlink" href="#0x1f-4" title="Permanent link">&para;</a></h3>
 <p>四道题都挺有意思的, 具有一定的挑战性. 作为作业, 这几题的思路&amp;解法见<a href="https://box.nju.edu.cn/f/67de5fdc95d242ca8bcd/">作业报告</a></p>
+<h3 id="0x20-336t3">0x20 力扣第336场周赛T3 <a href="https://leetcode.cn/problems/count-the-number-of-beautiful-subarrays/">统计美丽子数组</a><a class="headerlink" href="#0x20-336t3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>最近水平下滑太明显了, 将近一个月的缺乏训练, 连续三场周赛掉分😥, 要开始努力了</p>
+</blockquote>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>直接暴力的话, 时间复杂度是<span class="arithmatex"><span class="MathJax_Preview">O(n^3)</span><script type="math/tex">O(n^3)</script></span>, 如果进行一些预处理的话, 时间复杂度也许可以降到<span class="arithmatex"><span class="MathJax_Preview">O(n^2)</span><script type="math/tex">O(n^2)</script></span>, 但是还是不够, 如果能过的话, 时间复杂度应该要到<span class="arithmatex"><span class="MathJax_Preview">O(n\log n)</span><script type="math/tex">O(n\log n)</script></span>或者O(n), 这个地方笔者在思考的时候陷入了滑窗和DP的困境: 如果要满足复杂度, 那就意味着不能多次遍历, 但是似乎并没有这样的算法能够在一遍遍历后就统计出结果.</p>
+<p>赛后来看, 异或, 前缀和, 这两者都不陌生, 但是能够结合起来运用, 还是头一回见. 这道题对异或的性质的考察是很好的.</p>
+<details class="success">
+<summary>异或前缀和</summary>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<span class="k">def</span> <span class="nf">beautifulSubarrays</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">cnt</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">({</span><span class="n">s</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>  <span class="c1"># s[0]</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">^=</span> <span class="n">x</span>
+        <span class="n">ans</span> <span class="o">+=</span> <span class="n">cnt</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="n">cnt</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">ans</span>
+</code></pre></div>
+</details>
+<h3 id="0x21-acw-t96">0x21 ACW T96 <a href="cwing.com/problem/content/98/">奇怪的汉诺塔</a><a class="headerlink" href="#0x21-acw-t96" title="Permanent link">&para;</a></h3>
+<ul>
+<li>题目分析</li>
+</ul>
+<p>3根柱子的Hanoi问题是经典的, 本题做了一个小的变式, 4根柱子会如何?</p>
+<p>笔者第一遍做的时候犯的一个错误是: 先把n-2移动到B, 然后把第n-1移到C, 把第n移到D, 然后再移过来, 因此得到的状态转移方程<span class="arithmatex"><span class="MathJax_Preview">T(n) = 2 \times T(n-2) + 3</span><script type="math/tex">T(n) = 2 \times T(n-2) + 3</script></span>, 然后代入了一个3, 似乎没问题, 于是就挂了.</p>
+<p>其实这么想是没什么道理的. 这个推广其实也考察了对状态的理解. 因为汉诺塔要求大盘子要在小盘子下面, 因此第一次可以选取k个盘子移动到B上, 这个过程是可以用到4根柱子的, 但是剩下来的<span class="arithmatex"><span class="MathJax_Preview">n-k</span><script type="math/tex">n-k</script></span>个盘子就只能在3根柱子上移动, 这个状态是和第一次不同的, 因此状态转移方程为<span class="arithmatex"><span class="MathJax_Preview">Q(n) = 2 \times Q(k) + T(n-k)</span><script type="math/tex">Q(n) = 2 \times Q(k) + T(n-k)</script></span>, 其中Q代表可以用四根柱子, T代表3根, 那么k选什么呢? 就需要遍历所有可能的k, 取结果的最小值.</p>
+<div class="admonition question">
+<p class="admonition-title">进一步思考</p>
+<p>这题其实还有一些值得思考的地方: 为什么3-&gt;4, 就不再是划分成1, n-1来移动呢? 可能的原因在于, 原先3根柱子的时候, 第一次移动以后, 第二次只能用2根柱子, 而从一根柱子上移动到另一根上, 如果盘子数多于1个, 就无法完成了. 因此我们分析经典汉诺塔问题时, 总是先考虑移动上n-1块, 然后在只剩两根"可以周转"的柱子, 于是只能移动最下面的那一块了. 到了4根柱子的时候, 第一次移动完, 还有3根柱子, 这个问题就完全等同于经典汉诺塔问题, 因此这时候将n划分成k, n-k, 这个k的取值就不唯一了. 因此需要取最小值(如果通过数学上证明有最优划分, 那么这个过程可以简化).</p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 15, 2023</span>
       
     
   </small>
