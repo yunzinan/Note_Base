@@ -1,0 +1,1 @@
+<iframe seamless frameborder="0" scrolling="no" height="725" width="100%" src="https://app.insertchatgpt.com/embed/ec1776a8-fc59-4185-902c-6c5dc857ae94"></iframe>

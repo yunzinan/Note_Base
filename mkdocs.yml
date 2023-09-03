@@ -120,6 +120,7 @@ nav: # 导航
       - 数据结构: ComputerScience/数据结构.md
       - 数据结构复习笔记: ComputerScience/数据结构复习笔记.md
       - 数字逻辑与计算机组成: ComputerScience/数电计组.md
+      - 数电计组复习: ComputerScience/数电计组复习.md
 - 化学: 
   - 大学化学: Chemistry/大学化学笔记.md
   - 有机化学: Chemistry/有机化学笔记.md
@@ -140,6 +141,14 @@ nav: # 导航
       - 22SummerReview: InformalEssay/22SummerReview.md
       - 对个人笔记系统的思考: InformalEssay/对个人笔记系统的思考.md
       - 都是语法惹的祸: InformalEssay/一些LaTeX语法的问题.md
+      - ip代理爬虫: InformalEssay/爬虫进阶-ip代理.md
+      - <叫魂-1768年妖术大恐慌>书评: InformalEssay/叫魂书评.md
+      - 22FallReview: InformalEssay/22FallReview.md
+      - 从ChatGPT看AI-未来以来: InformalEssay/从ChatGPT看AI:未来以来.md 
+      - WSL: InformalEssay/wsl.md
+      - 如何优雅地写slides?: InformalEssay/marp.md
+      - 记一次失败的报告: InformalEssay/GTA-report.md
+      
 - OJ:
   - 警钟长鸣: OJ/警钟长鸣-题单.md
   # - 每日一题题单: OJ/everydayAC.md
@@ -147,3 +156,5 @@ nav: # 导航
   - mkdocs扩展语法: CheatSheet/mkdocs扩展语法.md
   - regex教程: CheatSheet/regex-cookbook.md
   - emoji-cheat-sheet: CheatSheet/markdown-emoji.md
+  - vim-cheat-sheet: CheatSheet/vim-CheatSheet.md 
+- ChatGPT: chat.md
