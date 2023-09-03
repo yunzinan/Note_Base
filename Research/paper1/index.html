@@ -1,0 +1,2665 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="存放和分享笔者的一些笔记和随笔">
+      
+      
+        <meta name="author" content="Yunzinan">
+      
+      
+      
+        <link rel="prev" href="../../ComputerScience/%E6%95%B0%E7%94%B5%E8%AE%A1%E7%BB%84%E5%A4%8D%E4%B9%A0/">
+      
+      
+        <link rel="next" href="../paper2/">
+      
+      
+      <link rel="icon" href="../../img/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.7">
+    
+    
+      
+        <title>BCI文献阅读第1期 - Yunzinan的知识库</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jetbrains+Mono:300,300i,400,400i,700,700i%7CJetbrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Jetbrains Mono";--md-code-font:"Jetbrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="Blue" data-md-color-accent="Lime">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#brain-computer-interfaces-definitions-and-principles" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Yunzinan的知识库" class="md-header__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yunzinan的知识库
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BCI文献阅读第1期
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/yunzinan/Note_Base" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Note_Base
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  主页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Math/Caculus/Calculus-II-notes-chapt1/" class="md-tabs__link">
+          
+  
+  数学
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+          
+  
+  计算机科学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  科研
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+          
+  
+  技能树
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-tabs__link">
+          
+  
+  课堂笔记
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-tabs__link">
+          
+  
+  随笔
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../OJ/%E8%AD%A6%E9%92%9F%E9%95%BF%E9%B8%A3-%E9%A2%98%E5%8D%95/" class="md-tabs__link">
+          
+  
+  OJ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../CheatSheet/mkdocs%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95/" class="md-tabs__link">
+          
+  
+  CheatSheet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../chat/" class="md-tabs__link">
+        
+  
+    
+  
+  ChatGPT
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Chemistry/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="md-tabs__link">
+          
+  
+  化学
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Yunzinan的知识库" class="md-nav__button md-logo" aria-label="Yunzinan的知识库" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yunzinan的知识库
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/yunzinan/Note_Base" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Note_Base
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    主页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            数学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    微积分II
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            微积分II
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chap 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chap 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chap 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chap 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chap 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-notes-chapt6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    chap 6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-midterm-review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    midterm review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/Caculus/Calculus-II-final-review/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    final review
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    离散数学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            离散数学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    代数系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%BB%93%E6%9E%84-%E7%BE%A4%E4%B8%8E%E7%8E%AF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    群与环
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E4%BB%A3%E6%95%B0%E7%B3%BB%E7%BB%9F-%E6%A0%BC%E4%B8%8E%E5%B8%83%E5%B0%94%E4%BB%A3%E6%95%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    格与布尔代数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA-%E6%94%AF%E9%85%8D%E4%B8%8E%E7%9D%80%E8%89%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    支配与着色
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%AC%A7%E6%8B%89%E5%9B%BE%E4%B8%8E%E5%93%88%E5%AF%86%E9%A1%BF%E5%9B%BE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    欧拉图与哈密顿图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E6%A0%91/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0-%E5%9B%BE%E8%AE%BA%E9%83%A8%E5%88%86-%E5%9B%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    图的基本概念
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/DiscreteMath/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E8%AF%BE%E5%A0%82%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    课堂笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Math/LinearAlgebra/Linear-algebra-notes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    线性代数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机科学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            计算机科学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerScience/%E5%8A%9B%E6%89%A3%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    力扣刷题笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerScience/%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    高级程序设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerScience/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerScience/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构复习笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerScience/%E6%95%B0%E7%94%B5%E8%AE%A1%E7%BB%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数字逻辑与计算机组成
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ComputerScience/%E6%95%B0%E7%94%B5%E8%AE%A1%E7%BB%84%E5%A4%8D%E4%B9%A0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数电计组复习
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    科研
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            科研
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    BCI文献阅读第1期
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    BCI文献阅读第1期
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brain-computer-interface" class="md-nav__link">
+    Brain-computer interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-terms" class="md-nav__link">
+    related terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-neurotechnologies" class="md-nav__link">
+    adaptive neurotechnologies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-issues" class="md-nav__link">
+    Key issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Key issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bcis-create-artificial-cns-outputs" class="md-nav__link">
+    BCIs create artificial CNS outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bci-operation-requires-the-effective-interaction-of-two-adaptive-controllers" class="md-nav__link">
+    BCI operation requires the effective interaction of two adaptive controllers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-signal-types-and-cns-regions" class="md-nav__link">
+    Selecting signal types and CNS regions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting-and-avoiding-artifacts" class="md-nav__link">
+    Detecting and avoiding artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bci-output-commands-can-either-select-goals-or-control-pocesses" class="md-nav__link">
+    BCI output commands can either select goals or control pocesses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-disseminating-important-bci-applications" class="md-nav__link">
+    Creating and disseminating important BCI applications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../paper2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BCI文献阅读第2期
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    技能树
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            技能树
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SkillMap/Jupyter-notebook%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jupyter Notebook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SkillMap/WebCrawlingNotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    爬虫入门
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SkillMap/gdb_note/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gdb入门
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    课堂笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            课堂笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LectureNotes/%E9%A9%AC%E5%8E%9F%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    马原
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LectureNotes/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86I%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    普通物理I
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LectureNotes/%E4%B8%AD%E5%9B%BD%E8%BF%91%E4%BB%A3%E5%8F%B2%E7%BA%B2%E8%A6%81%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    中国近代史纲要
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../LectureNotes/%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    高级程序设计
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    随笔
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            随笔
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/%E4%B8%80%E4%B8%AA%E5%B0%8F%E9%97%AE%E9%A2%98-%E5%8F%AF%E7%A7%AF%E4%B8%80%E5%AE%9A%E6%9C%89%E5%8E%9F%E5%87%BD%E6%95%B0%E5%90%97/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    可积一定有原函数吗?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/22SummerReview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22SummerReview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/%E5%AF%B9%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%80%9D%E8%80%83/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    对个人笔记系统的思考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/%E4%B8%80%E4%BA%9BLaTeX%E8%AF%AD%E6%B3%95%E7%9A%84%E9%97%AE%E9%A2%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    都是语法惹的祸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/%E7%88%AC%E8%99%AB%E8%BF%9B%E9%98%B6-ip%E4%BB%A3%E7%90%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ip代理爬虫
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/%E5%8F%AB%E9%AD%82%E4%B9%A6%E8%AF%84/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <叫魂-1768年妖术大恐慌>书评
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/22FallReview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22FallReview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/%E4%BB%8EChatGPT%E7%9C%8BAI%3A%E6%9C%AA%E6%9D%A5%E4%BB%A5%E6%9D%A5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    从ChatGPT看AI-未来以来
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/wsl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    WSL
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/marp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何优雅地写slides?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InformalEssay/GTA-report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    记一次失败的报告
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    OJ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            OJ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OJ/%E8%AD%A6%E9%92%9F%E9%95%BF%E9%B8%A3-%E9%A2%98%E5%8D%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    警钟长鸣
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CheatSheet
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            CheatSheet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CheatSheet/mkdocs%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    mkdocs扩展语法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CheatSheet/regex-cookbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    regex教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CheatSheet/markdown-emoji/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    emoji-cheat-sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CheatSheet/vim-CheatSheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vim-cheat-sheet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chat/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ChatGPT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    化学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            化学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chemistry/%E5%A4%A7%E5%AD%A6%E5%8C%96%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    大学化学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chemistry/%E6%9C%89%E6%9C%BA%E5%8C%96%E5%AD%A6%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    有机化学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chemistry/%E4%BB%AA%E5%99%A8%E5%88%86%E6%9E%90%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    仪器分析
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chemistry/%E4%BB%AA%E5%99%A8%E5%88%86%E6%9E%90%E4%BD%9C%E4%B8%9A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    仪器分析作业
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Chemistry/%E6%9C%89%E6%9C%BA%E5%8C%96%E5%AD%A6%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    有机化学学习指南笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    abstract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#brain-computer-interface" class="md-nav__link">
+    Brain-computer interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#related-terms" class="md-nav__link">
+    related terms
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptive-neurotechnologies" class="md-nav__link">
+    adaptive neurotechnologies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-issues" class="md-nav__link">
+    Key issues
+  </a>
+  
+    <nav class="md-nav" aria-label="Key issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bcis-create-artificial-cns-outputs" class="md-nav__link">
+    BCIs create artificial CNS outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bci-operation-requires-the-effective-interaction-of-two-adaptive-controllers" class="md-nav__link">
+    BCI operation requires the effective interaction of two adaptive controllers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selecting-signal-types-and-cns-regions" class="md-nav__link">
+    Selecting signal types and CNS regions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detecting-and-avoiding-artifacts" class="md-nav__link">
+    Detecting and avoiding artifacts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bci-output-commands-can-either-select-goals-or-control-pocesses" class="md-nav__link">
+    BCI output commands can either select goals or control pocesses
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-and-disseminating-important-bci-applications" class="md-nav__link">
+    Creating and disseminating important BCI applications
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div class="admonition info">
+<p class="admonition-title">阅读感受</p>
+<ul>
+<li>涉及生物相关的概念基本不懂</li>
+<li>涉及infomation encoding&amp;decoding的部分不太理解(涉及到SVM, ICP, GLM都不了解)</li>
+<li>限于英语文献阅读能力, 可能重点没有抓住/理解错了</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">central nervous systems</p>
+<p><a href="https://www.healthdirect.gov.au/central-nervous-system">Central nervous system (CNS) | healthdirect</a>
+<a href="https://www.youtube.com/watch?v=Qh6A1neljbI">Overview of the Central Nervous System (CNS) - YouTube</a>
+<img alt="image.png" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2023/03/202308071428390.png" /></p>
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=XEFumtI-pSk&amp;list=PLRDwuoRClPzf9X6J5oEFihBEL9a3GdMEy&amp;index=8">Overview of the Peripheral Nervous System - YouTube</a></p>
+</blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">neurons</p>
+<ul>
+<li>excitable</li>
+<li>signal to communicate<ul>
+<li>neurons</li>
+<li>muscles</li>
+<li>glands</li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="brain-computer-interfaces-definitions-and-principles">Brain-computer interfaces: Definitions and principles<a class="headerlink" href="#brain-computer-interfaces-definitions-and-principles" title="Permanent link">&para;</a></h1>
+<h2 id="abstract">abstract<a class="headerlink" href="#abstract" title="Permanent link">&para;</a></h2>
+<ul>
+<li>brain-computer interfaces quantify CNS acitvity and translate it into new artificial outputs that replace, restore, enhance, supplement, or improve the natural CNS outputs. -&gt; BCIs thereby modify the interactions between the CNS and the environment.</li>
+<li>
+<p>source不同: spinal and brainstem motoneurons -&gt; other CNS regions, like the sensorimotor cortex ❓</p>
+</li>
+<li>
+<p>❗<strong>2 most difficult &amp; critical challenge</strong></p>
+<ul>
+<li>reliablity &amp; accuracy</li>
+<li>adaptive modifications: "reliazation of this second adaptive controller, the BCI, and management of its interactions with concurrent adaptations in the CNS"</li>
+</ul>
+</li>
+<li>brain areas -&gt;  by experienments</li>
+<li>❗avoid mis-interpreting nonbrain signals</li>
+<li>goal selections with/or process control</li>
+<li>❗目前进展: benefit people with neuromuscular disorders -&gt; BCI clinical evaluation, validation, dessemination(宣传) -&gt; requirements of clinical studies.</li>
+</ul>
+<h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h2>
+<h3 id="brain-computer-interface">Brain-computer interface<a class="headerlink" href="#brain-computer-interface" title="Permanent link">&para;</a></h3>
+<p>CNS outputs: neuromuscular / hormonal
+BCI outputs: novel, neither of these</p>
+<div class="admonition note">
+<p class="admonition-title">BCI</p>
+<p>a system that <mark>records</mark> CNS activity and <mark>translate</mark> it into artificial output that <mark>replace, restores, enhances, supplements or improves</mark> natural CNS output; it thereby modifies the interactions of the CNS with the rest of the body or with the external world.</p>
+<p><img alt="image.png" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2023/03/202308071614673.png" /></p>
+</div>
+<ul>
+<li>
+<p>foundation: sensorimotor hypothesis
+<div class="highlight"><pre><span></span><code>graph LR;
+A[sensory input] --CNS--&gt; B[motor outputs]
+</code></pre></div></p>
+<blockquote>
+<p>the only function of CNS</p>
+</blockquote>
+</li>
+<li>
+<p>signals</p>
+<ul>
+<li>电生理信号</li>
+<li>神经化学信号</li>
+<li>新陈代谢现象<ul>
+<li>神经元的动作电位</li>
+<li>突触电位?</li>
+<li>神经介质的释放</li>
+<li>摄氧量(<span class="arithmatex"><span class="MathJax_Preview">VO_2</span><script type="math/tex">VO_2</script></span>, oxygen uptake)</li>
+</ul>
+</li>
+<li>电场 / 磁场, 血流量?, 血红蛋白的氧合作用(hemoglobin oxygenation)</li>
+</ul>
+</li>
+<li>
+<p>replace: 重构功能</p>
+</li>
+<li>restore: 重新建立刺激(stimulation)</li>
+<li>enhance</li>
+<li>supplement</li>
+<li>improve</li>
+</ul>
+<p>目前进展: replace, restore &gt; improve &gt; enhance, supplement</p>
+<ul>
+<li>✨ BCI <mark>changes the interactions</mark> (不能只是监控大脑活动)</li>
+</ul>
+<h3 id="related-terms">related terms<a class="headerlink" href="#related-terms" title="Permanent link">&para;</a></h3>
+<ul>
+<li>BCI &gt; BMI </li>
+<li><mark>dependent BCI</mark>: uses brain signals that depend on muscle activity<blockquote>
+<p>不仅要想, 还要动?</p>
+</blockquote>
+</li>
+<li>
+<p><mark>independent BCI</mark>: muscle activities are not needed for generating the brain signals that BCI measures.</p>
+<blockquote>
+<p>只用想, 不用动. -&gt; 对没法动的人(ALS患者)更有帮助</p>
+</blockquote>
+</li>
+<li>
+<p>hybrid BCI</p>
+<ul>
+<li>采用两种信号</li>
+<li>将BCI输出与原先的肌肉输出合并的BCI</li>
+</ul>
+</li>
+</ul>
+<h3 id="adaptive-neurotechnologies">adaptive neurotechnologies<a class="headerlink" href="#adaptive-neurotechnologies" title="Permanent link">&para;</a></h3>
+<p>They adapt to <mark>optimize the new interaction</mark> and they often <mark>induce(诱导) adaptive plasticity in the CNS</mark>, which also helps optimize the interaction</p>
+<blockquote>
+<p>BCI和CNS两个方面的adaptation</p>
+</blockquote>
+<h2 id="key-issues">Key issues<a class="headerlink" href="#key-issues" title="Permanent link">&para;</a></h2>
+<h3 id="bcis-create-artificial-cns-outputs">BCIs create artificial CNS outputs<a class="headerlink" href="#bcis-create-artificial-cns-outputs" title="Permanent link">&para;</a></h3>
+<p>2 principles regarding how the CNS produces its natural outputs
+- creation of natual outputs is distributed throughout the CNS. (多区域协作)
+- the actions produced by natural CNS outputs are acquired and maintained by initial and ongoing adaptations in all the CNS regions involved. (ongoing adaptation)</p>
+<p><img alt="image.png" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2023/03/202308071712951.png" /></p>
+<blockquote>
+<p>原先的某个特定的CNS区域本来是配合其他的一些区域来产生神经信号来activate 相应的spinal motoneurons从而产生CNS output(运动), 但是在BCI介入以后, 这些区域不再负责产生activation, 而是负责操控这个特定的被BCI识别信号的区域能够产生特定信号(例如操纵假肢的信号), 从而使得这个特定的区域负责产生最终的CNS output. 这个转变就是adaptation. 简单来说, 现在神经不再操控身体, 而是操控假肢.</p>
+</blockquote>
+<h3 id="bci-operation-requires-the-effective-interaction-of-two-adaptive-controllers">BCI operation requires the effective interaction of two adaptive controllers<a class="headerlink" href="#bci-operation-requires-the-effective-interaction-of-two-adaptive-controllers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>trade-off: 复杂的不能长久可靠</li>
+<li>2 adaptive controllers: BCI, CNS<ul>
+<li>信号的属性会变化</li>
+<li>CNS本身也会变化?</li>
+</ul>
+</li>
+</ul>
+<h3 id="selecting-signal-types-and-cns-regions">Selecting signal types and CNS regions<a class="headerlink" href="#selecting-signal-types-and-cns-regions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>EEG: 脑电图, 厘米级</li>
+<li>ECoG: 脑皮层电图, 毫米级</li>
+<li>neuronal action potentials: 10微米级</li>
+<li>什么方法最好要按照具体情况来, 因此需要实验决定.</li>
+<li>best regions to record signals: sensorimotor(and visual) cortical areas (most)<blockquote>
+<p>note: 即便是已经失去功能多年的大脑皮层也能产生对BCI有用的信号.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="detecting-and-avoiding-artifacts">Detecting and avoiding artifacts<a class="headerlink" href="#detecting-and-avoiding-artifacts" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">BCI artifacts</p>
+<p>They may obscure or contanminate the signals that provide output commands.
+- from the environment
+- from the body
+- BCI hardware</p>
+</div>
+<ul>
+<li>solution for EEG-based BCI: topographical and frequency analyses to differentiate</li>
+<li>solution for fNIRS: 差不多的方法</li>
+<li>总之, 不能只选择几个location, 或者narrow frequency band</li>
+</ul>
+<h3 id="bci-output-commands-can-either-select-goals-or-control-pocesses">BCI output commands can either select goals or control pocesses<a class="headerlink" href="#bci-output-commands-can-either-select-goals-or-control-pocesses" title="Permanent link">&para;</a></h3>
+<ul>
+<li>goal-selection BCI <mark>What to do</mark><ul>
+<li>puts the burden of rapid complicated interactive control on the <strong>application</strong></li>
+<li>select &amp; communicate</li>
+<li>适合做比较有限的工作(不会发生意外的)</li>
+</ul>
+</li>
+<li>
+<p>process-control BCI <mark>How to do</mark></p>
+<ul>
+<li>more detailed -&gt; more complex</li>
+</ul>
+</li>
+<li>
+<p>combined BCI: 有机结合</p>
+</li>
+</ul>
+<h3 id="creating-and-disseminating-important-bci-applications">Creating and disseminating important BCI applications<a class="headerlink" href="#creating-and-disseminating-important-bci-applications" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ethical issues</li>
+<li>clinically validated BCIs<ul>
+<li>challenge: profitable</li>
+</ul>
+</li>
+<li>nonmedical BCI</li>
+<li>rehabilitation applications of BCI 
+    e.g. [[“卒通”脑机接口偏瘫居家康复解决方案BP.pdf]]</li>
+</ul>
+<hr />
+<h1 id="real-time-fmri-for-brain-computer-interfacing">Real-time fMRI for brain-computer interfacing<a class="headerlink" href="#real-time-fmri-for-brain-computer-interfacing" title="Permanent link">&para;</a></h1>
+<p><img alt="image.png" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2023/03/202308072044007.png" /></p>
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=rJjHjnzmvDI">2-Minute Neuroscience: Functional Magnetic Resonance Imaging (fMRI) - YouTube</a>
+<a href="https://www.youtube.com/watch?v=TCL6SwunTyg">The difference between functional MRI and regular MRI | Ohio State Medical Center - YouTube</a></p>
+</blockquote>
+<h1 id="using-fmri-to-measure-brain-activation">Using fMRI to measure brain activation<a class="headerlink" href="#using-fmri-to-measure-brain-activation" title="Permanent link">&para;</a></h1>
+<p>advantages: 
+- spatial resolution
+- the ability to reach deep subcortical(皮层下的) structures
+- whole-brain coverage</p>
+<h2 id="phisiologic-principles-of-fmri">Phisiologic principles of fMRI<a class="headerlink" href="#phisiologic-principles-of-fmri" title="Permanent link">&para;</a></h2>
+<p><div class="highlight"><pre><span></span><code>graph TD;
+A[neuronal acitities]--&gt;B[localized changes]--&gt;C[concentration ratio of oxy- and deoxy- hemoglobin changes]--different magnetic properties--&gt;D[BOLD数值的变化]
+</code></pre></div>
+- cerebral metabolic rate of oxygen, <span class="arithmatex"><span class="MathJax_Preview">CMRO_2</span><script type="math/tex">CMRO_2</script></span>
+- cerebral blood flow, <span class="arithmatex"><span class="MathJax_Preview">CBF</span><script type="math/tex">CBF</script></span>
+- cerebral blood volume, <span class="arithmatex"><span class="MathJax_Preview">CBV</span><script type="math/tex">CBV</script></span></p>
+<blockquote>
+<p>blood oxygenation level-dependent, BOLD(血氧水平依赖)
+hemodynamic response function HRF</p>
+</blockquote>
+<p><mark>fMRI的时空分辨率受到hemodynamic response分辨率的限制</mark></p>
+<blockquote>
+<p>1.5t / 3T  -&gt; 1-3mm &amp; 1-3s</p>
+</blockquote>
+<h2 id="measurement-artifacts">Measurement artifacts<a class="headerlink" href="#measurement-artifacts" title="Permanent link">&para;</a></h2>
+<p>disadvantages: image suffer from 
+- signal dropouts (采样率的原因?)
+- geometric distortions</p>
+<p>substantial head movement(显著的头部移动)</p>
+<p>提高信噪比(signal-to-noise ratio, SNR): 采用平滑手段, 预处理</p>
+<h2 id="suitability-of-fmri-as-functional-neuroimaging-methods-in-bci">Suitability of fMRI as functional-neuroimaging methods in BCI<a class="headerlink" href="#suitability-of-fmri-as-functional-neuroimaging-methods-in-bci" title="Permanent link">&para;</a></h2>
+<h3 id="evaluation-of-fmri-as-bci-method">Evaluation of fMRI as BCI Method<a class="headerlink" href="#evaluation-of-fmri-as-bci-method" title="Permanent link">&para;</a></h3>
+<ul>
+<li>robustness<ul>
+<li>+relatively high single-trial reliability</li>
+<li>+high signal-to-noise ratio</li>
+<li>+high spatial resolution of the BOLD signal</li>
+<li>+large brain coverage</li>
+<li>-artifacts(e.g. head motion &amp; susceptibility artifacts)</li>
+<li>relatively low temporal resolution -&gt; information transfer rate is limited</li>
+</ul>
+</li>
+<li>flexibility: 目前受限, 未来实现个人化后有希望</li>
+<li>safety<ul>
+<li>非侵入式, 相对安全</li>
+<li>涉及到磁场, 避免携带金属</li>
+</ul>
+</li>
+<li>user friendliness: rather limited<ul>
+<li>BCI operator: simultaneously control 3+ PCs: scanner console, stimulation PC, and real-time data analysis PC</li>
+<li>BCI user:<ul>
+<li>isolated in separate scanner room -&gt; ❌interactions between user and operator</li>
+<li>lying position, no moving</li>
+<li>scanner noise </li>
+<li>unpleasant side effects</li>
+</ul>
+</li>
+<li>Pros: short preparation time </li>
+</ul>
+</li>
+<li>costs: 贵</li>
+</ul>
+<h2 id="methodology-of-fmri-based-bci">Methodology of fMRI-based BCI⭐<a class="headerlink" href="#methodology-of-fmri-based-bci" title="Permanent link">&para;</a></h2>
+<h3 id="general-aspects-of-information-encoding-and-decoding-in-bci">General aspects of information encoding and decoding in BCI<a class="headerlink" href="#general-aspects-of-information-encoding-and-decoding-in-bci" title="Permanent link">&para;</a></h3>
+<ul>
+<li>目标: "心照不宣", "读心术"</li>
+<li>最显然的办法: 比较回答yes/no时的不同的神经活动 -&gt; 目前无法分辨</li>
+<li>间接的办法: people can intentionally and <mark>effectively</mark> generate differentiable brain activity/brain signals by <strong>performing different <mark>mental activities</mark></strong></li>
+<li>e.g.
+<div class="highlight"><pre><span></span><code>graph TD;
+A[question]--&gt;B[&quot;Yes&quot;]--&gt;D[metanlly recite a poem]
+A--&gt;C[&quot;No&quot;]--&gt;E[imagine to spatially navigate through a house]
+D--&gt;F[different brain activity patterns]
+E--&gt;F
+</code></pre></div>
+<mark>encoding &amp; decoding</mark> yes/no &harr; mental activities</li>
+</ul>
+<h3 id="information-encoding">Information encoding<a class="headerlink" href="#information-encoding" title="Permanent link">&para;</a></h3>
+<h4 id="modulation-of-spatial-fmri-signal-features">Modulation of spatial fMRI-signal features<a class="headerlink" href="#modulation-of-spatial-fmri-signal-features" title="Permanent link">&para;</a></h4>
+<p><mark>amount of mental activities are limited, so far 6 at most</mark></p>
+<p>categories:
+- cognitive tasks
+- covert lagnuage-related tasks
+- imagery tasks
+- selective attentions tasks</p>
+<h4 id="temporal">temporal<a class="headerlink" href="#temporal" title="Permanent link">&para;</a></h4>
+<p>onsets, offsets, durations不同</p>
+<h4 id="magnitudinal">Magnitudinal<a class="headerlink" href="#magnitudinal" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>量化活动强度用于区分?</p>
+</blockquote>
+<p>different brain-avtivation levels: up to 5</p>
+<p>需要averaging</p>
+<h4 id="combinatory">Combinatory<a class="headerlink" href="#combinatory" title="Permanent link">&para;</a></h4>
+<p>效果更好</p>
+<h3 id="information-decoding">Information decoding<a class="headerlink" href="#information-decoding" title="Permanent link">&para;</a></h3>
+<h4 id="real-time-fmri-analysis">Real-time fMRI analysis<a class="headerlink" href="#real-time-fmri-analysis" title="Permanent link">&para;</a></h4>
+<ul>
+<li>实时分析: 单次的处理时间不能超过数据传输的间隔</li>
+<li>增量式算法</li>
+</ul>
+<p>GLM analysis?</p>
+<p>😵没看懂</p>
+<h4 id="decoding-based-on-mutiregional-statistical-analyses">decoding based on mutiregional statistical analyses<a class="headerlink" href="#decoding-based-on-mutiregional-statistical-analyses" title="Permanent link">&para;</a></h4>
+<h4 id="decoding-based-on-multivoxel-pattern-cliassification">Decoding based on multivoxel pattern cliassification<a class="headerlink" href="#decoding-based-on-multivoxel-pattern-cliassification" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>似乎与Machine Learning相关: supporter vector machine?</p>
+</blockquote>
+<h2 id="current-and-future-real-time-fmri-based-bci-applications">Current and future real-time fMRI-based BCI applications<a class="headerlink" href="#current-and-future-real-time-fmri-based-bci-applications" title="Permanent link">&para;</a></h2>
+<ul>
+<li>限于前文所述的局限性, 目前对瘫痪病人的作用仅限于一些特殊情况, 但还是有价值的</li>
+<li>另一用处: neurofeedback technique, promising<blockquote>
+<p><img alt="image.png" src="https://yunzinan-pic-bed.oss-cn-nanjing.aliyuncs.com/2023/03/202308081848431.png" /></p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><strong>Neurofeedback</strong> is a type of <a href="https://en.wikipedia.org/wiki/Biofeedback" title="Biofeedback">biofeedback</a> that focuses on the neuronal activity of the brain. The training method is based on reward learning (<a href="https://en.wikipedia.org/wiki/Operant_conditioning" title="Operant conditioning">operant conditioning</a>) where a real-time feedback provided to the trainee is supposed to reinforce desired brain activity or inhibit unfavorable activity patterns.</p>
+</blockquote>
+<ul>
+<li>as a neuroscientific research tool</li>
+</ul>
+<h2 id="conclusions-and-future-methodological-perspectivfes-of-real-time-fmri">Conclusions and future methodological perspectivfes of real-time fMRI<a class="headerlink" href="#conclusions-and-future-methodological-perspectivfes-of-real-time-fmri" title="Permanent link">&para;</a></h2>
+<h3 id="high-temporal-resolution">High temporal resolution<a class="headerlink" href="#high-temporal-resolution" title="Permanent link">&para;</a></h3>
+<ul>
+<li>cleaner signals</li>
+<li>shorter response delays</li>
+</ul>
+<h3 id="high-spatial-resolution-fmri-bcis-at-ultra-high-magnetic-fields">High-spatial resolution fMRI BCIs at ultra-high magnetic fields<a class="headerlink" href="#high-spatial-resolution-fmri-bcis-at-ultra-high-magnetic-fields" title="Permanent link">&para;</a></h3>
+<ul>
+<li>may allow research moving from patterns across task-related regions and networks to more fine-grained overlapping activation patterns <em>within</em> brain areas</li>
+<li>pick up weaker signals<ul>
+<li>e.g. Letter recognition</li>
+</ul>
+</li>
+</ul>
+<h1 id="_1">参考资料<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/273186198">神经科学术语表 - 知乎 (zhihu.com)</a></li>
+<li><a href="https://www.youtube.com/watch?v=GDx40b-FZiQ">fMRI (Functional MRI) - YouTube</a></li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022-2023 by yunzinan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "search.suggest", "search.share", "navigation.top"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
